@@ -12,4 +12,5 @@ return  array(
     'SHOW_ERROR_MSG'        => true,    // 显示错误信息
     'URL_CASE_INSENSITIVE'  => true,    // URL区分大小写
 	'SHOW_PAGE_TRACE'       => true,    //调试配置
+    'TMPL_CACHE_ON'         => false, // 默认开启模板缓存
 );

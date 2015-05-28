@@ -2,7 +2,7 @@
 defined('THINK_PATH') or exit();
 return array(
 	//'配置项'=>'配置值'
-	'SHOW_PAGE_TRACE'       => false,        //调试配置
+	'SHOW_PAGE_TRACE'       => true,        //调试配置
 	'APP_USE_NAMESPACE'     => true,
 
 	'DEFAULT_MODULE'        => 'Home',
@@ -17,7 +17,7 @@ return array(
     'DB_USER'               => 'root',       // 用户名
     'DB_PWD'                => '',           // 密码
     'DB_PORT'               => '3306',       // 端口
-    'DB_PREFIX'             => 'houtai_',      // 数据库表前缀
+    'DB_PREFIX'             => 'linshi_',      // 数据库表前缀
 	
     /* URL配置 */
     'URL_CASE_INSENSITIVE'  => true,        // 默认false 表示URL区分大小写 true则表示不区分大小写

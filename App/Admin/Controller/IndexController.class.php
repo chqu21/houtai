@@ -22,6 +22,10 @@ class IndexController extends CommonController {
 		$this->assign('menuList', $menuList);
 		$this->display('index');
 	}
+
+    public function abc(){
+        $this->display('index');
+    }
 	
 	/**
 	 * 用户登录

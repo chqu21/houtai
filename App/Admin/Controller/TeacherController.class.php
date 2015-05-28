@@ -62,13 +62,24 @@ class TeacherController extends CommonController {
     /**
      * 管理员管理
      */
-    public function teacherList($page = 1, $rows = 10, $sort = 'teacher_id', $order = 'asc'){
+    public function teacherList($page = 1, $rows = 10,$search = array(),$sort = 'teacher_id', $order = 'asc'){
         if(IS_POST){
-            $admin_db = D('Teacher');
-            $total = $admin_db->count();
+            $teacher_db = D('Teacher');
+            //搜索
+            $where = array();
+            foreach ($search as $k=>$v){
+                if(!$v) continue;
+                $where[] = "`{$k}` = '{$v}'";
+            }
+            $where = implode(' and ', $where);
+
+            $limit=($page - 1) * $rows . "," . $rows;
+            $total = $teacher_db->where($where)->count();
             $order = $sort.' '.$order;
-            $limit = ($page - 1) * $rows . "," . $rows;
-            $list = $admin_db->table(C('DB_PREFIX').'member_info A')->join(C('DB_PREFIX').'teachers AR on AR.member_id = A.member_id')->field("AR.teacher_id,AR.teacher_name,AR.sex,AR.teaching_age,AR.certification_flag,AR.education_flag,AR.teacher_certification_flag,AR.discipline,AR.grade,AR.course_category,AR.sort_num,AR.recommand_flag,AR.display,A.raw_add_time")->order($order)->limit($limit)->select();
+            $list = $total ? $teacher_db->where($where)->order($order)->limit($limit)->select() : array();
+            $data = array('total'=>$total, 'rows'=>$list);
+
+
             foreach($list as $k => $lt){
                 if ($lt['certification_flag']==1){
                     $list[$k]['certification_flag'] = '已认证';
@@ -100,6 +111,11 @@ class TeacherController extends CommonController {
                     $list[$k]['display'] = '不显示';
                 }
             }
+
+
+
+
+
             $data = array('total'=>$total, 'rows'=>$list);
             $this->ajaxReturn($data);
         }else{
@@ -109,7 +125,7 @@ class TeacherController extends CommonController {
                 'options'     => array(
                     'title'   => $currentpos,
                     'url'     => U('Teacher/teacherList', array('grid'=>'datagrid')),
-                    'toolbar' => 'admin_memberlist_datagrid_toolbar',
+                    'toolbar' => 'admin_teacherlist_datagrid_toolbar',
                 ),
                 'fields' => array(
                     '教师姓名'      => array('field'=>'teacher_name','width'=>15,'sortable'=>true),

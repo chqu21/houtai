@@ -62,12 +62,12 @@ function adminMemberlistEditDialogFormSubmit(){
 <table class="gridtable">
 	<tr>
 		<td width="80">教师姓名：</td>
-		<td><input type="text" value="<?php echo ($info["teacher_name"]); ?>" style="width:180px;height:22px" /></td>
+		<td><input type="text" name="teacher_name" value="<?php echo ($info["teacher_name"]); ?>" style="width:180px;height:22px" /></td>
 		<td></td>
 	</tr>
 	<tr>
 		<td>教龄：</td>
-        <td><input type="text" value="<?php echo ($info["teaching_age"]); ?>" style="width:180px;height:22px" /></td>
+        <td><input type="text" name="teaching_age" value="<?php echo ($info["teaching_age"]); ?>" style="width:180px;height:22px" /></td>
 		<td></td>
 	</tr>
     <tr>

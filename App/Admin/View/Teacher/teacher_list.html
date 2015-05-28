@@ -1,7 +1,18 @@
 <taglib name="Admin\TagLib\EasyUI" />
 
 <easyui:datagrid options="datagrid.options" fields="datagrid.fields" />
+<div id="admin_teacherlist_datagrid_toolbar" style="padding:5px;height:auto">
+    <form>
+        用户名:
+        <input type="text" name="search[teacher_name]" class="easyui-text" panelHeight="auto" style="width:100px">
+        </input>&nbsp;&nbsp;
 
+
+        <a href="javascript:;" onclick="adminTeacherSearch(this);" class="easyui-linkbutton" iconCls="icons-map-magnifier">搜索</a>&nbsp;&nbsp;
+        <a href="javascript:;" onclick="adminMemberAdd();" class="easyui-linkbutton" iconCls="icons-arrow-add">添加老师</a>&nbsp;&nbsp;
+        <a href="javascript:;" onclick="adminMemberRefresh();" class="easyui-linkbutton" iconCls="icons-arrow-arrow_refresh">刷新</a>
+    </form>
+</div>
 <!-- 添加老师 -->
 <div id="admin_memberlist_add_dialog" class="easyui-dialog" title="添加老师" data-options="modal:true,closed:true,iconCls:'icons-application-application_add',buttons:[{text:'确定',iconCls:'icons-other-tick',handler:function(){$('#admin_memberlist_add_dialog_form').submit();}},{text:'取消',iconCls:'icons-arrow-cross',handler:function(){$('#admin_memberlist_add_dialog').dialog('close');}}]" style="width:650px;height:400px;"></div>
 
@@ -9,10 +20,16 @@
 <div id="admin_memberlist_edit_dialog" class="easyui-dialog" title="编辑老师" data-options="modal:true,closed:true,iconCls:'icons-application-application_edit',buttons:[{text:'确定',iconCls:'icons-other-tick',handler:function(){$('#admin_memberlist_edit_dialog_form').submit();}},{text:'取消',iconCls:'icons-arrow-cross',handler:function(){$('#admin_memberlist_edit_dialog').dialog('close');}}]" style="width:650px;height:400px;"></div>
 
 <script type="text/javascript">
-var admin_memberlist_datagrid_toolbar = [
-	{ text: '添加老师', iconCls: 'icons-arrow-add', handler: adminMemberAdd },
-	{ text: '刷新', iconCls: 'icons-arrow-arrow_refresh', handler: adminMemberRefresh }
-];
+var teacher_teacherlist_datagrid_id = 'teacher_teacherlist_datagrid';
+//搜索
+function adminTeacherSearch(that){
+    var queryParams = $('#'+teacher_teacherlist_datagrid_id).datagrid('options').queryParams;
+    $.each($(that).parent('form').serializeArray(), function() {
+        queryParams[this['name']] = this['value'];
+    });
+    $('#'+teacher_teacherlist_datagrid_id).datagrid('reload');
+}
+
 //时间格式化
 function adminMemberListTimeFormatter(val){
 	return val != '1970-01-01 08:00:00' ? val : '';

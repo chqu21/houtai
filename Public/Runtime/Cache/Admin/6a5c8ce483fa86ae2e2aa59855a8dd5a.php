@@ -13,10 +13,10 @@
     </form>
 </div>
 <!-- 添加老师 -->
-<div id="admin_memberlist_add_dialog" class="easyui-dialog" title="添加老师" data-options="modal:true,closed:true,iconCls:'icons-application-application_add',buttons:[{text:'确定',iconCls:'icons-other-tick',handler:function(){$('#admin_memberlist_add_dialog_form').submit();}},{text:'取消',iconCls:'icons-arrow-cross',handler:function(){$('#admin_memberlist_add_dialog').dialog('close');}}]" style="width:650px;height:400px;"></div>
+<div id="admin_teacherlist_add_dialog" class="easyui-dialog" title="添加老师" data-options="modal:true,closed:true,iconCls:'icons-application-application_add',buttons:[{text:'确定',iconCls:'icons-other-tick',handler:function(){$('#admin_teacherlist_add_dialog_form').submit();}},{text:'取消',iconCls:'icons-arrow-cross',handler:function(){$('#admin_teacherlist_add_dialog').dialog('close');}}]" style="width:650px;height:400px;"></div>
 
 <!-- 编辑老师 -->
-<div id="admin_memberlist_edit_dialog" class="easyui-dialog" title="编辑老师" data-options="modal:true,closed:true,iconCls:'icons-application-application_edit',buttons:[{text:'确定',iconCls:'icons-other-tick',handler:function(){$('#admin_memberlist_edit_dialog_form').submit();}},{text:'取消',iconCls:'icons-arrow-cross',handler:function(){$('#admin_memberlist_edit_dialog').dialog('close');}}]" style="width:650px;height:400px;"></div>
+<div id="admin_teacherlist_edit_dialog" class="easyui-dialog" title="编辑老师" data-options="modal:true,closed:true,iconCls:'icons-application-application_edit',buttons:[{text:'确定',iconCls:'icons-other-tick',handler:function(){$('#admin_teacherlist_edit_dialog_form').submit();}},{text:'取消',iconCls:'icons-arrow-cross',handler:function(){$('#admin_teacherlist_edit_dialog').dialog('close');}}]" style="width:650px;height:400px;"></div>
 
 <script type="text/javascript">
 var teacher_teacherlist_datagrid_id = 'teacher_teacherlist_datagrid';
@@ -48,8 +48,8 @@ function adminMemberRefresh(){
 }
 //添加
 function adminMemberAdd(){
-	$('#admin_memberlist_add_dialog').dialog({href:'<?php echo U('Teacher/teacherAdd');?>'});
-	$('#admin_memberlist_add_dialog').dialog('open');
+	$('#admin_teacherlist_add_dialog').dialog({href:'<?php echo U('Teacher/teacherAdd');?>'});
+	$('#admin_teacherlist_add_dialog').dialog('open');
 }
 //编辑
 function adminMemberEdit(id){
@@ -59,8 +59,8 @@ function adminMemberEdit(id){
 	}
 	var url = '<?php echo U('Teacher/teacherEdit');?>';
 	url += url.indexOf('?') != -1 ? '&id='+id : '?id='+id;
-	$('#admin_memberlist_edit_dialog').dialog({href:url});
-	$('#admin_memberlist_edit_dialog').dialog('open');
+	$('#admin_teacherlist_edit_dialog').dialog({href:url});
+	$('#admin_teacherlist_edit_dialog').dialog('open');
 }
 //删除
 function adminMemberDelete(id){

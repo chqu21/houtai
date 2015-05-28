@@ -140,6 +140,9 @@ class TeacherController extends CommonController {
                 )
             );
             $this->assign('datagrid', $datagrid);
+            $admin_role_db = D('AdminRole');
+            $rolelist = $admin_role_db->where(array('disabled'=>'0'))->getField('roleid,rolename', true);
+            $this->assign('rolelist', $rolelist);
             $this->display('teacher_list');
         }
     }
@@ -149,17 +152,17 @@ class TeacherController extends CommonController {
      */
     public function teacherAdd(){
         if(IS_POST){
-            $admin_db = D('Admin');
+            $teacher_db = D('Teacher');
+            $member_db = D('member');
+            //$memberInfo_db = D('memberInfo');
             $data = I('post.info');
-            if($admin_db->where(array('username'=>$data['username']))->field('username')->find()){
-                $this->error('管理员名称已经存在');
-            }
-            $passwordinfo = password($data['password']);
-            $data['password'] = $passwordinfo['password'];
-            $data['encrypt'] = $passwordinfo['encrypt'];
-
-            $id = $admin_db->add($data);
-            if($id){
+            $memberInfo['mobile'] = $data['mobile'];
+            $memberInfo['password'] = $data['password'];
+            $memberId = $member_db->add($memberInfo);
+            unset($data['mobile']);
+            unset($data['password']);
+            $id = $teacher_db->add($data);
+            if($memberId && $id){
                 $this->success('添加成功');
             }else {
                 $this->error('添加失败');
@@ -168,7 +171,7 @@ class TeacherController extends CommonController {
             $admin_role_db = D('AdminRole');
             $rolelist = $admin_role_db->where(array('disabled'=>'0'))->getField('roleid,rolename', true);
             $this->assign('rolelist', $rolelist);
-            $this->display('member_add');
+            $this->display('teacher_add');
         }
     }
 

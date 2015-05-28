@@ -1,12 +1,12 @@
 <script type="text/javascript">
 $(function(){
-	$.formValidator.initConfig({formID:"admin_memberlist_edit_dialog_form",onError:function(msg){/*$.messager.alert('错误提示', msg, 'error');*/},onSuccess:adminMemberlistEditDialogFormSubmit,submitAfterAjaxPrompt:'有数据正在异步验证，请稍等...',inIframe:true});
-	$("#admin_memberlist_edit_dialog_form_password").formValidator({empty:true,onShow:"不修改密码请留空",onFocus:"密码应该为6-20位之间"}).inputValidator({min:6,max:20,onError:"密码应该为6-20位之间"});
-	$("#admin_memberlist_edit_dialog_form_pwdconfirm").formValidator({onShow:"不修改密码请留空",onFocus:"请输入确认密码"}).compareValidator({desID:"admin_memberlist_edit_dialog_form_password",operateor:"=",onError:"输入两次密码不一致"});
-	$("#admin_memberlist_edit_dialog_form_email").formValidator({onShow:"请输入E-mail",onFocus:"请输入E-mail"}).regexValidator({regExp:"email",dataType:"enum",onError:"E-mail格式错误"}).ajaxValidator({
+	$.formValidator.initConfig({formID:"admin_teacherlist_edit_dialog_form",onError:function(msg){/*$.messager.alert('错误提示', msg, 'error');*/},onSuccess:adminteacherlistEditDialogFormSubmit,submitAfterAjaxPrompt:'有数据正在异步验证，请稍等...',inIframe:true});
+	$("#admin_teacherlist_edit_dialog_form_password").formValidator({empty:true,onShow:"不修改密码请留空",onFocus:"密码应该为6-20位之间"}).inputValidator({min:6,max:20,onError:"密码应该为6-20位之间"});
+	$("#admin_teacherlist_edit_dialog_form_pwdconfirm").formValidator({onShow:"不修改密码请留空",onFocus:"请输入确认密码"}).compareValidator({desID:"admin_teacherlist_edit_dialog_form_password",operateor:"=",onError:"输入两次密码不一致"});
+	$("#admin_teacherlist_edit_dialog_form_email").formValidator({onShow:"请输入E-mail",onFocus:"请输入E-mail"}).regexValidator({regExp:"email",dataType:"enum",onError:"E-mail格式错误"}).ajaxValidator({
 		type : "post",
 		url : "<{:U('Admin/public_checkEmail')}>",
-		data : {email: function(){return $("#admin_memberlist_edit_dialog_form_email").val()}, default: '<{$info.email}>'},
+		data : {email: function(){return $("#admin_teacherlist_edit_dialog_form_email").val()}, default: '<{$info.email}>'},
 		datatype : "json",
 		async:'false',
 		success : function(data){
@@ -16,16 +16,16 @@ $(function(){
 		onError : "该邮箱已经存在",
 		onWait : "请稍候..."
 	});
-	$("#admin_memberlist_edit_dialog_form_realname").formValidator({onShow:"请输入真实姓名",onFocus:"真实姓名应该为2-20位之间"}).inputValidator({min:2,max:20,empty:{leftEmpty:false,rightEmpty:false,emptyError:"姓名两边不能有空格"},onError:"真实姓名应该为2-20位之间"});
-	$("#admin_memberlist_edit_dialog_form_role").formValidator({onShow:"请选择角色",onFocus:"请选择角色"}).inputValidator({min:0,onError:"请选择角色"});
+	$("#admin_teacherlist_edit_dialog_form_realname").formValidator({onShow:"请输入真实姓名",onFocus:"真实姓名应该为2-20位之间"}).inputValidator({min:2,max:20,empty:{leftEmpty:false,rightEmpty:false,emptyError:"姓名两边不能有空格"},onError:"真实姓名应该为2-20位之间"});
+	$("#admin_teacherlist_edit_dialog_form_role").formValidator({onShow:"请选择角色",onFocus:"请选择角色"}).inputValidator({min:0,onError:"请选择角色"});
 })
-function adminMemberlistEditDialogFormSubmit(){
-	$.post('<{:U('Teacher/teacherEdit?id='.$info['teacher_id'])}>', $("#admin_memberlist_edit_dialog_form").serialize(), function(res){
+function adminteacherlistEditDialogFormSubmit(){
+	$.post('<{:U('Teacher/teacherEdit?id='.$info['teacher_id'])}>', $("#admin_teacherlist_edit_dialog_form").serialize(), function(res){
 		if(!res.status){
 			$.messager.alert('提示信息', res.info, 'error');
 		}else{
 			$.messager.alert('提示信息', res.info, 'info');
-			$('#admin_memberlist_edit_dialog').dialog('close');
+			$('#admin_teacherlist_edit_dialog').dialog('close');
 			adminMemberRefresh();
 		}
 	})
@@ -58,7 +58,7 @@ function adminMemberlistEditDialogFormSubmit(){
     }
 </style>
 
-<form id="admin_memberlist_edit_dialog_form">
+<form id="admin_teacherlist_edit_dialog_form">
 <table class="gridtable">
 	<tr>
 		<td width="80">教师姓名：</td>
@@ -151,7 +151,7 @@ function adminMemberlistEditDialogFormSubmit(){
     </tr>
 	<tr>
 		<td>获得的荣誉：</td>
-        <td><input type="text" name="teaching_age" value="<{$info.teaching_age}>"  style="width:180px;height:22px" /></td>
+        <td><input type="text" name="honor" value="<{$info.honor}>"  style="width:180px;height:22px" /></td>
         <td></td>
 	</tr>
     <tr>

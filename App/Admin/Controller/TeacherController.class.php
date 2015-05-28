@@ -69,15 +69,14 @@ class TeacherController extends CommonController {
             $where = array();
             foreach ($search as $k=>$v){
                 if(!$v) continue;
-                $where[] = "`{$k}` = '{$v}'";
+                $where[] = "`{$k}` like '%{$v}%'";
             }
             $where = implode(' and ', $where);
-
             $limit=($page - 1) * $rows . "," . $rows;
             $total = $teacher_db->where($where)->count();
             $order = $sort.' '.$order;
             $list = $total ? $teacher_db->where($where)->order($order)->limit($limit)->select() : array();
-            $data = array('total'=>$total, 'rows'=>$list);
+
 
 
             foreach($list as $k => $lt){
@@ -111,10 +110,6 @@ class TeacherController extends CommonController {
                     $list[$k]['display'] = '不显示';
                 }
             }
-
-
-
-
 
             $data = array('total'=>$total, 'rows'=>$list);
             $this->ajaxReturn($data);

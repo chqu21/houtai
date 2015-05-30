@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d8f33eb3-3aed-4b70-b310-7d6daebbc6fb" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Public/Runtime/Logs/15_05_30.log" afterPath="$PROJECT_DIR$/Public/Runtime/Logs/15_05_30.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Public/Runtime/Cache/Admin/883f71e294d01c3e05f21ebe8616d387.php" afterPath="$PROJECT_DIR$/Public/Runtime/Cache/Admin/883f71e294d01c3e05f21ebe8616d387.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/App/Admin/View/Teacher/headPhoto.html" afterPath="$PROJECT_DIR$/App/Admin/View/Teacher/headPhoto.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="houtai.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -123,8 +121,8 @@
       <file leaf-file-name="headPhoto.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/App/Admin/View/Teacher/headPhoto.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.52059925" vertical-offset="542" max-vertical-offset="1220">
-              <caret line="41" column="34" selection-start-line="41" selection-start-column="34" selection-end-line="41" selection-end-column="34" />
+            <state vertical-scroll-proportion="0.5955056" vertical-offset="542" max-vertical-offset="1220">
+              <caret line="43" column="172" selection-start-line="43" selection-start-column="172" selection-end-line="43" selection-end-column="172" />
               <folding />
             </state>
           </provider>
@@ -944,8 +942,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/App/Admin/View/Teacher/headPhoto.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.52059925" vertical-offset="542" max-vertical-offset="1220">
-          <caret line="41" column="34" selection-start-line="41" selection-start-column="34" selection-end-line="41" selection-end-column="34" />
+        <state vertical-scroll-proportion="0.5955056" vertical-offset="542" max-vertical-offset="1220">
+          <caret line="43" column="172" selection-start-line="43" selection-start-column="172" selection-end-line="43" selection-end-column="172" />
           <folding />
         </state>
       </provider>

@@ -18,6 +18,8 @@
 
 <!-- 编辑老师 -->
 <div id="admin_teacherlist_edit_dialog" class="easyui-dialog" title="编辑老师" data-options="modal:true,closed:true,iconCls:'icons-application-application_edit',buttons:[{text:'确定',iconCls:'icons-other-tick',handler:function(){$('#admin_teacherlist_edit_dialog_form').submit();}},{text:'取消',iconCls:'icons-arrow-cross',handler:function(){$('#admin_teacherlist_edit_dialog').dialog('close');}}]" style="width:750px;height:550px;"></div>
+<!-- 评价老师 -->
+<div id="admin_teacher_addAppraise_dialog" class="easyui-dialog" title="评价老师" data-options="modal:true,closed:true,iconCls:'icons-application-application_edit',buttons:[{text:'确定',iconCls:'icons-other-tick',handler:function(){$('#admin_teacher_addAppraise_dialog_form').submit();}},{text:'取消',iconCls:'icons-arrow-cross',handler:function(){$('#admin_teacher_addAppraise_dialog').dialog('close');}}]" style="width:700px;height:450px;"></div>
 <!--编辑头像-->
 <div id="admin_teacherlist_edit_photo_dialog" class="easyui-dialog" title="编辑老师头像" data-options="modal:true,closed:true,iconCls:'icons-application-application_edit',buttons:[{text:'关闭',iconCls:'icons-arrow-cross',handler:function(){$('#admin_teacherlist_edit_photo_dialog').dialog('close');}}]" style="width:750px;height:550px;"></div>
 
@@ -40,6 +42,7 @@ function adminMemberListTimeFormatter(val){
 function adminMemberListOperateFormatter(val){
 	var btn = [];
 	btn.push('<a href="javascript:;" onclick="adminMemberEdit('+val+')">编辑</a>');
+    btn.push('<a href="javascript:;" onclick="adminAppraiseEdit('+val+')">评价老师</a>');
     btn.push('<a href="javascript:;" onclick="adminHeadPhotoEdit('+val+')">修改头像</a>');
 	btn.push('<a href="javascript:;" onclick="adminMemberDelete('+val+')">删除</a>');
 
@@ -77,6 +80,18 @@ function adminHeadPhotoEdit(id){
     url += url.indexOf('?') != -1 ? '&id='+id : '?id='+id;
     $('#admin_teacherlist_edit_photo_dialog').dialog({href:url});
     $('#admin_teacherlist_edit_photo_dialog').dialog('open');
+}
+
+//老师评价
+function adminAppraiseEdit(id){
+    if(typeof(id) !== 'number'){
+        $.messager.alert('提示信息', '未选择老师', 'error');
+        return false;
+    }
+    var url = '<{:U('Teacher/appraise')}>';
+    url += url.indexOf('?') != -1 ? '&id='+id : '?id='+id;
+    $('#admin_teacher_addAppraise_dialog').dialog({href:url});
+    $('#admin_teacher_addAppraise_dialog').dialog('open');
 }
 
 //删除

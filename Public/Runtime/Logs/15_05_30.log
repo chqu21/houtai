@@ -12957,3 +12957,55 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
 INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
 
+[ 2015-05-30T20:53:48+08:00 ] 127.0.0.1 /index.php?s=/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `linshi_setting` [ RunTime:0.045003s ]
+SQL: SELECT `key`,`value` FROM `linshi_setting`  [ RunTime:0.001000s ]
+NOTIC: [2] unlink(D:\wamp\www\houtai\Public\Runtime\Temp/71df8fced343b2a8ba67c00a47a67b50.php): No such file or directory D:\wamp\www\houtai\Libs\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+INFO: Run \Common\Behavior\SettingBehavior [ RunTime:0.146008s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.148008s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-05-30T21:01:41+08:00 ] 127.0.0.1 /index.php?s=/admin/teacher/appraise.html&id=322&_=1432990901325
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `linshi_setting` [ RunTime:0.013001s ]
+SQL: SELECT `key`,`value` FROM `linshi_setting`  [ RunTime:0.000000s ]
+NOTIC: [2] unlink(D:\wamp\www\houtai\Public\Runtime\Temp/71df8fced343b2a8ba67c00a47a67b50.php): No such file or directory D:\wamp\www\houtai\Libs\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+INFO: Run \Common\Behavior\SettingBehavior [ RunTime:0.093005s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.094005s ]
+SQL: SHOW COLUMNS FROM `linshi_teachers` [ RunTime:0.005000s ]
+SQL: SELECT `teacher_name`,`certification_flag`,`education_flag`,`teacher_certification_flag`,`honor`,`discipline_id`,`discipline`,`grade`,`course_category`,`area`,`sort_num`,`price`,`past_experience`,`teaching_achievements`,`score`,`teaching_tag`,`member_id`,`recommand_flag`,`appraise_num`,`catchphrase`,`students_number`,`class_hours_number`,`praise_rate`,`continue_rate`,`sex`,`head_photo`,`teacher_type`,`distance`,`course_id`,`raw_add_time`,`teaching_age`,`teaching_age_range`,`price_range`,`class_method`,`display` FROM `linshi_teachers` WHERE ( `teacher_id` = 322 ) LIMIT 1   [ RunTime:0.014001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: info D:\wamp\www\houtai\Public\Runtime\Cache\Admin\6bf7f904bd2a7cc18ea550f463ca15e6.php 第 9 行.
+NOTIC: [8] Undefined variable: info D:\wamp\www\houtai\Public\Runtime\Cache\Admin\6bf7f904bd2a7cc18ea550f463ca15e6.php 第 23 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.045003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.045003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.023001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.023001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-05-30T21:02:47+08:00 ] 127.0.0.1 /index.php?s=/admin/teacher/addappraise.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.169010s ]
+SQL: SHOW COLUMNS FROM `linshi_setting` [ RunTime:0.411023s ]
+SQL: SELECT `key`,`value` FROM `linshi_setting`  [ RunTime:0.001000s ]
+NOTIC: [2] unlink(D:\wamp\www\houtai\Public\Runtime\Temp/71df8fced343b2a8ba67c00a47a67b50.php): No such file or directory D:\wamp\www\houtai\Libs\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+INFO: Run \Common\Behavior\SettingBehavior [ RunTime:5.077290s ]
+INFO: [ app_begin ] --END-- [ RunTime:5.475313s ]
+SQL: SHOW COLUMNS FROM `linshi_service_comments` [ RunTime:0.004000s ]
+SQL: INSERT INTO `linshi_service_comments` (`teacher_id`,`member_name`,`type_id`,`type`,`comments`,`score`,`appraise_code`,`raw_add_time`) VALUES (322,'23',1,'环境与设施','sdfsdf','34','201505302102321455932639','2015-05-30 21:02:33') [ RunTime:13.415767s ]
+SQL: INSERT INTO `linshi_service_comments` (`teacher_id`,`member_name`,`type_id`,`type`,`comments`,`score`,`appraise_code`,`raw_add_time`) VALUES (322,'23',2,'教学过程','sdffsd','44','201505302102475149810733','2015-05-30 21:02:47') [ RunTime:0.086005s ]
+SQL: INSERT INTO `linshi_service_comments` (`teacher_id`,`member_name`,`type_id`,`type`,`comments`,`score`,`appraise_code`,`raw_add_time`) VALUES (322,'23',3,'教学效果','fdsfsd','33','201505302102477141906733','2015-05-30 21:02:47') [ RunTime:0.119007s ]
+SQL: INSERT INTO `linshi_service_comments` (`teacher_id`,`member_name`,`type_id`,`type`,`comments`,`score`,`appraise_code`,`raw_add_time`) VALUES (322,'23',4,'服务质量','dsfsfd','44','201505302102476452239928','2015-05-30 21:02:47') [ RunTime:0.132007s ]
+SQL: INSERT INTO `linshi_service_comments` (`teacher_id`,`member_name`,`type_id`,`type`,`comments`,`score`,`appraise_code`,`raw_add_time`) VALUES (322,'23',5,'作业与答疑','fdssdfds','55','201505302102472012939438','2015-05-30 21:02:47') [ RunTime:0.110006s ]
+

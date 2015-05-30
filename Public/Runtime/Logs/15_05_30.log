@@ -4303,3 +4303,891 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
 INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
 
+[ 2015-05-30T11:48:29+08:00 ] 127.0.0.1 /index.php?m=admin&c=index&a=public_sessionlife
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `linshi_setting` [ RunTime:0.004001s ]
+SQL: SELECT `key`,`value` FROM `linshi_setting`  [ RunTime:0.001000s ]
+NOTIC: [2] unlink(D:\wamp\www\houtai\Public\Runtime\Temp/71df8fced343b2a8ba67c00a47a67b50.php): No such file or directory D:\wamp\www\houtai\Libs\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+INFO: Run \Common\Behavior\SettingBehavior [ RunTime:0.046003s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.049003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-05-30T11:58:29+08:00 ] 127.0.0.1 /index.php?m=admin&c=index&a=public_sessionlife
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `linshi_setting` [ RunTime:0.004001s ]
+SQL: SELECT `key`,`value` FROM `linshi_setting`  [ RunTime:0.000000s ]
+NOTIC: [2] unlink(D:\wamp\www\houtai\Public\Runtime\Temp/71df8fced343b2a8ba67c00a47a67b50.php): No such file or directory D:\wamp\www\houtai\Libs\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+INFO: Run \Common\Behavior\SettingBehavior [ RunTime:0.071004s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.072004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-05-30T12:08:29+08:00 ] 127.0.0.1 /index.php?m=admin&c=index&a=public_sessionlife
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `linshi_setting` [ RunTime:0.043002s ]
+SQL: SELECT `key`,`value` FROM `linshi_setting`  [ RunTime:0.001000s ]
+NOTIC: [2] unlink(D:\wamp\www\houtai\Public\Runtime\Temp/71df8fced343b2a8ba67c00a47a67b50.php): No such file or directory D:\wamp\www\houtai\Libs\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+INFO: Run \Common\Behavior\SettingBehavior [ RunTime:0.055003s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.056003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-05-30T12:18:29+08:00 ] 127.0.0.1 /index.php?m=admin&c=index&a=public_sessionlife
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `linshi_setting` [ RunTime:0.004000s ]
+SQL: SELECT `key`,`value` FROM `linshi_setting`  [ RunTime:0.000000s ]
+NOTIC: [2] unlink(D:\wamp\www\houtai\Public\Runtime\Temp/71df8fced343b2a8ba67c00a47a67b50.php): No such file or directory D:\wamp\www\houtai\Libs\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+INFO: Run \Common\Behavior\SettingBehavior [ RunTime:0.099006s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.102006s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-05-30T12:23:00+08:00 ] 127.0.0.1 /index.php?m=admin&c=index&a=public_main&_=1432959773524
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `linshi_setting` [ RunTime:0.018001s ]
+SQL: SELECT `key`,`value` FROM `linshi_setting`  [ RunTime:0.001000s ]
+NOTIC: [2] unlink(D:\wamp\www\houtai\Public\Runtime\Temp/71df8fced343b2a8ba67c00a47a67b50.php): No such file or directory D:\wamp\www\houtai\Libs\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+INFO: Run \Common\Behavior\SettingBehavior [ RunTime:0.062003s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.064003s ]
+SQL: SHOW COLUMNS FROM `linshi_admin` [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `linshi_admin_role` [ RunTime:0.004000s ]
+SQL: SELECT `userid`,`username`,`roleid`,`encrypt`,`lastloginip`,`lastlogintime`,`email`,`realname` FROM `linshi_admin` WHERE ( `userid` = 1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `rolename` FROM `linshi_admin_role` WHERE ( `roleid` = 1 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [2048] Non-static method Admin\Common\Sysinfo::getinfo() should not be called statically, assuming $this from incompatible context D:\wamp\www\houtai\App\Admin\Controller\IndexController.class.php 第 112 行.
+NOTIC: [2048] Non-static method Admin\Common\Sysinfo::sys_windows() should not be called statically, assuming $this from incompatible context D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 19 行.
+NOTIC: [2048] Non-static method Admin\Common\Sysinfo::GetWMI() should not be called statically, assuming $this from incompatible context D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 250 行.
+NOTIC: [2] reset() expects parameter 1 to be array, object given D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 300 行.
+NOTIC: [2048] Non-static method Admin\Common\Sysinfo::GetWMI() should not be called statically, assuming $this from incompatible context D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 262 行.
+NOTIC: [2] reset() expects parameter 1 to be array, object given D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 300 行.
+NOTIC: [2048] Non-static method Admin\Common\Sysinfo::GetWMI() should not be called statically, assuming $this from incompatible context D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 285 行.
+NOTIC: [2] reset() expects parameter 1 to be array, object given D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 300 行.
+NOTIC: [2048] Non-static method Admin\Common\Sysinfo::GetWMI() should not be called statically, assuming $this from incompatible context D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 288 行.
+NOTIC: [2] reset() expects parameter 1 to be array, object given D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 300 行.
+NOTIC: [8] Undefined index: memCached D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 25 行.
+NOTIC: [8] Undefined index: memRealPercent D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 25 行.
+NOTIC: [8] Undefined index: memCachedPercent D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 25 行.
+NOTIC: [8] Undefined index: swapTotal D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 25 行.
+NOTIC: [8] Undefined index: swapUsed D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 25 行.
+NOTIC: [8] Undefined index: swapFree D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 25 行.
+NOTIC: [8] Undefined index: swapPercent D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 25 行.
+NOTIC: [2] file(/proc/net/dev): failed to open stream: No such file or directory D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 33 行.
+NOTIC: [8] Undefined index: memBuffers D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 68 行.
+NOTIC: [8] Undefined index: memRealUsed D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 73 行.
+NOTIC: [8] Undefined index: memRealFree D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 74 行.
+NOTIC: [8] Undefined offset: 2 D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 82 行.
+NOTIC: [8] Undefined offset: 3 D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 83 行.
+NOTIC: [8] Undefined offset: 4 D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 84 行.
+NOTIC: [8] Undefined offset: 5 D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 85 行.
+NOTIC: [8] Undefined offset: 6 D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 86 行.
+NOTIC: [8] Undefined offset: 7 D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 87 行.
+NOTIC: [8] Undefined offset: 8 D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 88 行.
+NOTIC: [8] Undefined offset: 9 D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 89 行.
+NOTIC: [8] Undefined offset: 10 D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 90 行.
+NOTIC: [8] Undefined variable: NetInput D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 91 行.
+NOTIC: [8] Undefined variable: NetInput D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 92 行.
+NOTIC: [8] Undefined variable: NetInput D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 93 行.
+NOTIC: [8] Undefined variable: NetInput D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 94 行.
+NOTIC: [8] Undefined variable: NetInput D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 95 行.
+NOTIC: [8] Undefined variable: NetInput D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 96 行.
+NOTIC: [8] Undefined variable: NetInput D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 97 行.
+NOTIC: [8] Undefined variable: NetInput D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 98 行.
+NOTIC: [8] Undefined variable: NetInput D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 99 行.
+NOTIC: [2] file(/proc/net/dev): failed to open stream: No such file or directory D:\wamp\www\houtai\App\Admin\Controller\IndexController.class.php 第 116 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.632036s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.632036s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-05-30T12:23:00+08:00 ] 127.0.0.1 /index.php?m=admin&c=index&a=public_menuleft
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `linshi_setting` [ RunTime:0.004000s ]
+SQL: SELECT `key`,`value` FROM `linshi_setting`  [ RunTime:0.000000s ]
+NOTIC: [2] unlink(D:\wamp\www\houtai\Public\Runtime\Temp/71df8fced343b2a8ba67c00a47a67b50.php): No such file or directory D:\wamp\www\houtai\Libs\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+INFO: Run \Common\Behavior\SettingBehavior [ RunTime:0.195011s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.196011s ]
+SQL: SHOW COLUMNS FROM `linshi_menu` [ RunTime:0.004000s ]
+SQL: SELECT * FROM `linshi_menu` WHERE ( `parentid` = 1 ) AND ( `display` = 1 ) ORDER BY listorder ASC LIMIT 1000   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `linshi_menu` WHERE ( `parentid` = 6 ) AND ( `display` = 1 ) ORDER BY listorder ASC LIMIT 1000   [ RunTime:0.001000s ]
+
+[ 2015-05-30T12:28:29+08:00 ] 127.0.0.1 /index.php?m=admin&c=index&a=public_sessionlife
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `linshi_setting` [ RunTime:0.005001s ]
+SQL: SELECT `key`,`value` FROM `linshi_setting`  [ RunTime:0.000000s ]
+NOTIC: [2] unlink(D:\wamp\www\houtai\Public\Runtime\Temp/71df8fced343b2a8ba67c00a47a67b50.php): No such file or directory D:\wamp\www\houtai\Libs\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+INFO: Run \Common\Behavior\SettingBehavior [ RunTime:0.031002s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.033002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-05-30T12:29:09+08:00 ] 127.0.0.1 /index.php?m=admin&c=index&a=public_main&_=1432960146366
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `linshi_setting` [ RunTime:0.005000s ]
+SQL: SELECT `key`,`value` FROM `linshi_setting`  [ RunTime:0.001000s ]
+NOTIC: [2] unlink(D:\wamp\www\houtai\Public\Runtime\Temp/71df8fced343b2a8ba67c00a47a67b50.php): No such file or directory D:\wamp\www\houtai\Libs\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+INFO: Run \Common\Behavior\SettingBehavior [ RunTime:0.124007s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.125007s ]
+SQL: SHOW COLUMNS FROM `linshi_admin` [ RunTime:0.087005s ]
+SQL: SHOW COLUMNS FROM `linshi_admin_role` [ RunTime:0.011000s ]
+SQL: SELECT `userid`,`username`,`roleid`,`encrypt`,`lastloginip`,`lastlogintime`,`email`,`realname` FROM `linshi_admin` WHERE ( `userid` = 1 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT `rolename` FROM `linshi_admin_role` WHERE ( `roleid` = 1 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [2048] Non-static method Admin\Common\Sysinfo::getinfo() should not be called statically, assuming $this from incompatible context D:\wamp\www\houtai\App\Admin\Controller\IndexController.class.php 第 112 行.
+NOTIC: [2048] Non-static method Admin\Common\Sysinfo::sys_windows() should not be called statically, assuming $this from incompatible context D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 19 行.
+NOTIC: [2048] Non-static method Admin\Common\Sysinfo::GetWMI() should not be called statically, assuming $this from incompatible context D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 250 行.
+NOTIC: [2] reset() expects parameter 1 to be array, object given D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 300 行.
+NOTIC: [2048] Non-static method Admin\Common\Sysinfo::GetWMI() should not be called statically, assuming $this from incompatible context D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 262 行.
+NOTIC: [2] reset() expects parameter 1 to be array, object given D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 300 行.
+NOTIC: [2048] Non-static method Admin\Common\Sysinfo::GetWMI() should not be called statically, assuming $this from incompatible context D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 285 行.
+NOTIC: [2] reset() expects parameter 1 to be array, object given D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 300 行.
+NOTIC: [2048] Non-static method Admin\Common\Sysinfo::GetWMI() should not be called statically, assuming $this from incompatible context D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 288 行.
+NOTIC: [2] reset() expects parameter 1 to be array, object given D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 300 行.
+NOTIC: [8] Undefined index: memCached D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 25 行.
+NOTIC: [8] Undefined index: memRealPercent D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 25 行.
+NOTIC: [8] Undefined index: memCachedPercent D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 25 行.
+NOTIC: [8] Undefined index: swapTotal D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 25 行.
+NOTIC: [8] Undefined index: swapUsed D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 25 行.
+NOTIC: [8] Undefined index: swapFree D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 25 行.
+NOTIC: [8] Undefined index: swapPercent D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 25 行.
+NOTIC: [2] file(/proc/net/dev): failed to open stream: No such file or directory D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 33 行.
+NOTIC: [8] Undefined index: memBuffers D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 68 行.
+NOTIC: [8] Undefined index: memRealUsed D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 73 行.
+NOTIC: [8] Undefined index: memRealFree D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 74 行.
+NOTIC: [8] Undefined offset: 2 D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 82 行.
+NOTIC: [8] Undefined offset: 3 D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 83 行.
+NOTIC: [8] Undefined offset: 4 D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 84 行.
+NOTIC: [8] Undefined offset: 5 D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 85 行.
+NOTIC: [8] Undefined offset: 6 D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 86 行.
+NOTIC: [8] Undefined offset: 7 D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 87 行.
+NOTIC: [8] Undefined offset: 8 D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 88 行.
+NOTIC: [8] Undefined offset: 9 D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 89 行.
+NOTIC: [8] Undefined offset: 10 D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 90 行.
+NOTIC: [8] Undefined variable: NetInput D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 91 行.
+NOTIC: [8] Undefined variable: NetInput D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 92 行.
+NOTIC: [8] Undefined variable: NetInput D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 93 行.
+NOTIC: [8] Undefined variable: NetInput D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 94 行.
+NOTIC: [8] Undefined variable: NetInput D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 95 行.
+NOTIC: [8] Undefined variable: NetInput D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 96 行.
+NOTIC: [8] Undefined variable: NetInput D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 97 行.
+NOTIC: [8] Undefined variable: NetInput D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 98 行.
+NOTIC: [8] Undefined variable: NetInput D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 99 行.
+NOTIC: [2] file(/proc/net/dev): failed to open stream: No such file or directory D:\wamp\www\houtai\App\Admin\Controller\IndexController.class.php 第 116 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.079005s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.079005s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-05-30T12:29:09+08:00 ] 127.0.0.1 /index.php?m=admin&c=index&a=public_menuleft
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `linshi_setting` [ RunTime:0.007001s ]
+SQL: SELECT `key`,`value` FROM `linshi_setting`  [ RunTime:0.000000s ]
+NOTIC: [2] unlink(D:\wamp\www\houtai\Public\Runtime\Temp/71df8fced343b2a8ba67c00a47a67b50.php): No such file or directory D:\wamp\www\houtai\Libs\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+INFO: Run \Common\Behavior\SettingBehavior [ RunTime:0.029002s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.031002s ]
+SQL: SHOW COLUMNS FROM `linshi_menu` [ RunTime:0.005000s ]
+SQL: SELECT * FROM `linshi_menu` WHERE ( `parentid` = 1 ) AND ( `display` = 1 ) ORDER BY listorder ASC LIMIT 1000   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `linshi_menu` WHERE ( `parentid` = 6 ) AND ( `display` = 1 ) ORDER BY listorder ASC LIMIT 1000   [ RunTime:0.001000s ]
+
+[ 2015-05-30T12:29:12+08:00 ] 127.0.0.1 /index.php?m=admin&c=index&a=public_menuleft
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+SQL: SHOW COLUMNS FROM `linshi_setting` [ RunTime:0.006000s ]
+SQL: SELECT `key`,`value` FROM `linshi_setting`  [ RunTime:0.000000s ]
+NOTIC: [2] unlink(D:\wamp\www\houtai\Public\Runtime\Temp/71df8fced343b2a8ba67c00a47a67b50.php): No such file or directory D:\wamp\www\houtai\Libs\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+INFO: Run \Common\Behavior\SettingBehavior [ RunTime:0.049002s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.052003s ]
+SQL: SHOW COLUMNS FROM `linshi_menu` [ RunTime:0.007000s ]
+SQL: SELECT * FROM `linshi_menu` WHERE ( `parentid` = 1 ) AND ( `display` = 1 ) ORDER BY listorder ASC LIMIT 1000   [ RunTime:0.001000s ]
+SQL: SELECT * FROM `linshi_menu` WHERE ( `parentid` = 6 ) AND ( `display` = 1 ) ORDER BY listorder ASC LIMIT 1000   [ RunTime:0.001000s ]
+
+[ 2015-05-30T12:29:14+08:00 ] 127.0.0.1 /index.php?m=admin&c=index&a=public_main&_=1432960151889
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `linshi_setting` [ RunTime:0.005000s ]
+SQL: SELECT `key`,`value` FROM `linshi_setting`  [ RunTime:0.000000s ]
+NOTIC: [2] unlink(D:\wamp\www\houtai\Public\Runtime\Temp/71df8fced343b2a8ba67c00a47a67b50.php): No such file or directory D:\wamp\www\houtai\Libs\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+INFO: Run \Common\Behavior\SettingBehavior [ RunTime:0.036003s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.041003s ]
+SQL: SHOW COLUMNS FROM `linshi_admin` [ RunTime:0.007000s ]
+SQL: SHOW COLUMNS FROM `linshi_admin_role` [ RunTime:0.027002s ]
+SQL: SELECT `userid`,`username`,`roleid`,`encrypt`,`lastloginip`,`lastlogintime`,`email`,`realname` FROM `linshi_admin` WHERE ( `userid` = 1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `rolename` FROM `linshi_admin_role` WHERE ( `roleid` = 1 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [2048] Non-static method Admin\Common\Sysinfo::getinfo() should not be called statically, assuming $this from incompatible context D:\wamp\www\houtai\App\Admin\Controller\IndexController.class.php 第 112 行.
+NOTIC: [2048] Non-static method Admin\Common\Sysinfo::sys_windows() should not be called statically, assuming $this from incompatible context D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 19 行.
+NOTIC: [2048] Non-static method Admin\Common\Sysinfo::GetWMI() should not be called statically, assuming $this from incompatible context D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 250 行.
+NOTIC: [2] reset() expects parameter 1 to be array, object given D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 300 行.
+NOTIC: [2048] Non-static method Admin\Common\Sysinfo::GetWMI() should not be called statically, assuming $this from incompatible context D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 262 行.
+NOTIC: [2] reset() expects parameter 1 to be array, object given D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 300 行.
+NOTIC: [2048] Non-static method Admin\Common\Sysinfo::GetWMI() should not be called statically, assuming $this from incompatible context D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 285 行.
+NOTIC: [2] reset() expects parameter 1 to be array, object given D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 300 行.
+NOTIC: [2048] Non-static method Admin\Common\Sysinfo::GetWMI() should not be called statically, assuming $this from incompatible context D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 288 行.
+NOTIC: [2] reset() expects parameter 1 to be array, object given D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 300 行.
+NOTIC: [8] Undefined index: memCached D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 25 行.
+NOTIC: [8] Undefined index: memRealPercent D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 25 行.
+NOTIC: [8] Undefined index: memCachedPercent D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 25 行.
+NOTIC: [8] Undefined index: swapTotal D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 25 行.
+NOTIC: [8] Undefined index: swapUsed D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 25 行.
+NOTIC: [8] Undefined index: swapFree D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 25 行.
+NOTIC: [8] Undefined index: swapPercent D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 25 行.
+NOTIC: [2] file(/proc/net/dev): failed to open stream: No such file or directory D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 33 行.
+NOTIC: [8] Undefined index: memBuffers D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 68 行.
+NOTIC: [8] Undefined index: memRealUsed D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 73 行.
+NOTIC: [8] Undefined index: memRealFree D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 74 行.
+NOTIC: [8] Undefined offset: 2 D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 82 行.
+NOTIC: [8] Undefined offset: 3 D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 83 行.
+NOTIC: [8] Undefined offset: 4 D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 84 行.
+NOTIC: [8] Undefined offset: 5 D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 85 行.
+NOTIC: [8] Undefined offset: 6 D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 86 行.
+NOTIC: [8] Undefined offset: 7 D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 87 行.
+NOTIC: [8] Undefined offset: 8 D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 88 行.
+NOTIC: [8] Undefined offset: 9 D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 89 行.
+NOTIC: [8] Undefined offset: 10 D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 90 行.
+NOTIC: [8] Undefined variable: NetInput D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 91 行.
+NOTIC: [8] Undefined variable: NetInput D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 92 行.
+NOTIC: [8] Undefined variable: NetInput D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 93 行.
+NOTIC: [8] Undefined variable: NetInput D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 94 行.
+NOTIC: [8] Undefined variable: NetInput D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 95 行.
+NOTIC: [8] Undefined variable: NetInput D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 96 行.
+NOTIC: [8] Undefined variable: NetInput D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 97 行.
+NOTIC: [8] Undefined variable: NetInput D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 98 行.
+NOTIC: [8] Undefined variable: NetInput D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 99 行.
+NOTIC: [2] file(/proc/net/dev): failed to open stream: No such file or directory D:\wamp\www\houtai\App\Admin\Controller\IndexController.class.php 第 116 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.051003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.051003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-05-30T12:29:24+08:00 ] 127.0.0.1 /index.php?m=admin&c=index&a=public_main&_=1432960162124
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `linshi_setting` [ RunTime:0.007000s ]
+SQL: SELECT `key`,`value` FROM `linshi_setting`  [ RunTime:0.000000s ]
+NOTIC: [2] unlink(D:\wamp\www\houtai\Public\Runtime\Temp/71df8fced343b2a8ba67c00a47a67b50.php): No such file or directory D:\wamp\www\houtai\Libs\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+INFO: Run \Common\Behavior\SettingBehavior [ RunTime:0.038002s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.040002s ]
+SQL: SHOW COLUMNS FROM `linshi_admin` [ RunTime:0.006001s ]
+SQL: SHOW COLUMNS FROM `linshi_admin_role` [ RunTime:0.036002s ]
+SQL: SELECT `userid`,`username`,`roleid`,`encrypt`,`lastloginip`,`lastlogintime`,`email`,`realname` FROM `linshi_admin` WHERE ( `userid` = 1 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT `rolename` FROM `linshi_admin_role` WHERE ( `roleid` = 1 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [2048] Non-static method Admin\Common\Sysinfo::getinfo() should not be called statically, assuming $this from incompatible context D:\wamp\www\houtai\App\Admin\Controller\IndexController.class.php 第 112 行.
+NOTIC: [2048] Non-static method Admin\Common\Sysinfo::sys_windows() should not be called statically, assuming $this from incompatible context D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 19 行.
+NOTIC: [2048] Non-static method Admin\Common\Sysinfo::GetWMI() should not be called statically, assuming $this from incompatible context D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 250 行.
+NOTIC: [2] reset() expects parameter 1 to be array, object given D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 300 行.
+NOTIC: [2048] Non-static method Admin\Common\Sysinfo::GetWMI() should not be called statically, assuming $this from incompatible context D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 262 行.
+NOTIC: [2] reset() expects parameter 1 to be array, object given D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 300 行.
+NOTIC: [2048] Non-static method Admin\Common\Sysinfo::GetWMI() should not be called statically, assuming $this from incompatible context D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 285 行.
+NOTIC: [2] reset() expects parameter 1 to be array, object given D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 300 行.
+NOTIC: [2048] Non-static method Admin\Common\Sysinfo::GetWMI() should not be called statically, assuming $this from incompatible context D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 288 行.
+NOTIC: [2] reset() expects parameter 1 to be array, object given D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 300 行.
+NOTIC: [8] Undefined index: memCached D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 25 行.
+NOTIC: [8] Undefined index: memRealPercent D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 25 行.
+NOTIC: [8] Undefined index: memCachedPercent D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 25 行.
+NOTIC: [8] Undefined index: swapTotal D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 25 行.
+NOTIC: [8] Undefined index: swapUsed D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 25 行.
+NOTIC: [8] Undefined index: swapFree D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 25 行.
+NOTIC: [8] Undefined index: swapPercent D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 25 行.
+NOTIC: [2] file(/proc/net/dev): failed to open stream: No such file or directory D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 33 行.
+NOTIC: [8] Undefined index: memBuffers D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 68 行.
+NOTIC: [8] Undefined index: memRealUsed D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 73 行.
+NOTIC: [8] Undefined index: memRealFree D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 74 行.
+NOTIC: [8] Undefined offset: 2 D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 82 行.
+NOTIC: [8] Undefined offset: 3 D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 83 行.
+NOTIC: [8] Undefined offset: 4 D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 84 行.
+NOTIC: [8] Undefined offset: 5 D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 85 行.
+NOTIC: [8] Undefined offset: 6 D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 86 行.
+NOTIC: [8] Undefined offset: 7 D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 87 行.
+NOTIC: [8] Undefined offset: 8 D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 88 行.
+NOTIC: [8] Undefined offset: 9 D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 89 行.
+NOTIC: [8] Undefined offset: 10 D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 90 行.
+NOTIC: [8] Undefined variable: NetInput D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 91 行.
+NOTIC: [8] Undefined variable: NetInput D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 92 行.
+NOTIC: [8] Undefined variable: NetInput D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 93 行.
+NOTIC: [8] Undefined variable: NetInput D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 94 行.
+NOTIC: [8] Undefined variable: NetInput D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 95 行.
+NOTIC: [8] Undefined variable: NetInput D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 96 行.
+NOTIC: [8] Undefined variable: NetInput D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 97 行.
+NOTIC: [8] Undefined variable: NetInput D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 98 行.
+NOTIC: [8] Undefined variable: NetInput D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 99 行.
+NOTIC: [2] file(/proc/net/dev): failed to open stream: No such file or directory D:\wamp\www\houtai\App\Admin\Controller\IndexController.class.php 第 116 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-05-30T12:29:24+08:00 ] 127.0.0.1 /index.php?m=admin&c=index&a=public_menuleft
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `linshi_setting` [ RunTime:0.035002s ]
+SQL: SELECT `key`,`value` FROM `linshi_setting`  [ RunTime:0.002000s ]
+NOTIC: [2] unlink(D:\wamp\www\houtai\Public\Runtime\Temp/71df8fced343b2a8ba67c00a47a67b50.php): No such file or directory D:\wamp\www\houtai\Libs\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+INFO: Run \Common\Behavior\SettingBehavior [ RunTime:0.060003s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.064004s ]
+SQL: SHOW COLUMNS FROM `linshi_menu` [ RunTime:0.004000s ]
+SQL: SELECT * FROM `linshi_menu` WHERE ( `parentid` = 1 ) AND ( `display` = 1 ) ORDER BY listorder ASC LIMIT 1000   [ RunTime:0.014001s ]
+SQL: SELECT * FROM `linshi_menu` WHERE ( `parentid` = 6 ) AND ( `display` = 1 ) ORDER BY listorder ASC LIMIT 1000   [ RunTime:0.001000s ]
+
+[ 2015-05-30T12:34:41+08:00 ] 127.0.0.1 /index.php?m=admin&c=member&a=typelist&menuid=44&_=1432960481270
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `linshi_setting` [ RunTime:0.003000s ]
+SQL: SELECT `key`,`value` FROM `linshi_setting`  [ RunTime:0.000000s ]
+NOTIC: [2] unlink(D:\wamp\www\houtai\Public\Runtime\Temp/71df8fced343b2a8ba67c00a47a67b50.php): No such file or directory D:\wamp\www\houtai\Libs\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+INFO: Run \Common\Behavior\SettingBehavior [ RunTime:0.026002s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.028002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.043003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.043003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-05-30T12:34:43+08:00 ] 127.0.0.1 /index.php?m=admin&c=teacher&a=teacherlist&menuid=45&_=1432960483085
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `linshi_setting` [ RunTime:0.004001s ]
+SQL: SELECT `key`,`value` FROM `linshi_setting`  [ RunTime:0.000000s ]
+NOTIC: [2] unlink(D:\wamp\www\houtai\Public\Runtime\Temp/71df8fced343b2a8ba67c00a47a67b50.php): No such file or directory D:\wamp\www\houtai\Libs\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+INFO: Run \Common\Behavior\SettingBehavior [ RunTime:0.014001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015001s ]
+SQL: SHOW COLUMNS FROM `linshi_menu` [ RunTime:0.004000s ]
+SQL: SELECT * FROM `linshi_menu` WHERE ( `id` = 45 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `linshi_menu` WHERE ( `id` = 42 ) LIMIT 1   [ RunTime:0.016001s ]
+SQL: SELECT * FROM `linshi_menu` WHERE ( `id` = 4 ) LIMIT 1   [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `linshi_admin_role` [ RunTime:0.003000s ]
+SQL: SELECT `roleid`,`rolename` FROM `linshi_admin_role` WHERE ( `disabled` = 0 )  [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.101006s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.101006s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-05-30T12:34:44+08:00 ] 127.0.0.1 /index.php?s=/admin/teacher/teacherlist/grid/datagrid.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `linshi_setting` [ RunTime:0.004001s ]
+SQL: SELECT `key`,`value` FROM `linshi_setting`  [ RunTime:0.001000s ]
+NOTIC: [2] unlink(D:\wamp\www\houtai\Public\Runtime\Temp/71df8fced343b2a8ba67c00a47a67b50.php): No such file or directory D:\wamp\www\houtai\Libs\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+INFO: Run \Common\Behavior\SettingBehavior [ RunTime:0.025002s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.026002s ]
+SQL: SHOW COLUMNS FROM `linshi_teachers` [ RunTime:0.004000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `linshi_teachers` LIMIT 1   [ RunTime:0.510029s ]
+SQL: SELECT * FROM `linshi_teachers` ORDER BY teacher_id asc LIMIT 0,20   [ RunTime:0.028002s ]
+
+[ 2015-05-30T12:34:50+08:00 ] 127.0.0.1 /index.php?s=/admin/teacher/teachereditheadphoto.html&id=315&_=1432960490227
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `linshi_setting` [ RunTime:0.004001s ]
+SQL: SELECT `key`,`value` FROM `linshi_setting`  [ RunTime:0.000000s ]
+NOTIC: [2] unlink(D:\wamp\www\houtai\Public\Runtime\Temp/71df8fced343b2a8ba67c00a47a67b50.php): No such file or directory D:\wamp\www\houtai\Libs\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+INFO: Run \Common\Behavior\SettingBehavior [ RunTime:0.028002s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.029002s ]
+SQL: SHOW COLUMNS FROM `linshi_teachers` [ RunTime:0.004000s ]
+SQL: SELECT `head_photo` FROM `linshi_teachers` WHERE ( `teacher_id` = 315 ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.047003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.047003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-05-30T12:35:41+08:00 ] 127.0.0.1 /index.php?s=/admin/index/public_main.html&_=1432960537125
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `linshi_setting` [ RunTime:0.004001s ]
+SQL: SELECT `key`,`value` FROM `linshi_setting`  [ RunTime:0.000000s ]
+NOTIC: [2] unlink(D:\wamp\www\houtai\Public\Runtime\Temp/71df8fced343b2a8ba67c00a47a67b50.php): No such file or directory D:\wamp\www\houtai\Libs\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+INFO: Run \Common\Behavior\SettingBehavior [ RunTime:0.025002s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.026002s ]
+SQL: SHOW COLUMNS FROM `linshi_admin` [ RunTime:0.006000s ]
+SQL: SHOW COLUMNS FROM `linshi_admin_role` [ RunTime:0.005001s ]
+SQL: SELECT `userid`,`username`,`roleid`,`encrypt`,`lastloginip`,`lastlogintime`,`email`,`realname` FROM `linshi_admin` WHERE ( `userid` = 1 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT `rolename` FROM `linshi_admin_role` WHERE ( `roleid` = 1 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [2048] Non-static method Admin\Common\Sysinfo::getinfo() should not be called statically, assuming $this from incompatible context D:\wamp\www\houtai\App\Admin\Controller\IndexController.class.php 第 112 行.
+NOTIC: [2048] Non-static method Admin\Common\Sysinfo::sys_windows() should not be called statically, assuming $this from incompatible context D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 19 行.
+NOTIC: [2048] Non-static method Admin\Common\Sysinfo::GetWMI() should not be called statically, assuming $this from incompatible context D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 250 行.
+NOTIC: [2] reset() expects parameter 1 to be array, object given D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 300 行.
+NOTIC: [2048] Non-static method Admin\Common\Sysinfo::GetWMI() should not be called statically, assuming $this from incompatible context D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 262 行.
+NOTIC: [2] reset() expects parameter 1 to be array, object given D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 300 行.
+NOTIC: [2048] Non-static method Admin\Common\Sysinfo::GetWMI() should not be called statically, assuming $this from incompatible context D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 285 行.
+NOTIC: [2] reset() expects parameter 1 to be array, object given D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 300 行.
+NOTIC: [2048] Non-static method Admin\Common\Sysinfo::GetWMI() should not be called statically, assuming $this from incompatible context D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 288 行.
+NOTIC: [2] reset() expects parameter 1 to be array, object given D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 300 行.
+NOTIC: [8] Undefined index: memCached D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 25 行.
+NOTIC: [8] Undefined index: memRealPercent D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 25 行.
+NOTIC: [8] Undefined index: memCachedPercent D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 25 行.
+NOTIC: [8] Undefined index: swapTotal D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 25 行.
+NOTIC: [8] Undefined index: swapUsed D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 25 行.
+NOTIC: [8] Undefined index: swapFree D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 25 行.
+NOTIC: [8] Undefined index: swapPercent D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 25 行.
+NOTIC: [2] file(/proc/net/dev): failed to open stream: No such file or directory D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 33 行.
+NOTIC: [8] Undefined index: memBuffers D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 68 行.
+NOTIC: [8] Undefined index: memRealUsed D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 73 行.
+NOTIC: [8] Undefined index: memRealFree D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 74 行.
+NOTIC: [8] Undefined offset: 2 D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 82 行.
+NOTIC: [8] Undefined offset: 3 D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 83 行.
+NOTIC: [8] Undefined offset: 4 D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 84 行.
+NOTIC: [8] Undefined offset: 5 D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 85 行.
+NOTIC: [8] Undefined offset: 6 D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 86 行.
+NOTIC: [8] Undefined offset: 7 D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 87 行.
+NOTIC: [8] Undefined offset: 8 D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 88 行.
+NOTIC: [8] Undefined offset: 9 D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 89 行.
+NOTIC: [8] Undefined offset: 10 D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 90 行.
+NOTIC: [8] Undefined variable: NetInput D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 91 行.
+NOTIC: [8] Undefined variable: NetInput D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 92 行.
+NOTIC: [8] Undefined variable: NetInput D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 93 行.
+NOTIC: [8] Undefined variable: NetInput D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 94 行.
+NOTIC: [8] Undefined variable: NetInput D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 95 行.
+NOTIC: [8] Undefined variable: NetInput D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 96 行.
+NOTIC: [8] Undefined variable: NetInput D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 97 行.
+NOTIC: [8] Undefined variable: NetInput D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 98 行.
+NOTIC: [8] Undefined variable: NetInput D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 99 行.
+NOTIC: [2] file(/proc/net/dev): failed to open stream: No such file or directory D:\wamp\www\houtai\App\Admin\Controller\IndexController.class.php 第 116 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-05-30T12:35:41+08:00 ] 127.0.0.1 /index.php?s=/admin/index/public_menuleft.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `linshi_setting` [ RunTime:0.004000s ]
+SQL: SELECT `key`,`value` FROM `linshi_setting`  [ RunTime:0.000000s ]
+NOTIC: [2] unlink(D:\wamp\www\houtai\Public\Runtime\Temp/71df8fced343b2a8ba67c00a47a67b50.php): No such file or directory D:\wamp\www\houtai\Libs\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+INFO: Run \Common\Behavior\SettingBehavior [ RunTime:0.069004s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.071004s ]
+SQL: SHOW COLUMNS FROM `linshi_menu` [ RunTime:0.017001s ]
+SQL: SELECT * FROM `linshi_menu` WHERE ( `parentid` = 1 ) AND ( `display` = 1 ) ORDER BY listorder ASC LIMIT 1000   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `linshi_menu` WHERE ( `parentid` = 6 ) AND ( `display` = 1 ) ORDER BY listorder ASC LIMIT 1000   [ RunTime:0.001000s ]
+
+[ 2015-05-30T12:35:41+08:00 ] 127.0.0.1 /index.php?s=/admin/index/public_menuleft.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `linshi_setting` [ RunTime:0.004001s ]
+SQL: SELECT `key`,`value` FROM `linshi_setting`  [ RunTime:0.001000s ]
+NOTIC: [2] unlink(D:\wamp\www\houtai\Public\Runtime\Temp/71df8fced343b2a8ba67c00a47a67b50.php): No such file or directory D:\wamp\www\houtai\Libs\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+INFO: Run \Common\Behavior\SettingBehavior [ RunTime:0.043003s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.044003s ]
+SQL: SHOW COLUMNS FROM `linshi_menu` [ RunTime:0.006000s ]
+SQL: SELECT * FROM `linshi_menu` WHERE ( `parentid` = 49 ) AND ( `display` = 1 ) ORDER BY listorder ASC LIMIT 1000   [ RunTime:0.001000s ]
+SQL: SELECT * FROM `linshi_menu` WHERE ( `parentid` = 50 ) AND ( `display` = 1 ) ORDER BY listorder ASC LIMIT 1000   [ RunTime:0.002000s ]
+SQL: SELECT * FROM `linshi_menu` WHERE ( `parentid` = 51 ) AND ( `display` = 1 ) ORDER BY listorder ASC LIMIT 1000   [ RunTime:0.000000s ]
+
+[ 2015-05-30T12:35:43+08:00 ] 127.0.0.1 /index.php?s=/admin/index/public_menuleft.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `linshi_setting` [ RunTime:0.004001s ]
+SQL: SELECT `key`,`value` FROM `linshi_setting`  [ RunTime:0.000000s ]
+NOTIC: [2] unlink(D:\wamp\www\houtai\Public\Runtime\Temp/71df8fced343b2a8ba67c00a47a67b50.php): No such file or directory D:\wamp\www\houtai\Libs\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+INFO: Run \Common\Behavior\SettingBehavior [ RunTime:0.046003s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.047003s ]
+SQL: SHOW COLUMNS FROM `linshi_menu` [ RunTime:0.004000s ]
+SQL: SELECT * FROM `linshi_menu` WHERE ( `parentid` = 4 ) AND ( `display` = 1 ) ORDER BY listorder ASC LIMIT 1000   [ RunTime:0.001000s ]
+SQL: SELECT * FROM `linshi_menu` WHERE ( `parentid` = 42 ) AND ( `display` = 1 ) ORDER BY listorder ASC LIMIT 1000   [ RunTime:0.000000s ]
+
+[ 2015-05-30T12:35:45+08:00 ] 127.0.0.1 /index.php?s=/admin/teacher/teacherlist/menuid/45.html&_=1432960545600
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `linshi_setting` [ RunTime:0.004000s ]
+SQL: SELECT `key`,`value` FROM `linshi_setting`  [ RunTime:0.000000s ]
+NOTIC: [2] unlink(D:\wamp\www\houtai\Public\Runtime\Temp/71df8fced343b2a8ba67c00a47a67b50.php): No such file or directory D:\wamp\www\houtai\Libs\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+INFO: Run \Common\Behavior\SettingBehavior [ RunTime:0.028002s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.029002s ]
+SQL: SHOW COLUMNS FROM `linshi_menu` [ RunTime:0.004000s ]
+SQL: SELECT * FROM `linshi_menu` WHERE ( `id` = 45 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `linshi_menu` WHERE ( `id` = 42 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT * FROM `linshi_menu` WHERE ( `id` = 4 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `linshi_admin_role` [ RunTime:0.003000s ]
+SQL: SELECT `roleid`,`rolename` FROM `linshi_admin_role` WHERE ( `disabled` = 0 )  [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.056003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.056003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-05-30T12:35:46+08:00 ] 127.0.0.1 /index.php?s=/admin/teacher/teacherlist/grid/datagrid.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `linshi_setting` [ RunTime:0.004000s ]
+SQL: SELECT `key`,`value` FROM `linshi_setting`  [ RunTime:0.001000s ]
+NOTIC: [2] unlink(D:\wamp\www\houtai\Public\Runtime\Temp/71df8fced343b2a8ba67c00a47a67b50.php): No such file or directory D:\wamp\www\houtai\Libs\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+INFO: Run \Common\Behavior\SettingBehavior [ RunTime:0.051003s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.053003s ]
+SQL: SHOW COLUMNS FROM `linshi_teachers` [ RunTime:0.005001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `linshi_teachers` LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT * FROM `linshi_teachers` ORDER BY teacher_id asc LIMIT 0,20   [ RunTime:0.001000s ]
+
+[ 2015-05-30T12:35:49+08:00 ] 127.0.0.1 /index.php?s=/admin/teacher/teachereditheadphoto.html&id=322&_=1432960549844
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `linshi_setting` [ RunTime:0.006000s ]
+SQL: SELECT `key`,`value` FROM `linshi_setting`  [ RunTime:0.000000s ]
+NOTIC: [2] unlink(D:\wamp\www\houtai\Public\Runtime\Temp/71df8fced343b2a8ba67c00a47a67b50.php): No such file or directory D:\wamp\www\houtai\Libs\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+INFO: Run \Common\Behavior\SettingBehavior [ RunTime:0.030002s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.032002s ]
+SQL: SHOW COLUMNS FROM `linshi_teachers` [ RunTime:0.016001s ]
+SQL: SELECT `head_photo` FROM `linshi_teachers` WHERE ( `teacher_id` = 322 ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-05-30T12:36:02+08:00 ] 127.0.0.1 /index.php?s=/admin/teacher/teacheredit.html&id=322&_=1432960562364
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `linshi_setting` [ RunTime:0.004000s ]
+SQL: SELECT `key`,`value` FROM `linshi_setting`  [ RunTime:0.001000s ]
+NOTIC: [2] unlink(D:\wamp\www\houtai\Public\Runtime\Temp/71df8fced343b2a8ba67c00a47a67b50.php): No such file or directory D:\wamp\www\houtai\Libs\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+INFO: Run \Common\Behavior\SettingBehavior [ RunTime:0.024001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.025001s ]
+SQL: SHOW COLUMNS FROM `linshi_teachers` [ RunTime:0.004001s ]
+SQL: SELECT * FROM `linshi_teachers` WHERE ( `teacher_id` = 322 ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: email D:\wamp\www\houtai\Public\Runtime\Cache\Admin\b6a77b1e423ae4c4643be5c9e026b741.php 第 9 行.
+NOTIC: [8] Use of undefined constant 男 - assumed '男' D:\wamp\www\houtai\Public\Runtime\Cache\Admin\b6a77b1e423ae4c4643be5c9e026b741.php 第 76 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.113006s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.114006s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-05-30T12:36:05+08:00 ] 127.0.0.1 /index.php?s=/admin/teacher/teachereditheadphoto.html&id=322&_=1432960565073
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `linshi_setting` [ RunTime:0.011000s ]
+SQL: SELECT `key`,`value` FROM `linshi_setting`  [ RunTime:0.000000s ]
+NOTIC: [2] unlink(D:\wamp\www\houtai\Public\Runtime\Temp/71df8fced343b2a8ba67c00a47a67b50.php): No such file or directory D:\wamp\www\houtai\Libs\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+INFO: Run \Common\Behavior\SettingBehavior [ RunTime:0.047003s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.051003s ]
+SQL: SHOW COLUMNS FROM `linshi_teachers` [ RunTime:0.006001s ]
+SQL: SELECT `head_photo` FROM `linshi_teachers` WHERE ( `teacher_id` = 322 ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-05-30T12:42:53+08:00 ] 127.0.0.1 /index.php?s=/admin/teacher/teacheredit.html&id=322&_=1432960973866
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `linshi_setting` [ RunTime:0.004001s ]
+SQL: SELECT `key`,`value` FROM `linshi_setting`  [ RunTime:0.001000s ]
+NOTIC: [2] unlink(D:\wamp\www\houtai\Public\Runtime\Temp/71df8fced343b2a8ba67c00a47a67b50.php): No such file or directory D:\wamp\www\houtai\Libs\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+INFO: Run \Common\Behavior\SettingBehavior [ RunTime:0.023002s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.025002s ]
+SQL: SHOW COLUMNS FROM `linshi_teachers` [ RunTime:0.005000s ]
+SQL: SELECT * FROM `linshi_teachers` WHERE ( `teacher_id` = 322 ) LIMIT 1   [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: email D:\wamp\www\houtai\Public\Runtime\Cache\Admin\b6a77b1e423ae4c4643be5c9e026b741.php 第 9 行.
+NOTIC: [8] Use of undefined constant 男 - assumed '男' D:\wamp\www\houtai\Public\Runtime\Cache\Admin\b6a77b1e423ae4c4643be5c9e026b741.php 第 76 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-05-30T12:42:57+08:00 ] 127.0.0.1 /index.php?s=/admin/teacher/teachereditheadphoto.html&id=322&_=1432960977170
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `linshi_setting` [ RunTime:0.007000s ]
+SQL: SELECT `key`,`value` FROM `linshi_setting`  [ RunTime:0.000000s ]
+NOTIC: [2] unlink(D:\wamp\www\houtai\Public\Runtime\Temp/71df8fced343b2a8ba67c00a47a67b50.php): No such file or directory D:\wamp\www\houtai\Libs\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+INFO: Run \Common\Behavior\SettingBehavior [ RunTime:0.033002s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.036002s ]
+SQL: SHOW COLUMNS FROM `linshi_teachers` [ RunTime:0.012001s ]
+SQL: SELECT `head_photo` FROM `linshi_teachers` WHERE ( `teacher_id` = 322 ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-05-30T12:45:37+08:00 ] 127.0.0.1 /index.php?s=/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `linshi_setting` [ RunTime:0.004000s ]
+SQL: SELECT `key`,`value` FROM `linshi_setting`  [ RunTime:0.000000s ]
+NOTIC: [2] unlink(D:\wamp\www\houtai\Public\Runtime\Temp/71df8fced343b2a8ba67c00a47a67b50.php): No such file or directory D:\wamp\www\houtai\Libs\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+INFO: Run \Common\Behavior\SettingBehavior [ RunTime:0.028001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.030002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-05-30T12:47:03+08:00 ] 127.0.0.1 /index.php?s=/admin/teacher/teachereditheadphoto.html&id=322&_=1432961223151
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `linshi_setting` [ RunTime:0.004000s ]
+SQL: SELECT `key`,`value` FROM `linshi_setting`  [ RunTime:0.000000s ]
+NOTIC: [2] unlink(D:\wamp\www\houtai\Public\Runtime\Temp/71df8fced343b2a8ba67c00a47a67b50.php): No such file or directory D:\wamp\www\houtai\Libs\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+INFO: Run \Common\Behavior\SettingBehavior [ RunTime:0.014000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.016000s ]
+SQL: SHOW COLUMNS FROM `linshi_teachers` [ RunTime:0.004000s ]
+SQL: SELECT `head_photo` FROM `linshi_teachers` WHERE ( `teacher_id` = 322 ) LIMIT 1   [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-05-30T12:50:44+08:00 ] 127.0.0.1 /index.php?s=/admin/teacher/teacheredit.html&id=322&_=1432961444521
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `linshi_setting` [ RunTime:0.005000s ]
+SQL: SELECT `key`,`value` FROM `linshi_setting`  [ RunTime:0.000000s ]
+NOTIC: [2] unlink(D:\wamp\www\houtai\Public\Runtime\Temp/71df8fced343b2a8ba67c00a47a67b50.php): No such file or directory D:\wamp\www\houtai\Libs\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+INFO: Run \Common\Behavior\SettingBehavior [ RunTime:0.024001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.026001s ]
+SQL: SHOW COLUMNS FROM `linshi_teachers` [ RunTime:0.014001s ]
+SQL: SELECT * FROM `linshi_teachers` WHERE ( `teacher_id` = 322 ) LIMIT 1   [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: email D:\wamp\www\houtai\Public\Runtime\Cache\Admin\b6a77b1e423ae4c4643be5c9e026b741.php 第 9 行.
+NOTIC: [8] Use of undefined constant 男 - assumed '男' D:\wamp\www\houtai\Public\Runtime\Cache\Admin\b6a77b1e423ae4c4643be5c9e026b741.php 第 76 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-05-30T12:50:47+08:00 ] 127.0.0.1 /index.php?s=/admin/teacher/teachereditheadphoto.html&id=322&_=1432961447461
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+SQL: SHOW COLUMNS FROM `linshi_setting` [ RunTime:0.004001s ]
+SQL: SELECT `key`,`value` FROM `linshi_setting`  [ RunTime:0.000000s ]
+NOTIC: [2] unlink(D:\wamp\www\houtai\Public\Runtime\Temp/71df8fced343b2a8ba67c00a47a67b50.php): No such file or directory D:\wamp\www\houtai\Libs\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+INFO: Run \Common\Behavior\SettingBehavior [ RunTime:0.037002s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.039003s ]
+SQL: SHOW COLUMNS FROM `linshi_teachers` [ RunTime:0.005000s ]
+SQL: SELECT `head_photo` FROM `linshi_teachers` WHERE ( `teacher_id` = 322 ) LIMIT 1   [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-05-30T12:50:51+08:00 ] 127.0.0.1 /index.php?s=/admin/teacher/teachereditheadphoto.html&id=324&_=1432961451094
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `linshi_setting` [ RunTime:0.005000s ]
+SQL: SELECT `key`,`value` FROM `linshi_setting`  [ RunTime:0.001000s ]
+NOTIC: [2] unlink(D:\wamp\www\houtai\Public\Runtime\Temp/71df8fced343b2a8ba67c00a47a67b50.php): No such file or directory D:\wamp\www\houtai\Libs\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+INFO: Run \Common\Behavior\SettingBehavior [ RunTime:0.075004s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.078005s ]
+SQL: SHOW COLUMNS FROM `linshi_teachers` [ RunTime:0.006001s ]
+SQL: SELECT `head_photo` FROM `linshi_teachers` WHERE ( `teacher_id` = 324 ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-05-30T12:51:01+08:00 ] 127.0.0.1 /index.php?s=/admin/teacher/teachereditheadphoto.html&id=324&_=1432961461731
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `linshi_setting` [ RunTime:0.005000s ]
+SQL: SELECT `key`,`value` FROM `linshi_setting`  [ RunTime:0.000000s ]
+NOTIC: [2] unlink(D:\wamp\www\houtai\Public\Runtime\Temp/71df8fced343b2a8ba67c00a47a67b50.php): No such file or directory D:\wamp\www\houtai\Libs\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+INFO: Run \Common\Behavior\SettingBehavior [ RunTime:0.021001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.022001s ]
+SQL: SHOW COLUMNS FROM `linshi_teachers` [ RunTime:0.007001s ]
+SQL: SELECT `head_photo` FROM `linshi_teachers` WHERE ( `teacher_id` = 324 ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-05-30T12:54:10+08:00 ] 127.0.0.1 /index.php?s=/admin/teacher/teacheredit.html&id=324&_=1432961649979
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `linshi_setting` [ RunTime:0.005001s ]
+SQL: SELECT `key`,`value` FROM `linshi_setting`  [ RunTime:0.001000s ]
+NOTIC: [2] unlink(D:\wamp\www\houtai\Public\Runtime\Temp/71df8fced343b2a8ba67c00a47a67b50.php): No such file or directory D:\wamp\www\houtai\Libs\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+INFO: Run \Common\Behavior\SettingBehavior [ RunTime:0.025002s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.026002s ]
+SQL: SHOW COLUMNS FROM `linshi_teachers` [ RunTime:0.004000s ]
+SQL: SELECT * FROM `linshi_teachers` WHERE ( `teacher_id` = 324 ) LIMIT 1   [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: email D:\wamp\www\houtai\Public\Runtime\Cache\Admin\b6a77b1e423ae4c4643be5c9e026b741.php 第 9 行.
+NOTIC: [8] Use of undefined constant 男 - assumed '男' D:\wamp\www\houtai\Public\Runtime\Cache\Admin\b6a77b1e423ae4c4643be5c9e026b741.php 第 76 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-05-30T12:54:13+08:00 ] 127.0.0.1 /index.php?s=/admin/teacher/teachereditheadphoto.html&id=324&_=1432961652983
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `linshi_setting` [ RunTime:0.005000s ]
+SQL: SELECT `key`,`value` FROM `linshi_setting`  [ RunTime:0.000000s ]
+NOTIC: [2] unlink(D:\wamp\www\houtai\Public\Runtime\Temp/71df8fced343b2a8ba67c00a47a67b50.php): No such file or directory D:\wamp\www\houtai\Libs\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+INFO: Run \Common\Behavior\SettingBehavior [ RunTime:0.033002s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.034002s ]
+SQL: SHOW COLUMNS FROM `linshi_teachers` [ RunTime:0.008000s ]
+SQL: SELECT `head_photo` FROM `linshi_teachers` WHERE ( `teacher_id` = 324 ) LIMIT 1   [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+

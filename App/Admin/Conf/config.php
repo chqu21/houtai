@@ -35,4 +35,6 @@ return array(
 	'FILE_UPLOAD_MEDIA_CONFIG'    => array(
 		'exts'     => array('avi'),
 	),
+    'URL_MODEL'=>3,
+    'IMG_PATH' => 'D:/wamp/www/houtai/Uploads/',
 );

@@ -40,8 +40,8 @@ WIDTH="650" HEIGHT="450" id="myMovieName">
 <PARAM NAME=movie VALUE="../flash/avatar.swf">
 <PARAM NAME=quality VALUE=high>
 <PARAM NAME=bgcolor VALUE=#FFFFFF>
-<param name="flashvars" value="imgUrl=<?php echo ($headPhoto["bigPic"]); ?>&uploadUrl=index.php?m=admin&c=teacher&a=upfile&teacherId=<?php echo ($teacherId); ?>&uploadSrc=false" />
-<EMBED src="../flash/avatar.swf" quality=high bgcolor=#FFFFFF WIDTH="650" HEIGHT="450" wmode="transparent" flashVars="imgUrl=<?php echo ($headPhoto["bigPic"]); ?>&uploadUrl=index.php?m=admin&c=teacher&a=upfile&teacherId=<?php echo ($teacherId); ?>&uploadSrc=false"
+<param name="flashvars" value="imgUrl=<?php echo ($headPhoto["bigPic"]); ?>&uploadUrl=/index.php?s=/admin/teacher/upfile/teacherId/<?php echo ($teacherId); ?>&uploadSrc=false" />
+<EMBED src="../flash/avatar.swf" quality=high bgcolor=#FFFFFF WIDTH="650" HEIGHT="450" wmode="transparent" flashVars="imgUrl=<?php echo ($headPhoto["bigPic"]); ?>&uploadUrl=/index.php?s=/admin/teacher/upfile/teacherId/<?php echo ($teacherId); ?>&uploadSrc=false"
 NAME="myMovieName" ALIGN="" TYPE="application/x-shockwave-flash" allowScriptAccess="always"
 PLUGINSPAGE="http://www.macromedia.com/go/getflashplayer">
 </EMBED>

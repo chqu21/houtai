@@ -432,7 +432,7 @@ class TeacherController extends CommonController {
 
     // 处理表单数据
     public function upfile($teacherId) {
-        $path = "D:/wamp/www/houtai/Uploads/";
+        $path = C('IMG_PATH');
         $file_src = "src.png";
         $filename162 = $teacherId."_big.png";
         $filename48 =  $teacherId."_middle.png";
@@ -446,7 +446,15 @@ class TeacherController extends CommonController {
         if($src) {
             file_put_contents($file_src,$src);
         }
-
+        if (file_exist($path.$filename162,$pic1)){
+            unlink($path.$filename162);
+        }
+        if (file_exist($path.$filename48,$pic1)){
+            unlink($path.$filename48);
+        }
+        if (file_exist($path.$filename20,$pic1)){
+            unlink($path.$filename20);
+        }
         file_put_contents($path.$filename162,$pic1);
         file_put_contents($path.$filename48,$pic2);
         file_put_contents($path.$filename20,$pic3);

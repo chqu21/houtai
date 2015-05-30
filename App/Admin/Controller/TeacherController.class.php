@@ -418,6 +418,9 @@ class TeacherController extends CommonController {
         $teacherInfo = $teacher_db->where(array('teacher_id'=>$id))->field('head_photo')->find();
         if (!empty($teacherInfo['head_photo'])){
             $rs = json_decode($teacherInfo['head_photo'],'r');
+            foreach($rs as $key => $img){
+                $rs[$key] = 'http://'.$_SERVER['SERVER_NAME'].'/'.$img.'?'.rand(10,20);
+            }
         }else{
             $rs = array(
                 'bigPic' =>'../flash/default.jpg',

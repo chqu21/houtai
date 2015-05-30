@@ -8,6 +8,40 @@ use Admin\Controller\CommonController;
  */
 class TeacherController extends CommonController {
 
+
+    public $timeArr = array(
+                '7:00-7:30',
+                '7:30-8:00',
+                '8:00-8:30',
+                '8:30-9:00',
+                '9:00-9:30',
+                '9:30-10:00',
+                '10:00-10:30',
+                '10:30-11:00',
+                '11:00-11:30',
+                '11:30-12:00',
+                '12:00-12:30',
+                '12:30-13:00',
+                '13:00-13:30',
+                '13:30-14:00',
+                '14:00-14:30',
+                '14:30-15:00',
+                '15:00-15:30',
+                '15:30-16:00',
+                '16:00-16:30',
+                '16:30-17:00',
+                '17:00-17:30',
+                '17:30-18:00',
+                '18:00-18:30',
+                '18:30-19:00',
+                '19:00-19:30',
+                '19:30-20:00',
+                '20:00-20:30',
+                '20:30-21:00',
+                '21:00-21:30',
+                '21:30-22:00',
+        );
+
     /**
      * 老师列表
      */
@@ -298,6 +332,156 @@ class TeacherController extends CommonController {
         }
         exit;
 
+    }
+
+    /**
+     * 时间列表
+     */
+    public function timeList($page = 1, $rows = 10,$search = array(),$sort = 'course_time_id', $order = 'asc'){
+        if(IS_POST){
+            $teacher_db = D('CourseTime');
+            //搜索
+            $where = array();
+            foreach ($search as $k=>$v){
+                if(!$v) continue;
+                $where[] = "`{$k}` like '%{$v}%'";
+            }
+            $where = implode(' and ', $where);
+            $limit=($page - 1) * $rows . "," . $rows;
+            $total = $teacher_db->where($where)->count();
+            $order = $sort.' '.$order;
+            $list = $total ? $teacher_db->where($where)->order($order)->limit($limit)->select() : array();
+
+
+
+            foreach($list as $k => $lt){
+                if ($lt['teacher_no_time']==1){
+                    $list[$k]['teacher_no_time'] = '未开放';
+                }else{
+                    $list[$k]['teacher_no_time'] = '已开放';
+                }
+
+                if ($lt['student_selected']==1){
+                    $list[$k]['student_selected'] = '学生已定';
+                }else{
+                    $list[$k]['student_selected'] = '学生未定';
+                }
+            }
+
+            $data = array('total'=>$total, 'rows'=>$list);
+            $this->ajaxReturn($data);
+        }else{
+            $menu_db = D('Menu');
+            $currentpos = $menu_db->currentPos(I('get.menuid'));  //栏目位置
+            $datagrid = array(
+                'options'     => array(
+                    'title'   => $currentpos,
+                    'url'     => U('Teacher/timeList', array('grid'=>'datagrid')),
+                    'toolbar' => 'admin_timelist_datagrid_toolbar',
+                ),
+                'fields' => array(
+                    '教师ID' => array('field'=>'teacher_id','width'=>25),
+                    '教师名'      => array('field'=>'teacher_name','width'=>15,'sortable'=>true),
+                    '时间'      => array('field'=>'class_date','width'=>7,'sortable'=>true),
+                    '时段'    => array('field'=>'class_time','width'=>7,'sortable'=>true),
+                    '是否开放'  => array('field'=>'teacher_no_time','width'=>15,'sortable'=>true),
+                    '是否占用' => array('field'=>'student_selected','width'=>15,'sortable'=>true),
+                    '购课订单号' => array('field'=>'course_category','width'=>15,'sortable'=>true),
+                    '学生ID' => array('field'=>'sort_num','width'=>15,'sortable'=>true),
+                    '学生名' => array('field'=>'student_name','width'=>15,'sortable'=>true),
+                    '课程时间ID'    => array('field'=>'course_time_id','width'=>15,'sortable'=>false,'formatter'=>'adminMemberListOperateFormatter'),
+                )
+            );
+            $this->assign('datagrid', $datagrid);
+            $admin_role_db = D('AdminRole');
+            $rolelist = $admin_role_db->where(array('disabled'=>'0'))->getField('roleid,rolename', true);
+            $this->assign('rolelist', $rolelist);
+            $this->display('time_list');
+        }
+    }
+    //编辑时间
+    public function timeEdit($id){
+        $courseTime = D('CourseTime');
+        if(IS_POST){
+            $data = I('post.');
+            $result = $courseTime->where(array('course_time_id'=>$id))->save($data);
+            if($result){
+                $this->success('修改成功');
+            }else {
+                $this->error('修改失败');
+            }
+        }else {
+            $teacherInfo = $courseTime->where(array('course_time_id' => $id))->find();
+            $this->assign('info', $teacherInfo);
+            $this->display('time_edit');
+        }
+    }
+
+    //添加时间
+    public function timeAdd(){
+
+        if(IS_POST) {
+            $weekarray=array("日","一","二","三","四","五","六");
+            $data = I('post.info');
+            $k = date('w',strtotime($data['class_date']));
+            $week = '周'.$weekarray[$k];
+            $result = array();
+            if ($data['teacherAll']==1 && $data['classTimeAll']==1) {
+                $teacherDb = D('Teacher');
+                $courseTime = D('CourseTime');
+                $teacherList = $teacherDb->select();
+                foreach ($teacherList as $lt) {
+                    foreach ($this->timeArr as $time){
+                        $dataArr['teacher_id'] = $lt['teacher_id'];
+                        $dataArr['teacher_name'] = $lt['teacher_name'];
+                        $dataArr['class_date'] = $data['class_date'];
+                        $dataArr['class_time'] = $time;
+                        $dataArr['class_week'] = $week;
+                        $dataArr['teacher_no_time'] = 0;
+                        $result = $courseTime->save($dataArr);
+                    }
+                 }
+            }
+
+            if ($data['teacherAll']==1 && $data['classTimeAll']==0) {
+                $teacherDb = D('Teacher');
+                $courseTime = D('CourseTime');
+                $teacherList = $teacherDb->select();
+                foreach ($teacherList as $lt) {
+                        $dataArr['teacher_id'] = $lt['teacher_id'];
+                        $dataArr['teacher_name'] = $lt['teacher_name'];
+                        $dataArr['class_date'] = $data['class_date'];
+                        $dataArr['class_time'] = $data['class_time'];
+                        $dataArr['class_week'] = $week;
+                        $dataArr['teacher_no_time'] = 0;
+                        $result = $courseTime->save($dataArr);
+                }
+            }
+
+            if ($data['teacherAll']==0 && $data['classTimeAll']==1) {
+                $teacherDb = D('Teacher');
+                $courseTime = D('CourseTime');
+                $teacherInfo = $teacherDb->where(array(teacher_id=>$data['teacher_id']))->select();
+                $teacherName = $teacherInfo[0]['teacher_name'];
+                foreach ($this->timeArr as $time){
+                    $dataArr['teacher_id'] = $data['teacher_id'];
+                    $dataArr['teacher_name'] = $teacherName;
+                    $dataArr['class_date'] = $data['class_date'];
+                    $dataArr['class_time'] = $time;
+                    $dataArr['class_week'] = $week;
+                    $dataArr['teacher_no_time'] = 0;
+                    $result = $courseTime->save($dataArr);
+                }
+            }
+            if($result){
+                $this->success('修改成功');
+                exit;
+            }else {
+                $this->error('修改失败');
+            }
+        }else {
+            $this->display('time_add');
+        }
     }
 
 }

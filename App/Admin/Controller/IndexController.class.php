@@ -23,9 +23,6 @@ class IndexController extends CommonController {
 		$this->display('index');
 	}
 
-    public function abc(){
-        $this->display('index');
-    }
 	
 	/**
 	 * 用户登录

@@ -14,10 +14,12 @@
     </form>
 </div>
 <!-- 添加老师 -->
-<div id="admin_teacherlist_add_dialog" class="easyui-dialog" title="添加老师" data-options="modal:true,closed:true,iconCls:'icons-application-application_add',buttons:[{text:'确定',iconCls:'icons-other-tick',handler:function(){$('#admin_teacherlist_add_dialog_form').submit();}},{text:'取消',iconCls:'icons-arrow-cross',handler:function(){$('#admin_teacherlist_add_dialog').dialog('close');}}]" style="width:650px;height:400px;"></div>
+<div id="admin_teacherlist_add_dialog" class="easyui-dialog" title="添加老师" data-options="modal:true,closed:true,iconCls:'icons-application-application_add',buttons:[{text:'确定',iconCls:'icons-other-tick',handler:function(){$('#admin_teacherlist_add_dialog_form').submit();}},{text:'取消',iconCls:'icons-arrow-cross',handler:function(){$('#admin_teacherlist_add_dialog').dialog('close');}}]" style="width:750px;height:550px;"></div>
 
 <!-- 编辑老师 -->
-<div id="admin_teacherlist_edit_dialog" class="easyui-dialog" title="编辑老师" data-options="modal:true,closed:true,iconCls:'icons-application-application_edit',buttons:[{text:'确定',iconCls:'icons-other-tick',handler:function(){$('#admin_teacherlist_edit_dialog_form').submit();}},{text:'取消',iconCls:'icons-arrow-cross',handler:function(){$('#admin_teacherlist_edit_dialog').dialog('close');}}]" style="width:650px;height:400px;"></div>
+<div id="admin_teacherlist_edit_dialog" class="easyui-dialog" title="编辑老师" data-options="modal:true,closed:true,iconCls:'icons-application-application_edit',buttons:[{text:'确定',iconCls:'icons-other-tick',handler:function(){$('#admin_teacherlist_edit_dialog_form').submit();}},{text:'取消',iconCls:'icons-arrow-cross',handler:function(){$('#admin_teacherlist_edit_dialog').dialog('close');}}]" style="width:750px;height:550px;"></div>
+<!--编辑头像-->
+<div id="admin_teacherlist_edit_photo_dialog" class="easyui-dialog" title="编辑老师头像" data-options="modal:true,closed:true,iconCls:'icons-application-application_edit',buttons:[{text:'关闭',iconCls:'icons-arrow-cross',handler:function(){$('#admin_teacherlist_edit_photo_dialog').dialog('close');}}]" style="width:750px;height:550px;"></div>
 
 <script type="text/javascript">
 var teacher_teacherlist_datagrid_id = 'teacher_teacherlist_datagrid';
@@ -38,6 +40,7 @@ function adminMemberListTimeFormatter(val){
 function adminMemberListOperateFormatter(val){
 	var btn = [];
 	btn.push('<a href="javascript:;" onclick="adminMemberEdit('+val+')">编辑</a>');
+    btn.push('<a href="javascript:;" onclick="adminHeadPhotoEdit('+val+')">修改头像</a>');
 	btn.push('<a href="javascript:;" onclick="adminMemberDelete('+val+')">删除</a>');
 
 	return btn.join(' | ');
@@ -63,6 +66,19 @@ function adminMemberEdit(id){
 	$('#admin_teacherlist_edit_dialog').dialog({href:url});
 	$('#admin_teacherlist_edit_dialog').dialog('open');
 }
+
+//修改头像
+function adminHeadPhotoEdit(id){
+    if(typeof(id) !== 'number'){
+        $.messager.alert('提示信息', '未选择老师', 'error');
+        return false;
+    }
+    var url = '<{:U('Teacher/teacherEditHeadPhoto')}>';
+    url += url.indexOf('?') != -1 ? '&id='+id : '?id='+id;
+    $('#admin_teacherlist_edit_photo_dialog').dialog({href:url});
+    $('#admin_teacherlist_edit_photo_dialog').dialog('open');
+}
+
 //删除
 function adminMemberDelete(id){
     console.log(id);

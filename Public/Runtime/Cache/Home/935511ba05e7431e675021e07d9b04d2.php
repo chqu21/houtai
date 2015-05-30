@@ -1,0 +1,1 @@
+<?php if (!defined('THINK_PATH')) exit();?><b>404 Not Found</b>

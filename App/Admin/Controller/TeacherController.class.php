@@ -136,7 +136,7 @@ class TeacherController extends CommonController {
                     '推荐' => array('field'=>'recommand_flag','width'=>15,'sortable'=>true),
                     '注册时间' => array('field'=>'raw_add_time','width'=>25),
                     '显示' => array('field'=>'display','width'=>7,'sortable'=>true),
-                    '教师ID'    => array('field'=>'teacher_id','width'=>15,'sortable'=>false,'formatter'=>'adminMemberListOperateFormatter'),
+                    '教师ID'    => array('field'=>'teacher_id','width'=>35,'sortable'=>false,'formatter'=>'adminMemberListOperateFormatter'),
                 )
             );
             $this->assign('datagrid', $datagrid);
@@ -410,5 +410,57 @@ class TeacherController extends CommonController {
         }else{
             $this->error('角色名称不存在');
         }
+    }
+
+
+    public function teacherEditHeadPhoto($id){
+        $teacher_db = D('Teacher');
+        $teacherInfo = $teacher_db->where(array('teacher_id'=>$id))->field('head_photo')->find();
+        if (!empty($teacherInfo['head_photo'])){
+            $rs = json_decode($teacherInfo['head_photo'],'r');
+        }else{
+            $rs = array(
+                'bigPic' =>'../flash/default.jpg',
+                'middlePic' =>'2.png',
+                'smallPic' =>'3.png',
+            );
+        }
+        $this->assign('headPhoto',$rs);
+        $this->assign('teacherId', $id);
+        $this->display('headPhoto');
+    }
+
+    // 处理表单数据
+    public function upfile($teacherId) {
+        $path = "D:/wamp/www/houtai/Uploads/";
+        $file_src = "src.png";
+        $filename162 = $teacherId."_big.png";
+        $filename48 =  $teacherId."_middle.png";
+        $filename20 =  $teacherId."_small.png";
+
+        $src=base64_decode($_POST['pic']);
+        $pic1=base64_decode($_POST['pic1']);
+        $pic2=base64_decode($_POST['pic2']);
+        $pic3=base64_decode($_POST['pic3']);
+
+        if($src) {
+            file_put_contents($file_src,$src);
+        }
+
+        file_put_contents($path.$filename162,$pic1);
+        file_put_contents($path.$filename48,$pic2);
+        file_put_contents($path.$filename20,$pic3);
+        $imgArr['bigPic'] = 'Uploads/'.$filename162;
+        $imgArr['middlePic'] = 'Uploads/'.$filename48;
+        $imgArr['smallPic'] = 'Uploads/'.$filename20;
+        $teacher_db = D('Teacher');
+        if ($teacher_db->where(array('teacher_id'=>$teacherId))->save(array('head_photo'=>json_encode($imgArr)))){
+            $rs['status'] = 1;
+            echo json_encode($rs);
+            exit;
+        }
+        $rs['status'] = 0;
+        echo json_encode($rs);
+        exit;
     }
 }

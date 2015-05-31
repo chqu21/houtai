@@ -58,9 +58,8 @@ class TeacherController extends CommonController {
             $limit=($page - 1) * $rows . "," . $rows;
             $total = $teacher_db->where($where)->count();
             $order = $sort.' '.$order;
-            $list = $total ? $teacher_db->where($where)->order($order)->limit($limit)->select() : array();
-
-
+            $column = "`teacher_name`,`sex`,`teaching_age`,`certification_flag`,`education_flag`,`teacher_certification_flag`,`discipline`,`grade`,`course_category`,`sort_num`,`recommand_flag`,`raw_add_time`,`display`,`teacher_id`,`teacher_id` as teacher_ids";
+            $list = $total ? $teacher_db->field($column)->where($where)->order($order)->limit($limit)->select() : array();
 
             foreach($list as $k => $lt){
                 if ($lt['certification_flag']==1){
@@ -106,6 +105,7 @@ class TeacherController extends CommonController {
                     'toolbar' => 'admin_teacherlist_datagrid_toolbar',
                 ),
                 'fields' => array(
+                    '教师ID'    => array('field'=>'teacher_id','width'=>15,'sortable'=>true),
                     '教师姓名'      => array('field'=>'teacher_name','width'=>15,'sortable'=>true),
                     '姓别'      => array('field'=>'sex','width'=>7,'sortable'=>true),
                     '教龄'    => array('field'=>'teaching_age','width'=>7,'sortable'=>true),
@@ -119,7 +119,7 @@ class TeacherController extends CommonController {
                     '推荐' => array('field'=>'recommand_flag','width'=>15,'sortable'=>true),
                     '注册时间' => array('field'=>'raw_add_time','width'=>25),
                     '显示' => array('field'=>'display','width'=>7,'sortable'=>true),
-                    '教师ID'    => array('field'=>'teacher_id','width'=>55,'sortable'=>false,'formatter'=>'adminMemberListOperateFormatter'),
+                    '操作'    => array('field'=>'teacher_ids','width'=>55,'sortable'=>true,'formatter'=>'adminMemberListOperateFormatter'),
                 )
             );
             $this->assign('datagrid', $datagrid);

@@ -62,7 +62,7 @@ function adminteacherlistAddDialogFormSubmit(){
 <table class="gridtable">
 	<tr>
 		<td width="80">教师id：</td>
-		<td><input id="admin_time_add_dialog_form_teacherid" type="text" name="info[teacher_id]" style="width:180px;height:22px" /></td>
+		<td><input id="admin_time_add_dialog_form_teacherid" class="easyui-combotree" name="info[teacher_id]" style="width:180px;height:22px" /></td>
         <td>所有老师：</td>
         <td>
             <select id="admin_time_add_dialog_form_teacherAll" class="easyui-combobox" data-options="editable:false,panelHeight:'auto'" name="info[teacherAll]" style="height:25px">

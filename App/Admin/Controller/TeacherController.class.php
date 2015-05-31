@@ -438,7 +438,7 @@ class TeacherController extends CommonController {
                         $dataArr['class_time'] = $time;
                         $dataArr['class_week'] = $week;
                         $dataArr['teacher_no_time'] = 0;
-                        $result = $courseTime->save($dataArr);
+                        $result = $courseTime->add($dataArr);
                     }
                  }
             }
@@ -454,7 +454,7 @@ class TeacherController extends CommonController {
                         $dataArr['class_time'] = $data['class_time'];
                         $dataArr['class_week'] = $week;
                         $dataArr['teacher_no_time'] = 0;
-                        $result = $courseTime->save($dataArr);
+                        $result = $courseTime->add($dataArr);
                 }
             }
 
@@ -470,7 +470,7 @@ class TeacherController extends CommonController {
                     $dataArr['class_time'] = $time;
                     $dataArr['class_week'] = $week;
                     $dataArr['teacher_no_time'] = 0;
-                    $result = $courseTime->save($dataArr);
+                    $result = $courseTime->add($dataArr);
                 }
             }
             if($result){

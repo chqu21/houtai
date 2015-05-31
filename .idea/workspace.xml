@@ -4,7 +4,6 @@
     <list default="true" id="d8f33eb3-3aed-4b70-b310-7d6daebbc6fb" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Public/Runtime/Logs/15_05_31.log" afterPath="$PROJECT_DIR$/Public/Runtime/Logs/15_05_31.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/App/Admin/Controller/TeacherController.class.php" afterPath="$PROJECT_DIR$/App/Admin/Controller/TeacherController.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/App/Admin/View/Teacher/time_add.html" afterPath="$PROJECT_DIR$/App/Admin/View/Teacher/time_add.html" />
     </list>
     <ignored path="houtai.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,11 +28,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="TeacherController.class.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="TeacherModel.class.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/App/Admin/Model/TeacherModel.class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-13.206897" vertical-offset="1117" max-vertical-offset="1680">
+              <caret line="75" column="44" selection-start-line="75" selection-start-column="44" selection-end-line="75" selection-end-column="44" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TeacherController.class.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/App/Admin/Controller/TeacherController.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="2.5172415" vertical-offset="546" max-vertical-offset="9840">
-              <caret line="20" column="25" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
+            <state vertical-scroll-proportion="0.5505618" vertical-offset="9406" max-vertical-offset="10120">
+              <caret line="485" column="48" selection-start-line="485" selection-start-column="48" selection-end-line="485" selection-end-column="48" />
               <folding />
             </state>
           </provider>
@@ -49,10 +58,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="time_add.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="time_add.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/App/Admin/View/Teacher/time_add.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5580524" vertical-offset="1442" max-vertical-offset="2680">
+            <state vertical-scroll-proportion="-5.137931" vertical-offset="1442" max-vertical-offset="2680">
               <caret line="87" column="51" selection-start-line="87" selection-start-column="51" selection-end-line="87" selection-end-column="51" />
               <folding>
                 <element signature="n#style#0;n#input#0;n#td#1;n#tr#0;n#table#0;n#form#0;n#!!top" expanded="true" />
@@ -124,16 +133,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AdminModel.class.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/App/Admin/Model/AdminModel.class.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="24.827587" vertical-offset="1140" max-vertical-offset="1720">
-              <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Model.class.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Libs/ThinkPHP/Library/Think/Model.class.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -187,8 +186,8 @@
         <option value="$PROJECT_DIR$/App/Admin/Model/CourseTimeModel.class.php" />
         <option value="$PROJECT_DIR$/App/Admin/View/Teacher/time_list.html" />
         <option value="$PROJECT_DIR$/index.php" />
-        <option value="$PROJECT_DIR$/App/Admin/Controller/TeacherController.class.php" />
         <option value="$PROJECT_DIR$/App/Admin/View/Teacher/time_add.html" />
+        <option value="$PROJECT_DIR$/App/Admin/Controller/TeacherController.class.php" />
       </list>
     </option>
   </component>
@@ -816,14 +815,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/App/Admin/Model/TeacherModel.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-51.03448" vertical-offset="0" max-vertical-offset="1680">
-          <caret line="74" column="37" selection-start-line="74" selection-start-column="37" selection-end-line="74" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/App/Admin/View/Teacher/teacher_appraise.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-9.068966" vertical-offset="1237" max-vertical-offset="2220">
@@ -984,17 +975,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/App/Admin/Controller/TeacherController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.5172415" vertical-offset="546" max-vertical-offset="9840">
-          <caret line="20" column="25" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/App/Admin/View/Teacher/time_add.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5580524" vertical-offset="1442" max-vertical-offset="2680">
+        <state vertical-scroll-proportion="-5.137931" vertical-offset="1442" max-vertical-offset="2680">
           <caret line="87" column="51" selection-start-line="87" selection-start-column="51" selection-end-line="87" selection-end-column="51" />
           <folding>
             <element signature="n#style#0;n#input#0;n#td#1;n#tr#0;n#table#0;n#form#0;n#!!top" expanded="true" />
@@ -1002,6 +985,22 @@
             <element signature="n#style#0;n#select#0;n#td#1;n#tr#2;n#table#0;n#form#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#select#0;n#td#1;n#tr#3;n#table#0;n#form#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/Admin/Model/TeacherModel.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.206897" vertical-offset="1117" max-vertical-offset="1680">
+          <caret line="75" column="44" selection-start-line="75" selection-start-column="44" selection-end-line="75" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/Admin/Controller/TeacherController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5505618" vertical-offset="9406" max-vertical-offset="10120">
+          <caret line="485" column="48" selection-start-line="485" selection-start-column="48" selection-end-line="485" selection-end-column="48" />
+          <folding />
         </state>
       </provider>
     </entry>

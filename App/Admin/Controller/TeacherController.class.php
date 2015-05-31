@@ -473,6 +473,20 @@ class TeacherController extends CommonController {
                     $result = $courseTime->add($dataArr);
                 }
             }
+            if ($data['teacherAll']==0 && $data['classTimeAll']==0) {
+                $teacherDb = D('Teacher');
+                $courseTime = D('CourseTime');
+                $teacherInfo = $teacherDb->where(array(teacher_id=>$data['teacher_id']))->select();
+                $teacherName = $teacherInfo[0]['teacher_name'];
+                $dataArr['teacher_id'] = $data['teacher_id'];
+                $dataArr['teacher_name'] = $teacherName;
+                $dataArr['class_date'] = $data['class_date'];
+                $dataArr['class_time'] = $data['class_time'];
+                $dataArr['class_week'] = $week;
+                $dataArr['teacher_no_time'] = 0;
+                $result = $courseTime->add($dataArr);
+
+            }
             if($result){
                 $this->success('修改成功');
                 exit;

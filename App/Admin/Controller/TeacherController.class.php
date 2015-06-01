@@ -439,10 +439,7 @@ class TeacherController extends CommonController {
                         $dataArr['class_time'] = $time;
                         $dataArr['class_week'] = $week;
                         $dataArr['teacher_no_time'] = 0;
-                        $rs = $courseTime->where(array('teacher_id'=>$lt['teacher_id'],'class_date'=>$data['class_date'],'clss_time'=>$time))->select();
-                        if (empty($rs)){
-                            $result = $courseTime->add($dataArr);
-                        }
+                        $result = $courseTime->add($dataArr);
                     }
                  }
             }
@@ -458,13 +455,7 @@ class TeacherController extends CommonController {
                         $dataArr['class_time'] = json_encode($data['class_time']);
                         $dataArr['class_week'] = $week;
                         $dataArr['teacher_no_time'] = 0;
-                        foreach($data['class_time'] as $timeStr){
-                            $rs = $courseTime->where("`class_date`=$date AND `clss_time` like %$timeStr%")->select();
-                        }
-
-                        if (empty($rs)) {
-                            $result = $courseTime->add($dataArr);
-                        }
+                        $result = $courseTime->add($dataArr);
                 }
             }
 
@@ -479,10 +470,7 @@ class TeacherController extends CommonController {
                     $dataArr['class_time'] = json_encode($this->timeArr);
                     $dataArr['class_week'] = $week;
                     $dataArr['teacher_no_time'] = 0;
-                    $rs = $courseTime->where(array('teacher_id'=>$data['teacher_id'],'class_date'=>$data['class_date'],'clss_time'=>$time))->select();
-                    if (empty($rs)) {
-                        $result = $courseTime->add($dataArr);
-                    }
+                    $result = $courseTime->add($dataArr);
             }
             if ($data['teacherAll']==0 && $data['classTimeAll']==0) {
                 $teacherDb = D('Teacher');
@@ -495,13 +483,7 @@ class TeacherController extends CommonController {
                 $dataArr['class_time'] = json_encode($data['class_time']);
                 $dataArr['class_week'] = $week;
                 $dataArr['teacher_no_time'] = 0;
-                foreach($data['class_time'] as $timeStr){
-                    $rs = $courseTime->where("`class_date`=$date AND `class_time` like %$timeStr%")->select();
-                    if (empty($rs)) {
-                        $result = $courseTime->add($dataArr);
-                    }
-                }
-
+                $result = $courseTime->add($dataArr);
             }
             if($result){
                 $this->success('修改成功');

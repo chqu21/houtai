@@ -2120,3 +2120,774 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
 INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
 
+[ 2015-06-01T18:37:39+08:00 ] 127.0.0.1 /index.php?s=/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `linshi_setting` [ RunTime:0.716041s ]
+SQL: SELECT `key`,`value` FROM `linshi_setting`  [ RunTime:0.000000s ]
+NOTIC: [2] unlink(D:\wamp\www\houtai\Public\Runtime\Temp/71df8fced343b2a8ba67c00a47a67b50.php): No such file or directory D:\wamp\www\houtai\Libs\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+INFO: Run \Common\Behavior\SettingBehavior [ RunTime:1.187068s ]
+INFO: [ app_begin ] --END-- [ RunTime:1.190068s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-06-01T18:47:37+08:00 ] 127.0.0.1 /index.php?s=/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `linshi_setting` [ RunTime:0.027002s ]
+SQL: SELECT `key`,`value` FROM `linshi_setting`  [ RunTime:0.001000s ]
+NOTIC: [2] unlink(D:\wamp\www\houtai\Public\Runtime\Temp/71df8fced343b2a8ba67c00a47a67b50.php): No such file or directory D:\wamp\www\houtai\Libs\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+INFO: Run \Common\Behavior\SettingBehavior [ RunTime:0.060004s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.062004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-06-01T18:57:37+08:00 ] 127.0.0.1 /index.php?s=/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `linshi_setting` [ RunTime:0.077005s ]
+SQL: SELECT `key`,`value` FROM `linshi_setting`  [ RunTime:0.002000s ]
+NOTIC: [2] unlink(D:\wamp\www\houtai\Public\Runtime\Temp/71df8fced343b2a8ba67c00a47a67b50.php): No such file or directory D:\wamp\www\houtai\Libs\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+INFO: Run \Common\Behavior\SettingBehavior [ RunTime:0.355020s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.356020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-06-01T19:07:39+08:00 ] 127.0.0.1 /index.php?s=/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `linshi_setting` [ RunTime:0.042002s ]
+SQL: SELECT `key`,`value` FROM `linshi_setting`  [ RunTime:0.001000s ]
+NOTIC: [2] unlink(D:\wamp\www\houtai\Public\Runtime\Temp/71df8fced343b2a8ba67c00a47a67b50.php): No such file or directory D:\wamp\www\houtai\Libs\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+INFO: Run \Common\Behavior\SettingBehavior [ RunTime:0.212012s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.215012s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002001s ]
+
+[ 2015-06-01T19:17:38+08:00 ] 127.0.0.1 /index.php?s=/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `linshi_setting` [ RunTime:0.111007s ]
+SQL: SELECT `key`,`value` FROM `linshi_setting`  [ RunTime:0.000000s ]
+NOTIC: [2] unlink(D:\wamp\www\houtai\Public\Runtime\Temp/71df8fced343b2a8ba67c00a47a67b50.php): No such file or directory D:\wamp\www\houtai\Libs\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+INFO: Run \Common\Behavior\SettingBehavior [ RunTime:0.275016s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.276016s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-06-01T19:24:27+08:00 ] 127.0.0.1 /index.php?s=/admin/index/public_menuleft.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.027002s ]
+SQL: SHOW COLUMNS FROM `linshi_setting` [ RunTime:0.061003s ]
+SQL: SELECT `key`,`value` FROM `linshi_setting`  [ RunTime:0.001000s ]
+NOTIC: [2] unlink(D:\wamp\www\houtai\Public\Runtime\Temp/71df8fced343b2a8ba67c00a47a67b50.php): No such file or directory D:\wamp\www\houtai\Libs\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+INFO: Run \Common\Behavior\SettingBehavior [ RunTime:0.587033s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.659038s ]
+SQL: SHOW COLUMNS FROM `linshi_menu` [ RunTime:0.286016s ]
+SQL: SELECT * FROM `linshi_menu` WHERE ( `parentid` = 5 ) AND ( `display` = 1 ) ORDER BY listorder ASC LIMIT 1000   [ RunTime:1.288074s ]
+SQL: SELECT * FROM `linshi_menu` WHERE ( `parentid` = 14 ) AND ( `display` = 1 ) ORDER BY listorder ASC LIMIT 1000   [ RunTime:0.023001s ]
+
+[ 2015-06-01T19:24:35+08:00 ] 127.0.0.1 /index.php?s=/admin/system/menulist/menuid/16.html&_=1433157872556
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `linshi_setting` [ RunTime:0.085005s ]
+SQL: SELECT `key`,`value` FROM `linshi_setting`  [ RunTime:0.000000s ]
+NOTIC: [2] unlink(D:\wamp\www\houtai\Public\Runtime\Temp/71df8fced343b2a8ba67c00a47a67b50.php): No such file or directory D:\wamp\www\houtai\Libs\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+INFO: Run \Common\Behavior\SettingBehavior [ RunTime:0.213012s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.214013s ]
+SQL: SHOW COLUMNS FROM `linshi_menu` [ RunTime:0.005001s ]
+SQL: SELECT * FROM `linshi_menu` WHERE ( `id` = 16 ) LIMIT 1   [ RunTime:0.048003s ]
+SQL: SELECT * FROM `linshi_menu` WHERE ( `id` = 14 ) LIMIT 1   [ RunTime:0.023001s ]
+SQL: SELECT * FROM `linshi_menu` WHERE ( `id` = 5 ) LIMIT 1   [ RunTime:0.050003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:1.670096s ]
+INFO: [ view_parse ] --END-- [ RunTime:1.670096s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.061003s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.061003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.022002s ]
+INFO: [ app_end ] --END-- [ RunTime:0.022002s ]
+
+[ 2015-06-01T19:24:44+08:00 ] 127.0.0.1 /index.php?s=/admin/system/menulist/grid/treegrid.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `linshi_setting` [ RunTime:0.005001s ]
+SQL: SELECT `key`,`value` FROM `linshi_setting`  [ RunTime:0.001000s ]
+NOTIC: [2] unlink(D:\wamp\www\houtai\Public\Runtime\Temp/71df8fced343b2a8ba67c00a47a67b50.php): No such file or directory D:\wamp\www\houtai\Libs\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+INFO: Run \Common\Behavior\SettingBehavior [ RunTime:0.131008s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.132008s ]
+SQL: SHOW COLUMNS FROM `linshi_menu` [ RunTime:0.004000s ]
+
+[ 2015-06-01T19:24:55+08:00 ] 127.0.0.1 /index.php?s=/admin/index/public_menuleft.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `linshi_setting` [ RunTime:0.004000s ]
+SQL: SELECT `key`,`value` FROM `linshi_setting`  [ RunTime:0.001000s ]
+NOTIC: [2] unlink(D:\wamp\www\houtai\Public\Runtime\Temp/71df8fced343b2a8ba67c00a47a67b50.php): No such file or directory D:\wamp\www\houtai\Libs\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+INFO: Run \Common\Behavior\SettingBehavior [ RunTime:0.055003s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.057003s ]
+SQL: SHOW COLUMNS FROM `linshi_menu` [ RunTime:0.004000s ]
+SQL: SELECT * FROM `linshi_menu` WHERE ( `parentid` = 4 ) AND ( `display` = 1 ) ORDER BY listorder ASC LIMIT 1000   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `linshi_menu` WHERE ( `parentid` = 42 ) AND ( `display` = 1 ) ORDER BY listorder ASC LIMIT 1000   [ RunTime:0.000000s ]
+
+[ 2015-06-01T19:25:00+08:00 ] 127.0.0.1 /index.php?s=/admin/index/public_menuleft.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `linshi_setting` [ RunTime:0.040003s ]
+SQL: SELECT `key`,`value` FROM `linshi_setting`  [ RunTime:0.000000s ]
+NOTIC: [2] unlink(D:\wamp\www\houtai\Public\Runtime\Temp/71df8fced343b2a8ba67c00a47a67b50.php): No such file or directory D:\wamp\www\houtai\Libs\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+INFO: Run \Common\Behavior\SettingBehavior [ RunTime:0.048003s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.049003s ]
+SQL: SHOW COLUMNS FROM `linshi_menu` [ RunTime:0.005000s ]
+SQL: SELECT * FROM `linshi_menu` WHERE ( `parentid` = 2 ) AND ( `display` = 1 ) ORDER BY listorder ASC LIMIT 1000   [ RunTime:0.104006s ]
+SQL: SELECT * FROM `linshi_menu` WHERE ( `parentid` = 9 ) AND ( `display` = 1 ) ORDER BY listorder ASC LIMIT 1000   [ RunTime:0.085005s ]
+SQL: SELECT * FROM `linshi_menu` WHERE ( `parentid` = 11 ) AND ( `display` = 1 ) ORDER BY listorder ASC LIMIT 1000   [ RunTime:0.000000s ]
+
+[ 2015-06-01T19:25:03+08:00 ] 127.0.0.1 /index.php?s=/admin/admin/memberlist/menuid/12.html&_=1433157902891
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `linshi_setting` [ RunTime:0.004000s ]
+SQL: SELECT `key`,`value` FROM `linshi_setting`  [ RunTime:0.001000s ]
+NOTIC: [2] unlink(D:\wamp\www\houtai\Public\Runtime\Temp/71df8fced343b2a8ba67c00a47a67b50.php): No such file or directory D:\wamp\www\houtai\Libs\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+INFO: Run \Common\Behavior\SettingBehavior [ RunTime:0.059003s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.061003s ]
+SQL: SHOW COLUMNS FROM `linshi_menu` [ RunTime:0.019001s ]
+SQL: SELECT * FROM `linshi_menu` WHERE ( `id` = 12 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `linshi_menu` WHERE ( `id` = 11 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `linshi_menu` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.016001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.122007s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.122007s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-06-01T19:25:05+08:00 ] 127.0.0.1 /index.php?s=/admin/admin/memberlist/grid/datagrid.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `linshi_setting` [ RunTime:0.026002s ]
+SQL: SELECT `key`,`value` FROM `linshi_setting`  [ RunTime:0.000000s ]
+NOTIC: [2] unlink(D:\wamp\www\houtai\Public\Runtime\Temp/71df8fced343b2a8ba67c00a47a67b50.php): No such file or directory D:\wamp\www\houtai\Libs\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+INFO: Run \Common\Behavior\SettingBehavior [ RunTime:0.106006s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.107006s ]
+SQL: SHOW COLUMNS FROM `linshi_admin` [ RunTime:0.119006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `linshi_admin` LIMIT 1   [ RunTime:0.121007s ]
+SQL: SHOW COLUMNS FROM `linshi_admin` [ RunTime:0.066004s ]
+SQL: SELECT A.userid,A.username,A.lastloginip,A.email,A.realname,AR.rolename,FROM_UNIXTIME(A.lastlogintime,'%Y-%m-%d %H:%i:%s') as lastlogintime FROM linshi_admin A INNER JOIN linshi_admin_role AR on AR.roleid = A.roleid  ORDER BY userid asc LIMIT 0,20   [ RunTime:0.819047s ]
+
+[ 2015-06-01T19:25:10+08:00 ] 127.0.0.1 /index.php?s=/admin/admin/memberedit.html&id=2&_=1433157910126
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `linshi_setting` [ RunTime:0.005001s ]
+SQL: SELECT `key`,`value` FROM `linshi_setting`  [ RunTime:0.001000s ]
+NOTIC: [2] unlink(D:\wamp\www\houtai\Public\Runtime\Temp/71df8fced343b2a8ba67c00a47a67b50.php): No such file or directory D:\wamp\www\houtai\Libs\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+INFO: Run \Common\Behavior\SettingBehavior [ RunTime:0.031002s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.032002s ]
+SQL: SHOW COLUMNS FROM `linshi_admin` [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `linshi_admin_role` [ RunTime:0.005001s ]
+SQL: SELECT `userid`,`username`,`roleid`,`encrypt`,`lastloginip`,`lastlogintime`,`email`,`realname` FROM `linshi_admin` WHERE ( `userid` = 2 ) LIMIT 1   [ RunTime:0.023001s ]
+SQL: SELECT `rolename` FROM `linshi_admin_role` WHERE ( `roleid` = 2 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT `roleid`,`rolename` FROM `linshi_admin_role` WHERE ( `disabled` = 0 )  [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.057003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.058003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-06-01T19:25:26+08:00 ] 127.0.0.1 /index.php?s=/admin/admin/rolelist/menuid/13.html&_=1433157926206
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `linshi_setting` [ RunTime:0.004000s ]
+SQL: SELECT `key`,`value` FROM `linshi_setting`  [ RunTime:0.000000s ]
+NOTIC: [2] unlink(D:\wamp\www\houtai\Public\Runtime\Temp/71df8fced343b2a8ba67c00a47a67b50.php): No such file or directory D:\wamp\www\houtai\Libs\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+INFO: Run \Common\Behavior\SettingBehavior [ RunTime:0.055003s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.056003s ]
+SQL: SHOW COLUMNS FROM `linshi_menu` [ RunTime:0.013001s ]
+SQL: SELECT * FROM `linshi_menu` WHERE ( `id` = 13 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `linshi_menu` WHERE ( `id` = 11 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `linshi_menu` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.053003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.054003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-06-01T19:25:27+08:00 ] 127.0.0.1 /index.php?s=/admin/admin/rolelist/grid/datagrid.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `linshi_setting` [ RunTime:0.005000s ]
+SQL: SELECT `key`,`value` FROM `linshi_setting`  [ RunTime:0.000000s ]
+NOTIC: [2] unlink(D:\wamp\www\houtai\Public\Runtime\Temp/71df8fced343b2a8ba67c00a47a67b50.php): No such file or directory D:\wamp\www\houtai\Libs\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+INFO: Run \Common\Behavior\SettingBehavior [ RunTime:0.062003s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.063003s ]
+SQL: SHOW COLUMNS FROM `linshi_admin_role` [ RunTime:0.005000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `linshi_admin_role` LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT *,roleid as id FROM `linshi_admin_role` ORDER BY listorder asc LIMIT 0,20   [ RunTime:0.091005s ]
+
+[ 2015-06-01T19:25:30+08:00 ] 127.0.0.1 /index.php?s=/admin/admin/rolepermission.html&id=2&_=1433157930229
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `linshi_setting` [ RunTime:0.004000s ]
+SQL: SELECT `key`,`value` FROM `linshi_setting`  [ RunTime:0.000000s ]
+NOTIC: [2] unlink(D:\wamp\www\houtai\Public\Runtime\Temp/71df8fced343b2a8ba67c00a47a67b50.php): No such file or directory D:\wamp\www\houtai\Libs\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+INFO: Run \Common\Behavior\SettingBehavior [ RunTime:0.038002s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.039002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.061003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.061003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-06-01T19:25:31+08:00 ] 127.0.0.1 /index.php?s=/admin/admin/rolepermission/id/2.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `linshi_setting` [ RunTime:0.005000s ]
+SQL: SELECT `key`,`value` FROM `linshi_setting`  [ RunTime:0.000000s ]
+NOTIC: [2] unlink(D:\wamp\www\houtai\Public\Runtime\Temp/71df8fced343b2a8ba67c00a47a67b50.php): No such file or directory D:\wamp\www\houtai\Libs\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+INFO: Run \Common\Behavior\SettingBehavior [ RunTime:0.028001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.029002s ]
+SQL: SHOW COLUMNS FROM `linshi_menu` [ RunTime:0.004001s ]
+SQL: SELECT `id`,`name` as `text`,`c`,`a` FROM `linshi_menu` WHERE ( `parentid`='0' AND `id`<>'1' ) ORDER BY `listorder` ASC,`id` DESC  [ RunTime:0.188010s ]
+SQL: SHOW COLUMNS FROM `linshi_admin_role_priv` [ RunTime:0.161010s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `id`,`name` as `text`,`c`,`a` FROM `linshi_menu` WHERE ( `parentid`='2' AND `id`<>'1' ) ORDER BY `listorder` ASC,`id` DESC  [ RunTime:0.000000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 9 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT `id`,`name` as `text`,`c`,`a` FROM `linshi_menu` WHERE ( `parentid`='9' AND `id`<>'1' ) ORDER BY `listorder` ASC,`id` DESC  [ RunTime:0.001000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 10 ) LIMIT 1   [ RunTime:0.004000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 9 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `id`,`name` as `text`,`c`,`a` FROM `linshi_menu` WHERE ( `parentid`='10' AND `id`<>'1' ) ORDER BY `listorder` ASC,`id` DESC  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `linshi_admin_role_priv` WHERE ( `c` = 'Setting' ) AND ( `a` = 'site' ) AND ( `roleid` = 2 ) LIMIT 1   [ RunTime:0.078005s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 11 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT `id`,`name` as `text`,`c`,`a` FROM `linshi_menu` WHERE ( `parentid`='11' AND `id`<>'1' ) ORDER BY `listorder` ASC,`id` DESC  [ RunTime:0.001000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 12 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 11 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `id`,`name` as `text`,`c`,`a` FROM `linshi_menu` WHERE ( `parentid`='12' AND `id`<>'1' ) ORDER BY `listorder` ASC,`id` DESC  [ RunTime:0.000000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 27 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 12 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 11 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT `id`,`name` as `text`,`c`,`a` FROM `linshi_menu` WHERE ( `parentid`='27' AND `id`<>'1' ) ORDER BY `listorder` ASC,`id` DESC  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `linshi_admin_role_priv` WHERE ( `c` = 'Admin' ) AND ( `a` = 'memberDelete' ) AND ( `roleid` = 2 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 26 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 12 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 11 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `id`,`name` as `text`,`c`,`a` FROM `linshi_menu` WHERE ( `parentid`='26' AND `id`<>'1' ) ORDER BY `listorder` ASC,`id` DESC  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `linshi_admin_role_priv` WHERE ( `c` = 'Admin' ) AND ( `a` = 'memberEdit' ) AND ( `roleid` = 2 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 25 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 12 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 11 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT `id`,`name` as `text`,`c`,`a` FROM `linshi_menu` WHERE ( `parentid`='25' AND `id`<>'1' ) ORDER BY `listorder` ASC,`id` DESC  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `linshi_admin_role_priv` WHERE ( `c` = 'Admin' ) AND ( `a` = 'memberAdd' ) AND ( `roleid` = 2 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 24 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 12 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 11 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT `id`,`name` as `text`,`c`,`a` FROM `linshi_menu` WHERE ( `parentid`='24' AND `id`<>'1' ) ORDER BY `listorder` ASC,`id` DESC  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `linshi_admin_role_priv` WHERE ( `c` = 'Admin' ) AND ( `a` = 'memberView' ) AND ( `roleid` = 2 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 13 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 11 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `id`,`name` as `text`,`c`,`a` FROM `linshi_menu` WHERE ( `parentid`='13' AND `id`<>'1' ) ORDER BY `listorder` ASC,`id` DESC  [ RunTime:0.000000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 33 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 13 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 11 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT `id`,`name` as `text`,`c`,`a` FROM `linshi_menu` WHERE ( `parentid`='33' AND `id`<>'1' ) ORDER BY `listorder` ASC,`id` DESC  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `linshi_admin_role_priv` WHERE ( `c` = 'Admin' ) AND ( `a` = 'roleSet' ) AND ( `roleid` = 2 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 32 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 13 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 11 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `id`,`name` as `text`,`c`,`a` FROM `linshi_menu` WHERE ( `parentid`='32' AND `id`<>'1' ) ORDER BY `listorder` ASC,`id` DESC  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `linshi_admin_role_priv` WHERE ( `c` = 'Admin' ) AND ( `a` = 'roleOrder' ) AND ( `roleid` = 2 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 31 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 13 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 11 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `id`,`name` as `text`,`c`,`a` FROM `linshi_menu` WHERE ( `parentid`='31' AND `id`<>'1' ) ORDER BY `listorder` ASC,`id` DESC  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `linshi_admin_role_priv` WHERE ( `c` = 'Admin' ) AND ( `a` = 'roleDelete' ) AND ( `roleid` = 2 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 30 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 13 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 11 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `id`,`name` as `text`,`c`,`a` FROM `linshi_menu` WHERE ( `parentid`='30' AND `id`<>'1' ) ORDER BY `listorder` ASC,`id` DESC  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `linshi_admin_role_priv` WHERE ( `c` = 'Admin' ) AND ( `a` = 'roleEdit' ) AND ( `roleid` = 2 ) LIMIT 1   [ RunTime:0.001001s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 29 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 13 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 11 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT `id`,`name` as `text`,`c`,`a` FROM `linshi_menu` WHERE ( `parentid`='29' AND `id`<>'1' ) ORDER BY `listorder` ASC,`id` DESC  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `linshi_admin_role_priv` WHERE ( `c` = 'Admin' ) AND ( `a` = 'roleAdd' ) AND ( `roleid` = 2 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 28 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 13 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 11 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `id`,`name` as `text`,`c`,`a` FROM `linshi_menu` WHERE ( `parentid`='28' AND `id`<>'1' ) ORDER BY `listorder` ASC,`id` DESC  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `linshi_admin_role_priv` WHERE ( `c` = 'Admin' ) AND ( `a` = 'roleView' ) AND ( `roleid` = 2 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 47 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `id`,`name` as `text`,`c`,`a` FROM `linshi_menu` WHERE ( `parentid`='47' AND `id`<>'1' ) ORDER BY `listorder` ASC,`id` DESC  [ RunTime:0.000000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 48 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 47 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `id`,`name` as `text`,`c`,`a` FROM `linshi_menu` WHERE ( `parentid`='48' AND `id`<>'1' ) ORDER BY `listorder` ASC,`id` DESC  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `linshi_admin_role_priv` WHERE ( `c` = 'Order' ) AND ( `a` = 'orderList' ) AND ( `roleid` = 2 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 3 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `id`,`name` as `text`,`c`,`a` FROM `linshi_menu` WHERE ( `parentid`='3' AND `id`<>'1' ) ORDER BY `listorder` ASC,`id` DESC  [ RunTime:0.001001s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 34 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 3 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT `id`,`name` as `text`,`c`,`a` FROM `linshi_menu` WHERE ( `parentid`='34' AND `id`<>'1' ) ORDER BY `listorder` ASC,`id` DESC  [ RunTime:0.001000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 36 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 34 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 3 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `id`,`name` as `text`,`c`,`a` FROM `linshi_menu` WHERE ( `parentid`='36' AND `id`<>'1' ) ORDER BY `listorder` ASC,`id` DESC  [ RunTime:0.000000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 41 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 36 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 34 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 3 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `id`,`name` as `text`,`c`,`a` FROM `linshi_menu` WHERE ( `parentid`='41' AND `id`<>'1' ) ORDER BY `listorder` ASC,`id` DESC  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `linshi_admin_role_priv` WHERE ( `c` = 'Category' ) AND ( `a` = 'categoryOrder' ) AND ( `roleid` = 2 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 40 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 36 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 34 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 3 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `id`,`name` as `text`,`c`,`a` FROM `linshi_menu` WHERE ( `parentid`='40' AND `id`<>'1' ) ORDER BY `listorder` ASC,`id` DESC  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `linshi_admin_role_priv` WHERE ( `c` = 'Category' ) AND ( `a` = 'categoryDelete' ) AND ( `roleid` = 2 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 39 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 36 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 34 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 3 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT `id`,`name` as `text`,`c`,`a` FROM `linshi_menu` WHERE ( `parentid`='39' AND `id`<>'1' ) ORDER BY `listorder` ASC,`id` DESC  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `linshi_admin_role_priv` WHERE ( `c` = 'Category' ) AND ( `a` = 'categoryEdit' ) AND ( `roleid` = 2 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 38 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 36 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 34 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 3 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT `id`,`name` as `text`,`c`,`a` FROM `linshi_menu` WHERE ( `parentid`='38' AND `id`<>'1' ) ORDER BY `listorder` ASC,`id` DESC  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `linshi_admin_role_priv` WHERE ( `c` = 'Category' ) AND ( `a` = 'categoryAdd' ) AND ( `roleid` = 2 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 37 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 36 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 34 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 3 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `id`,`name` as `text`,`c`,`a` FROM `linshi_menu` WHERE ( `parentid`='37' AND `id`<>'1' ) ORDER BY `listorder` ASC,`id` DESC  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `linshi_admin_role_priv` WHERE ( `c` = 'Category' ) AND ( `a` = 'categoryView' ) AND ( `roleid` = 2 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 35 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 34 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 3 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT `id`,`name` as `text`,`c`,`a` FROM `linshi_menu` WHERE ( `parentid`='35' AND `id`<>'1' ) ORDER BY `listorder` ASC,`id` DESC  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `linshi_admin_role_priv` WHERE ( `c` = 'Content' ) AND ( `a` = 'index' ) AND ( `roleid` = 2 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 49 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `id`,`name` as `text`,`c`,`a` FROM `linshi_menu` WHERE ( `parentid`='49' AND `id`<>'1' ) ORDER BY `listorder` ASC,`id` DESC  [ RunTime:0.000000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 50 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 49 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `id`,`name` as `text`,`c`,`a` FROM `linshi_menu` WHERE ( `parentid`='50' AND `id`<>'1' ) ORDER BY `listorder` ASC,`id` DESC  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `linshi_admin_role_priv` WHERE ( `c` = 'Course' ) AND ( `a` = 'course_list' ) AND ( `roleid` = 2 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 51 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 49 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `id`,`name` as `text`,`c`,`a` FROM `linshi_menu` WHERE ( `parentid`='51' AND `id`<>'1' ) ORDER BY `listorder` ASC,`id` DESC  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `linshi_admin_role_priv` WHERE ( `c` = 'Course' ) AND ( `a` = 'group_course_list' ) AND ( `roleid` = 2 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 4 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT `id`,`name` as `text`,`c`,`a` FROM `linshi_menu` WHERE ( `parentid`='4' AND `id`<>'1' ) ORDER BY `listorder` ASC,`id` DESC  [ RunTime:0.000000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 42 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 4 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `id`,`name` as `text`,`c`,`a` FROM `linshi_menu` WHERE ( `parentid`='42' AND `id`<>'1' ) ORDER BY `listorder` ASC,`id` DESC  [ RunTime:0.000000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 57 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 42 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 4 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `id`,`name` as `text`,`c`,`a` FROM `linshi_menu` WHERE ( `parentid`='57' AND `id`<>'1' ) ORDER BY `listorder` ASC,`id` DESC  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `linshi_admin_role_priv` WHERE ( `c` = 'Teacher' ) AND ( `a` = 'timeList' ) AND ( `roleid` = 2 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 46 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 42 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 4 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `id`,`name` as `text`,`c`,`a` FROM `linshi_menu` WHERE ( `parentid`='46' AND `id`<>'1' ) ORDER BY `listorder` ASC,`id` DESC  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `linshi_admin_role_priv` WHERE ( `c` = 'Student' ) AND ( `a` = 'studentList' ) AND ( `roleid` = 2 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 45 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 42 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 4 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `id`,`name` as `text`,`c`,`a` FROM `linshi_menu` WHERE ( `parentid`='45' AND `id`<>'1' ) ORDER BY `listorder` ASC,`id` DESC  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `linshi_admin_role_priv` WHERE ( `c` = 'Teacher' ) AND ( `a` = 'teacherList' ) AND ( `roleid` = 2 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 44 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 42 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 4 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `id`,`name` as `text`,`c`,`a` FROM `linshi_menu` WHERE ( `parentid`='44' AND `id`<>'1' ) ORDER BY `listorder` ASC,`id` DESC  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `linshi_admin_role_priv` WHERE ( `c` = 'Member' ) AND ( `a` = 'typeList' ) AND ( `roleid` = 2 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 52 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT `id`,`name` as `text`,`c`,`a` FROM `linshi_menu` WHERE ( `parentid`='52' AND `id`<>'1' ) ORDER BY `listorder` ASC,`id` DESC  [ RunTime:0.000000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 55 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 52 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `id`,`name` as `text`,`c`,`a` FROM `linshi_menu` WHERE ( `parentid`='55' AND `id`<>'1' ) ORDER BY `listorder` ASC,`id` DESC  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `linshi_admin_role_priv` WHERE ( `c` = 'Student' ) AND ( `a` = 'appointment_list' ) AND ( `roleid` = 2 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 54 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 52 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `id`,`name` as `text`,`c`,`a` FROM `linshi_menu` WHERE ( `parentid`='54' AND `id`<>'1' ) ORDER BY `listorder` ASC,`id` DESC  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `linshi_admin_role_priv` WHERE ( `c` = 'Student' ) AND ( `a` = 'appointment_customer' ) AND ( `roleid` = 2 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 5 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `id`,`name` as `text`,`c`,`a` FROM `linshi_menu` WHERE ( `parentid`='5' AND `id`<>'1' ) ORDER BY `listorder` ASC,`id` DESC  [ RunTime:0.000000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 14 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 5 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `id`,`name` as `text`,`c`,`a` FROM `linshi_menu` WHERE ( `parentid`='14' AND `id`<>'1' ) ORDER BY `listorder` ASC,`id` DESC  [ RunTime:0.000000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 15 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 14 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 5 ) LIMIT 1   [ RunTime:0.002000s ]
+SQL: SELECT `id`,`name` as `text`,`c`,`a` FROM `linshi_menu` WHERE ( `parentid`='15' AND `id`<>'1' ) ORDER BY `listorder` ASC,`id` DESC  [ RunTime:0.001000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 23 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 15 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 14 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 5 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT `id`,`name` as `text`,`c`,`a` FROM `linshi_menu` WHERE ( `parentid`='23' AND `id`<>'1' ) ORDER BY `listorder` ASC,`id` DESC  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `linshi_admin_role_priv` WHERE ( `c` = 'System' ) AND ( `a` = 'logDelete' ) AND ( `roleid` = 2 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 22 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 15 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 14 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 5 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `id`,`name` as `text`,`c`,`a` FROM `linshi_menu` WHERE ( `parentid`='22' AND `id`<>'1' ) ORDER BY `listorder` ASC,`id` DESC  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `linshi_admin_role_priv` WHERE ( `c` = 'System' ) AND ( `a` = 'logView' ) AND ( `roleid` = 2 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 16 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 14 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 5 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `id`,`name` as `text`,`c`,`a` FROM `linshi_menu` WHERE ( `parentid`='16' AND `id`<>'1' ) ORDER BY `listorder` ASC,`id` DESC  [ RunTime:0.001000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 21 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 16 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 14 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 5 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `id`,`name` as `text`,`c`,`a` FROM `linshi_menu` WHERE ( `parentid`='21' AND `id`<>'1' ) ORDER BY `listorder` ASC,`id` DESC  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `linshi_admin_role_priv` WHERE ( `c` = 'System' ) AND ( `a` = 'menuOrder' ) AND ( `roleid` = 2 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 20 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 16 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 14 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 5 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT `id`,`name` as `text`,`c`,`a` FROM `linshi_menu` WHERE ( `parentid`='20' AND `id`<>'1' ) ORDER BY `listorder` ASC,`id` DESC  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `linshi_admin_role_priv` WHERE ( `c` = 'System' ) AND ( `a` = 'menuDelete' ) AND ( `roleid` = 2 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 19 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 16 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 14 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 5 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `id`,`name` as `text`,`c`,`a` FROM `linshi_menu` WHERE ( `parentid`='19' AND `id`<>'1' ) ORDER BY `listorder` ASC,`id` DESC  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `linshi_admin_role_priv` WHERE ( `c` = 'System' ) AND ( `a` = 'menuEdit' ) AND ( `roleid` = 2 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 18 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 16 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 14 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 5 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `id`,`name` as `text`,`c`,`a` FROM `linshi_menu` WHERE ( `parentid`='18' AND `id`<>'1' ) ORDER BY `listorder` ASC,`id` DESC  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `linshi_admin_role_priv` WHERE ( `c` = 'System' ) AND ( `a` = 'menuAdd' ) AND ( `roleid` = 2 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 17 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 16 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 14 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 5 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `id`,`name` as `text`,`c`,`a` FROM `linshi_menu` WHERE ( `parentid`='17' AND `id`<>'1' ) ORDER BY `listorder` ASC,`id` DESC  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `linshi_admin_role_priv` WHERE ( `c` = 'System' ) AND ( `a` = 'menuView' ) AND ( `roleid` = 2 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 53 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `id`,`name` as `text`,`c`,`a` FROM `linshi_menu` WHERE ( `parentid`='53' AND `id`<>'1' ) ORDER BY `listorder` ASC,`id` DESC  [ RunTime:0.000000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 56 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `parentid` FROM `linshi_menu` WHERE ( `id` = 53 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `id`,`name` as `text`,`c`,`a` FROM `linshi_menu` WHERE ( `parentid`='56' AND `id`<>'1' ) ORDER BY `listorder` ASC,`id` DESC  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `linshi_admin_role_priv` WHERE ( `c` = 'Coupon' ) AND ( `a` = 'coupon_list' ) AND ( `roleid` = 2 ) LIMIT 1   [ RunTime:0.000000s ]
+
+[ 2015-06-01T19:26:42+08:00 ] 127.0.0.1 /index.php?s=/admin/index/login/dosubmit/1.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `linshi_setting` [ RunTime:0.006001s ]
+SQL: SELECT `key`,`value` FROM `linshi_setting`  [ RunTime:0.000000s ]
+NOTIC: [2] unlink(D:\wamp\www\houtai\Public\Runtime\Temp/71df8fced343b2a8ba67c00a47a67b50.php): No such file or directory D:\wamp\www\houtai\Libs\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+INFO: Run \Common\Behavior\SettingBehavior [ RunTime:0.041003s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.042003s ]
+SQL: SHOW COLUMNS FROM `linshi_admin` [ RunTime:0.015001s ]
+SQL: SHOW COLUMNS FROM `linshi_times` [ RunTime:0.096005s ]
+SQL: SELECT * FROM `linshi_admin` WHERE ( `username` = 'admin' ) LIMIT 1   [ RunTime:0.003001s ]
+SQL: SELECT * FROM `linshi_times` WHERE ( `username` = 'admin' ) AND ( `isadmin` = 1 ) LIMIT 1   [ RunTime:0.030001s ]
+SQL: DELETE FROM `linshi_times` WHERE ( `username` = 'admin' ) [ RunTime:0.009000s ]
+SQL: UPDATE `linshi_admin` SET `lastloginip`='127.0.0.1',`lastlogintime`=1433158002 WHERE ( `userid` = 1 ) [ RunTime:0.051003s ]
+
+[ 2015-06-01T19:26:53+08:00 ] 127.0.0.1 /index.php?s=/admin/index/public_main.html&_=1433158003980
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `linshi_setting` [ RunTime:0.005000s ]
+SQL: SELECT `key`,`value` FROM `linshi_setting`  [ RunTime:0.000000s ]
+NOTIC: [2] unlink(D:\wamp\www\houtai\Public\Runtime\Temp/71df8fced343b2a8ba67c00a47a67b50.php): No such file or directory D:\wamp\www\houtai\Libs\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+INFO: Run \Common\Behavior\SettingBehavior [ RunTime:0.084005s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.086005s ]
+SQL: SHOW COLUMNS FROM `linshi_admin` [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `linshi_admin_role` [ RunTime:0.005000s ]
+SQL: SELECT `userid`,`username`,`roleid`,`encrypt`,`lastloginip`,`lastlogintime`,`email`,`realname` FROM `linshi_admin` WHERE ( `userid` = 1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `rolename` FROM `linshi_admin_role` WHERE ( `roleid` = 1 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [2048] Non-static method Admin\Common\Sysinfo::getinfo() should not be called statically, assuming $this from incompatible context D:\wamp\www\houtai\App\Admin\Controller\IndexController.class.php 第 112 行.
+NOTIC: [2048] Non-static method Admin\Common\Sysinfo::sys_windows() should not be called statically, assuming $this from incompatible context D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 19 行.
+NOTIC: [2048] Non-static method Admin\Common\Sysinfo::GetWMI() should not be called statically, assuming $this from incompatible context D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 250 行.
+NOTIC: [2] reset() expects parameter 1 to be array, object given D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 300 行.
+NOTIC: [2048] Non-static method Admin\Common\Sysinfo::GetWMI() should not be called statically, assuming $this from incompatible context D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 262 行.
+NOTIC: [2] reset() expects parameter 1 to be array, object given D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 300 行.
+NOTIC: [2048] Non-static method Admin\Common\Sysinfo::GetWMI() should not be called statically, assuming $this from incompatible context D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 285 行.
+NOTIC: [2] reset() expects parameter 1 to be array, object given D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 300 行.
+NOTIC: [2048] Non-static method Admin\Common\Sysinfo::GetWMI() should not be called statically, assuming $this from incompatible context D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 288 行.
+NOTIC: [2] reset() expects parameter 1 to be array, object given D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 300 行.
+NOTIC: [8] Undefined index: memCached D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 25 行.
+NOTIC: [8] Undefined index: memRealPercent D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 25 行.
+NOTIC: [8] Undefined index: memCachedPercent D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 25 行.
+NOTIC: [8] Undefined index: swapTotal D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 25 行.
+NOTIC: [8] Undefined index: swapUsed D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 25 行.
+NOTIC: [8] Undefined index: swapFree D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 25 行.
+NOTIC: [8] Undefined index: swapPercent D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 25 行.
+NOTIC: [2] file(/proc/net/dev): failed to open stream: No such file or directory D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 33 行.
+NOTIC: [8] Undefined index: memBuffers D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 68 行.
+NOTIC: [8] Undefined index: memRealUsed D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 73 行.
+NOTIC: [8] Undefined index: memRealFree D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 74 行.
+NOTIC: [8] Undefined offset: 2 D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 82 行.
+NOTIC: [8] Undefined offset: 3 D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 83 行.
+NOTIC: [8] Undefined offset: 4 D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 84 行.
+NOTIC: [8] Undefined offset: 5 D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 85 行.
+NOTIC: [8] Undefined offset: 6 D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 86 行.
+NOTIC: [8] Undefined offset: 7 D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 87 行.
+NOTIC: [8] Undefined offset: 8 D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 88 行.
+NOTIC: [8] Undefined offset: 9 D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 89 行.
+NOTIC: [8] Undefined offset: 10 D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 90 行.
+NOTIC: [8] Undefined variable: NetInput D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 91 行.
+NOTIC: [8] Undefined variable: NetInput D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 92 行.
+NOTIC: [8] Undefined variable: NetInput D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 93 行.
+NOTIC: [8] Undefined variable: NetInput D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 94 行.
+NOTIC: [8] Undefined variable: NetInput D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 95 行.
+NOTIC: [8] Undefined variable: NetInput D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 96 行.
+NOTIC: [8] Undefined variable: NetInput D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 97 行.
+NOTIC: [8] Undefined variable: NetInput D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 98 行.
+NOTIC: [8] Undefined variable: NetInput D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 99 行.
+NOTIC: [2] file(/proc/net/dev): failed to open stream: No such file or directory D:\wamp\www\houtai\App\Admin\Controller\IndexController.class.php 第 116 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.106006s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.106006s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2015-06-01T19:26:53+08:00 ] 127.0.0.1 /index.php?s=/admin/index/public_menuleft.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `linshi_setting` [ RunTime:0.004000s ]
+SQL: SELECT `key`,`value` FROM `linshi_setting`  [ RunTime:0.001000s ]
+NOTIC: [2] unlink(D:\wamp\www\houtai\Public\Runtime\Temp/71df8fced343b2a8ba67c00a47a67b50.php): No such file or directory D:\wamp\www\houtai\Libs\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+INFO: Run \Common\Behavior\SettingBehavior [ RunTime:0.087005s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.089005s ]
+SQL: SHOW COLUMNS FROM `linshi_menu` [ RunTime:0.004000s ]
+SQL: SELECT * FROM `linshi_menu` WHERE ( `parentid` = 1 ) AND ( `display` = 1 ) ORDER BY listorder ASC LIMIT 1000   [ RunTime:0.009000s ]
+SQL: SELECT * FROM `linshi_menu` WHERE ( `parentid` = 6 ) AND ( `display` = 1 ) ORDER BY listorder ASC LIMIT 1000   [ RunTime:0.001000s ]
+
+[ 2015-06-01T19:26:53+08:00 ] 127.0.0.1 /index.php?s=/admin/index/public_menuleft.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `linshi_setting` [ RunTime:0.034002s ]
+SQL: SELECT `key`,`value` FROM `linshi_setting`  [ RunTime:0.000000s ]
+NOTIC: [2] unlink(D:\wamp\www\houtai\Public\Runtime\Temp/71df8fced343b2a8ba67c00a47a67b50.php): No such file or directory D:\wamp\www\houtai\Libs\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+INFO: Run \Common\Behavior\SettingBehavior [ RunTime:0.183011s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.185011s ]
+SQL: SHOW COLUMNS FROM `linshi_menu` [ RunTime:0.018001s ]
+SQL: SELECT * FROM `linshi_menu` WHERE ( `parentid` = 4 ) AND ( `display` = 1 ) ORDER BY listorder ASC LIMIT 1000   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `linshi_menu` WHERE ( `parentid` = 42 ) AND ( `display` = 1 ) ORDER BY listorder ASC LIMIT 1000   [ RunTime:0.001000s ]
+
+[ 2015-06-01T19:27:18+08:00 ] 127.0.0.1 /index.php?s=/admin/index/login/dosubmit/1.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `linshi_setting` [ RunTime:0.004001s ]
+SQL: SELECT `key`,`value` FROM `linshi_setting`  [ RunTime:0.000000s ]
+NOTIC: [2] unlink(D:\wamp\www\houtai\Public\Runtime\Temp/71df8fced343b2a8ba67c00a47a67b50.php): No such file or directory D:\wamp\www\houtai\Libs\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+INFO: Run \Common\Behavior\SettingBehavior [ RunTime:0.023002s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.026002s ]
+SQL: SHOW COLUMNS FROM `linshi_admin` [ RunTime:0.004000s ]
+
+[ 2015-06-01T19:27:25+08:00 ] 127.0.0.1 /index.php?s=/admin/index/login/dosubmit/1.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `linshi_setting` [ RunTime:0.006001s ]
+SQL: SELECT `key`,`value` FROM `linshi_setting`  [ RunTime:0.001000s ]
+NOTIC: [2] unlink(D:\wamp\www\houtai\Public\Runtime\Temp/71df8fced343b2a8ba67c00a47a67b50.php): No such file or directory D:\wamp\www\houtai\Libs\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+INFO: Run \Common\Behavior\SettingBehavior [ RunTime:0.035002s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.037002s ]
+SQL: SHOW COLUMNS FROM `linshi_admin` [ RunTime:0.007000s ]
+SQL: SHOW COLUMNS FROM `linshi_times` [ RunTime:0.004000s ]
+SQL: SELECT * FROM `linshi_admin` WHERE ( `username` = 'abc' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `linshi_times` WHERE ( `username` = 'abc' ) AND ( `isadmin` = 1 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: DELETE FROM `linshi_times` WHERE ( `username` = 'abc' ) [ RunTime:0.000000s ]
+SQL: UPDATE `linshi_admin` SET `lastloginip`='127.0.0.1',`lastlogintime`=1433158045 WHERE ( `userid` = 2 ) [ RunTime:0.001000s ]
+
+[ 2015-06-01T19:27:29+08:00 ] 127.0.0.1 /index.php?s=/admin/index/public_main.html&_=1433158046217
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `linshi_setting` [ RunTime:0.041002s ]
+SQL: SELECT `key`,`value` FROM `linshi_setting`  [ RunTime:0.001000s ]
+NOTIC: [2] unlink(D:\wamp\www\houtai\Public\Runtime\Temp/71df8fced343b2a8ba67c00a47a67b50.php): No such file or directory D:\wamp\www\houtai\Libs\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+INFO: Run \Common\Behavior\SettingBehavior [ RunTime:0.171010s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.172010s ]
+SQL: SHOW COLUMNS FROM `linshi_admin` [ RunTime:0.010000s ]
+SQL: SHOW COLUMNS FROM `linshi_admin_role` [ RunTime:0.027001s ]
+SQL: SELECT `userid`,`username`,`roleid`,`encrypt`,`lastloginip`,`lastlogintime`,`email`,`realname` FROM `linshi_admin` WHERE ( `userid` = 2 ) LIMIT 1   [ RunTime:0.002000s ]
+SQL: SELECT `rolename` FROM `linshi_admin_role` WHERE ( `roleid` = 2 ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [2048] Non-static method Admin\Common\Sysinfo::getinfo() should not be called statically, assuming $this from incompatible context D:\wamp\www\houtai\App\Admin\Controller\IndexController.class.php 第 112 行.
+NOTIC: [2048] Non-static method Admin\Common\Sysinfo::sys_windows() should not be called statically, assuming $this from incompatible context D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 19 行.
+NOTIC: [2048] Non-static method Admin\Common\Sysinfo::GetWMI() should not be called statically, assuming $this from incompatible context D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 250 行.
+NOTIC: [2] reset() expects parameter 1 to be array, object given D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 300 行.
+NOTIC: [2048] Non-static method Admin\Common\Sysinfo::GetWMI() should not be called statically, assuming $this from incompatible context D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 262 行.
+NOTIC: [2] reset() expects parameter 1 to be array, object given D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 300 行.
+NOTIC: [2048] Non-static method Admin\Common\Sysinfo::GetWMI() should not be called statically, assuming $this from incompatible context D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 285 行.
+NOTIC: [2] reset() expects parameter 1 to be array, object given D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 300 行.
+NOTIC: [2048] Non-static method Admin\Common\Sysinfo::GetWMI() should not be called statically, assuming $this from incompatible context D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 288 行.
+NOTIC: [2] reset() expects parameter 1 to be array, object given D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 300 行.
+NOTIC: [8] Undefined index: memCached D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 25 行.
+NOTIC: [8] Undefined index: memRealPercent D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 25 行.
+NOTIC: [8] Undefined index: memCachedPercent D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 25 行.
+NOTIC: [8] Undefined index: swapTotal D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 25 行.
+NOTIC: [8] Undefined index: swapUsed D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 25 行.
+NOTIC: [8] Undefined index: swapFree D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 25 行.
+NOTIC: [8] Undefined index: swapPercent D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 25 行.
+NOTIC: [2] file(/proc/net/dev): failed to open stream: No such file or directory D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 33 行.
+NOTIC: [8] Undefined index: memBuffers D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 68 行.
+NOTIC: [8] Undefined index: memRealUsed D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 73 行.
+NOTIC: [8] Undefined index: memRealFree D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 74 行.
+NOTIC: [8] Undefined offset: 2 D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 82 行.
+NOTIC: [8] Undefined offset: 3 D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 83 行.
+NOTIC: [8] Undefined offset: 4 D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 84 行.
+NOTIC: [8] Undefined offset: 5 D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 85 行.
+NOTIC: [8] Undefined offset: 6 D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 86 行.
+NOTIC: [8] Undefined offset: 7 D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 87 行.
+NOTIC: [8] Undefined offset: 8 D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 88 行.
+NOTIC: [8] Undefined offset: 9 D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 89 行.
+NOTIC: [8] Undefined offset: 10 D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 90 行.
+NOTIC: [8] Undefined variable: NetInput D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 91 行.
+NOTIC: [8] Undefined variable: NetInput D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 92 行.
+NOTIC: [8] Undefined variable: NetInput D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 93 行.
+NOTIC: [8] Undefined variable: NetInput D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 94 行.
+NOTIC: [8] Undefined variable: NetInput D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 95 行.
+NOTIC: [8] Undefined variable: NetInput D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 96 行.
+NOTIC: [8] Undefined variable: NetInput D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 97 行.
+NOTIC: [8] Undefined variable: NetInput D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 98 行.
+NOTIC: [8] Undefined variable: NetInput D:\wamp\www\houtai\App\Admin\Common\Sysinfo.class.php 第 99 行.
+NOTIC: [2] file(/proc/net/dev): failed to open stream: No such file or directory D:\wamp\www\houtai\App\Admin\Controller\IndexController.class.php 第 116 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.099006s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.099006s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-06-01T19:27:29+08:00 ] 127.0.0.1 /index.php?s=/admin/index/public_menuleft.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `linshi_setting` [ RunTime:0.057003s ]
+SQL: SELECT `key`,`value` FROM `linshi_setting`  [ RunTime:0.004001s ]
+NOTIC: [2] unlink(D:\wamp\www\houtai\Public\Runtime\Temp/71df8fced343b2a8ba67c00a47a67b50.php): No such file or directory D:\wamp\www\houtai\Libs\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+INFO: Run \Common\Behavior\SettingBehavior [ RunTime:0.203012s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.205012s ]
+SQL: SHOW COLUMNS FROM `linshi_menu` [ RunTime:0.005000s ]
+SQL: SELECT * FROM `linshi_menu` WHERE ( `parentid` = 1 ) AND ( `display` = 1 ) ORDER BY listorder ASC LIMIT 1000   [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `linshi_admin_role_priv` [ RunTime:0.004000s ]
+SQL: SELECT * FROM `linshi_menu` WHERE ( `parentid` = 6 ) AND ( `display` = 1 ) ORDER BY listorder ASC LIMIT 1000   [ RunTime:0.001000s ]
+
+[ 2015-06-01T19:27:29+08:00 ] 127.0.0.1 /index.php?s=/admin/index/public_menuleft.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `linshi_setting` [ RunTime:0.005001s ]
+SQL: SELECT `key`,`value` FROM `linshi_setting`  [ RunTime:0.000000s ]
+NOTIC: [2] unlink(D:\wamp\www\houtai\Public\Runtime\Temp/71df8fced343b2a8ba67c00a47a67b50.php): No such file or directory D:\wamp\www\houtai\Libs\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+INFO: Run \Common\Behavior\SettingBehavior [ RunTime:0.031002s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.033002s ]
+SQL: SHOW COLUMNS FROM `linshi_menu` [ RunTime:0.004001s ]
+SQL: SELECT * FROM `linshi_menu` WHERE ( `parentid` = 4 ) AND ( `display` = 1 ) ORDER BY listorder ASC LIMIT 1000   [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `linshi_admin_role_priv` [ RunTime:0.016001s ]
+SQL: SELECT * FROM `linshi_admin_role_priv` WHERE ( `c` = 'Member' ) AND ( `a` = 'left' ) AND ( `roleid` = 2 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT * FROM `linshi_menu` WHERE ( `parentid` = 42 ) AND ( `display` = 1 ) ORDER BY listorder ASC LIMIT 1000   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `linshi_admin_role_priv` WHERE ( `c` = 'Member' ) AND ( `a` = 'typeList' ) AND ( `roleid` = 2 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT * FROM `linshi_admin_role_priv` WHERE ( `c` = 'Teacher' ) AND ( `a` = 'teacherList' ) AND ( `roleid` = 2 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT * FROM `linshi_admin_role_priv` WHERE ( `c` = 'Student' ) AND ( `a` = 'studentList' ) AND ( `roleid` = 2 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `linshi_admin_role_priv` WHERE ( `c` = 'Teacher' ) AND ( `a` = 'timeList' ) AND ( `roleid` = 2 ) LIMIT 1   [ RunTime:0.000000s ]
+
+[ 2015-06-01T19:27:31+08:00 ] 127.0.0.1 /index.php?s=/admin/teacher/teacherlist/menuid/45.html&_=1433158050676
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `linshi_setting` [ RunTime:0.004000s ]
+SQL: SELECT `key`,`value` FROM `linshi_setting`  [ RunTime:0.000000s ]
+NOTIC: [2] unlink(D:\wamp\www\houtai\Public\Runtime\Temp/71df8fced343b2a8ba67c00a47a67b50.php): No such file or directory D:\wamp\www\houtai\Libs\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+INFO: Run \Common\Behavior\SettingBehavior [ RunTime:0.092005s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.093005s ]
+SQL: SHOW COLUMNS FROM `linshi_admin_role_priv` [ RunTime:0.004000s ]
+SQL: SELECT * FROM `linshi_admin_role_priv` WHERE ( `c` = 'Teacher' ) AND ( `a` = 'teacherlist' ) AND ( `roleid` = 2 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `linshi_menu` [ RunTime:0.027002s ]
+SQL: SELECT * FROM `linshi_menu` WHERE ( `id` = 45 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT * FROM `linshi_menu` WHERE ( `id` = 42 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `linshi_menu` WHERE ( `id` = 4 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `linshi_admin_role` [ RunTime:0.004000s ]
+SQL: SELECT `roleid`,`rolename` FROM `linshi_admin_role` WHERE ( `disabled` = 0 )  [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.693040s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.693040s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-06-01T19:27:33+08:00 ] 127.0.0.1 /index.php?s=/admin/teacher/teacherlist/grid/datagrid.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `linshi_setting` [ RunTime:0.098006s ]
+SQL: SELECT `key`,`value` FROM `linshi_setting`  [ RunTime:0.001000s ]
+NOTIC: [2] unlink(D:\wamp\www\houtai\Public\Runtime\Temp/71df8fced343b2a8ba67c00a47a67b50.php): No such file or directory D:\wamp\www\houtai\Libs\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+INFO: Run \Common\Behavior\SettingBehavior [ RunTime:0.110006s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.111006s ]
+SQL: SHOW COLUMNS FROM `linshi_admin_role_priv` [ RunTime:0.037003s ]
+SQL: SELECT * FROM `linshi_admin_role_priv` WHERE ( `c` = 'Teacher' ) AND ( `a` = 'teacherlist' ) AND ( `roleid` = 2 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `linshi_teachers` [ RunTime:0.513029s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `linshi_teachers` LIMIT 1   [ RunTime:0.588034s ]
+SQL: SELECT `teacher_name`,`sex`,`teaching_age`,`certification_flag`,`education_flag`,`teacher_certification_flag`,`discipline`,`grade`,`course_category`,`sort_num`,`recommand_flag`,`raw_add_time`,`display`,`teacher_id`,`teacher_id` as teacher_ids FROM `linshi_teachers` ORDER BY teacher_id asc LIMIT 0,20   [ RunTime:0.321018s ]
+

@@ -123,9 +123,6 @@ class TeacherController extends CommonController {
                 )
             );
             $this->assign('datagrid', $datagrid);
-            $admin_role_db = D('AdminRole');
-            $rolelist = $admin_role_db->where(array('disabled'=>'0'))->getField('roleid,rolename', true);
-            $this->assign('rolelist', $rolelist);
             $this->display('teacher_list');
         }
     }
@@ -151,9 +148,6 @@ class TeacherController extends CommonController {
                 $this->error('添加失败');
             }
         }else{
-            $admin_role_db = D('AdminRole');
-            $rolelist = $admin_role_db->where(array('disabled'=>'0'))->getField('roleid,rolename', true);
-            $this->assign('rolelist', $rolelist);
             $this->display('teacher_add');
         }
     }
@@ -393,9 +387,6 @@ class TeacherController extends CommonController {
                 )
             );
             $this->assign('datagrid', $datagrid);
-            $admin_role_db = D('AdminRole');
-            $rolelist = $admin_role_db->where(array('disabled'=>'0'))->getField('roleid,rolename', true);
-            $this->assign('rolelist', $rolelist);
             $this->display('time_list');
         }
     }

@@ -438,7 +438,10 @@ class TeacherController extends CommonController {
                         $dataArr['class_time'] = $time;
                         $dataArr['class_week'] = $week;
                         $dataArr['teacher_no_time'] = 0;
-                        $result = $courseTime->add($dataArr);
+                        $rs = $courseTime->where(array('teacher_id'=>$lt['teacher_id'],'class_date'=>$data['class_date'],'clss_time'=>$time))->select();
+                        if (empty($rs)){
+                            $result = $courseTime->add($dataArr);
+                        }
                     }
                  }
             }
@@ -454,7 +457,10 @@ class TeacherController extends CommonController {
                         $dataArr['class_time'] = $data['class_time'];
                         $dataArr['class_week'] = $week;
                         $dataArr['teacher_no_time'] = 0;
-                        $result = $courseTime->add($dataArr);
+                        $rs = $courseTime->where(array('teacher_id'=>$lt['teacher_id'],'class_date'=>$data['class_date'],'clss_time'=>$data['class_time']))->select();
+                        if (empty($rs)) {
+                            $result = $courseTime->add($dataArr);
+                        }
                 }
             }
 
@@ -470,7 +476,10 @@ class TeacherController extends CommonController {
                     $dataArr['class_time'] = $time;
                     $dataArr['class_week'] = $week;
                     $dataArr['teacher_no_time'] = 0;
-                    $result = $courseTime->add($dataArr);
+                    $rs = $courseTime->where(array('teacher_id'=>$data['teacher_id'],'class_date'=>$data['class_date'],'clss_time'=>$time))->select();
+                    if (empty($rs)) {
+                        $result = $courseTime->add($dataArr);
+                    }
                 }
             }
             if ($data['teacherAll']==0 && $data['classTimeAll']==0) {
@@ -484,7 +493,10 @@ class TeacherController extends CommonController {
                 $dataArr['class_time'] = $data['class_time'];
                 $dataArr['class_week'] = $week;
                 $dataArr['teacher_no_time'] = 0;
-                $result = $courseTime->add($dataArr);
+                $rs = $courseTime->where(array('teacher_id'=>$dataArr['teacher_id'],'class_date'=>$dataArr['class_date'],'clss_time'=>$dataArr['class_time']))->select();
+                if (empty($rs)) {
+                    $result = $courseTime->add($dataArr);
+                }
 
             }
             if($result){

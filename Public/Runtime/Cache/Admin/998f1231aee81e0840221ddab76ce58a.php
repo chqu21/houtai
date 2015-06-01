@@ -80,33 +80,33 @@ function adminteacherlistAddDialogFormSubmit(){
 	<tr>
 		<td>时间段：</td>
 		<td colspan="4">
-                <label><input type="checkbox" name="class_time" value="07:00-07:30">07:00-07:30</label>
-                <label><input type="checkbox" name="class_time" value="07:30-08:00">07:30-08:00</label>
-                <label><input type="checkbox" name="class_time" value="08:00-08:30">08:00-08:30</label>
-                <label><input type="checkbox" name="class_time" value="08:30-09:00">08:30-09:00</label><br/>
-                <label><input type="checkbox" name="class_time" value="09:00-09:30">09:00-09:30</label>
-                <label><input type="checkbox" name="class_time" value="09:30-10:00">09:30-10:00</label>
-                <label><input type="checkbox" name="class_time" value="10:00-10:30">10:00-10:30</label>
-                <label><input type="checkbox" name="class_time" value="11:00-11:30">11:00-11:30</label><br/>
-                <label><input type="checkbox" name="class_time" value="11:30-12:00">11:30-12:00</label>
-                <label><input type="checkbox" name="class_time" value="12:00-12:30">12:00-12:30</label>
-                <label><input type="checkbox" name="class_time" value="12:30-13:00">12:30-13:00</label>
-                <label><input type="checkbox" name="class_time" value="13:00-13:30">13:00-13:30</label><br/>
-                <label><input type="checkbox" name="class_time" value="13:30-14:00">13:30-14:00</label>
-                <label><input type="checkbox" name="class_time" value="14:00-14:30">14:00-14:30</label>
-                <label><input type="checkbox" name="class_time" value="14:30-15:00">14:30-15:00</label>
-                <label><input type="checkbox" name="class_time" value="15:00-15:30">15:00-15:30</label><br/>
-                <label><input type="checkbox" name="class_time" value="16:00-16:30">16:00-16:30</label>
-                <label><input type="checkbox" name="class_time" value="16:30-17:00">16:30-17:00</label>
-                <label><input type="checkbox" name="class_time" value="17:00-17:30">17:00-17:30</label>
-                <label><input type="checkbox" name="class_time" value="17:30-18:00">17:30-18:00</label><br/>
-                <label><input type="checkbox" name="class_time" value="18:00-18:30">18:00-18:30</label>
-                <label><input type="checkbox" name="class_time" value="18:30-19:00">18:30-19:00</label>
-                <label><input type="checkbox" name="class_time" value="19:00-19:30">19:00-19:30</label>
-                <label><input type="checkbox" name="class_time" value="20:00-20:30">20:00-20:30</label><br/>
-                <label><input type="checkbox" name="class_time" value="20:30-21:00">20:30-21:00</label>
-                <label><input type="checkbox" name="class_time" value="21:00-21:30">21:00-21:30</label>
-                <label><input type="checkbox" name="class_time" value="21:30-22:00">21:30-22:00</label>
+                <label><input type="checkbox" name="info[class_time][]" value="07:00-07:30">07:00-07:30</label>
+                <label><input type="checkbox" name="info[class_time][]" value="07:30-08:00">07:30-08:00</label>
+                <label><input type="checkbox" name="info[class_time][]" value="08:00-08:30">08:00-08:30</label>
+                <label><input type="checkbox" name="info[class_time][]" value="08:30-09:00">08:30-09:00</label><br/>
+                <label><input type="checkbox" name="info[class_time][]" value="09:00-09:30">09:00-09:30</label>
+                <label><input type="checkbox" name="info[class_time][]" value="09:30-10:00">09:30-10:00</label>
+                <label><input type="checkbox" name="info[class_time][]" value="10:00-10:30">10:00-10:30</label>
+                <label><input type="checkbox" name="info[class_time][]" value="11:00-11:30">11:00-11:30</label><br/>
+                <label><input type="checkbox" name="info[class_time][]" value="11:30-12:00">11:30-12:00</label>
+                <label><input type="checkbox" name="info[class_time][]" value="12:00-12:30">12:00-12:30</label>
+                <label><input type="checkbox" name="info[class_time][]" value="12:30-13:00">12:30-13:00</label>
+                <label><input type="checkbox" name="info[class_time][]" value="13:00-13:30">13:00-13:30</label><br/>
+                <label><input type="checkbox" name="info[class_time][]" value="13:30-14:00">13:30-14:00</label>
+                <label><input type="checkbox" name="info[class_time][]" value="14:00-14:30">14:00-14:30</label>
+                <label><input type="checkbox" name="info[class_time][]" value="14:30-15:00">14:30-15:00</label>
+                <label><input type="checkbox" name="info[class_time][]" value="15:00-15:30">15:00-15:30</label><br/>
+                <label><input type="checkbox" name="info[class_time][]" value="16:00-16:30">16:00-16:30</label>
+                <label><input type="checkbox" name="info[class_time][]" value="16:30-17:00">16:30-17:00</label>
+                <label><input type="checkbox" name="info[class_time][]" value="17:00-17:30">17:00-17:30</label>
+                <label><input type="checkbox" name="info[class_time][]" value="17:30-18:00">17:30-18:00</label><br/>
+                <label><input type="checkbox" name="info[class_time][]" value="18:00-18:30">18:00-18:30</label>
+                <label><input type="checkbox" name="info[class_time][]" value="18:30-19:00">18:30-19:00</label>
+                <label><input type="checkbox" name="info[class_time][]" value="19:00-19:30">19:00-19:30</label>
+                <label><input type="checkbox" name="info[class_time][]" value="20:00-20:30">20:00-20:30</label><br/>
+                <label><input type="checkbox" name="info[class_time][]" value="20:30-21:00">20:30-21:00</label>
+                <label><input type="checkbox" name="info[class_time][]" value="21:00-21:30">21:00-21:30</label>
+                <label><input type="checkbox" name="info[class_time][]" value="21:30-22:00">21:30-22:00</label>
 		</td>
 		<td><div id="admin_time_add_dialog_form_pwdconfirmTip"></div></td>
 	</tr>

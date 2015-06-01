@@ -81,12 +81,12 @@ function adminteacherlistAddDialogFormSubmit(){
 		<td>时间段：</td>
 		<td>
             <select id="admin_time_add_dialog_form_class_time" class="easyui-combobox" data-options="editable:false,panelHeight:'auto'" name="info[class_time]" style="height:25px">
-                <option value="7:00-7:30">7:00-7:30</option>
-                <option value="7:30-8:00">7:30-8:00</option>
-                <option value="8:00-8:30">8:00-8:30</option>
-                <option value="8:30-9:00">8:30-9:00</option>
-                <option value="9:00-9:30">9:00-9:30</option>
-                <option value="9:30-10:00">9:30-10:00</option>
+                <option value="07:00-07:30">07:00-07:30</option>
+                <option value="07:30-08:00">07:30-08:00</option>
+                <option value="08:00-08:30">08:00-08:30</option>
+                <option value="08:30-09:00">08:30-09:00</option>
+                <option value="09:00-09:30">09:00-09:30</option>
+                <option value="09:30-10:00">09:30-10:00</option>
                 <option value="10:00-10:30">10:00-10:30</option>
                 <option value="10:30-11:00">10:30-11:00</option>
                 <option value="11:00-11:30">11:00-11:30</option>

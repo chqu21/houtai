@@ -36,12 +36,12 @@
 
 <OBJECT classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
 codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"
-WIDTH="650" HEIGHT="450" id="myMovieName">
+WIDTH="850" HEIGHT="450" id="myMovieName">
 <PARAM NAME=movie VALUE="../flash/avatar.swf">
 <PARAM NAME=quality VALUE=high>
 <PARAM NAME=bgcolor VALUE=#FFFFFF>
-<param name="flashvars" value="imgUrl=<?php echo ($headPhoto["bigPic"]); ?>&uploadUrl=/index.php?s=/admin/teacher/upfile/teacherId/<?php echo ($teacherId); ?>&uploadSrc=false&pCut=190|145&pData=190|145|48|48|20|20&pSize=190|145|48|48|20|20" />
-<EMBED src="../flash/avatar.swf" quality=high bgcolor=#FFFFFF WIDTH="650" HEIGHT="450" wmode="transparent" flashVars="imgUrl=<?php echo ($headPhoto["bigPic"]); ?>&uploadUrl=/index.php?s=/admin/teacher/upfile/teacherId/<?php echo ($teacherId); ?>&uploadSrc=false&pCut=190|145&pData=190|145|48|48|20|20&pSize=190|145|48|48|20|20"
+<param name="flashvars" value="imgUrl=<?php echo ($headPhoto["bigPic"]); ?>&uploadUrl=/index.php?s=/admin/teacher/upfile/teacherId/<?php echo ($teacherId); ?>&uploadSrc=true&pCut=190|145&pData=190|145|145|145|20|20&pSize=190|145|145|145|20|20" />
+<EMBED src="../flash/avatar.swf" quality=high bgcolor=#FFFFFF WIDTH="850" HEIGHT="450" wmode="transparent" flashVars="imgUrl=<?php echo ($headPhoto["bigPic"]); ?>&uploadUrl=/index.php?s=/admin/teacher/upfile/teacherId/<?php echo ($teacherId); ?>&uploadSrc=true&pCut=190|145&pData=190|145|145|145|20|20&pSize=190|145|145|145|20|20"
 NAME="myMovieName" ALIGN="" TYPE="application/x-shockwave-flash" allowScriptAccess="always"
 PLUGINSPAGE="http://www.macromedia.com/go/getflashplayer">
 </EMBED>

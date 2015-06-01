@@ -256,11 +256,7 @@ class TeacherController extends CommonController {
 
     //评价列表
     public function appraiseList($id){
-        $teacher_db = D('Teacher');
-        $teacherInfo = $teacher_db->where(array('teacher_id'=>$id))->field('teacher_id','teacher_name')->find();
-        $this->assign('teacherName', $teacherInfo['teacher_name']);
-        $this->assign('teacherId',$id);
-        $this->display('teacher_appraise');
+
     }
     //生成唯一订单号
     public  function getOrderCode(){
@@ -277,55 +273,62 @@ class TeacherController extends CommonController {
     }
     //添加评价
     public  function addAppraise(){
-        $data = I('post.info');
-        $teacherName = $data['teacher_name'];
-        $teacherId = $data['teacher_id'];
-        $memberName = $data['member_name'];
-        unset($data['teacher_name']);
-        unset($data['teacher_id']);
-        unset($data['member_name']);
-        $commentType= array(
-            'type1'=>array(
-                'type_id'=>1,
-                'type'=>'环境与设施',
-            ),
-            'type2'=>array(
-                'type_id'=>2,
-                'type'=>'教学过程',
-            ),
-            'type3'=>array(
-                'type_id'=>3,
-                'type'=>'教学效果',
-            ),
-            'type4'=>array(
-                'type_id'=>4,
-                'type'=>'服务质量',
-            ),
-            'type5'=>array(
-                'type_id'=>5,
-                'type'=>'作业与答疑',
-            ),
-        );
-        $serviceComments = D('ServiceComments');
-        foreach($data as $key => $v){
-            $dataArr['teacher_id'] = $teacherId;
-            $dataArr['teacher_name'] = $teacherName;
-            $dataArr['member_name'] = $memberName;
-            $dataArr['type_id'] = $commentType[$key]['type_id'];
-            $dataArr['type'] = $commentType[$key]['type'];
-            $dataArr['comments'] = $v['content'];
-            $dataArr['score']=$v['score'];
-            $dataArr['appraise_code'] = $this->getOrderCode();
-            $dataArr['raw_add_time']=date('Y-m-d H:i:s');
-            $result= $serviceComments->add($dataArr);
+        if(IS_POST) {
+            $data = I('post.info');
+            $teacherName = $data['teacher_name'];
+            $teacherId = $data['teacher_id'];
+            $memberName = $data['member_name'];
+            unset($data['teacher_name']);
+            unset($data['teacher_id']);
+            unset($data['member_name']);
+            $commentType = array(
+                'type1' => array(
+                    'type_id' => 1,
+                    'type' => '环境与设施',
+                ),
+                'type2' => array(
+                    'type_id' => 2,
+                    'type' => '教学过程',
+                ),
+                'type3' => array(
+                    'type_id' => 3,
+                    'type' => '教学效果',
+                ),
+                'type4' => array(
+                    'type_id' => 4,
+                    'type' => '服务质量',
+                ),
+                'type5' => array(
+                    'type_id' => 5,
+                    'type' => '作业与答疑',
+                ),
+            );
+            $serviceComments = D('ServiceComments');
+            foreach ($data as $key => $v) {
+                $dataArr['teacher_id'] = $teacherId;
+                $dataArr['teacher_name'] = $teacherName;
+                $dataArr['member_name'] = $memberName;
+                $dataArr['type_id'] = $commentType[$key]['type_id'];
+                $dataArr['type'] = $commentType[$key]['type'];
+                $dataArr['comments'] = $v['content'];
+                $dataArr['score'] = $v['score'];
+                $dataArr['appraise_code'] = $this->getOrderCode();
+                $dataArr['raw_add_time'] = date('Y-m-d H:i:s');
+                $result = $serviceComments->add($dataArr);
+            }
+            if ($result) {
+                $this->success('添加评论成功');
+            } else {
+                $this->error('添加评论失败');
+            }
+            exit;
+        }else{
+            $teacher_db = D('Teacher');
+            $teacherInfo = $teacher_db->where(array('teacher_id'=>$id))->field('teacher_id','teacher_name')->find();
+            $this->assign('teacherName', $teacherInfo['teacher_name']);
+            $this->assign('teacherId',$id);
+            $this->display('teacher_appraise');
         }
-        if ($result){
-            $this->success('添加评论成功');
-        }else {
-            $this->error('添加评论失败');
-        }
-        exit;
-
     }
 
     /**

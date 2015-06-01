@@ -88,7 +88,7 @@ function adminAppraiseEdit(id){
         $.messager.alert('提示信息', '未选择老师', 'error');
         return false;
     }
-    var url = '<{:U('Teacher/appraise')}>';
+    var url = '<{:U('Teacher/addAppraise')}>';
     url += url.indexOf('?') != -1 ? '&id='+id : '?id='+id;
     $('#admin_teacher_addAppraise_dialog').dialog({href:url});
     $('#admin_teacher_addAppraise_dialog').dialog('open');

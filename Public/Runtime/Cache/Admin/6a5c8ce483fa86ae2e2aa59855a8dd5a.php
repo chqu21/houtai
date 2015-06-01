@@ -75,7 +75,7 @@ function adminHeadPhotoEdit(id){
         $.messager.alert('提示信息', '未选择老师', 'error');
         return false;
     }
-    var url = '<?php echo U('Teacher/teacherEditHeadPhoto');?>';
+    var url = '<?php echo U('Teacher/editPhoto');?>';
     url += url.indexOf('?') != -1 ? '&id='+id : '?id='+id;
     $('#admin_teacherlist_edit_photo_dialog').dialog({href:url});
     $('#admin_teacherlist_edit_photo_dialog').dialog('open');

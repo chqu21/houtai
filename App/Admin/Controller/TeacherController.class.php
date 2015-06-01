@@ -191,7 +191,7 @@ class TeacherController extends CommonController {
 
 
 
-    public function teacherEditHeadPhoto($id){
+    public function editPhoto($id){
         $teacher_db = D('Teacher');
         $teacherInfo = $teacher_db->where(array('teacher_id'=>$id))->field('head_photo')->find();
         if (!empty($teacherInfo['head_photo'])){
@@ -212,7 +212,7 @@ class TeacherController extends CommonController {
     }
 
     // 处理表单数据
-    public function upfile($teacherId) {
+    public function upFile($teacherId) {
         $path = C('IMG_PATH');
         $file_src = "src.png";
         $filename162 = $teacherId."_big.png";

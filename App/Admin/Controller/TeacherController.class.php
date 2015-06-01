@@ -254,8 +254,8 @@ class TeacherController extends CommonController {
     }
 
 
-    //添加评价
-    public function addAppraise($id){
+    //评价列表
+    public function appraiseList($id){
         $teacher_db = D('Teacher');
         $teacherInfo = $teacher_db->where(array('teacher_id'=>$id))->field('teacher_id','teacher_name')->find();
         $this->assign('teacherName', $teacherInfo['teacher_name']);

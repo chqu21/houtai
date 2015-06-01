@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="d8f33eb3-3aed-4b70-b310-7d6daebbc6fb" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Public/Runtime/Logs/15_06_01.log" afterPath="$PROJECT_DIR$/Public/Runtime/Logs/15_06_01.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Public/Runtime/Cache/Admin/6a5c8ce483fa86ae2e2aa59855a8dd5a.php" afterPath="$PROJECT_DIR$/Public/Runtime/Cache/Admin/6a5c8ce483fa86ae2e2aa59855a8dd5a.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/App/Admin/Controller/TeacherController.class.php" afterPath="$PROJECT_DIR$/App/Admin/Controller/TeacherController.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/App/Admin/View/Teacher/headPhoto.html" afterPath="$PROJECT_DIR$/App/Admin/View/Teacher/headPhoto.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="houtai.iws" />
@@ -44,8 +41,8 @@
       <file leaf-file-name="TeacherController.class.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/App/Admin/Controller/TeacherController.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.2380106" vertical-offset="9517" max-vertical-offset="10080">
-              <caret line="441" column="61" selection-start-line="441" selection-start-column="61" selection-end-line="441" selection-end-column="61" />
+            <state vertical-scroll-proportion="0.5381883" vertical-offset="9377" max-vertical-offset="10080">
+              <caret line="484" column="48" selection-start-line="484" selection-start-column="48" selection-end-line="484" selection-end-column="48" />
               <folding />
             </state>
           </provider>
@@ -961,8 +958,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/App/Admin/Controller/TeacherController.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.2380106" vertical-offset="9517" max-vertical-offset="10080">
-          <caret line="441" column="61" selection-start-line="441" selection-start-column="61" selection-end-line="441" selection-end-column="61" />
+        <state vertical-scroll-proportion="0.5381883" vertical-offset="9377" max-vertical-offset="10080">
+          <caret line="484" column="48" selection-start-line="484" selection-start-column="48" selection-end-line="484" selection-end-column="48" />
           <folding />
         </state>
       </provider>

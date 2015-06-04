@@ -210,45 +210,108 @@ class TeacherController extends CommonController {
         $this->assign('teacherId', $id);
         $this->display('headPhoto');
     }
+public function getPicExt($fileStream){
+    $strInfo = @unpack("C2chars", $fileStream);
+    $typeCode = intval($strInfo['chars1'].$strInfo['chars2']);
+    $fileType = '';
+    switch ($typeCode) {
+        case 7790: $fileType = 'exe'; break;
+        case 7784: $fileType = 'midi'; break;
+        case 8297: $fileType = 'rar'; break;
+        case 255216: $fileType = 'jpg'; break;
+        case 7173: $fileType = 'gif'; break;
+        case 6677: $fileType = 'bmp'; break;
+        case 13780: $fileType = 'png'; break;
+        default: echo'unknown';
+    }
+    return $fileType;
+}
+
+
+
+
+
 
     // 处理表单数据
     public function upFile($teacherId) {
         $path = C('IMG_PATH');
-        $file_src = "src.png";
-        $filename162 = $teacherId."_big.png";
-        $filename48 =  $teacherId."_middle.png";
-        $filename20 =  $teacherId."_small.png";
-
         $src=base64_decode($_POST['pic']);
         $pic1=base64_decode($_POST['pic1']);
         $pic2=base64_decode($_POST['pic2']);
         $pic3=base64_decode($_POST['pic3']);
 
         if($src) {
-            file_put_contents($file_src,$src);
+            $ext = $this->getPicExt($src);
+            $filenameSrc = $teacherId."_src.";
+            $filename170 = $teacherId."_big.";
+            $filename130 =  $teacherId."_middle.";
+            $filename20 =  $teacherId."_small.";
+
+            if (file_exist($path.$filenameSrc.$ext)){
+                unlink($path.$filenameSrc.$ext);
+            }
+            if (file_exist($path.$filename170)){
+                unlink($path.$filename170);
+            }
+            if (file_exist($path.$filename130)){
+                unlink($path.$filename130);
+            }
+            if (file_exist($path.$filename20)){
+                unlink($path.$filename20);
+            }
+            file_put_contents($path.$filenameSrc.$ext,$src);
+            file_put_contents($path.$filename170.$ext,$pic1);
+            file_put_contents($path.$filename130.$ext,$pic2);
+            file_put_contents($path.$filename20.$ext,$pic3);
+            $imgType = array('_src','_big','_middle','_small');
+            switch($ext){
+                case 'jpg':
+                    foreach($imgType as $type){
+                        $pathStr = $path.$teacherId.$type;
+                        $src = $pathStr.'.jpg';
+                        $image = ImageCreateFromJPEG($src);
+                        $output = $pathStr.'.png';
+                        imagepng($image,$output);
+                        imagedestroy($image);
+                        unlink($src);
+                    }
+                    break;
+                case 'gif':
+                    foreach($imgType as $type){
+                        $pathStr = $path.$type;
+                        $src = $pathStr.'.gif';
+                        $image = ImageCreateFromJPEG($src);
+                        $output = $pathStr.'.png';
+                        imagepng($image,$output);
+                        imagedestroy($image);
+                        unlink($src);
+                    }
+                    break;
+                case 'bmp':
+                    foreach($imgType as $type){
+                        $pathStr = $path.$type;
+                        $src = $pathStr.'.bmp';
+                        $image = ImageCreateFromJPEG($src);
+                        $output = $pathStr.'.png';
+                        imagepng($image,$output);
+                        imagedestroy($image);
+                        unlink($src);
+                    }
+                    break;
+
+            }
+            $imgArr['bigPic'] = 'uploads/'.$filename170.'png';
+            $imgArr['middlePic'] = 'uploads/'.$filename130.'png';
+            $imgArr['smallPic'] = 'uploads/'.$filename20.'png';
+            $teacher_db = D('Teacher');
+            if ($teacher_db->where(array('teacher_id'=>$teacherId))->save(array('head_photo'=>json_encode($imgArr)))){
+                $rs['status'] = 1;
+                echo json_encode($rs);
+                exit;
+            }
+            $rs['status'] = 0;
         }
-        if (file_exist($path.$filename162,$pic1)){
-            unlink($path.$filename162);
-        }
-        if (file_exist($path.$filename48,$pic1)){
-            unlink($path.$filename48);
-        }
-        if (file_exist($path.$filename20,$pic1)){
-            unlink($path.$filename20);
-        }
-        file_put_contents($path.$filename162,$pic1);
-        file_put_contents($path.$filename48,$pic2);
-        file_put_contents($path.$filename20,$pic3);
-        $imgArr['bigPic'] = 'Uploads/'.$filename162;
-        $imgArr['middlePic'] = 'Uploads/'.$filename48;
-        $imgArr['smallPic'] = 'Uploads/'.$filename20;
-        $teacher_db = D('Teacher');
-        if ($teacher_db->where(array('teacher_id'=>$teacherId))->save(array('head_photo'=>json_encode($imgArr)))){
-            $rs['status'] = 1;
-            echo json_encode($rs);
-            exit;
-        }
-        $rs['status'] = 0;
+        $rs['status'] = 1;
         echo json_encode($rs);
         exit;
     }

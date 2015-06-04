@@ -36,5 +36,5 @@ return array(
 		'exts'     => array('avi'),
 	),
     'URL_MODEL'=>3,
-    'IMG_PATH' => 'D:/wamp/www/houtai/Uploads/',
+    'IMG_PATH' => 'D:/wamp/www/houtai/uploads/',
 );

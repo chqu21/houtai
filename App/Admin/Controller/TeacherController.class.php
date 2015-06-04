@@ -300,6 +300,7 @@ public function getPicExt($fileStream){
                     break;
 
             }
+            $imgArr['srcPic'] = 'upload/'.$filenameSrc.'png';
             $imgArr['bigPic'] = 'upload/'.$filename170.'png';
             $imgArr['middlePic'] = 'upload/'.$filename130.'png';
             $imgArr['smallPic'] = 'upload/'.$filename20.'png';

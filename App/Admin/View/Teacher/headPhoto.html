@@ -16,7 +16,7 @@
      switch(status){
      case '1':
 		var time = new Date().getTime();
-		document.getElementById('avatar_priview').innerHTML = "头像1 : <img src='./Uploads/1.png?" + time + "'/> <br/> 头像2: <img src='./Uploads/2.png?" + time + "'/><br/> 头像3: <img src='./Uploads/3.png?" + time + "'/>" ;
+		document.getElementById('avatar_priview').innerHTML = "头像1 : <img src='./upload/1.png?" + time + "'/> <br/> 头像2: <img src='./upload/2.png?" + time + "'/><br/> 头像3: <img src='./upload/3.png?" + time + "'/>" ;
 		
 	break;
      break;

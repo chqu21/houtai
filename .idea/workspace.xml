@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d8f33eb3-3aed-4b70-b310-7d6daebbc6fb" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/Runtime/Logs/15_06_04.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flash/avatar.swf" afterPath="$PROJECT_DIR$/flash/avatar.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Public/Runtime/Logs/15_06_01.log" afterPath="$PROJECT_DIR$/Public/Runtime/Logs/15_06_01.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Public/Runtime/Cache/Admin/6a5c8ce483fa86ae2e2aa59855a8dd5a.php" afterPath="$PROJECT_DIR$/Public/Runtime/Cache/Admin/6a5c8ce483fa86ae2e2aa59855a8dd5a.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Public/Runtime/Logs/15_06_04.log" afterPath="$PROJECT_DIR$/Public/Runtime/Logs/15_06_04.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/App/Admin/Controller/TeacherController.class.php" afterPath="$PROJECT_DIR$/App/Admin/Controller/TeacherController.class.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/App/Admin/Conf/config.php" afterPath="$PROJECT_DIR$/App/Admin/Conf/config.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="houtai.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -36,8 +32,8 @@
       <file leaf-file-name="TeacherController.class.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/App/Admin/Controller/TeacherController.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7584369" vertical-offset="5713" max-vertical-offset="11220">
-              <caret line="307" column="34" selection-start-line="307" selection-start-column="34" selection-end-line="307" selection-end-column="34" />
+            <state vertical-scroll-proportion="0.37078652" vertical-offset="5882" max-vertical-offset="11220">
+              <caret line="304" column="41" selection-start-line="304" selection-start-column="41" selection-end-line="304" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -57,7 +53,7 @@
         <entry file="file://$PROJECT_DIR$/App/Admin/Conf/config.php">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-15.586206" vertical-offset="308" max-vertical-offset="900">
-              <caret line="38" column="39" selection-start-line="38" selection-start-column="39" selection-end-line="38" selection-end-column="39" />
+              <caret line="38" column="44" selection-start-line="38" selection-start-column="44" selection-end-line="38" selection-end-column="44" />
               <folding />
             </state>
           </provider>
@@ -958,15 +954,15 @@
     <entry file="file://$PROJECT_DIR$/App/Admin/Conf/config.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-15.586206" vertical-offset="308" max-vertical-offset="900">
-          <caret line="38" column="39" selection-start-line="38" selection-start-column="39" selection-end-line="38" selection-end-column="39" />
+          <caret line="38" column="44" selection-start-line="38" selection-start-column="44" selection-end-line="38" selection-end-column="44" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/App/Admin/Controller/TeacherController.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7584369" vertical-offset="5713" max-vertical-offset="11220">
-          <caret line="307" column="34" selection-start-line="307" selection-start-column="34" selection-end-line="307" selection-end-column="34" />
+        <state vertical-scroll-proportion="0.37078652" vertical-offset="5882" max-vertical-offset="11220">
+          <caret line="304" column="41" selection-start-line="304" selection-start-column="41" selection-end-line="304" selection-end-column="41" />
           <folding />
         </state>
       </provider>

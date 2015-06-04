@@ -300,9 +300,9 @@ public function getPicExt($fileStream){
                     break;
 
             }
-            $imgArr['bigPic'] = 'uploads/'.$filename170.'png';
-            $imgArr['middlePic'] = 'uploads/'.$filename130.'png';
-            $imgArr['smallPic'] = 'uploads/'.$filename20.'png';
+            $imgArr['bigPic'] = 'upload/'.$filename170.'png';
+            $imgArr['middlePic'] = 'upload/'.$filename130.'png';
+            $imgArr['smallPic'] = 'upload/'.$filename20.'png';
             $teacher_db = D('Teacher');
             if ($teacher_db->where(array('teacher_id'=>$teacherId))->save(array('head_photo'=>json_encode($imgArr)))){
                 $rs['status'] = 1;

@@ -1,0 +1,208 @@
+<script type="text/javascript">
+$(function(){
+	$.formValidator.initConfig({formID:"admin_teacherlist_edit_dialog_form",onError:function(msg){/*$.messager.alert('错误提示', msg, 'error');*/},onSuccess:adminteacherlistEditDialogFormSubmit,submitAfterAjaxPrompt:'有数据正在异步验证，请稍等...',inIframe:true});
+	$("#admin_teacherlist_edit_dialog_form_password").formValidator({empty:true,onShow:"不修改密码请留空",onFocus:"密码应该为6-20位之间"}).inputValidator({min:6,max:20,onError:"密码应该为6-20位之间"});
+	$("#admin_teacherlist_edit_dialog_form_pwdconfirm").formValidator({onShow:"不修改密码请留空",onFocus:"请输入确认密码"}).compareValidator({desID:"admin_teacherlist_edit_dialog_form_password",operateor:"=",onError:"输入两次密码不一致"});
+	$("#admin_teacherlist_edit_dialog_form_email").formValidator({onShow:"请输入E-mail",onFocus:"请输入E-mail"}).regexValidator({regExp:"email",dataType:"enum",onError:"E-mail格式错误"}).ajaxValidator({
+		type : "post",
+		url : "<{:U('Admin/public_checkEmail')}>",
+		data : {email: function(){return $("#admin_teacherlist_edit_dialog_form_email").val()}, default: '<{$info.email}>'},
+		datatype : "json",
+		async:'false',
+		success : function(data){
+			var json = $.parseJSON(data);
+            return json.status == 1 ? false : true;
+		},
+		onError : "该邮箱已经存在",
+		onWait : "请稍候..."
+	});
+	$("#admin_teacherlist_edit_dialog_form_realname").formValidator({onShow:"请输入真实姓名",onFocus:"真实姓名应该为2-20位之间"}).inputValidator({min:2,max:20,empty:{leftEmpty:false,rightEmpty:false,emptyError:"姓名两边不能有空格"},onError:"真实姓名应该为2-20位之间"});
+	$("#admin_teacherlist_edit_dialog_form_role").formValidator({onShow:"请选择角色",onFocus:"请选择角色"}).inputValidator({min:0,onError:"请选择角色"});
+})
+function adminteacherlistEditDialogFormSubmit(){
+	$.post('<{:U('Teacher/teacherEdit?id='.$info['teacher_id'])}>', $("#admin_teacherlist_edit_dialog_form").serialize(), function(res){
+		if(!res.status){
+			$.messager.alert('提示信息', res.info, 'error');
+		}else{
+			$.messager.alert('提示信息', res.info, 'info');
+			$('#admin_teacherlist_edit_dialog').dialog('close');
+			adminMemberRefresh();
+		}
+	})
+}
+</script>
+<!-- CSS goes in the document HEAD or added to your external stylesheet -->
+<style type="text/css">
+    table.gridtable {
+        font-family: verdana,arial,sans-serif;
+        font-size:11px;
+        color:#333333;
+        border-width: 0px;
+        border-color: #666666;
+        border-collapse: collapse;
+        margin-left: 15px;
+    }
+    table.gridtable th {
+        border-width: 0px;
+        padding: 8px;
+        border-style: solid;
+        border-color: #666666;
+        background-color: #dedede;
+    }
+    table.gridtable td {
+        border-width: 0px;
+        padding: 8px;
+        border-style: solid;
+        border-color: #666666;
+        background-color: #ffffff;
+    }
+</style>
+
+<form id="admin_teacherlist_edit_dialog_form">
+<table class="gridtable">
+	<tr>
+		<td width="80">教师姓名：</td>
+		<td><input type="text" name="teacher_name" value="<{$info.teacher_name}>" style="width:180px;height:22px" /></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>教龄：</td>
+        <td><input type="text" name="teaching_age" value="<{$info.teaching_age}>" style="width:180px;height:22px" /></td>
+		<td></td>
+	</tr>
+    <tr>
+        <td>姓别：</td>
+        <td>
+            <if condition="$info.sex eq 男">
+                <input type="radio" value="男"  name="sex" checked="checked">&nbsp;&nbsp;男</input>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="radio" value="女"  name="sex">&nbsp;&nbsp;女</input>
+                <else />
+                <input type="radio" value="男" name="sex">&nbsp;&nbsp;男</input>
+                <input type="radio" value="女" name="sex" checked="checked">&nbsp;&nbsp;女</input>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </if>
+        </td>
+        <td></td>
+    </tr>
+	<tr>
+		<td>身份认证：</td>
+        <td>
+            <if condition="$info.certification_flag eq 0">
+                <input type="radio" value="0"  name="certification_flag" checked="checked">&nbsp;&nbsp;未认证</input>&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="radio" value="1"  name="certification_flag">&nbsp;&nbsp;已认证</input>
+                <else />
+                <input type="radio" value="0" name="certification_flag">&nbsp;&nbsp;未认证</input>
+                <input type="radio" value="1" name="certification_flag" checked="checked">&nbsp;&nbsp;已认证</input>&nbsp;&nbsp;&nbsp;&nbsp;
+            </if>
+        </td>
+        <td></td>
+	</tr>
+	<tr>
+		<td>学历认证：</td>
+        <td>
+            <if condition="$info.education_flag eq 0">
+                <input type="radio" value="0"  name="education_flag" checked="checked">&nbsp;&nbsp;未认证</input>&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="radio" value="1"  name="education_flag">&nbsp;&nbsp;已认证</input>&nbsp;&nbsp;&nbsp;&nbsp;
+                <else />
+                <input type="radio" value="0" name="education_flag">&nbsp;&nbsp;未认证</input>&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="radio" value="1" name="education_flag" checked="checked">&nbsp;&nbsp;已认证</input>&nbsp;&nbsp;&nbsp;&nbsp;
+            </if>
+        </td>
+        <td></td>
+	</tr>
+	<tr>
+		<td>教师资格认证：</td>
+        <td>
+        <if condition="$info.teacher_certification_flag eq 0">
+            <input type="radio" value="0"  name="teacher_certification_flag" checked="checked">&nbsp;&nbsp;未认证</input>&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="radio" value="1"  name="teacher_certification_flag">&nbsp;&nbsp;已认证</input>&nbsp;&nbsp;&nbsp;&nbsp;
+        <else />
+            <input type="radio" value="0" name="teacher_certification_flag">&nbsp;&nbsp;未认证</input>&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="radio" value="1" name="teacher_certification_flag" checked="checked">&nbsp;&nbsp;已认证</input>&nbsp;&nbsp;&nbsp;&nbsp;
+        </if>
+        </td>
+        <td></td>
+	</tr>
+    <tr>
+        <td>是否推荐：</td>
+        <td>
+            <if condition="$info.recommand_flag eq 0">
+                <input type="radio" value="0"  name="recommand_flag" checked="checked">&nbsp;&nbsp;未推荐</input>&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="radio" value="1"  name="recommand_flag">&nbsp;&nbsp;已推荐</input>&nbsp;&nbsp;&nbsp;&nbsp;
+                <else />
+                <input type="radio" value="0" name="recommand_flag">&nbsp;&nbsp;未推荐</input>&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="radio" value="1" name="recommand_flag" checked="checked">&nbsp;&nbsp;已推荐</input>&nbsp;&nbsp;&nbsp;&nbsp;
+            </if>
+        </td>
+        <td></td>
+    </tr>
+    </tr>
+    <tr>
+        <td>是否显示：</td>
+        <td>
+            <if condition="$info.display eq 0">
+                <input type="radio" value="0"  name="display" checked="checked">&nbsp;&nbsp;未显示</input>&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="radio" value="1"  name="display">&nbsp;&nbsp;已显示</input>&nbsp;&nbsp;&nbsp;&nbsp;
+                <else />
+                <input type="radio" value="0" name="display">&nbsp;&nbsp;未显示</input>&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="radio" value="1" name="display" checked="checked">&nbsp;&nbsp;已显示</input>&nbsp;&nbsp;&nbsp;&nbsp;
+            </if>
+        </td>
+        <td></td>
+    </tr>
+	<tr>
+		<td>获得的荣誉：</td>
+        <td><input type="text" name="honor" value="<{$info.honor}>"  style="width:180px;height:22px" /></td>
+        <td></td>
+	</tr>
+    <tr>
+        <td>科目：</td>
+        <td><input type="text" name="discipline"  value="<{$info.discipline}>"  style="width:180px;height:22px" /></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>年级：</td>
+        <td><input type="text" name="grade"  value="<{$info.grade}>"  style="width:180px;height:22px" /></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>课程分类：</td>
+        <td><input type="text" name="course_category"  value="<{$info.course_category}>"  style="width:180px;height:22px" /></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>排序数字：</td>
+        <td><input type="text" name="sort_num"  value="<{$info.sort_num}>"  style="width:180px;height:22px" /></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>价格：</td>
+        <td><input type="text" name="price"  value="<{$info.price}>"  style="width:180px;height:22px" /></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>总评分：</td>
+        <td><input type="text" name="score"  value="<{$info.score}>" style="width:180px;height:22px" /></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>名言警句：</td>
+        <td><input type="text" name="catchphrase"  value="<{$info.catchphrase}>"  style="width:180px;height:22px" /></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>学生数：</td>
+        <td><input type="text" name="students_number"  value="<{$info.students_number}>" style="width:180px;height:22px" /></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>课时数：</td>
+        <td><input type="text" name="class_hours_number"  value="<{$info.class_hours_number}>" style="width:180px;height:22px" /></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>上课方式：</td>
+        <td><input type="text" name="class_method"  value="<{$info.class_method}>" style="width:180px;height:22px" /></td>
+        <td></td>
+    </tr>
+</table>
+</form>

@@ -10,7 +10,6 @@
             submitAfterAjaxPrompt: '有数据正在异步验证，请稍等...',
             inIframe: true
         });
-
     $('#file_upload').uploadify({
         'formData'     : {
             'timestamp' : "<?php echo ($info["timestamp"]); ?>",
@@ -40,7 +39,7 @@
 
 function adminadListEditDialogFormSubmit(){
         $('#file_upload').uploadify('upload', '*');
-        //$("#submitBtn").attr("disabled",true).attr("enabled",false);
+        $("#submitBtn").attr("disabled",true).attr("enabled",false);
 
 }
 </script>

@@ -39,10 +39,9 @@
 
 
 function adminadListEditDialogFormSubmit(){
-    $("#submitBtn").click(function(){     //上传按钮
         $('#file_upload').uploadify('upload', '*');
         $("#submitBtn").attr("disabled",true).attr("enabled",false);
-    });
+
 }
 </script>
 <!-- CSS goes in the document HEAD or added to your external stylesheet -->
@@ -81,7 +80,7 @@ function adminadListEditDialogFormSubmit(){
 	</tr>
     <tr>
         <td width="80">标题：</td>
-        <td><input type="text" id="title"  name="info[title]" value="<?php echo ($info["postion_id"]); ?>" style="width:180px;height:22px" /></td>
+        <td><input type="text" id="title"  name="info[title]" value="<?php echo ($info["title"]); ?>" style="width:180px;height:22px" /></td>
         <td></td>
     </tr>
     <tr>

@@ -1,4 +1,4 @@
-<script type="text/javascript">
+<?php if (!defined('THINK_PATH')) exit();?><script type="text/javascript">
     $(function() {
         $.formValidator.initConfig({
             formID: "admin_postionList_add_dialog_form",
@@ -10,7 +10,7 @@
         });
     });
 function adminpostionListAddDialogFormSubmit(){
-	$.post('<{:U('Ad/addPostion')}>', $("#admin_postionList_add_dialog_form").serialize(), function(res){
+	$.post('<?php echo U('Ad/addPostion');?>', $("#admin_postionList_add_dialog_form").serialize(), function(res){
 		if(!res.status){
 			$.messager.alert('提示信息', res.info, 'error');
 		}else{

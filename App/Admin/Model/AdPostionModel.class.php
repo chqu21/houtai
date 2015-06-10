@@ -2,9 +2,9 @@
 namespace Admin\Model;
 use Think\Model;
 
-class AdModel extends Model{
-    protected $tableName = 'ad';
-	protected $pk        = 'ad_id';
+class AdPostionModel extends Model{
+    protected $tableName = 'ad_postion';
+	protected $pk        = 'postion_id';
 	public    $error;
 
 

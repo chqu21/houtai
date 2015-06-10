@@ -1,21 +1,21 @@
-<script type="text/javascript">
+<?php if (!defined('THINK_PATH')) exit();?><script type="text/javascript">
     $(function() {
         $.formValidator.initConfig({
-            formID: "admin_postionList_add_dialog_form",
+            formID: "admin_postionList_edit_dialog_form",
             onError: function (msg) {/*$.messager.alert('错误提示', msg, 'error');*/
             },
-            onSuccess: adminpostionListAddDialogFormSubmit,
+            onSuccess: adminpostionListEditDialogFormSubmit,
             submitAfterAjaxPrompt: '有数据正在异步验证，请稍等...',
             inIframe: true
         });
     });
-function adminpostionListAddDialogFormSubmit(){
-	$.post('<{:U('Ad/addPostion')}>', $("#admin_postionList_add_dialog_form").serialize(), function(res){
+function adminpostionListEditDialogFormSubmit(){
+	$.post('<?php echo U('Ad/editPostion');?>', $("#admin_postionList_edit_dialog_form").serialize(), function(res){
 		if(!res.status){
 			$.messager.alert('提示信息', res.info, 'error');
 		}else{
 			$.messager.alert('提示信息', res.info, 'info');
-			$('#admin_postionList_add_dialog').dialog('close');
+            $('#admin_postionList_edit_dialog').dialog('close');
             adminAdRefresh();
 		}
 	})
@@ -48,20 +48,24 @@ function adminpostionListAddDialogFormSubmit(){
         background-color: #ffffff;
     }
 </style>
-<form id="admin_postionList_add_dialog_form">
+<form id="admin_postionList_edit_dialog_form">
 <table class="gridtable">
 	<tr>
 		<td width="80">广告类型：</td>
         <td>
-                <input type="radio" value="1"  name="info[type]" checked="checked">&nbsp;&nbsp;幻灯片</input>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <?php if($info["type"] == 1): ?><input type="radio" value="1"  name="info[type]" checked="checked">&nbsp;&nbsp;幻灯片</input>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <input type="radio" value="2"  name="info[type]">&nbsp;&nbsp;单张图片</input>
+                <?php else: ?>
+                <input type="radio" value="1"  name="info[type]">&nbsp;&nbsp;幻灯片</input>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="radio" value="2"  name="info[type]" checked="checked">&nbsp;&nbsp;单张图片</input><?php endif; ?>
         </td>
         <td></td>
 	</tr>
 	<tr>
 		<td>广告位置：</td>
         <td>
-            <input type="text"   name="info[postion]" checked="checked">&nbsp;&nbsp;</input>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="hidden" name="info[postion_id]" value="<?php echo ($info["postion_id"]); ?>">
+            <input type="text"   name="info[postion]" checked="checked" value="<?php echo ($info["postion"]); ?>">&nbsp;&nbsp;</input>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         </td>
         <td></td>
 	</tr>

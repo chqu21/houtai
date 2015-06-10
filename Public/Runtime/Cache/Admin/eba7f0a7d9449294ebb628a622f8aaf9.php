@@ -1,5 +1,5 @@
-<script src="__STATIC__/js/uploadify/jquery.uploadify.min.js" type="text/javascript"></script>
-<link rel="stylesheet" type="text/css" href="__STATIC__/css/admin/uploadify/uploadify.css">
+<?php if (!defined('THINK_PATH')) exit();?><script src="/Public/static/js/uploadify/jquery.uploadify.min.js" type="text/javascript"></script>
+<link rel="stylesheet" type="text/css" href="/Public/static/css/admin/uploadify/uploadify.css">
 <script type="text/javascript">
     $(function() {
         $.formValidator.initConfig({
@@ -12,18 +12,18 @@
         });
         $('#file_upload').uploadify({
             'formData'     : {
-                'timestamp' : "<{$info.timestamp}>",
-                'token'     : "<{$info.token}>"
+                'timestamp' : "<?php echo ($info["timestamp"]); ?>",
+                'token'     : "<?php echo ($info["token"]); ?>"
             },
             'auto': false, //非自动上传模式。
             'buttonText' : '选择图片',
             'swf'      : '/flash/uploadify.swf',
-            'uploader' : "/admin/Ad/adImage?id=<{$info.postion_id}>",
+            'uploader' : "/admin/Ad/adImage?id=<?php echo ($info["postion_id"]); ?>",
             'onUploadSuccess' : function(file, data, response)     //上传一次
             {
                 var p = eval('('+data+ ')');
                 $("#img_upload").val(p.pic);
-                $.post('<{:U('Ad/adAdd?id='.$info['postion_id'])}>', $("#admin_adList_add_dialog_form").serialize(), function(res){
+                $.post('<?php echo U('Ad/adAdd?id='.$info['postion_id']);?>', $("#admin_adList_add_dialog_form").serialize(), function(res){
                 if(!res.status){
                     $.messager.alert('提示信息', res.info, 'error');
                 }else{
@@ -73,7 +73,7 @@
     <table class="gridtable">
         <tr>
             <td width="80">位置：</td>
-            <td><input type="text" name="postion" readonly value="<{$info.postion}>" style="width:180px;height:22px" /></td>
+            <td><input type="text" name="postion" readonly value="<?php echo ($info["postion"]); ?>" style="width:180px;height:22px" /></td>
             <td></td>
         </tr>
         <tr>

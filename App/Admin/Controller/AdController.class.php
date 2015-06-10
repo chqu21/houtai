@@ -6,7 +6,7 @@ use Admin\Controller\CommonController;
  * 后台管理通用模块
  * @author wangdong
  */
-class OrderController extends CommonController {
+class AdController extends CommonController {
     /**
 	 * 后台首页
 	 */
@@ -23,130 +23,291 @@ class OrderController extends CommonController {
 		$this->display('index');
 	}
 
-    public function abc(){
-        $this->display('index');
-    }
-	
-	/**
-	 * 用户登录
-	 */
-    public function login(){
-    	if (I('get.dosubmit')){
-            $admin_db = D('Admin');
-            
-			$username = I('post.username', '', 'trim') ? I('post.username', '', 'trim') : $this->error('用户名不能为空', HTTP_REFERER);
-			$password = I('post.password', '', 'trim') ? I('post.password', '', 'trim') : $this->error('密码不能为空', HTTP_REFERER);
-			//验证码判断
-			$code = I('post.code', '', 'trim') ? I('post.code', '', 'trim') : $this->error('请输入验证码', HTTP_REFERER);
-			if(!check_verify($code, 'admin')) $this->error('验证码错误！', HTTP_REFERER);
-			
-			if($admin_db->login($username, $password)){
-			    $this->success('登录成功', U('Index/index'));
-			}else{
-			    $this->error($admin_db->error, HTTP_REFERER);
-			}
-    	}else {
-    		$this->display();
-    	}
-    }
-    
-    /**
-	 * 退出登录
-	 */
-    public function logout() {
-		session('userid', null);
-		session('roleid', null);
-		cookie('username', null);
-		cookie('userid', null);
-		
-		$this->success('安全退出！', U('Index/login'));
-	}
-    
-    /**
-	 * 验证码
-	 */
-	public function code(){
-        $verify = new \Think\Verify();
-        $verify->useCurve = true;
-        $verify->useNoise = false;
-        $verify->bg = array(255, 255, 255);
-        
-		if (I('get.code_len')) $verify->length = intval(I('get.code_len'));
-		if ($verify->length > 8 || $verify->length < 2) $verify->length = 4;
-		
-		if (I('get.font_size')) $verify->fontSize = intval(I('get.font_size'));
-		
-		if (I('get.width')) $verify->imageW = intval(I('get.width'));
-		if ($verify->imageW <= 0) $verify->imageW = 130;
-		
-		if (I('get.height')) $verify->imageH = intval(I('get.height'));
-		if ($verify->imageH <= 0) $verify->imageH = 50;
 
-        $verify->entry('admin');
-	}
-	
+
     /**
-     * 左侧菜单
+     * 广告位列表
      */
-	public function public_menuLeft($menuid = 0) {
-	    $menu_db = D('Menu');
-		$datas = array();
-		$list = $menu_db->getMenu($menuid);
-		foreach ($list as $k=>$v){
-			$datas[$k]['name'] = $v['name'];
-			$son_datas = $menu_db->getMenu($v['id']);
-			foreach ($son_datas as $k2=>$v2){
-				$datas[$k]['son'][$k2]['text'] = $v2['name'];
-				$datas[$k]['son'][$k2]['id']   = $v2['id'];
-				$datas[$k]['son'][$k2]['url'] = U($v2['c'].'/'.$v2['a'].'?menuid='.$v2['id'].'&'.$v2['data']);
-			}
-		}
-		$this->ajaxReturn($datas);
-	}
-	
-	/**
-	 * 后台欢迎页
-	 */
-	public function public_main(){
-	    $admin_db      = D('Admin');
-	    $userid = session('userid');
-		$userInfo = $admin_db->getUserInfo($userid);    //获取用户基本信息
-		
-	    $sysinfo = \Admin\Common\Sysinfo::getinfo();
-		$os = explode(' ', php_uname());
-		//网络使用状况
-		$net_state = null;
-		if ($sysinfo['sysReShow'] == 'show' && false !== ($strs = @file("/proc/net/dev"))){
-			for ($i = 2; $i < count($strs); $i++ ){
-				preg_match_all( "/([^\s]+):[\s]{0,}(\d+)\s+(\d+)\s+(\d+)\s+(\d+)\s+(\d+)\s+(\d+)\s+(\d+)\s+(\d+)\s+(\d+)\s+(\d+)\s+(\d+)/", $strs[$i], $info );
-				$net_state.="{$info[1][0]} : 已接收 : <font color=\"#CC0000\"><span id=\"NetInput{$i}\">".$sysinfo['NetInput'.$i]."</span></font> GB &nbsp;&nbsp;&nbsp;&nbsp;已发送 : <font color=\"#CC0000\"><span id=\"NetOut{$i}\">".$sysinfo['NetOut'.$i]."</span></font> GB <br />";
-			}
-		}
-		
-		$this->assign('userInfo', $userInfo);
-		$this->assign('sysinfo',$sysinfo);
-		$this->assign('os',$os);
-		$this->assign('net_state',$net_state);
-		$this->display('main');
-	}
-	
-	/**
-	 * 更新后台缓存
-	 */
-	public function public_clearCatche(){
-	    $list = dict('', 'Cache');
-		if(is_array($list) && !empty($list)){
-			foreach ($list as $modelName=>$funcName){
-				D($modelName)->$funcName();
-			}
-		}
-		$this->success('操作成功');
-	}
-	
+    public function adList($page = 1, $rows = 10,$search = array(),$sort = 'ad_id', $order = 'asc'){
+        if(IS_POST){
+            $ad_db = D('Ad');
+            //搜索
+            $where = array();
+            foreach ($search as $k=>$v){
+                if(!$v) continue;
+                $where[] = "`{$k}` like '%{$v}%'";
+            }
+            $where = implode(' and ', $where);
+            $limit=($page - 1) * $rows . "," . $rows;
+            $total = $ad_db->where($where)->count();
+            $order = $sort.' '.$order;
+            $column = "`ad_id`,`ad_id` as ad_ids,`pic`,`type`,`postion_id`,`postion`,`title`,`url`";
+            $list = $total ? $ad_db->field($column)->where($where)->order($order)->limit($limit)->select() : array();
+
+            foreach($list as $k => $lt){
+                if ($lt['type']==1){
+                    $list[$k]['type'] = '幻灯片';
+                }else{
+                    $list[$k]['type'] = '单张图片';
+                }
+                //$list[$k]['pic'] = json_decode($lt,'r');
+
+            }
+            $data = array('total'=>$total, 'rows'=>$list);
+            $this->ajaxReturn($data);
+        }else{
+            $menu_db = D('Menu');
+            $currentpos = $menu_db->currentPos(I('get.menuid'));  //栏目位置
+            $datagrid = array(
+                'options'     => array(
+                    'title'   => $currentpos,
+                    'url'     => U('Ad/adList', array('grid'=>'datagrid')),
+                    'toolbar' => 'admin_adList_datagrid_toolbar',
+                ),
+                'fields' => array(
+                    '广告ID'    => array('field'=>'ad_id','width'=>15,'sortable'=>true),
+                    '广告类型'      => array('field'=>'type','width'=>15,'sortable'=>true),
+                    '图片'      => array('field'=>'pic','width'=>50,'sortable'=>true,'formatter'=>'adImgFormatter'),
+                    '位置ID'    => array('field'=>'postion_id','width'=>20,'sortable'=>true),
+                    '位置'    => array('field'=>'postion','width'=>20,'sortable'=>true),
+                    '标题'    => array('field'=>'title','width'=>20,'sortable'=>true),
+                    '链接地址'    => array('field'=>'url','width'=>40,'sortable'=>true),
+                    '操作'    => array('field'=>'ad_ids','width'=>55,'sortable'=>true,'formatter'=>'adminAdListOperateFormatter'),
+                )
+            );
+            $this->assign('datagrid', $datagrid);
+            $this->display('ad_list');
+        }
+    }
+
     /**
-     * 防止登录超时
+     * 广告位列表
      */
-	public function public_sessionLife(){
-		$userid = session('userid');
-	}
+    public function postionList($page = 1, $rows = 10,$search = array(),$sort = 'postion_id', $order = 'asc'){
+        if(IS_POST){
+            $ad_db = D('AdPostion');
+            //搜索
+            $where = array();
+            foreach ($search as $k=>$v){
+                if(!$v) continue;
+                $where[] = "`{$k}` like '%{$v}%'";
+            }
+            $where = implode(' and ', $where);
+            $limit=($page - 1) * $rows . "," . $rows;
+            $total = $ad_db->where($where)->count();
+            $order = $sort.' '.$order;
+            $column = "`postion_id`,`postion_id` as postion_ids,`postion`,`type`";
+            $list = $total ? $ad_db->field($column)->where($where)->order($order)->limit($limit)->select() : array();
+
+            foreach($list as $k => $lt){
+                if ($lt['type']==1){
+                    $list[$k]['type'] = '幻灯片';
+                }else{
+                    $list[$k]['type'] = '单张图片';
+                }
+                //$list[$k]['pic'] = json_decode($lt,'r');
+
+            }
+            $data = array('total'=>$total, 'rows'=>$list);
+            $this->ajaxReturn($data);
+        }else{
+            $menu_db = D('Menu');
+            $currentpos = $menu_db->currentPos(I('get.menuid'));  //栏目位置
+            $datagrid = array(
+                'options'     => array(
+                    'title'   => $currentpos,
+                    'url'     => U('Ad/postionList', array('grid'=>'datagrid')),
+                    'toolbar' => 'admin_postionList_datagrid_toolbar',
+                ),
+                'fields' => array(
+                    '广告位ID'    => array('field'=>'postion_id','width'=>15,'sortable'=>true),
+                    '广告类型'      => array('field'=>'type','width'=>15,'sortable'=>true),
+                    '位置'    => array('field'=>'postion','width'=>7,'sortable'=>true),
+                    '操作'    => array('field'=>'postion_ids','width'=>55,'sortable'=>true,'formatter'=>'adminpostionListOperateFormatter'),
+
+                )
+            );
+            $this->assign('datagrid', $datagrid);
+            $this->display('postion_list');
+        }
+    }
+
+
+    /**
+     * 添加广告位
+     */
+    public function addPostion(){
+        if(IS_POST){
+            $ad_postion_db = D('AdPostion');
+            //$memberInfo_db = D('memberInfo');
+            $data = I('post.info');
+            $adInfo['type'] = $data['type'];
+            $adInfo['postion'] = $data['postion'];
+            $adId = $ad_postion_db->add($adInfo);
+            if($adId){
+                $this->success('添加成功');
+            }else {
+                $this->error('添加失败');
+            }
+        }else{
+            $this->display('postion_add');
+        }
+    }
+
+    /**
+     * 添加广告
+     */
+    public function adAdd($id){
+        $ad_db = D('Ad');
+        $postion_db =  D('AdPostion');
+        if(IS_POST){
+            $data = I('post.');
+            $adInfo = $ad_db->where(array('postion_id'=>$id))->find();
+            $postionInfo = $postion_db->where(array('postion_id'=>$id))->find();
+            if (!empty($adInfo) && ($postionInfo['type'] == 2)){
+                $dataInfo['title'] = $data['title'];
+                $dataInfo['url'] = $data['url'];
+                $dataInfo['pic'] = $data['img_upload'];
+                $result = $ad_db->where(array('postion_id'=>$id))->save($dataInfo);
+            }else{
+                $dataInfo['postion_id'] = $id;
+                $dataInfo['postion'] = $postionInfo['postion'];
+                $dataInfo['type'] = $postionInfo['type'];
+                $dataInfo['title'] = $data['title'];
+                $dataInfo['url'] = $data['url'];
+                $dataInfo['pic'] = $data['img_upload'];
+                $result = $ad_db->add($dataInfo);
+            }
+
+            if($result){
+                $this->success('添加成功');
+            }else {
+                $this->error('添加失败');
+            }
+        }else{
+            $info = $ad_db->getAdInfo($id);
+            $info['timestamp'] = time();
+            $info['token'] = md5('unique_salt'.time());
+            $this->assign('info', $info);
+            $this->display('ad_edit');
+        }
+    }
+
+
+
+
+
+
+    /**
+     * 编辑广告
+     */
+    public function adEdit($id){
+        $ad_db = D('Ad');
+        $postion_db =  D('AdPostion');
+        if(IS_POST){
+            $data = I('post.info');
+            $dataInfo['title'] = $data['title'];
+            $dataInfo['url'] = $data['url'];
+            $dataInfo['pic'] = $data['img_upload'];
+            $result = $ad_db->where(array('ad_id'=>$id))->save($dataInfo);
+            if($result){
+                $this->success('修改成功');
+            }else {
+                $this->error('修改失败');
+            }
+        }else{
+            $info = $ad_db->where(array('ad_id'=>$id))->find();
+            $info['timestamp'] = time();
+            $info['token'] = md5('unique_salt'.time());
+            $this->assign('info', $info);
+            $this->display('ad_edit');
+        }
+    }
+
+
+
+
+    /**
+     * 编辑老师
+     */
+    public function editPostion($id=''){
+        $postion_db =  D('AdPostion');
+        if(IS_POST){
+            $data = I('post.info');
+            $dataInfo['postion'] = !empty($data['postion']) ? $data['postion'] : '';
+            $dataInfo['type'] = !empty($data['type']) ? $data['type'] : '';
+            $result = $postion_db->where(array('postion_id'=>$data['postion_id']))->save($dataInfo);
+
+            if($result){
+                $this->success('修改成功');
+            }else {
+                $this->error('修改失败');
+            }
+        }else{
+            $info = $postion_db->getAdInfo($id);
+            $this->assign('info', $info);
+            $this->display('postion_edit');
+        }
+    }
+
+
+    /**
+     * 删除广告图
+     */
+    public function adDelete(){
+        $ad_db = D('Ad');
+        $id = I('post.id');
+        $result = $ad_db->where(array('ad_id'=>$id))->delete();
+        if ($result){
+            $this->success('删除成功');
+        }else {
+            $this->error('删除失败');
+        }
+    }
+
+    /**
+     * 删除广告位
+     */
+    public function postionDelete(){
+        $ad_db = D('AdPostion');
+        $id = I('post.id');
+        $result = $ad_db->where(array('postion_id'=>$id))->delete();
+        if ($result){
+            $this->success('删除成功');
+        }else {
+            $this->error('删除失败');
+        }
+    }
+
+    public function adImage($id){
+        $ad_db = D('Ad');
+        $postion_db =  D('AdPostion');
+        $info = $postion_db->getAdInfo($id);
+        if (IS_POST) {
+            $targetPath = C('IMG_PATH') . 'ad/';
+            $verifyToken = md5('unique_salt' . $_POST['timestamp']);
+            if (!empty($_FILES) && $_POST['token'] == $verifyToken) {
+                $tempFile = $_FILES['Filedata']['tmp_name'];
+                // Validate the file type
+                $fileTypes = array('jpg', 'jpeg', 'gif', 'png'); // File extensions
+                $fileParts = pathinfo($_FILES['Filedata']['name']);
+                $imgName = date(YmdHis) . rand(1000, 900000);
+                $targetFile = $targetPath . $imgName . "." . $fileParts['extension'];
+                if (in_array($fileParts['extension'], $fileTypes)) {
+                    move_uploaded_file($tempFile, $targetFile);
+                    exit(json_encode(array('rs'=>1,'pic'=> 'upload/ad/' . $imgName . "." . $fileParts['extension'])));
+                } else {
+                    echo 'Invalid file type.';
+                }
+            }
+        }else{
+            $info['timestamp'] = time();
+            $info['token'] = md5('unique_salt'.time());
+            $info['postion_id'] = $id;
+            $this->assign('info', $info);
+            $this->display('ad_add');
+        }
+        exit;
+    }
+
 }

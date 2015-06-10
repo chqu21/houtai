@@ -247,17 +247,17 @@ public function getPicExt($fileStream){
             $filename130 =  $teacherId."_middle.";
             $filename20 =  $teacherId."_small.";
 
-            if (file_exist($path.$filenameSrc.$ext)){
-                unlink($path.$filenameSrc.$ext);
+            if (file_exist($path.$filenameSrc.'png')){
+                unlink($path.$filenameSrc.'png');
             }
-            if (file_exist($path.$filename170)){
-                unlink($path.$filename170);
+            if (file_exist($path.$filename170.'png')){
+                unlink($path.$filename170.'png');
             }
-            if (file_exist($path.$filename130)){
-                unlink($path.$filename130);
+            if (file_exist($path.$filename130.'png')){
+                unlink($path.$filename130.'png');
             }
-            if (file_exist($path.$filename20)){
-                unlink($path.$filename20);
+            if (file_exist($path.$filename20.'png')){
+                unlink($path.$filename20.'png');
             }
             file_put_contents($path.$filenameSrc.$ext,$src);
             file_put_contents($path.$filename170.$ext,$pic1);

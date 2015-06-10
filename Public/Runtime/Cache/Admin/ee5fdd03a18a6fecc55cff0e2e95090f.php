@@ -1,6 +1,5 @@
-<taglib name="Admin\TagLib\EasyUI" />
-
-<easyui:datagrid options="datagrid.options" fields="datagrid.fields" />
+<?php if (!defined('THINK_PATH')) exit();?>
+<table id="ad_postionlist_datagrid" class="easyui-datagrid" data-options='<?php $dataOptions = array_merge(array ( 'border' => false, 'fit' => true, 'fitColumns' => true, 'rownumbers' => true, 'singleSelect' => true, 'pagination' => true, 'pageList' => array ( 0 => 20, 1 => 30, 2 => 50, 3 => 80, 4 => 100, ), 'pageSize' => '20', ), $datagrid["options"]);if(isset($dataOptions['toolbar']) && substr($dataOptions['toolbar'],0,1) != '#'): unset($dataOptions['toolbar']); endif; echo trim(json_encode($dataOptions), '{}[]').((isset($datagrid["options"]['toolbar']) && substr($datagrid["options"]['toolbar'],0,1) != '#')?',"toolbar":'.$datagrid["options"]['toolbar']:null); ?>' style=""><thead><tr><?php if(is_array($datagrid["fields"])):foreach ($datagrid["fields"] as $key=>$arr):if(isset($arr['formatter'])):unset($arr['formatter']);endif;echo "<th data-options='".trim(json_encode($arr), '{}[]').(isset($datagrid["fields"][$key]['formatter'])?",\"formatter\":".$datagrid["fields"][$key]['formatter']:null)."'>".$key."</th>";endforeach;endif; ?></tr></thead></table>
 <div id="admin_postionList_datagrid_toolbar" style="padding:5px;height:auto">
     <form>
         广告位:
@@ -62,7 +61,7 @@ function adminAdRefresh(){
 }
 //添加
 function addPostion(){
-    $('#admin_postionList_add_dialog').dialog({href:'<{:U('Ad/addPostion')}>'});
+    $('#admin_postionList_add_dialog').dialog({href:'<?php echo U('Ad/addPostion');?>'});
     $('#admin_postionList_add_dialog').dialog('open');
 }
 
@@ -72,7 +71,7 @@ function editPostion(id){
         $.messager.alert('提示信息', '未选择广告位', 'error');
         return false;
     }
-    var url = '<{:U('Ad/editPostion')}>';
+    var url = '<?php echo U('Ad/editPostion');?>';
     url += url.indexOf('?') != -1 ? '&id='+id : '?id='+id;
     $('#admin_postionList_edit_dialog').dialog({href:url});
     $('#admin_postionList_edit_dialog').dialog('open');
@@ -84,7 +83,7 @@ function adminImgPic(id){
 		$.messager.alert('提示信息', '未选择广告位', 'error');
 		return false;
 	}
-	var url = '<{:U('Ad/adImage')}>';
+	var url = '<?php echo U('Ad/adImage');?>';
 	url += url.indexOf('?') != -1 ? '&id='+id : '?id='+id;
 	$('#admin_adList_add_dialog').dialog({href:url});
 	$('#admin_adList_add_dialog').dialog('open');
@@ -100,7 +99,7 @@ function adminAdDelete(id){
 	}
 	$.messager.confirm('提示信息', '确定要删除吗？', function(result){
 		if(!result) return false;
-		$.post('<{:U('Ad/postionDelete')}>', {id: id}, function(res){
+		$.post('<?php echo U('Ad/postionDelete');?>', {id: id}, function(res){
 			if(!res.status){
 				$.messager.alert('提示信息', res.info, 'error');
 			}else{

@@ -11,8 +11,8 @@ class AdPostionModel extends Model{
     /**
      * 获取用户信息
      */
-    public function getAdInfo($teacherId){
-        $info = $this->where(array('ad_id'=>$teacherId))->find();
+    public function getAdInfo($postionId){
+        $info = $this->where(array('postion_id'=>$postionId))->find();
         return $info;
     }
 }

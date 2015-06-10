@@ -10,7 +10,7 @@
             submitAfterAjaxPrompt: '有数据正在异步验证，请稍等...',
             inIframe: true
         });
-        $('#file_upload').uploadify({
+        $('#file_upload2').uploadify({
             'formData'     : {
                 'timestamp' : "<{$info.timestamp}>",
                 'token'     : "<{$info.token}>"
@@ -22,7 +22,7 @@
             'onUploadSuccess' : function(file, data, response)     //上传一次
             {
                 var p = eval('('+data+ ')');
-                $("#img_upload").val(p.pic);
+                $("#img_upload1").val(p.pic);
                 $.post('<{:U('Ad/adAdd?id='.$info['postion_id'])}>', $("#admin_adList_add_dialog_form").serialize(), function(res){
                 if(!res.status){
                     $.messager.alert('提示信息', res.info, 'error');
@@ -36,7 +36,7 @@
         });
     });
     function adminadListAddDialogFormSubmit(){
-            $('#file_upload').uploadify('upload', '*');
+            $('#file_upload2').uploadify('upload', '*');
             $("#submitBtn").attr("disabled",true).attr("enabled",false);
     }
 </script>
@@ -86,7 +86,7 @@
         </tr>
         <tr>
             <td>更新图片：</td>
-            <td><input id="file_upload" name="file_upload" type="file" multiple="true"><input id="img_upload" name="img_upload" type="hidden"></td>
+            <td><input id="file_upload2" name="file_upload2" type="file" multiple="true"><input id="img_upload1" name="img_upload1" type="hidden"></td>
             <td></td>
         </tr>
     </table>

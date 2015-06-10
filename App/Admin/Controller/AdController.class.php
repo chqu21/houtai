@@ -175,7 +175,7 @@ class AdController extends CommonController {
                 $dataInfo['type'] = $postionInfo['type'];
                 $dataInfo['title'] = $data['title'];
                 $dataInfo['url'] = $data['url'];
-                $dataInfo['pic'] = $data['img_upload'];
+                $dataInfo['pic'] = $data['img_upload1'];
                 $result = $ad_db->add($dataInfo);
             }
 
@@ -208,8 +208,8 @@ class AdController extends CommonController {
             $data = I('post.info');
             $dataInfo['title'] = $data['title'];
             $dataInfo['url'] = str_replace('&amp;','&',$data['url']);
-            if (!empty($data['img_upload'])){
-                $dataInfo['pic'] = $data['img_upload'];
+            if (!empty($data['img_upload2'])){
+                $dataInfo['pic'] = $data['img_upload2'];
             }
             $result = $ad_db->where(array('ad_id'=>$id))->save($dataInfo);
             if($result){

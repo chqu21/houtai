@@ -122,7 +122,7 @@ class AdController extends CommonController {
                 'fields' => array(
                     '广告位ID'    => array('field'=>'postion_id','width'=>15,'sortable'=>true),
                     '广告类型'      => array('field'=>'type','width'=>15,'sortable'=>true),
-                    '位置'    => array('field'=>'postion','width'=>7,'sortable'=>true),
+                    '位置'    => array('field'=>'postion','width'=>20,'sortable'=>true),
                     '操作'    => array('field'=>'postion_ids','width'=>55,'sortable'=>true,'formatter'=>'adminpostionListOperateFormatter'),
 
                 )

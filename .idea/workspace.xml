@@ -4,7 +4,6 @@
     <list default="true" id="d8f33eb3-3aed-4b70-b310-7d6daebbc6fb" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Public/Runtime/Logs/15_06_10.log" afterPath="$PROJECT_DIR$/Public/Runtime/Logs/15_06_10.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/App/Admin/Controller/AdController.class.php" afterPath="$PROJECT_DIR$/App/Admin/Controller/AdController.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Public/Runtime/Cache/Admin/bb47acac20a03de7e1377c7931740111.php" afterPath="$PROJECT_DIR$/Public/Runtime/Cache/Admin/bb47acac20a03de7e1377c7931740111.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="houtai.iws" />
@@ -30,11 +29,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="AdController.class.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="AdController.class.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/App/Admin/Controller/AdController.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.4210525" vertical-offset="3776" max-vertical-offset="6080">
-              <caret line="212" column="13" selection-start-line="212" selection-start-column="13" selection-end-line="212" selection-end-column="13" />
+            <state vertical-scroll-proportion="2.5185184" vertical-offset="1064" max-vertical-offset="6080">
+              <caret line="124" column="67" selection-start-line="124" selection-start-column="67" selection-end-line="124" selection-end-column="67" />
               <folding />
             </state>
           </provider>
@@ -110,10 +109,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ad_edit.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ad_edit.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/App/Admin/View/Ad/ad_edit.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.84210527" vertical-offset="366" max-vertical-offset="1938">
+            <state vertical-scroll-proportion="-7.5789475" vertical-offset="366" max-vertical-offset="1938">
               <caret line="42" column="8" selection-start-line="42" selection-start-column="8" selection-end-line="42" selection-end-column="8" />
               <folding>
                 <element signature="n#style#0;n#input#0;n#td#1;n#tr#0;n#table#0;n#form#0;n#!!top" expanded="true" />
@@ -205,8 +204,8 @@
         <option value="$PROJECT_DIR$/Public/static/js/easyui/jquery.easyui.min.js" />
         <option value="$PROJECT_DIR$/App/Admin/View/Ad/postion_list.html" />
         <option value="$PROJECT_DIR$/App/Admin/View/Ad/ad_add.html" />
-        <option value="$PROJECT_DIR$/App/Admin/Controller/AdController.class.php" />
         <option value="$PROJECT_DIR$/App/Admin/View/Ad/ad_edit.html" />
+        <option value="$PROJECT_DIR$/App/Admin/Controller/AdController.class.php" />
       </list>
     </option>
   </component>
@@ -944,23 +943,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/App/Admin/Controller/AdController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.4210525" vertical-offset="3776" max-vertical-offset="6080">
-          <caret line="212" column="13" selection-start-line="212" selection-start-column="13" selection-end-line="212" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/App/Admin/View/Ad/ad_edit.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.84210527" vertical-offset="366" max-vertical-offset="1938">
+        <state vertical-scroll-proportion="-7.5789475" vertical-offset="366" max-vertical-offset="1938">
           <caret line="42" column="8" selection-start-line="42" selection-start-column="8" selection-end-line="42" selection-end-column="8" />
           <folding>
             <element signature="n#style#0;n#input#0;n#td#1;n#tr#0;n#table#0;n#form#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#0;n#td#1;n#tr#1;n#table#0;n#form#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#0;n#td#1;n#tr#2;n#table#0;n#form#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/Admin/Controller/AdController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2.5185184" vertical-offset="1064" max-vertical-offset="6080">
+          <caret line="124" column="67" selection-start-line="124" selection-start-column="67" selection-end-line="124" selection-end-column="67" />
+          <folding />
         </state>
       </provider>
     </entry>

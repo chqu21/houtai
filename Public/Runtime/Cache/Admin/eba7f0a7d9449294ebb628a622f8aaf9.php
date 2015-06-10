@@ -36,10 +36,8 @@
         });
     });
     function adminadListAddDialogFormSubmit(){
-        $("#submitBtn").click(function(){     //上传按钮
             $('#file_upload').uploadify('upload', '*');
             $("#submitBtn").attr("disabled",true).attr("enabled",false);
-        });
     }
 </script>
 <!-- CSS goes in the document HEAD or added to your external stylesheet -->

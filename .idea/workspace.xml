@@ -3,10 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d8f33eb3-3aed-4b70-b310-7d6daebbc6fb" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Public/Runtime/Logs/15_06_10.log" afterPath="$PROJECT_DIR$/Public/Runtime/Logs/15_06_10.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/App/Admin/View/Ad/ad_edit.html" afterPath="$PROJECT_DIR$/App/Admin/View/Ad/ad_edit.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Public/Runtime/Cache/Admin/bb47acac20a03de7e1377c7931740111.php" afterPath="$PROJECT_DIR$/Public/Runtime/Cache/Admin/bb47acac20a03de7e1377c7931740111.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Public/static/js/uploadify/jquery.uploadify.min.js" afterPath="$PROJECT_DIR$/Public/static/js/uploadify/jquery.uploadify.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/App/Admin/View/Ad/ad_add.html" afterPath="$PROJECT_DIR$/App/Admin/View/Ad/ad_add.html" />
     </list>
     <ignored path="houtai.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -41,11 +38,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ad_add.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ad_add.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/App/Admin/View/Ad/ad_add.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.857142" vertical-offset="0" max-vertical-offset="1862">
-              <caret line="16" column="14" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
+            <state vertical-scroll-proportion="0.701107" vertical-offset="0" max-vertical-offset="1862">
+              <caret line="20" column="79" selection-start-line="20" selection-start-column="79" selection-end-line="20" selection-end-column="79" />
               <folding />
             </state>
           </provider>
@@ -65,10 +62,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="jquery.uploadify.min.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="jquery.uploadify.min.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Public/static/js/uploadify/jquery.uploadify.min.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.53977275" vertical-offset="0" max-vertical-offset="528">
+            <state vertical-scroll-proportion="-9.827586" vertical-offset="0" max-vertical-offset="399">
               <caret line="15" column="10422" selection-start-line="15" selection-start-column="10422" selection-end-line="15" selection-end-column="10422" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
@@ -136,8 +133,8 @@
       <file leaf-file-name="ad_edit.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/App/Admin/View/Ad/ad_edit.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.3333333" vertical-offset="171" max-vertical-offset="1919">
-              <caret line="16" column="10" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
+            <state vertical-scroll-proportion="-3.6666667" vertical-offset="171" max-vertical-offset="1919">
+              <caret line="20" column="75" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="75" />
               <folding>
                 <element signature="n#style#0;n#input#0;n#td#1;n#tr#0;n#table#0;n#form#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#input#0;n#td#1;n#tr#1;n#table#0;n#form#0;n#!!top" expanded="true" />
@@ -205,8 +202,8 @@
         <option value="$PROJECT_DIR$/App/Admin/Model/AdPostionModel.class.php" />
         <option value="$PROJECT_DIR$/App/Admin/Controller/AdController.class.php" />
         <option value="$PROJECT_DIR$/App/Admin/View/Ad/ad_edit.html" />
-        <option value="$PROJECT_DIR$/App/Admin/View/Ad/ad_add.html" />
         <option value="$PROJECT_DIR$/Public/static/js/uploadify/jquery.uploadify.min.js" />
+        <option value="$PROJECT_DIR$/App/Admin/View/Ad/ad_add.html" />
       </list>
     </option>
   </component>
@@ -608,7 +605,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2588384" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2588384" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32978722" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1002,18 +999,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/App/Admin/View/Ad/ad_add.html">
+    <entry file="file://$PROJECT_DIR$/Public/static/js/uploadify/jquery.uploadify.min.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.857142" vertical-offset="0" max-vertical-offset="1862">
-          <caret line="16" column="14" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
-          <folding />
+        <state vertical-scroll-proportion="-9.827586" vertical-offset="0" max-vertical-offset="399">
+          <caret line="15" column="10422" selection-start-line="15" selection-start-column="10422" selection-end-line="15" selection-end-column="10422" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/App/Admin/View/Ad/ad_edit.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.3333333" vertical-offset="171" max-vertical-offset="1919">
-          <caret line="16" column="10" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
+        <state vertical-scroll-proportion="-3.6666667" vertical-offset="171" max-vertical-offset="1919">
+          <caret line="20" column="75" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="75" />
           <folding>
             <element signature="n#style#0;n#input#0;n#td#1;n#tr#0;n#table#0;n#form#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#0;n#td#1;n#tr#1;n#table#0;n#form#0;n#!!top" expanded="true" />
@@ -1022,13 +1021,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Public/static/js/uploadify/jquery.uploadify.min.js">
+    <entry file="file://$PROJECT_DIR$/App/Admin/View/Ad/ad_add.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.53977275" vertical-offset="0" max-vertical-offset="528">
-          <caret line="15" column="10422" selection-start-line="15" selection-start-column="10422" selection-end-line="15" selection-end-column="10422" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.701107" vertical-offset="0" max-vertical-offset="1862">
+          <caret line="20" column="79" selection-start-line="20" selection-start-column="79" selection-end-line="20" selection-end-column="79" />
+          <folding />
         </state>
       </provider>
     </entry>

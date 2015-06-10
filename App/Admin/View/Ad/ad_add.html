@@ -18,7 +18,7 @@
             'auto': false, //非自动上传模式。
             'buttonText' : '选择图片',
             'swf'      : '/flash/uploadify.swf',
-            'uploader' : "/admin/Ad/adImage?id=<{$info.postion_id}>",
+            'uploader' : "/index.php?s=admin/Ad/adImage&id=<{$info.postion_id}>",
             'onUploadSuccess' : function(file, data, response)     //上传一次
             {
                 var p = eval('('+data+ ')');

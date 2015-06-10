@@ -40,7 +40,7 @@
 
 function adminadListEditDialogFormSubmit(){
         $('#file_upload').uploadify('upload', '*');
-        $("#submitBtn").attr("disabled",true).attr("enabled",false);
+        //$("#submitBtn").attr("disabled",true).attr("enabled",false);
 
 }
 </script>

@@ -207,8 +207,10 @@ class AdController extends CommonController {
         if(IS_POST){
             $data = I('post.info');
             $dataInfo['title'] = $data['title'];
-            $dataInfo['url'] = $data['url'];
-            $dataInfo['pic'] = $data['img_upload'];
+            $dataInfo['url'] = str_replace('&amp;','&',$data['url']);
+            if (!empty($data['img_upload'])){
+                $dataInfo['pic'] = $data['img_upload'];
+            }
             $result = $ad_db->where(array('ad_id'=>$id))->save($dataInfo);
             if($result){
                 $this->success('修改成功');

@@ -4,7 +4,6 @@
     <list default="true" id="d8f33eb3-3aed-4b70-b310-7d6daebbc6fb" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Public/Runtime/Logs/15_06_10.log" afterPath="$PROJECT_DIR$/Public/Runtime/Logs/15_06_10.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Public/static/js/uploadify/jquery.uploadify.min.js" afterPath="$PROJECT_DIR$/Public/static/js/uploadify/jquery.uploadify.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="houtai.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -52,11 +51,9 @@
       <file leaf-file-name="jquery.uploadify.min.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Public/static/js/uploadify/jquery.uploadify.min.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.53977275" vertical-offset="0" max-vertical-offset="528">
-              <caret line="15" column="10430" selection-start-line="15" selection-start-column="10430" selection-end-line="15" selection-end-column="10430" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="0.46780303" vertical-offset="0" max-vertical-offset="528">
+              <caret line="13" column="86" selection-start-line="13" selection-start-column="86" selection-end-line="13" selection-end-column="86" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -1010,11 +1007,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Public/static/js/uploadify/jquery.uploadify.min.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.53977275" vertical-offset="0" max-vertical-offset="528">
-          <caret line="15" column="10430" selection-start-line="15" selection-start-column="10430" selection-end-line="15" selection-end-column="10430" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.46780303" vertical-offset="0" max-vertical-offset="528">
+          <caret line="13" column="86" selection-start-line="13" selection-start-column="86" selection-end-line="13" selection-end-column="86" />
+          <folding />
         </state>
       </provider>
     </entry>

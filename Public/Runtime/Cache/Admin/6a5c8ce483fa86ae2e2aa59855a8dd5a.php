@@ -95,7 +95,6 @@ function adminAppraiseEdit(id){
 
 //删除
 function adminMemberDelete(id){
-    console.log(id);
 	if(typeof(id) !== 'number'){
 		$.messager.alert('提示信息', '未选择老师', 'error');
 		return false;

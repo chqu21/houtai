@@ -2,17 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d8f33eb3-3aed-4b70-b310-7d6daebbc6fb" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Public/Runtime/Cache/Admin/11032dec5587cb9d862dcb230f0a4211.php" afterPath="$PROJECT_DIR$/Public/Runtime/Cache/Admin/11032dec5587cb9d862dcb230f0a4211.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Public/Runtime/Logs/15_06_11.log" afterPath="$PROJECT_DIR$/Public/Runtime/Logs/15_06_11.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Public/Runtime/Cache/Admin/87c077d3d70c848e65f1f8cc6a137fe4.php" afterPath="$PROJECT_DIR$/Public/Runtime/Cache/Admin/87c077d3d70c848e65f1f8cc6a137fe4.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Public/Runtime/Cache/Admin/9b3b91ad4f98ef8509a0baef9432cee8.php" afterPath="$PROJECT_DIR$/Public/Runtime/Cache/Admin/9b3b91ad4f98ef8509a0baef9432cee8.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Public/Runtime/Cache/Admin/6a5c8ce483fa86ae2e2aa59855a8dd5a.php" afterPath="$PROJECT_DIR$/Public/Runtime/Cache/Admin/6a5c8ce483fa86ae2e2aa59855a8dd5a.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/App/Admin/Controller/AdController.class.php" afterPath="$PROJECT_DIR$/App/Admin/Controller/AdController.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/App/Admin/View/Ad/ad_edit.html" afterPath="$PROJECT_DIR$/App/Admin/View/Ad/ad_edit.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/App/Admin/Model/AdModel.class.php" afterPath="$PROJECT_DIR$/App/Admin/Model/AdModel.class.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/App/Admin/View/Ad/ad_list.html" afterPath="$PROJECT_DIR$/App/Admin/View/Ad/ad_list.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Public/Runtime/Cache/Admin/bb47acac20a03de7e1377c7931740111.php" afterPath="$PROJECT_DIR$/Public/Runtime/Cache/Admin/bb47acac20a03de7e1377c7931740111.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Public/Runtime/Cache/Admin/e4a2b760f415950920478001da38da84.php" afterPath="$PROJECT_DIR$/Public/Runtime/Cache/Admin/e4a2b760f415950920478001da38da84.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/App/Admin/View/Ad/postion_add.html" afterPath="$PROJECT_DIR$/App/Admin/View/Ad/postion_add.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/App/Admin/View/Ad/postion_edit.html" afterPath="$PROJECT_DIR$/App/Admin/View/Ad/postion_edit.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/App/Admin/View/Teacher/teacher_list.html" afterPath="$PROJECT_DIR$/App/Admin/View/Teacher/teacher_list.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="houtai.iws" />
@@ -41,28 +37,8 @@
       <file leaf-file-name="AdController.class.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/App/Admin/Controller/AdController.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.428572" vertical-offset="2521" max-vertical-offset="6650">
-              <caret line="151" column="19" selection-start-line="151" selection-start-column="19" selection-end-line="151" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="menu_list.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/App/Admin/View/System/menu_list.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.6666667" vertical-offset="0" max-vertical-offset="1824">
-              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="21" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ad_list.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/App/Admin/View/Ad/ad_list.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.321428" vertical-offset="1299" max-vertical-offset="2071">
-              <caret line="88" column="24" selection-start-line="88" selection-start-column="9" selection-end-line="88" selection-end-column="24" />
+            <state vertical-scroll-proportion="-36.17857" vertical-offset="203" max-vertical-offset="6650">
+              <caret line="64" column="36" selection-start-line="64" selection-start-column="36" selection-end-line="64" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -71,76 +47,92 @@
       <file leaf-file-name="SystemController.class.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/App/Admin/Controller/SystemController.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.392858" vertical-offset="1723" max-vertical-offset="4617">
+            <state vertical-scroll-proportion="-6.321429" vertical-offset="1837" max-vertical-offset="4617">
               <caret line="106" column="37" selection-start-line="106" selection-start-column="37" selection-end-line="106" selection-end-column="37" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.php">
+      <file leaf-file-name="teacher_list.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/App/Admin/View/Teacher/teacher_list.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="513">
-              <caret line="0" column="5" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
+            <state vertical-scroll-proportion="-59.714287" vertical-offset="171" max-vertical-offset="2280">
+              <caret line="97" column="31" selection-start-line="97" selection-start-column="31" selection-end-line="97" selection-end-column="31" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="postion_edit.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/App/Admin/View/Ad/postion_edit.html">
+      <file leaf-file-name="MenuModel.class.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/App/Admin/Model/MenuModel.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.25" vertical-offset="1128" max-vertical-offset="1786">
-              <caret line="73" column="0" selection-start-line="73" selection-start-column="0" selection-end-line="86" selection-end-column="9" />
+            <state vertical-scroll-proportion="-13.678572" vertical-offset="2334" max-vertical-offset="2850">
+              <caret line="143" column="5" selection-start-line="143" selection-start-column="5" selection-end-line="143" selection-end-column="5" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="postion_add.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SettingModel.class.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/App/Admin/Model/SettingModel.class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-11.964286" vertical-offset="976" max-vertical-offset="1520">
+              <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="73" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AdModel.class.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/App/Admin/Model/AdModel.class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-14.928572" vertical-offset="0" max-vertical-offset="551">
+              <caret line="22" column="5" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="postion_list.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/App/Admin/View/Ad/postion_list.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-6.107143" vertical-offset="342" max-vertical-offset="2242">
+              <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="34" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="menu_list.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/App/Admin/View/System/menu_list.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-6.7017546" vertical-offset="1081" max-vertical-offset="1824">
+              <caret line="77" column="7" selection-start-line="77" selection-start-column="7" selection-end-line="77" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ad_list.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/App/Admin/View/Ad/ad_list.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.76" vertical-offset="323" max-vertical-offset="2128">
+              <caret line="31" column="29" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="29" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="postion_add.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/App/Admin/View/Ad/postion_add.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5668693" vertical-offset="900" max-vertical-offset="1672">
+            <state vertical-scroll-proportion="-13.321428" vertical-offset="900" max-vertical-offset="1672">
               <caret line="67" column="8" selection-start-line="67" selection-start-column="8" selection-end-line="67" selection-end-column="8" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ad_add.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/App/Admin/View/Ad/ad_add.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-18.535715" vertical-offset="1191" max-vertical-offset="1862">
-              <caret line="90" column="13" selection-start-line="90" selection-start-column="13" selection-end-line="90" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="jquery.uploadify.min.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Public/static/js/uploadify/jquery.uploadify.min.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="399">
-              <caret line="15" column="10368" selection-start-line="15" selection-start-column="10368" selection-end-line="15" selection-end-column="10368" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ad_edit.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/App/Admin/View/Ad/ad_edit.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-19.214285" vertical-offset="1343" max-vertical-offset="2014">
-              <caret line="99" column="8" selection-start-line="99" selection-start-column="8" selection-end-line="99" selection-end-column="8" />
-              <folding>
-                <element signature="n#style#0;n#input#0;n#td#1;n#tr#0;n#table#0;n#form#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#td#1;n#tr#1;n#table#0;n#form#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#td#1;n#tr#2;n#table#0;n#form#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#td#1;n#tr#4;n#table#0;n#form#0;n#!!top" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -183,13 +175,11 @@
         <option value="$PROJECT_DIR$/App/Admin/Model/CourseTimeModel.class.php" />
         <option value="$PROJECT_DIR$/App/Admin/View/Teacher/time_list.html" />
         <option value="$PROJECT_DIR$/App/Admin/View/Teacher/time_add.html" />
-        <option value="$PROJECT_DIR$/App/Admin/View/Teacher/teacher_list.html" />
         <option value="$PROJECT_DIR$/App/Admin/Conf/config.php" />
         <option value="$PROJECT_DIR$/App/Admin/View/Teacher/headPhoto.html" />
         <option value="$PROJECT_DIR$/App/Admin/Controller/TeacherController.class.php" />
         <option value="$PROJECT_DIR$/uploadify/index.php" />
         <option value="$PROJECT_DIR$/uploadify/uploadify.php" />
-        <option value="$PROJECT_DIR$/App/Admin/Model/AdModel.class.php" />
         <option value="$PROJECT_DIR$/Public/static/css/admin/uploadify/uploadify.css" />
         <option value="$PROJECT_DIR$/Public/static/js/easyui/jquery.easyui.min.js" />
         <option value="$PROJECT_DIR$/App/Admin/View/Ad/postion_list.html" />
@@ -198,10 +188,12 @@
         <option value="$PROJECT_DIR$/App/Admin/View/Ad/ad_add.html" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/App/Admin/View/Ad/ad_edit.html" />
-        <option value="$PROJECT_DIR$/App/Admin/View/Ad/ad_list.html" />
         <option value="$PROJECT_DIR$/App/Admin/View/Ad/postion_edit.html" />
-        <option value="$PROJECT_DIR$/App/Admin/Controller/AdController.class.php" />
         <option value="$PROJECT_DIR$/App/Admin/View/Ad/postion_add.html" />
+        <option value="$PROJECT_DIR$/App/Admin/Model/AdModel.class.php" />
+        <option value="$PROJECT_DIR$/App/Admin/View/Teacher/teacher_list.html" />
+        <option value="$PROJECT_DIR$/App/Admin/Controller/AdController.class.php" />
+        <option value="$PROJECT_DIR$/App/Admin/View/Ad/ad_list.html" />
       </list>
     </option>
   </component>
@@ -647,16 +639,16 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.37101063" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2588384" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25694445" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17154256" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -689,13 +681,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/App/Admin/Controller/IndexController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0" vertical-offset="480" max-vertical-offset="3080">
-          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/App/Admin/View/Admin/member_add.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.0689654" vertical-offset="262" max-vertical-offset="1580">
@@ -728,13 +713,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2.7586207" vertical-offset="0" max-vertical-offset="320">
           <caret line="4" column="21" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/App/Admin/Model/SettingModel.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.7586207" vertical-offset="1024" max-vertical-offset="1600">
-          <caret line="61" column="34" selection-start-line="61" selection-start-column="34" selection-end-line="61" selection-end-column="34" />
         </state>
       </provider>
     </entry>
@@ -892,24 +870,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/App/Admin/Model/AdModel.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="209" max-vertical-offset="437">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Public/static/css/admin/uploadify/uploadify.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.8405594" vertical-offset="1147" max-vertical-offset="1862">
           <caret line="92" column="1" selection-start-line="92" selection-start-column="1" selection-end-line="92" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/App/Admin/View/Teacher/teacher_list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-67.17857" vertical-offset="285" max-vertical-offset="2299">
-          <caret line="114" column="1" selection-start-line="114" selection-start-column="1" selection-end-line="114" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -957,20 +921,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/App/Admin/View/Ad/postion_list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1083" max-vertical-offset="2242">
-          <caret line="40" column="47" selection-start-line="40" selection-start-column="47" selection-end-line="40" selection-end-column="47" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/App/Admin/Model/AdPostionModel.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="266" max-vertical-offset="437">
@@ -1009,30 +959,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/App/Admin/View/System/menu_list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.6666667" vertical-offset="0" max-vertical-offset="1824">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="21" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/App/Admin/View/Ad/ad_list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.321428" vertical-offset="1299" max-vertical-offset="2071">
-          <caret line="88" column="24" selection-start-line="88" selection-start-column="9" selection-end-line="88" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/App/Admin/Controller/SystemController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.392858" vertical-offset="1723" max-vertical-offset="4617">
-          <caret line="106" column="37" selection-start-line="106" selection-start-column="37" selection-end-line="106" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/App/Admin/View/Ad/ad_add.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-18.535715" vertical-offset="1191" max-vertical-offset="1862">
@@ -1054,14 +980,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/App/Admin/Controller/AdController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.428572" vertical-offset="2521" max-vertical-offset="6650">
-          <caret line="151" column="19" selection-start-line="151" selection-start-column="19" selection-end-line="151" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/App/Admin/View/Ad/postion_edit.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-9.25" vertical-offset="1128" max-vertical-offset="1786">
@@ -1072,9 +990,84 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/App/Admin/View/Ad/postion_add.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5668693" vertical-offset="900" max-vertical-offset="1672">
+        <state vertical-scroll-proportion="-13.321428" vertical-offset="900" max-vertical-offset="1672">
           <caret line="67" column="8" selection-start-line="67" selection-start-column="8" selection-end-line="67" selection-end-column="8" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/Admin/View/System/menu_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.7017546" vertical-offset="1081" max-vertical-offset="1824">
+          <caret line="77" column="7" selection-start-line="77" selection-start-column="7" selection-end-line="77" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/Admin/Model/MenuModel.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.678572" vertical-offset="2334" max-vertical-offset="2850">
+          <caret line="143" column="5" selection-start-line="143" selection-start-column="5" selection-end-line="143" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/Admin/Model/SettingModel.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.964286" vertical-offset="976" max-vertical-offset="1520">
+          <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="73" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/Admin/Model/AdModel.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-14.928572" vertical-offset="0" max-vertical-offset="551">
+          <caret line="22" column="5" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/Admin/Controller/SystemController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.321429" vertical-offset="1837" max-vertical-offset="4617">
+          <caret line="106" column="37" selection-start-line="106" selection-start-column="37" selection-end-line="106" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/Admin/View/Teacher/teacher_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-59.714287" vertical-offset="171" max-vertical-offset="2280">
+          <caret line="97" column="31" selection-start-line="97" selection-start-column="31" selection-end-line="97" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/Admin/View/Ad/postion_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.107143" vertical-offset="342" max-vertical-offset="2242">
+          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="34" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/Admin/Controller/AdController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-36.17857" vertical-offset="203" max-vertical-offset="6650">
+          <caret line="64" column="36" selection-start-line="64" selection-start-column="36" selection-end-line="64" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/Admin/View/Ad/ad_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.76" vertical-offset="323" max-vertical-offset="2128">
+          <caret line="31" column="29" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="29" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

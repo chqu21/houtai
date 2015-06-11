@@ -62,12 +62,12 @@ class AdController extends CommonController {
                 'options'     => array(
                     'title'   => $currentpos,
                     'url'     => U('Ad/adList', array('grid'=>'datagrid')),
-                    'toolbar' => 'admin_adList_datagrid_toolbar',
+                    'toolbar' => 'ad_adList_datagrid_toolbar',
                 ),
                 'fields' => array(
                     '广告ID'    => array('field'=>'ad_id','width'=>15,'sortable'=>true),
                     '广告类型'      => array('field'=>'type','width'=>15,'sortable'=>true),
-                    '排序'    => array('field'=>'sort_num','width'=>40,'sortable'=>true,'formatter'=>'adListFormatter'),
+                    '排序'    => array('field'=>'sort_num','width'=>40,'sortable'=>true,'formatter'=>'adListOrderFormatter'),
                     '图片'      => array('field'=>'pic','width'=>50,'sortable'=>true,'formatter'=>'adImgFormatter'),
                     '宽度'    => array('field'=>'width','width'=>15,'sortable'=>true),
                     '高度'    => array('field'=>'height','width'=>15,'sortable'=>true),
@@ -329,13 +329,13 @@ class AdController extends CommonController {
     /**
      * 广告图排序
      */
-    function menuOrder(){
+    function adOrder(){
         if(IS_POST) {
-            $menu_db = D('Menu');
-            foreach(I('post.order') as $id => $listorder) {
-                $menu_db->where(array('id'=>$id))->save(array('listorder'=>$listorder));
+            $ad_db = D('Ad');
+            foreach(I('post.sort_num') as $id => $sortNum) {
+                $ad_db->where(array('ad_id'=>$id))->save(array('sort_num'=>$sortNum));
             }
-            $menu_db->clearCatche();
+            $ad_db->clearCatche();
             $this->success('操作成功');
         } else {
             $this->error('操作失败');

@@ -1,7 +1,15 @@
 <?php if (!defined('THINK_PATH')) exit();?>
 <table id="ad_adlist_datagrid" class="easyui-datagrid" data-options='<?php $dataOptions = array_merge(array ( 'border' => false, 'fit' => true, 'fitColumns' => true, 'rownumbers' => true, 'singleSelect' => true, 'pagination' => true, 'pageList' => array ( 0 => 20, 1 => 30, 2 => 50, 3 => 80, 4 => 100, ), 'pageSize' => '20', ), $datagrid["options"]);if(isset($dataOptions['toolbar']) && substr($dataOptions['toolbar'],0,1) != '#'): unset($dataOptions['toolbar']); endif; echo trim(json_encode($dataOptions), '{}[]').((isset($datagrid["options"]['toolbar']) && substr($datagrid["options"]['toolbar'],0,1) != '#')?',"toolbar":'.$datagrid["options"]['toolbar']:null); ?>' style=""><thead><tr><?php if(is_array($datagrid["fields"])):foreach ($datagrid["fields"] as $key=>$arr):if(isset($arr['formatter'])):unset($arr['formatter']);endif;echo "<th data-options='".trim(json_encode($arr), '{}[]').(isset($datagrid["fields"][$key]['formatter'])?",\"formatter\":".$datagrid["fields"][$key]['formatter']:null)."'>".$key."</th>";endforeach;endif; ?></tr></thead></table>
-<div id="admin_adList_datagrid_toolbar" style="padding:5px;height:auto">
-</div>
+ <div id="ad_adList_datagrid_toolbar" style="padding:5px;height:auto">
+        <form>
+            广告位ID:
+            <input type="text" name="search[postion_id]" class="easyui-text" panelHeight="auto" style="width:100px">
+            </input>&nbsp;&nbsp;
+            <a href="javascript:;" onclick="adminAdSearch(this);" class="easyui-linkbutton" iconCls="icons-map-magnifier">搜索</a>&nbsp;&nbsp;
+            <a href="javascript:;" onclick="adminAdRefresh();" class="easyui-linkbutton" iconCls="icons-arrow-arrow_refresh">刷新</a>
+            <a href="javascript:;" onclick="adListOrder();" class="easyui-linkbutton" iconCls="icons-arrow-arrow_down">排序</a>
+        </form>
+    </div>
 <!-- 添加广告 -->
 <div id="admin_adList_add_dialog" class="easyui-dialog" title="添加广告位" data-options="modal:true,closed:true,iconCls:'icons-application-application_add',buttons:[{text:'确定',iconCls:'icons-other-tick',handler:function(){$('#admin_adList_add_dialog_form').submit();}},{text:'取消',iconCls:'icons-arrow-cross',handler:function(){$('#admin_adList_add_dialog').dialog('close');}}]" style="width:450px;height:350px;"></div>
 
@@ -10,14 +18,14 @@
 
 
 <script type="text/javascript">
-var teacher_adList_datagrid_id = 'teacher_adList_datagrid';
+
 //搜索
-function adminTeacherSearch(that){
-    var queryParams = $('#'+teacher_adList_datagrid_id).datagrid('options').queryParams;
+function adminAdSearch(that){
+    var queryParams = $('#ad_adlist_datagrid').datagrid('options').queryParams;
     $.each($(that).parent('form').serializeArray(), function() {
         queryParams[this['name']] = this['value'];
     });
-    $('#'+teacher_adList_datagrid_id).datagrid('reload');
+    $('#ad_adlist_datagrid').datagrid('reload');
 }
 //图片格式化
 function adImgFormatter(val){
@@ -78,20 +86,15 @@ function adminAdDelete(id){
 	});
 }
 
-//工具栏
-var admin_adList_datagrid_toolbar = [
-    { text: '刷新', iconCls: 'icons-arrow-arrow_refresh', handler: adminAdRefresh },
-    { text: '排序', iconCls: 'icons-arrow-arrow_down', handler: adListFormatter }
-];
 
 //排序格式化
-function adListFormatter(val, arr){
-    return '<input class="adList_input" type="text" name="order['+arr['id']+']" value="'+ val +'" size="2" style="text-align:center">';
+function adListOrderFormatter(val, arr){
+    return '<input class="adList_input" type="text" name="sort_num['+arr['ad_id']+']" value="'+ val +'" size="2" style="text-align:center">';
 }
 
 //排序
 function adListOrder(){
-    $.post('<?php echo U('System/menuOrder');?>', $('.adList_input').serialize(), function(res){
+    $.post('<?php echo U('Ad/adOrder');?>', $('.adList_input').serialize(), function(res){
         if(!res.status){
             $.messager.alert('提示信息', res.info, 'error');
         }else{

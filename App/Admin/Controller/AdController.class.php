@@ -41,7 +41,7 @@ class AdController extends CommonController {
             $limit=($page - 1) * $rows . "," . $rows;
             $total = $ad_db->where($where)->count();
             $order = $sort.' '.$order;
-            $column = "`ad_id`,`ad_id` as ad_ids,`pic`,`type`,`postion_id`,`postion`,`title`,`url`";
+            $column = "`ad_id`,`ad_id` as ad_ids,`pic`,`type`,`postion_id`,`postion`,`title`,`url`,`width`,`height`";
             $list = $total ? $ad_db->field($column)->where($where)->order($order)->limit($limit)->select() : array();
 
             foreach($list as $k => $lt){
@@ -68,6 +68,8 @@ class AdController extends CommonController {
                     '广告ID'    => array('field'=>'ad_id','width'=>15,'sortable'=>true),
                     '广告类型'      => array('field'=>'type','width'=>15,'sortable'=>true),
                     '图片'      => array('field'=>'pic','width'=>50,'sortable'=>true,'formatter'=>'adImgFormatter'),
+                    '宽度'    => array('field'=>'width','width'=>15,'sortable'=>true),
+                    '高度'    => array('field'=>'height','width'=>15,'sortable'=>true),
                     '位置ID'    => array('field'=>'postion_id','width'=>20,'sortable'=>true),
                     '位置'    => array('field'=>'postion','width'=>20,'sortable'=>true),
                     '标题'    => array('field'=>'title','width'=>20,'sortable'=>true),
@@ -96,7 +98,7 @@ class AdController extends CommonController {
             $limit=($page - 1) * $rows . "," . $rows;
             $total = $ad_db->where($where)->count();
             $order = $sort.' '.$order;
-            $column = "`postion_id`,`postion_id` as postion_ids,`postion`,`type`";
+            $column = "`postion_id`,`postion_id` as postion_ids,`postion`,`type`,`width`,`height`";
             $list = $total ? $ad_db->field($column)->where($where)->order($order)->limit($limit)->select() : array();
 
             foreach($list as $k => $lt){
@@ -123,6 +125,8 @@ class AdController extends CommonController {
                     '广告位ID'    => array('field'=>'postion_id','width'=>15,'sortable'=>true),
                     '广告类型'      => array('field'=>'type','width'=>15,'sortable'=>true),
                     '位置'    => array('field'=>'postion','width'=>20,'sortable'=>true),
+                    '宽度'    => array('field'=>'width','width'=>15,'sortable'=>true),
+                    '高度'    => array('field'=>'height','width'=>15,'sortable'=>true),
                     '操作'    => array('field'=>'postion_ids','width'=>55,'sortable'=>true,'formatter'=>'adminpostionListOperateFormatter'),
 
                 )
@@ -176,6 +180,8 @@ class AdController extends CommonController {
                 $dataInfo['title'] = $data['title'];
                 $dataInfo['url'] = $data['url'];
                 $dataInfo['pic'] = $data['img_upload1'];
+                $dataInfo['width'] = $postionInfo['width'];
+                $dataInfo['height'] = $postionInfo['height'];
                 $result = $ad_db->add($dataInfo);
             }
 

@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d8f33eb3-3aed-4b70-b310-7d6daebbc6fb" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Public/Runtime/Logs/15_06_10.log" afterPath="$PROJECT_DIR$/Public/Runtime/Logs/15_06_10.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Public/Runtime/Logs/15_06_11.log" afterPath="$PROJECT_DIR$/Public/Runtime/Logs/15_06_11.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/App/Admin/Controller/AdController.class.php" afterPath="$PROJECT_DIR$/App/Admin/Controller/AdController.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/App/Admin/View/Ad/ad_add.html" afterPath="$PROJECT_DIR$/App/Admin/View/Ad/ad_add.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/App/Admin/View/Ad/ad_edit.html" afterPath="$PROJECT_DIR$/App/Admin/View/Ad/ad_edit.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Public/Runtime/Cache/Admin/bb47acac20a03de7e1377c7931740111.php" afterPath="$PROJECT_DIR$/Public/Runtime/Cache/Admin/bb47acac20a03de7e1377c7931740111.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Public/Runtime/Cache/Admin/eba7f0a7d9449294ebb628a622f8aaf9.php" afterPath="$PROJECT_DIR$/Public/Runtime/Cache/Admin/eba7f0a7d9449294ebb628a622f8aaf9.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Public/static/js/uploadify/jquery.uploadify.min.js" afterPath="$PROJECT_DIR$/Public/static/js/uploadify/jquery.uploadify.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="houtai.iws" />
@@ -37,8 +32,18 @@
       <file leaf-file-name="AdController.class.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/App/Admin/Controller/AdController.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.37704918" vertical-offset="3775" max-vertical-offset="6080">
-              <caret line="212" column="13" selection-start-line="212" selection-start-column="13" selection-end-line="212" selection-end-column="13" />
+            <state vertical-scroll-proportion="0.5752608" vertical-offset="3015" max-vertical-offset="6194">
+              <caret line="179" column="52" selection-start-line="179" selection-start-column="52" selection-end-line="179" selection-end-column="52" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="513">
+              <caret line="0" column="5" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -47,7 +52,7 @@
       <file leaf-file-name="ad_add.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/App/Admin/View/Ad/ad_add.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.5964913" vertical-offset="194" max-vertical-offset="1862">
+            <state vertical-scroll-proportion="0.0" vertical-offset="194" max-vertical-offset="1862">
               <caret line="24" column="31" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
               <folding />
             </state>
@@ -71,7 +76,7 @@
       <file leaf-file-name="jquery.uploadify.min.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Public/static/js/uploadify/jquery.uploadify.min.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.827586" vertical-offset="0" max-vertical-offset="399">
+            <state vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="399">
               <caret line="15" column="10368" selection-start-line="15" selection-start-column="10368" selection-end-line="15" selection-end-column="10368" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
@@ -116,16 +121,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="teacher_edit.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/App/Admin/View/Teacher/teacher_edit.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1197" max-vertical-offset="4047">
-              <caret line="22" column="62" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="62" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="TeacherController.class.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/App/Admin/Controller/TeacherController.class.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -139,7 +134,7 @@
       <file leaf-file-name="ad_edit.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/App/Admin/View/Ad/ad_edit.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.25" vertical-offset="393" max-vertical-offset="1919">
+            <state vertical-scroll-proportion="0.0" vertical-offset="393" max-vertical-offset="1919">
               <caret line="24" column="27" selection-start-line="24" selection-start-column="27" selection-end-line="24" selection-end-column="27" />
               <folding>
                 <element signature="n#style#0;n#input#0;n#td#1;n#tr#0;n#table#0;n#form#0;n#!!top" expanded="true" />
@@ -196,7 +191,6 @@
         <option value="$PROJECT_DIR$/uploadify/uploadify.php" />
         <option value="$PROJECT_DIR$/App/Admin/View/Ad/postion_add.html" />
         <option value="$PROJECT_DIR$/App/Admin/Model/AdModel.class.php" />
-        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/Public/static/css/admin/uploadify/uploadify.css" />
         <option value="$PROJECT_DIR$/App/Admin/View/Ad/ad_list.html" />
         <option value="$PROJECT_DIR$/Public/static/js/easyui/jquery.easyui.min.js" />
@@ -206,6 +200,7 @@
         <option value="$PROJECT_DIR$/Public/static/js/uploadify/jquery.uploadify.min.js" />
         <option value="$PROJECT_DIR$/App/Admin/View/Ad/ad_add.html" />
         <option value="$PROJECT_DIR$/App/Admin/View/Ad/ad_edit.html" />
+        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/App/Admin/Controller/AdController.class.php" />
       </list>
     </option>
@@ -560,15 +555,15 @@
       <BehatRunner />
       <method />
     </configuration>
-    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
-      <method />
-    </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
       <node-options />
       <gulpfile />
       <tasks />
       <pass-parent-env-vars>false</pass-parent-env-vars>
       <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
       <method />
     </configuration>
     <list size="1">
@@ -609,13 +604,13 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17154256" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32978722" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -899,13 +894,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="687">
-          <caret line="0" column="5" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/App/Admin/Conf/config.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-14.928572" vertical-offset="285" max-vertical-offset="855">
@@ -994,7 +982,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Public/static/js/uploadify/jquery.uploadify.min.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.827586" vertical-offset="0" max-vertical-offset="399">
+        <state vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="399">
           <caret line="15" column="10368" selection-start-line="15" selection-start-column="10368" selection-end-line="15" selection-end-column="10368" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
@@ -1004,7 +992,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/App/Admin/View/Ad/ad_edit.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.25" vertical-offset="393" max-vertical-offset="1919">
+        <state vertical-scroll-proportion="0.0" vertical-offset="393" max-vertical-offset="1919">
           <caret line="24" column="27" selection-start-line="24" selection-start-column="27" selection-end-line="24" selection-end-column="27" />
           <folding>
             <element signature="n#style#0;n#input#0;n#td#1;n#tr#0;n#table#0;n#form#0;n#!!top" expanded="true" />
@@ -1016,16 +1004,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/App/Admin/View/Ad/ad_add.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.5964913" vertical-offset="194" max-vertical-offset="1862">
+        <state vertical-scroll-proportion="0.0" vertical-offset="194" max-vertical-offset="1862">
           <caret line="24" column="31" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="671">
+          <caret line="0" column="5" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/App/Admin/Controller/AdController.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.37704918" vertical-offset="3775" max-vertical-offset="6080">
-          <caret line="212" column="13" selection-start-line="212" selection-start-column="13" selection-end-line="212" selection-end-column="13" />
+        <state vertical-scroll-proportion="0.5752608" vertical-offset="3015" max-vertical-offset="6194">
+          <caret line="179" column="52" selection-start-line="179" selection-start-column="52" selection-end-line="179" selection-end-column="52" />
           <folding />
         </state>
       </provider>

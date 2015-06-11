@@ -41,7 +41,7 @@ class AdController extends CommonController {
             $limit=($page - 1) * $rows . "," . $rows;
             $total = $ad_db->where($where)->count();
             $order = $sort.' '.$order;
-            $column = "`ad_id`,`ad_id` as ad_ids,`pic`,`type`,`postion_id`,`postion`,`title`,`url`,`width`,`height`";
+            $column = "`ad_id`,`ad_id` as ad_ids,`pic`,`type`,`postion_id`,`postion`,`title`,`url`,`width`,`height`,`sort_num`";
             $list = $total ? $ad_db->field($column)->where($where)->order($order)->limit($limit)->select() : array();
 
             foreach($list as $k => $lt){
@@ -67,6 +67,7 @@ class AdController extends CommonController {
                 'fields' => array(
                     '广告ID'    => array('field'=>'ad_id','width'=>15,'sortable'=>true),
                     '广告类型'      => array('field'=>'type','width'=>15,'sortable'=>true),
+                    '排序'    => array('field'=>'sort_num','width'=>40,'sortable'=>true,'formatter'=>'adListFormatter'),
                     '图片'      => array('field'=>'pic','width'=>50,'sortable'=>true,'formatter'=>'adImgFormatter'),
                     '宽度'    => array('field'=>'width','width'=>15,'sortable'=>true),
                     '高度'    => array('field'=>'height','width'=>15,'sortable'=>true),
@@ -147,6 +148,8 @@ class AdController extends CommonController {
             $data = I('post.info');
             $adInfo['type'] = $data['type'];
             $adInfo['postion'] = $data['postion'];
+            $adInfo['width'] = !empty($data['width']) ? $data['width'] : '';
+            $adInfo['height'] = !empty($data['height']) ? $data['height'] : '';
             $adId = $ad_postion_db->add($adInfo);
             if($adId){
                 $this->success('添加成功');
@@ -214,6 +217,7 @@ class AdController extends CommonController {
             $data = I('post.info');
             $dataInfo['title'] = $data['title'];
             $dataInfo['url'] = str_replace('&amp;','&',$data['url']);
+            $dataInfo['sort_num'] = $data['sort_num'];
             if (!empty($data['img_upload2'])){
                 $dataInfo['pic'] = $data['img_upload2'];
             }
@@ -244,6 +248,9 @@ class AdController extends CommonController {
             $data = I('post.info');
             $dataInfo['postion'] = !empty($data['postion']) ? $data['postion'] : '';
             $dataInfo['type'] = !empty($data['type']) ? $data['type'] : '';
+            $dataInfo['width'] = !empty($data['width']) ? $data['width'] : '';
+            $dataInfo['height'] = !empty($data['height']) ? $data['height'] : '';
+
             $result = $postion_db->where(array('postion_id'=>$data['postion_id']))->save($dataInfo);
 
             if($result){
@@ -316,6 +323,23 @@ class AdController extends CommonController {
             $this->display('ad_add');
         }
         exit;
+    }
+
+
+    /**
+     * 广告图排序
+     */
+    function menuOrder(){
+        if(IS_POST) {
+            $menu_db = D('Menu');
+            foreach(I('post.order') as $id => $listorder) {
+                $menu_db->where(array('id'=>$id))->save(array('listorder'=>$listorder));
+            }
+            $menu_db->clearCatche();
+            $this->success('操作成功');
+        } else {
+            $this->error('操作失败');
+        }
     }
 
 }

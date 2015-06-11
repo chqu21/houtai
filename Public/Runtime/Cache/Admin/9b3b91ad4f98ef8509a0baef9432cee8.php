@@ -69,5 +69,19 @@ function adminpostionListEditDialogFormSubmit(){
         </td>
         <td></td>
 	</tr>
+    <tr>
+        <td>宽度：</td>
+        <td>
+            <input type="text"   name="info[width]" checked="checked" value="<?php echo ($info["width"]); ?>">&nbsp;&nbsp;</input>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>高度：</td>
+        <td>
+            <input type="text"   name="info[height]" checked="checked" value="<?php echo ($info["height"]); ?>">&nbsp;&nbsp;</input>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </td>
+        <td></td>
+    </tr>
 </table>
 </form>

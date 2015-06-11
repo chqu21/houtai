@@ -77,4 +77,27 @@ function adminAdDelete(id){
 		}, 'json');
 	});
 }
+
+//工具栏
+var admin_adList_datagrid_toolbar = [
+    { text: '刷新', iconCls: 'icons-arrow-arrow_refresh', handler: adminAdRefresh },
+    { text: '排序', iconCls: 'icons-arrow-arrow_down', handler: adListFormatter }
+];
+
+//排序格式化
+function adListFormatter(val, arr){
+    return '<input class="adList_input" type="text" name="order['+arr['id']+']" value="'+ val +'" size="2" style="text-align:center">';
+}
+
+//排序
+function adListOrder(){
+    $.post('<?php echo U('System/menuOrder');?>', $('.adList_input').serialize(), function(res){
+        if(!res.status){
+            $.messager.alert('提示信息', res.info, 'error');
+        }else{
+            $.messager.alert('提示信息', res.info, 'info');
+            systemMenuRefresh();
+        }
+    }, 'json');
+}
 </script>

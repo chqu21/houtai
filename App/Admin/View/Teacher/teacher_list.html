@@ -11,6 +11,7 @@
         <a href="javascript:;" onclick="adminTeacherSearch(this);" class="easyui-linkbutton" iconCls="icons-map-magnifier">搜索</a>&nbsp;&nbsp;
         <a href="javascript:;" onclick="adminMemberAdd();" class="easyui-linkbutton" iconCls="icons-arrow-add">添加老师</a>&nbsp;&nbsp;
         <a href="javascript:;" onclick="adminMemberRefresh();" class="easyui-linkbutton" iconCls="icons-arrow-arrow_refresh">刷新</a>
+        <a href="javascript:;" onclick="sendSms();" class="easyui-linkbutton" iconCls="icons-arrow-arrow_email">发送短信通知</a>
     </form>
 </div>
 <!-- 添加老师 -->
@@ -24,7 +25,31 @@
 <div id="admin_teacherlist_edit_photo_dialog" class="easyui-dialog" title="编辑老师头像" data-options="modal:true,closed:true,iconCls:'icons-application-application_edit',buttons:[{text:'关闭',iconCls:'icons-arrow-cross',handler:function(){$('#admin_teacherlist_edit_photo_dialog').dialog('close');}}]" style="width:900px;height:550px;"></div>
 
 <script type="text/javascript">
-var teacher_teacherlist_datagrid_id = 'teacher_teacherlist_datagrid';
+
+   function sendSms(){
+        var checkedItems = $('#teacher_teacherlist_datagrid').datagrid('getChecked');
+       console.dir(checkedItems);
+        var names = [];
+       $.each(checkedItems, function(index, item){
+           names.push(item.teacher_id);
+       });
+       console.log(names.join(","));
+    };
+    $('#teacher_teacherlist_datagrid').datagrid({
+        singleSelect: false,
+        selectOnCheck: true,
+        checkOnSelect: true,
+        onLoadSuccess:function(data){
+            if(data){
+                $.each(data.rows, function(index, item){
+                    if(item.checked){
+                        $('#teacher_teacherlist_datagrid').datagrid('checkRow', index);
+                    }
+                });
+           }
+        }
+    });
+        var teacher_teacherlist_datagrid_id = 'teacher_teacherlist_datagrid';
 //搜索
 function adminTeacherSearch(that){
     var queryParams = $('#'+teacher_teacherlist_datagrid_id).datagrid('options').queryParams;
@@ -45,7 +70,6 @@ function adminMemberListOperateFormatter(val){
     btn.push('<a href="javascript:;" onclick="adminAppraiseEdit('+val+')">评价老师</a>');
     btn.push('<a href="javascript:;" onclick="adminHeadPhotoEdit('+val+')">修改头像</a>');
 	btn.push('<a href="javascript:;" onclick="adminMemberDelete('+val+')">删除</a>');
-
 	return btn.join(' | ');
 }
 

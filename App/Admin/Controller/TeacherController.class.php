@@ -42,6 +42,7 @@ class TeacherController extends CommonController {
                 '21:30-22:00',
         );
 
+
     /**
      * 老师列表
      */
@@ -58,7 +59,7 @@ class TeacherController extends CommonController {
             $limit=($page - 1) * $rows . "," . $rows;
             $total = $teacher_db->where($where)->count();
             $order = $sort.' '.$order;
-            $column = "`teacher_name`,`sex`,`teaching_age`,`certification_flag`,`education_flag`,`teacher_certification_flag`,`discipline`,`grade`,`course_category`,`sort_num`,`recommand_flag`,`raw_add_time`,`display`,`teacher_id`,`teacher_id` as teacher_ids";
+            $column = "`teacher_name`,`sex`,`teaching_age`,`certification_flag`,`education_flag`,`teacher_certification_flag`,`discipline`,`grade`,`course_category`,`sort_num`,`recommand_flag`,`raw_add_time`,`display`,`teacher_id`,`teacher_id` as teacher_ids,`teacher_id` as teacher_idss,`mobile`";
             $list = $total ? $teacher_db->field($column)->where($where)->order($order)->limit($limit)->select() : array();
 
             foreach($list as $k => $lt){
@@ -105,6 +106,7 @@ class TeacherController extends CommonController {
                     'toolbar' => 'admin_teacherlist_datagrid_toolbar',
                 ),
                 'fields' => array(
+                    '选择'    => array('field'=>'teacher_idss','width'=>15,'checkbox'=>"true"),
                     '教师ID'    => array('field'=>'teacher_id','width'=>15,'sortable'=>true),
                     '教师姓名'      => array('field'=>'teacher_name','width'=>15,'sortable'=>true),
                     '姓别'      => array('field'=>'sex','width'=>7,'sortable'=>true),
@@ -119,6 +121,7 @@ class TeacherController extends CommonController {
                     '推荐' => array('field'=>'recommand_flag','width'=>15,'sortable'=>true),
                     '注册时间' => array('field'=>'raw_add_time','width'=>25),
                     '显示' => array('field'=>'display','width'=>7,'sortable'=>true),
+                    '手机号' => array('field'=>'mobile','width'=>15,'sortable'=>true),
                     '操作'    => array('field'=>'teacher_ids','width'=>55,'sortable'=>true,'formatter'=>'adminMemberListOperateFormatter'),
                 )
             );
@@ -137,10 +140,41 @@ class TeacherController extends CommonController {
             //$memberInfo_db = D('memberInfo');
             $data = I('post.info');
             $memberInfo['mobile'] = $data['mobile'];
-            $memberInfo['password'] = $data['password'];
+            $memberInfo['identity'] = 3;
+            $pwd = $this->handle_pwd(trim($data['password']),'kdsjkdeyuewy');
+            $memberInfo['password'] = $pwd;
             $memberId = $member_db->add($memberInfo);
-            unset($data['mobile']);
             unset($data['password']);
+            unset($data['pwdconfirm']);
+            $data['member_id'] = $memberId;
+            $teachingAge = $data['teaching_age'];
+            if ($teachingAge <= 5){
+                $teachingAgeRange = 1;
+            }elseif($teachingAge > 5 and $teachingAge<=10){
+                $teachingAgeRange = 2;
+            }elseif($teachingAge > 10 and $teachingAge<=15){
+                $teachingAgeRange = 3;
+            }elseif($teachingAge > 15 and $teachingAge<=20){
+                $teachingAgeRange = 4;
+            }elseif($teachingAge > 20){
+                $teachingAgeRange = 5;
+            }
+            $price = $data['price'];
+            if ($price <= 100){
+                $priceRange = 1;
+            }elseif($price > 100 and $price<=150){
+                $priceRange = 2;
+            }elseif($price > 150 and $price<=200){
+                $priceRange = 3;
+            }elseif($price > 200 and $price<=250){
+                $priceRange = 4;
+            }elseif($price > 250 and $price<=300){
+                $priceRange = 5;
+            }elseif($price > 300){
+                $priceRange = 6;
+            }
+            $data['price_range'] = $priceRange;
+            $data['teaching_age_range'] = $teachingAgeRange;
             $id = $teacher_db->add($data);
             if($memberId && $id){
                 $this->success('添加成功');
@@ -151,6 +185,7 @@ class TeacherController extends CommonController {
             $this->display('teacher_add');
         }
     }
+
 
     /**
      * 编辑老师
@@ -551,6 +586,19 @@ public function getPicExt($fileStream){
             }
         }else {
             $this->display('time_add');
+        }
+    }
+
+    /**
+     * 验证邮箱是否存在
+     */
+    public function checkMobile($mobile = ''){
+        $teacher_db = D('Teacher');
+        $exists = $teacher_db->where(array('mobile'=>$mobile))->field('mobile')->find();
+        if ($exists) {
+            $this->success('手机号存在');
+        }else{
+            $this->error('手机号不存在');
         }
     }
 

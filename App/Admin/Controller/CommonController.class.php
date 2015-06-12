@@ -113,5 +113,11 @@ class CommonController extends Controller {
 		    $this->display('Common:404');
 		}
 	}
-	
+
+    public function handle_pwd($pwd,$key){
+        $pwd.=$key;
+        $mpw=md5($pwd);//进行md5处理
+        return substr($mpw,5,20);//截取指定的一段字符串
+    }
+
 }

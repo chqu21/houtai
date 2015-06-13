@@ -6,58 +6,7 @@ class TeacherModel extends Model{
     protected $tableName = 'teachers';
 	protected $pk        = 'teacher_id';
 	public    $error;
-	
-	/**
-	 * 登录验证
-	 */
-	public function login($username, $password){
-	    $times_db = M('times');
-	    
-        //查询帐号
-        $r = $this->where(array('username'=>$username))->find();
-        if(!$r){
-            $this->error = '管理员不存在';
-            return false;
-        }
-		
-	    //密码错误剩余重试次数
-        $rtime = $times_db->where(array('username'=>$username, 'isadmin'=>'1'))->find();
-        if($rtime['times'] >= C('MAX_LOGIN_TIMES')) {
-            $minute = C('LOGIN_WAIT_TIME') - floor((time()-$rtime['logintime'])/60);
-            if ($minute > 0) {
-                $this->error = "密码重试次数太多，请过{$minute}分钟后重新登录！";
-                return false;
-            }else {
-                $times_db->where(array('username'=>$username))->delete();
-            }
-        }
-		
-		$password = md5(md5($password).$r['encrypt']);
-        $ip = get_client_ip();
-        if($r['password'] != $password) {
-            if($rtime && $rtime['times'] < C('MAX_LOGIN_TIMES')) {
-                $times = C('MAX_LOGIN_TIMES') - intval($rtime['times']);
-                $times_db->where(array('username'=>$username))->save(array('ip'=>$ip,'isadmin'=>1));
-                $times_db->where(array('username'=>$username))->setInc('times');
-            } else {
-                $times_db->where(array('username'=>$username,'isadmin'=>1))->delete();
-                $times_db->add(array('username'=>$username,'ip'=>$ip,'isadmin'=>1,'logintime'=>SYS_TIME,'times'=>1));
-                $times = C('MAX_LOGIN_TIMES');
-            }
-            $this->error = "密码错误，您还有{$times}次尝试机会！";
-            return false;
-        }
-        
-        $times_db->where(array('username'=>$username))->delete();
-        $this->where(array('userid'=>$r['userid']))->save(array('lastloginip'=>$ip,'lastlogintime'=>time()));
-        
-        session('userid', $r['userid']);
-        session('roleid', $r['roleid']);
-        cookie('username', $username);
-        cookie('userid', $r['userid']);
-        
-        return true;
-	}
+
 	
 	/**
 	 * 获取用户信息
@@ -66,14 +15,57 @@ class TeacherModel extends Model{
 	    $info = $this->where(array('teacher_id'=>$teacherId))->find();
 	    return $info;
 	}
-    
-	/**
-	 * 修改密码
-	 */
-	public function editPassword($userid, $password){
-		$userid = intval($userid);
-		if($userid < 1) return false;
-		$passwordinfo = password($password);
-		return $this->where(array('userid'=>$userid))->save($passwordinfo);
-	}
+
+    public function addTeacher($data){
+        $teachingAge = $data['teaching_age'];
+        if ($teachingAge <= 5){
+            $teachingAgeRange = 1;
+        }elseif($teachingAge > 5 and $teachingAge<=10){
+            $teachingAgeRange = 2;
+        }elseif($teachingAge > 10 and $teachingAge<=15){
+            $teachingAgeRange = 3;
+        }elseif($teachingAge > 15 and $teachingAge<=20){
+            $teachingAgeRange = 4;
+        }elseif($teachingAge > 20){
+            $teachingAgeRange = 5;
+        }
+        $price = $data['price'];
+        if ($price <= 100){
+            $priceRange = 1;
+        }elseif($price > 100 and $price<=150){
+            $priceRange = 2;
+        }elseif($price > 150 and $price<=200){
+            $priceRange = 3;
+        }elseif($price > 200 and $price<=250){
+            $priceRange = 4;
+        }elseif($price > 250 and $price<=300){
+            $priceRange = 5;
+        }elseif($price > 300){
+            $priceRange = 6;
+        }
+        $data['price_range'] = $priceRange;
+        $data['teaching_age_range'] = $teachingAgeRange;
+        $teacher_db = D('Teacher');
+        $member_db = D('member');
+        $memberInfo['mobile'] = $data['mobile'];
+        $memberInfo['identity'] = 3;
+        $memberInfo['password'] = $data['password'];
+        unset($data['password']);
+        unset($data['pwdconfirm']);
+        try{
+            $this->startTrans();
+            $memberId = $member_db->add($memberInfo);
+            $data['member_id'] = $memberId;
+            if (empty($memberId)){
+                $this->rollback();
+                return false;
+            }
+            $teacher_db->add($data);
+            $this->commit();
+        } catch (ThinkException $e) {
+            $this->rollback();
+        }
+        return true;
+    }
+
 }

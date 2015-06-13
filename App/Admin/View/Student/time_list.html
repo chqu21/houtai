@@ -1,0 +1,85 @@
+<taglib name="Admin\TagLib\EasyUI" />
+
+<easyui:datagrid options="datagrid.options" fields="datagrid.fields" />
+<div id="admin_timelist_datagrid_toolbar" style="padding:5px;height:auto">
+    <form>
+        教师姓名:
+        <input type="text" name="search[teacher_name]" class="easyui-text" panelHeight="auto" style="width:100px">
+        </input>&nbsp;&nbsp;
+
+
+        <a href="javascript:;" onclick="adminTeacherSearch(this);" class="easyui-linkbutton" iconCls="icons-map-magnifier">搜索</a>&nbsp;&nbsp;
+        <a href="javascript:;" onclick="adminTimeAdd();" class="easyui-linkbutton" iconCls="icons-arrow-add">添加老师授课时间</a>&nbsp;&nbsp;
+        <a href="javascript:;" onclick="adminTimeRefresh();" class="easyui-linkbutton" iconCls="icons-arrow-arrow_refresh">刷新</a>
+    </form>
+</div>
+
+<!-- 编辑时间 -->
+<div id="admin_timelist_edit_dialog" class="easyui-dialog" title="编辑时间" data-options="modal:true,closed:true,iconCls:'icons-application-application_edit',buttons:[{text:'确定',iconCls:'icons-other-tick',handler:function(){$('#admin_timelist_edit_dialog_form').submit();}},{text:'取消',iconCls:'icons-arrow-cross',handler:function(){$('#admin_timelist_edit_dialog').dialog('close');}}]" style="width:350px;height:250px;"></div>
+<!--添加授课时间-->
+<div id="admin_time_add_dialog" class="easyui-dialog" title="添加授课时间" data-options="modal:true,closed:true,iconCls:'icons-application-application_edit',buttons:[{text:'确定',iconCls:'icons-other-tick',handler:function(){$('#admin_time_add_dialog_form').submit();}},{text:'取消',iconCls:'icons-arrow-cross',handler:function(){$('#admin_time_add_dialog').dialog('close');}}]" style="width:600px;height:450px;"></div>
+
+<script type="text/javascript">
+var teacher_timelist_datagrid_id = 'teacher_timelist_datagrid';
+//搜索
+function adminTeacherSearch(that){
+    var queryParams = $('#'+teacher_timelist_datagrid_id).datagrid('options').queryParams;
+    $.each($(that).parent('form').serializeArray(), function() {
+        queryParams[this['name']] = this['value'];
+    });
+    $('#'+teacher_timelist_datagrid_id).datagrid('reload');
+}
+
+//时间格式化
+function adminMemberListTimeFormatter(val){
+	return val != '1970-01-01 08:00:00' ? val : '';
+}
+//操作格式化
+function adminMemberListOperateFormatter(val){
+	var btn = [];
+	btn.push('<a href="javascript:;" onclick="adminMemberEdit('+val+')">编辑</a>');
+	return btn.join(' | ');
+}
+
+//刷新
+function adminTimeRefresh(){
+	$('#teacher_timelist_datagrid').datagrid('reload');
+}
+//添加
+function adminTimeAdd(){
+	$('#admin_time_add_dialog').dialog({href:'<{:U('Teacher/timeAdd')}>'});
+	$('#admin_time_add_dialog').dialog('open');
+}
+//编辑
+function adminMemberEdit(id){
+	if(typeof(id) !== 'number'){
+		$.messager.alert('提示信息', '未选择老师', 'error');
+		return false;
+	}
+	var url = '<{:U('Teacher/timeEdit')}>';
+	url += url.indexOf('?') != -1 ? '&id='+id : '?id='+id;
+	$('#admin_timelist_edit_dialog').dialog({href:url});
+	$('#admin_timelist_edit_dialog').dialog('open');
+}
+
+
+//删除
+function adminMemberDelete(id){
+    console.log(id);
+	if(typeof(id) !== 'number'){
+		$.messager.alert('提示信息', '未选择老师', 'error');
+		return false;
+	}
+	$.messager.confirm('提示信息', '确定要删除吗？', function(result){
+		if(!result) return false;
+		$.post('<{:U('Teacher/teacherDelete')}>', {id: id}, function(res){
+			if(!res.status){
+				$.messager.alert('提示信息', res.info, 'error');
+			}else{
+				$.messager.alert('提示信息', res.info, 'info');
+				adminMemberRefresh();
+			}
+		}, 'json');
+	});
+}
+</script>

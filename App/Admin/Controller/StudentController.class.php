@@ -6,7 +6,7 @@ use Admin\Controller\CommonController;
  * 后台管理员相关模块
  * @author wangdong
  */
-class TeacherController extends CommonController {
+class StudentController extends CommonController {
 
 
     public $timeArr = array(
@@ -46,9 +46,10 @@ class TeacherController extends CommonController {
     /**
      * 老师列表
      */
-    public function teacherList($page = 1, $rows = 10,$search = array(),$sort = 'teacher_id', $order = 'asc'){
+    public function studentList($page = 1, $rows = 10,$search = array(),$sort = 'member_id', $order = 'desc'){
         if(IS_POST){
-            $teacher_db = D('Teacher');
+            $member_info_db = D('MemberInfo');
+            $member_db = D('Member');
             //搜索
             $where = array();
             foreach ($search as $k=>$v){
@@ -57,43 +58,15 @@ class TeacherController extends CommonController {
             }
             $where = implode(' and ', $where);
             $limit=($page - 1) * $rows . "," . $rows;
-            $total = $teacher_db->where($where)->count();
+            $total = $member_info_db->where($where)->count();
             $order = $sort.' '.$order;
-            $column = "`teacher_name`,`sex`,`teaching_age`,`certification_flag`,`education_flag`,`teacher_certification_flag`,`discipline`,`grade`,`course_category`,`sort_num`,`recommand_flag`,`raw_add_time`,`display`,`teacher_id`,`teacher_id` as teacher_ids,`teacher_id` as teacher_idss,`mobile`";
-            $list = $total ? $teacher_db->field($column)->where($where)->order($order)->limit($limit)->select() : array();
-
+            $column = "`real_name`,`address`,`nick_name`,`sex`,`birthday`,`school`,`grade`,`weixin`,`qq`,`safe_email`,`head_photo`,`mobile`,`member_id`,`member_id` as member_ids,`raw_add_time`";
+            $list = $total ? $member_info_db->field($column)->where($where)->order($order)->limit($limit)->select() : array();
             foreach($list as $k => $lt){
-                if ($lt['certification_flag']==1){
-                    $list[$k]['certification_flag'] = '已认证';
-                }else{
-                    $list[$k]['certification_flag'] = '未认证';
-                }
-
-                if ($lt['education_flag']==1){
-                    $list[$k]['education_flag'] = '已认证';
-                }else{
-                    $list[$k]['education_flag'] = '未认证';
-                }
-
-                if ($lt['teacher_certification_flag']==1){
-                    $list[$k]['teacher_certification_flag'] = '已认证';
-                }else{
-                    $list[$k]['teacher_certification_flag'] = '未认证';
-                }
-
-                if ($lt['recommand_flag']==1){
-                    $list[$k]['recommand_flag'] = '已推荐';
-                }else{
-                    $list[$k]['recommand_flag'] = '未推荐';
-                }
-
-                if ($lt['display']==1){
-                    $list[$k]['display'] = '显示';
-                }else{
-                    $list[$k]['display'] = '不显示';
-                }
+                $mId = $lt['member_id'];
+                $mInfo = $member_db->field("`huanxin_user`")->where("member_id=$mId")->select();
+                $list[$k]['huanxin_user'] = $mInfo[0]['huanxin_user'];
             }
-
             $data = array('total'=>$total, 'rows'=>$list);
             $this->ajaxReturn($data);
         }else{
@@ -102,31 +75,28 @@ class TeacherController extends CommonController {
             $datagrid = array(
                 'options'     => array(
                     'title'   => $currentpos,
-                    'url'     => U('Teacher/teacherList', array('grid'=>'datagrid')),
-                    'toolbar' => 'admin_teacherlist_datagrid_toolbar',
+                    'url'     => U('Student/studentList', array('grid'=>'datagrid')),
+                    'toolbar' => 'admin_studentlist_datagrid_toolbar',
                 ),
                 'fields' => array(
-                    '选择'    => array('field'=>'teacher_idss','width'=>15,'checkbox'=>"true"),
-                    '教师ID'    => array('field'=>'teacher_id','width'=>15,'sortable'=>true),
-                    '教师姓名'      => array('field'=>'teacher_name','width'=>15,'sortable'=>true),
+                    '学生ID'    => array('field'=>'member_id','width'=>15,'sortable'=>true),
+                    '真实姓名'      => array('field'=>'real_name','width'=>15,'sortable'=>true),
                     '姓别'      => array('field'=>'sex','width'=>7,'sortable'=>true),
-                    '教龄'    => array('field'=>'teaching_age','width'=>7,'sortable'=>true),
-                    '身份认证'  => array('field'=>'certification_flag','width'=>15,'sortable'=>true),
-                    '学历认证' => array('field'=>'education_flag','width'=>15,'sortable'=>true),
-                    '教师资格认证' => array('field'=>'teacher_certification_flag','width'=>25,'sortable'=>true),
-                    '科目'    => array('field'=>'discipline','width'=>15,'sortable'=>true),
+                    '昵称'    => array('field'=>'nick_name','width'=>7,'sortable'=>true),
+                    '学校'  => array('field'=>'school','width'=>15,'sortable'=>true),
+                    '微信'    => array('field'=>'weixin','width'=>15,'sortable'=>true),
                     '年级'    => array('field'=>'grade','width'=>15,'sortable'=>true),
-                    '课程分类' => array('field'=>'course_category','width'=>15,'sortable'=>true),
-                    '排序' => array('field'=>'sort_num','width'=>15,'sortable'=>true),
-                    '推荐' => array('field'=>'recommand_flag','width'=>15,'sortable'=>true),
-                    '注册时间' => array('field'=>'raw_add_time','width'=>25),
-                    '显示' => array('field'=>'display','width'=>7,'sortable'=>true),
+                    '安全邮箱' => array('field'=>'safe_email','width'=>15,'sortable'=>true),
                     '手机号' => array('field'=>'mobile','width'=>15,'sortable'=>true),
-                    '操作'    => array('field'=>'teacher_ids','width'=>55,'sortable'=>true,'formatter'=>'adminMemberListOperateFormatter'),
+                    'qq' => array('field'=>'qq','width'=>15,'sortable'=>true),
+                    '微博' => array('field'=>'weibo','width'=>25,'sortable'=>true),
+                    '注册时间' => array('field'=>'raw_add_time','width'=>25,'sortable'=>true),
+                    '环信帐号' => array('field'=>'huanxin_user','width'=>15,'sortable'=>true),
+                    '操作'    => array('field'=>'member_ids','width'=>55,'sortable'=>true,'formatter'=>'adminMemberListOperateFormatter'),
                 )
             );
             $this->assign('datagrid', $datagrid);
-            $this->display('teacher_list');
+            $this->display('student_list');
         }
     }
 
@@ -135,20 +105,20 @@ class TeacherController extends CommonController {
      */
     public function teacherAdd(){
         if(IS_POST){
-            $teacher_db = D('Teacher');
+            $student_db = D('MemberInfo');
             //$memberInfo_db = D('memberInfo');
             $data = I('post.info');
             $len = strlen($data['mobile']);
             $pw = substr($data['mobile'],($len-6),6);//默认密码，手机号后六位
             $data['password'] = $this->handle_pwd($pw,'kdsjkdeyuewy');
-            $rs = $teacher_db ->addTeacher($data);
+            $rs = $student_db ->addTeacher($data);
             if($rs){
                 $this->success('添加成功');
             }else {
                 $this->error('添加失败');
             }
         }else{
-            $this->display('teacher_add');
+            $this->display('student_add');
         }
     }
 
@@ -157,20 +127,20 @@ class TeacherController extends CommonController {
      * 编辑老师
      */
     public function teacherEdit($id){
-        $teacher_db = D('Teacher');
+        $student_db = D('MemberInfo');
 
         if(IS_POST){
             $data = I('post.info');
-            $result = $teacher_db->where(array('teacher_id'=>$id))->save($data);
+            $result = $student_db->where(array('student_id'=>$id))->save($data);
             if($result){
                 $this->success('修改成功');
             }else {
                 $this->error('修改失败');
             }
         }else{
-            $info = $teacher_db->getTeacherInfo($id);
+            $info = $student_db->getTeacherInfo($id);
             $this->assign('info', $info);
-            $this->display('teacher_edit');
+            $this->display('student_edit');
         }
     }
 
@@ -178,9 +148,9 @@ class TeacherController extends CommonController {
      * 删除老师
      */
     public function teacherDelete(){
-        $admin_db = D('Teacher');
+        $admin_db = D('MemberInfo');
         $id = I('post.id');
-        $result = $admin_db->where(array('teacher_id'=>$id))->delete();
+        $result = $admin_db->where(array('student_id'=>$id))->delete();
         if ($result){
             $this->success('删除成功');
         }else {
@@ -193,8 +163,8 @@ class TeacherController extends CommonController {
 
 
     public function editPhoto($id){
-        $teacher_db = D('Teacher');
-        $teacherInfo = $teacher_db->where(array('teacher_id'=>$id))->field('head_photo')->find();
+        $student_db = D('MemberInfo');
+        $teacherInfo = $student_db->where(array('student_id'=>$id))->field('head_photo')->find();
         if (!empty($teacherInfo['head_photo'])){
             $rs = json_decode($teacherInfo['head_photo'],'r');
             foreach($rs as $key => $img){
@@ -305,8 +275,8 @@ public function getPicExt($fileStream){
             $imgArr['bigPic'] = 'upload/'.$filename170.'png';
             $imgArr['middlePic'] = 'upload/'.$filename130.'png';
             $imgArr['smallPic'] = 'upload/'.$filename20.'png';
-            $teacher_db = D('Teacher');
-            if ($teacher_db->where(array('teacher_id'=>$teacherId))->save(array('head_photo'=>json_encode($imgArr)))){
+            $student_db = D('MemberInfo');
+            if ($student_db->where(array('student_id'=>$teacherId))->save(array('head_photo'=>json_encode($imgArr)))){
                 $rs['status'] = 1;
                 echo json_encode($rs);
                 exit;
@@ -340,11 +310,11 @@ public function getPicExt($fileStream){
     public  function addAppraise(){
         if(IS_POST) {
             $data = I('post.info');
-            $teacherName = $data['teacher_name'];
-            $teacherId = $data['teacher_id'];
+            $teacherName = $data['student_name'];
+            $teacherId = $data['student_id'];
             $memberName = $data['member_name'];
-            unset($data['teacher_name']);
-            unset($data['teacher_id']);
+            unset($data['student_name']);
+            unset($data['student_id']);
             unset($data['member_name']);
             $commentType = array(
                 'type1' => array(
@@ -370,8 +340,8 @@ public function getPicExt($fileStream){
             );
             $serviceComments = D('ServiceComments');
             foreach ($data as $key => $v) {
-                $dataArr['teacher_id'] = $teacherId;
-                $dataArr['teacher_name'] = $teacherName;
+                $dataArr['student_id'] = $teacherId;
+                $dataArr['student_name'] = $teacherName;
                 $dataArr['member_name'] = $memberName;
                 $dataArr['type_id'] = $commentType[$key]['type_id'];
                 $dataArr['type'] = $commentType[$key]['type'];
@@ -388,11 +358,11 @@ public function getPicExt($fileStream){
             }
             exit;
         }else{
-            $teacher_db = D('Teacher');
-            $teacherInfo = $teacher_db->where(array('teacher_id'=>$id))->field('teacher_id','teacher_name')->find();
-            $this->assign('teacherName', $teacherInfo['teacher_name']);
+            $student_db = D('MemberInfo');
+            $teacherInfo = $student_db->where(array('student_id'=>$id))->field('student_id','student_name')->find();
+            $this->assign('teacherName', $teacherInfo['student_name']);
             $this->assign('teacherId',$id);
-            $this->display('teacher_appraise');
+            $this->display('student_appraise');
         }
     }
 
@@ -401,7 +371,7 @@ public function getPicExt($fileStream){
      */
     public function timeList($page = 1, $rows = 10,$search = array(),$sort = 'course_time_id', $order = 'asc'){
         if(IS_POST){
-            $teacher_db = D('CourseTime');
+            $student_db = D('CourseTime');
             //搜索
             $where = array();
             foreach ($search as $k=>$v){
@@ -410,17 +380,17 @@ public function getPicExt($fileStream){
             }
             $where = implode(' and ', $where);
             $limit=($page - 1) * $rows . "," . $rows;
-            $total = $teacher_db->where($where)->count();
+            $total = $student_db->where($where)->count();
             $order = $sort.' '.$order;
-            $list = $total ? $teacher_db->where($where)->order($order)->limit($limit)->select() : array();
+            $list = $total ? $student_db->where($where)->order($order)->limit($limit)->select() : array();
 
 
 
             foreach($list as $k => $lt){
-                if ($lt['teacher_no_time']==1){
-                    $list[$k]['teacher_no_time'] = '未开放';
+                if ($lt['student_no_time']==1){
+                    $list[$k]['student_no_time'] = '未开放';
                 }else{
-                    $list[$k]['teacher_no_time'] = '已开放';
+                    $list[$k]['student_no_time'] = '已开放';
                 }
 
                 if ($lt['student_selected']==1){
@@ -442,11 +412,11 @@ public function getPicExt($fileStream){
                     'toolbar' => 'admin_timelist_datagrid_toolbar',
                 ),
                 'fields' => array(
-                    '教师ID' => array('field'=>'teacher_id','width'=>25),
-                    '教师名'      => array('field'=>'teacher_name','width'=>15,'sortable'=>true),
+                    '教师ID' => array('field'=>'student_id','width'=>25),
+                    '教师名'      => array('field'=>'student_name','width'=>15,'sortable'=>true),
                     '时间'      => array('field'=>'class_date','width'=>7,'sortable'=>true),
                     '时段'    => array('field'=>'class_time','width'=>7,'sortable'=>true),
-                    '是否开放'  => array('field'=>'teacher_no_time','width'=>15,'sortable'=>true),
+                    '是否开放'  => array('field'=>'student_no_time','width'=>15,'sortable'=>true),
                     '是否占用' => array('field'=>'student_selected','width'=>15,'sortable'=>true),
                     '购课订单号' => array('field'=>'course_category','width'=>15,'sortable'=>true),
                     '学生ID' => array('field'=>'sort_num','width'=>15,'sortable'=>true),
@@ -487,61 +457,61 @@ public function getPicExt($fileStream){
             $result = array();
             $date = $data['class_date'];
             if ($data['teacherAll']==1 && $data['classTimeAll']==1) {
-                $teacherDb = D('Teacher');
+                $teacherDb = D('MemberInfo');
                 $courseTime = D('CourseTime');
                 $teacherList = $teacherDb->select();
                 foreach ($teacherList as $lt) {
                     foreach ($this->timeArr as $time){
-                        $dataArr['teacher_id'] = $lt['teacher_id'];
-                        $dataArr['teacher_name'] = $lt['teacher_name'];
+                        $dataArr['student_id'] = $lt['student_id'];
+                        $dataArr['student_name'] = $lt['student_name'];
                         $dataArr['class_date'] = $date;
                         $dataArr['class_time'] = $time;
                         $dataArr['class_week'] = $week;
-                        $dataArr['teacher_no_time'] = 0;
+                        $dataArr['student_no_time'] = 0;
                         $result = $courseTime->add($dataArr);
                     }
                  }
             }
 
             if ($data['teacherAll']==1 && $data['classTimeAll']==0) {
-                $teacherDb = D('Teacher');
+                $teacherDb = D('MemberInfo');
                 $courseTime = D('CourseTime');
                 $teacherList = $teacherDb->select();
                 foreach ($teacherList as $lt) {
-                        $dataArr['teacher_id'] = $lt['teacher_id'];
-                        $dataArr['teacher_name'] = $lt['teacher_name'];
+                        $dataArr['student_id'] = $lt['student_id'];
+                        $dataArr['student_name'] = $lt['student_name'];
                         $dataArr['class_date'] = $date;
                         $dataArr['class_time'] = json_encode($data['class_time']);
                         $dataArr['class_week'] = $week;
-                        $dataArr['teacher_no_time'] = 0;
+                        $dataArr['student_no_time'] = 0;
                         $result = $courseTime->add($dataArr);
                 }
             }
 
             if ($data['teacherAll']==0 && $data['classTimeAll']==1) {
-                $teacherDb = D('Teacher');
+                $teacherDb = D('MemberInfo');
                 $courseTime = D('CourseTime');
-                $teacherInfo = $teacherDb->where(array(teacher_id=>$data['teacher_id']))->select();
-                $teacherName = $teacherInfo[0]['teacher_name'];
-                    $dataArr['teacher_id'] = $data['teacher_id'];
-                    $dataArr['teacher_name'] = $teacherName;
+                $teacherInfo = $teacherDb->where(array(student_id=>$data['student_id']))->select();
+                $teacherName = $teacherInfo[0]['student_name'];
+                    $dataArr['student_id'] = $data['student_id'];
+                    $dataArr['student_name'] = $teacherName;
                     $dataArr['class_date'] = $date;
                     $dataArr['class_time'] = json_encode($this->timeArr);
                     $dataArr['class_week'] = $week;
-                    $dataArr['teacher_no_time'] = 0;
+                    $dataArr['student_no_time'] = 0;
                     $result = $courseTime->add($dataArr);
             }
             if ($data['teacherAll']==0 && $data['classTimeAll']==0) {
-                $teacherDb = D('Teacher');
+                $teacherDb = D('MemberInfo');
                 $courseTime = D('CourseTime');
-                $teacherInfo = $teacherDb->where(array(teacher_id=>$data['teacher_id']))->select();
-                $teacherName = $teacherInfo[0]['teacher_name'];
-                $dataArr['teacher_id'] = $data['teacher_id'];
-                $dataArr['teacher_name'] = $teacherName;
+                $teacherInfo = $teacherDb->where(array(student_id=>$data['student_id']))->select();
+                $teacherName = $teacherInfo[0]['student_name'];
+                $dataArr['student_id'] = $data['student_id'];
+                $dataArr['student_name'] = $teacherName;
                 $dataArr['class_date'] = $data['class_date'];
                 $dataArr['class_time'] = json_encode($data['class_time']);
                 $dataArr['class_week'] = $week;
-                $dataArr['teacher_no_time'] = 0;
+                $dataArr['student_no_time'] = 0;
                 $result = $courseTime->add($dataArr);
             }
             if($result){
@@ -559,8 +529,8 @@ public function getPicExt($fileStream){
      * 验证邮箱是否存在
      */
     public function checkMobile($mobile = ''){
-        $teacher_db = D('Teacher');
-        $exists = $teacher_db->where(array('mobile'=>$mobile))->field('mobile')->find();
+        $student_db = D('MemberInfo');
+        $exists = $student_db->where(array('mobile'=>$mobile))->field('mobile')->find();
         if ($exists) {
             $this->success('手机号存在');
         }else{

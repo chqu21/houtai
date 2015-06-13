@@ -22,7 +22,7 @@ function adminteacherlistAddDialogFormSubmit(){
 			$.messager.alert('提示信息', res.info, 'error');
 		}else{
 			$.messager.alert('提示信息', res.info, 'info');
-			//$('#admin_teacherlist_add_dialog').dialog('close');
+			$('#admin_teacherlist_add_dialog').dialog('close');
 			adminMemberRefresh();
 		}
 	})

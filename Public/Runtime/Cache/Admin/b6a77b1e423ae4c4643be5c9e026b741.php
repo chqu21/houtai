@@ -62,12 +62,12 @@ function adminteacherlistEditDialogFormSubmit(){
 <table class="gridtable">
 	<tr>
 		<td width="80">教师姓名：</td>
-		<td><input type="text" name="teacher_name" value="<?php echo ($info["teacher_name"]); ?>" style="width:180px;height:22px" /></td>
+		<td><input type="text" name="info[teacher_name]" value="<?php echo ($info["teacher_name"]); ?>" style="width:180px;height:22px" /></td>
 		<td></td>
 	</tr>
     <tr>
         <td>手机号：</td>
-        <td><input id="admin_teacherlist_add_dialog_form_mobile" type="text" name="info[mobile]" style="width:180px;height:22px" /></td>
+        <td><input id="admin_teacherlist_add_dialog_form_mobile" type="text" name="info[mobile]" value="<?php echo ($info["mobile"]); ?>" style="width:180px;height:22px" /></td>
         <td><div id="admin_teacherlist_add_dialog_form_mobileTip"></div></td>
     </tr>
     <tr>
@@ -131,61 +131,61 @@ function adminteacherlistEditDialogFormSubmit(){
     </tr>
 	<tr>
 		<td>教龄：</td>
-        <td><input type="text" name="teaching_age" value="<?php echo ($info["teaching_age"]); ?>" style="width:180px;height:22px" /></td>
+        <td><input type="text" name="info[teaching_age]" value="<?php echo ($info["teaching_age"]); ?>" style="width:180px;height:22px" /></td>
 		<td></td>
 	</tr>
     <tr>
         <td>姓别：</td>
         <td>
-            <?php if($info["sex"] == 男): ?><input type="radio" value="男"  name="sex" checked="checked">&nbsp;&nbsp;男</input>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <input type="radio" value="女"  name="sex">&nbsp;&nbsp;女</input>
+            <?php if($info["sex"] == 男): ?><input type="radio" value="男"  name="info[sex]" checked="checked">&nbsp;&nbsp;男</input>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="radio" value="女"  name="info[sex]">&nbsp;&nbsp;女</input>
                 <?php else: ?>
-                <input type="radio" value="男" name="sex">&nbsp;&nbsp;男</input>
-                <input type="radio" value="女" name="sex" checked="checked">&nbsp;&nbsp;女</input>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?php endif; ?>
+                <input type="radio" value="男" name="info[sex]">&nbsp;&nbsp;男</input>
+                <input type="radio" value="女" name="info[sex]" checked="checked">&nbsp;&nbsp;女</input>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?php endif; ?>
         </td>
         <td></td>
     </tr>
 	<tr>
 		<td>身份认证：</td>
         <td>
-            <?php if($info["certification_flag"] == 0): ?><input type="radio" value="0"  name="certification_flag" checked="checked">&nbsp;&nbsp;未认证</input>&nbsp;&nbsp;&nbsp;&nbsp;
-                <input type="radio" value="1"  name="certification_flag">&nbsp;&nbsp;已认证</input>
+            <?php if($info["certification_flag"] == 0): ?><input type="radio" value="0"  name="info[certification_flag]" checked="checked">&nbsp;&nbsp;未认证</input>&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="radio" value="1"  name="info[certification_flag]">&nbsp;&nbsp;已认证</input>
                 <?php else: ?>
-                <input type="radio" value="0" name="certification_flag">&nbsp;&nbsp;未认证</input>
-                <input type="radio" value="1" name="certification_flag" checked="checked">&nbsp;&nbsp;已认证</input>&nbsp;&nbsp;&nbsp;&nbsp;<?php endif; ?>
+                <input type="radio" value="0" name="info[certification_flag]">&nbsp;&nbsp;未认证</input>
+                <input type="radio" value="1" name="info[certification_flag]" checked="checked">&nbsp;&nbsp;已认证</input>&nbsp;&nbsp;&nbsp;&nbsp;<?php endif; ?>
         </td>
         <td></td>
 	</tr>
 	<tr>
 		<td>学历认证：</td>
         <td>
-            <?php if($info["education_flag"] == 0): ?><input type="radio" value="0"  name="education_flag" checked="checked">&nbsp;&nbsp;未认证</input>&nbsp;&nbsp;&nbsp;&nbsp;
-                <input type="radio" value="1"  name="education_flag">&nbsp;&nbsp;已认证</input>&nbsp;&nbsp;&nbsp;&nbsp;
+            <?php if($info["education_flag"] == 0): ?><input type="radio" value="0"  name="info[education_flag]" checked="checked">&nbsp;&nbsp;未认证</input>&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="radio" value="1"  name="info[education_flag]">&nbsp;&nbsp;已认证</input>&nbsp;&nbsp;&nbsp;&nbsp;
                 <?php else: ?>
-                <input type="radio" value="0" name="education_flag">&nbsp;&nbsp;未认证</input>&nbsp;&nbsp;&nbsp;&nbsp;
-                <input type="radio" value="1" name="education_flag" checked="checked">&nbsp;&nbsp;已认证</input>&nbsp;&nbsp;&nbsp;&nbsp;<?php endif; ?>
+                <input type="radio" value="0" name="info[education_flag]">&nbsp;&nbsp;未认证</input>&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="radio" value="1" name="info[education_flag]" checked="checked">&nbsp;&nbsp;已认证</input>&nbsp;&nbsp;&nbsp;&nbsp;<?php endif; ?>
         </td>
         <td></td>
 	</tr>
 	<tr>
 		<td>教师资格认证：</td>
         <td>
-        <?php if($info["teacher_certification_flag"] == 0): ?><input type="radio" value="0"  name="teacher_certification_flag" checked="checked">&nbsp;&nbsp;未认证</input>&nbsp;&nbsp;&nbsp;&nbsp;
-            <input type="radio" value="1"  name="teacher_certification_flag">&nbsp;&nbsp;已认证</input>&nbsp;&nbsp;&nbsp;&nbsp;
+        <?php if($info["teacher_certification_flag"] == 0): ?><input type="radio" value="0"  name="info[teacher_certification_flag]" checked="checked">&nbsp;&nbsp;未认证</input>&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="radio" value="1"  name="info[teacher_certification_flag]">&nbsp;&nbsp;已认证</input>&nbsp;&nbsp;&nbsp;&nbsp;
         <?php else: ?>
-            <input type="radio" value="0" name="teacher_certification_flag">&nbsp;&nbsp;未认证</input>&nbsp;&nbsp;&nbsp;&nbsp;
-            <input type="radio" value="1" name="teacher_certification_flag" checked="checked">&nbsp;&nbsp;已认证</input>&nbsp;&nbsp;&nbsp;&nbsp;<?php endif; ?>
+            <input type="radio" value="0" name="info[teacher_certification_flag]">&nbsp;&nbsp;未认证</input>&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="radio" value="1" name="info[teacher_certification_flag]" checked="checked">&nbsp;&nbsp;已认证</input>&nbsp;&nbsp;&nbsp;&nbsp;<?php endif; ?>
         </td>
         <td></td>
 	</tr>
     <tr>
         <td>是否推荐：</td>
         <td>
-            <?php if($info["recommand_flag"] == 0): ?><input type="radio" value="0"  name="recommand_flag" checked="checked">&nbsp;&nbsp;未推荐</input>&nbsp;&nbsp;&nbsp;&nbsp;
-                <input type="radio" value="1"  name="recommand_flag">&nbsp;&nbsp;已推荐</input>&nbsp;&nbsp;&nbsp;&nbsp;
+            <?php if($info["recommand_flag"] == 0): ?><input type="radio" value="0"  name="info[recommand_flag]" checked="checked">&nbsp;&nbsp;未推荐</input>&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="radio" value="1"  name="info[recommand_flag]">&nbsp;&nbsp;已推荐</input>&nbsp;&nbsp;&nbsp;&nbsp;
                 <?php else: ?>
-                <input type="radio" value="0" name="recommand_flag">&nbsp;&nbsp;未推荐</input>&nbsp;&nbsp;&nbsp;&nbsp;
-                <input type="radio" value="1" name="recommand_flag" checked="checked">&nbsp;&nbsp;已推荐</input>&nbsp;&nbsp;&nbsp;&nbsp;<?php endif; ?>
+                <input type="radio" value="0" name="info[recommand_flag]">&nbsp;&nbsp;未推荐</input>&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="radio" value="1" name="info[recommand_flag]" checked="checked">&nbsp;&nbsp;已推荐</input>&nbsp;&nbsp;&nbsp;&nbsp;<?php endif; ?>
         </td>
         <td></td>
     </tr>
@@ -193,57 +193,57 @@ function adminteacherlistEditDialogFormSubmit(){
     <tr>
         <td>是否显示：</td>
         <td>
-            <?php if($info["display"] == 0): ?><input type="radio" value="0"  name="display" checked="checked">&nbsp;&nbsp;未显示</input>&nbsp;&nbsp;&nbsp;&nbsp;
-                <input type="radio" value="1"  name="display">&nbsp;&nbsp;已显示</input>&nbsp;&nbsp;&nbsp;&nbsp;
+            <?php if($info["display"] == 0): ?><input type="radio" value="0"  name="info[display]" checked="checked">&nbsp;&nbsp;未显示</input>&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="radio" value="1"  name="info[display]">&nbsp;&nbsp;已显示</input>&nbsp;&nbsp;&nbsp;&nbsp;
                 <?php else: ?>
-                <input type="radio" value="0" name="display">&nbsp;&nbsp;未显示</input>&nbsp;&nbsp;&nbsp;&nbsp;
-                <input type="radio" value="1" name="display" checked="checked">&nbsp;&nbsp;已显示</input>&nbsp;&nbsp;&nbsp;&nbsp;<?php endif; ?>
+                <input type="radio" value="0" name="info[display]">&nbsp;&nbsp;未显示</input>&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="radio" value="1" name="info[display]" checked="checked">&nbsp;&nbsp;已显示</input>&nbsp;&nbsp;&nbsp;&nbsp;<?php endif; ?>
         </td>
         <td></td>
     </tr>
 	<tr>
 		<td>获得的荣誉：</td>
-        <td><input type="text" name="honor" value="<?php echo ($info["honor"]); ?>"  style="width:180px;height:22px" /></td>
+        <td><input type="text" name="info[honor]" value="<?php echo ($info["honor"]); ?>"  style="width:180px;height:22px" /></td>
         <td></td>
 	</tr>
     <tr>
         <td>科目：</td>
-        <td><input type="text" name="discipline"  value="<?php echo ($info["discipline"]); ?>"  style="width:180px;height:22px" /></td>
+        <td><input type="text" name="info[discipline]"  value="<?php echo ($info["discipline"]); ?>"  style="width:180px;height:22px" /></td>
         <td></td>
     </tr>
     <tr>
         <td>年级：</td>
-        <td><input type="text" name="grade"  value="<?php echo ($info["grade"]); ?>"  style="width:180px;height:22px" /></td>
+        <td><input type="text" name="info[grade]"  value="<?php echo ($info["grade"]); ?>"  style="width:180px;height:22px" /></td>
         <td></td>
     </tr>
     <tr>
         <td>排序数字：</td>
-        <td><input type="text" name="sort_num"  value="<?php echo ($info["sort_num"]); ?>"  style="width:180px;height:22px" /></td>
+        <td><input type="text" name="info[sort_num]"  value="<?php echo ($info["sort_num"]); ?>"  style="width:180px;height:22px" /></td>
         <td></td>
     </tr>
     <tr>
         <td>价格：</td>
-        <td><input type="text" name="price"  value="<?php echo ($info["price"]); ?>"  style="width:180px;height:22px" /></td>
+        <td><input type="text" name="info[price]"  value="<?php echo ($info["price"]); ?>"  style="width:180px;height:22px" /></td>
         <td></td>
     </tr>
     <tr>
         <td>总评分：</td>
-        <td><input type="text" name="score"  value="<?php echo ($info["score"]); ?>" style="width:180px;height:22px" /></td>
+        <td><input type="text" name="info[score]"  value="<?php echo ($info["score"]); ?>" style="width:180px;height:22px" /></td>
         <td></td>
     </tr>
     <tr>
         <td>名言警句：</td>
-        <td><input type="text" name="catchphrase"  value="<?php echo ($info["catchphrase"]); ?>"  style="width:180px;height:22px" /></td>
+        <td><input type="text" name="info[catchphrase]"  value="<?php echo ($info["catchphrase"]); ?>"  style="width:180px;height:22px" /></td>
         <td></td>
     </tr>
     <tr>
         <td>学生数：</td>
-        <td><input type="text" name="students_number"  value="<?php echo ($info["students_number"]); ?>" style="width:180px;height:22px" /></td>
+        <td><input type="text" name="info[students_number]"  value="<?php echo ($info["students_number"]); ?>" style="width:180px;height:22px" /></td>
         <td></td>
     </tr>
     <tr>
         <td>课时数：</td>
-        <td><input type="text" name="class_hours_number"  value="<?php echo ($info["class_hours_number"]); ?>" style="width:180px;height:22px" /></td>
+        <td><input type="text" name="info[class_hours_number]"  value="<?php echo ($info["class_hours_number"]); ?>" style="width:180px;height:22px" /></td>
         <td></td>
     </tr>
 </table>

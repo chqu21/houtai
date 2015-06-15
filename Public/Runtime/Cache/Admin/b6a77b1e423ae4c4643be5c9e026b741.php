@@ -60,11 +60,16 @@ function adminteacherlistEditDialogFormSubmit(){
 
 <form id="admin_teacherlist_edit_dialog_form">
 <table class="gridtable">
-	<tr>
-		<td width="80">教师姓名：</td>
-		<td><input type="text" name="info[teacher_name]" value="<?php echo ($info["teacher_name"]); ?>" style="width:180px;height:22px" /></td>
-		<td></td>
-	</tr>
+    <tr>
+        <td width="80">真实姓名：</td>
+        <td><input type="text" name="info[real_name]" value="<?php echo ($info["teacher_name"]); ?>" style="width:180px;height:22px" /></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td width="80">显示名称：</td>
+        <td><input type="text" name="info[teacher_name]" value="<?php echo ($info["teacher_name"]); ?>" style="width:180px;height:22px" /></td>
+        <td></td>
+    </tr>
     <tr>
         <td>手机号：</td>
         <td><input id="admin_teacherlist_add_dialog_form_mobile" type="text" name="info[mobile]" value="<?php echo ($info["mobile"]); ?>" style="width:180px;height:22px" /></td>

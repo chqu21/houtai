@@ -3,15 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="d8f33eb3-3aed-4b70-b310-7d6daebbc6fb" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Public/Runtime/Logs/15_06_15.log" afterPath="$PROJECT_DIR$/Public/Runtime/Logs/15_06_15.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Public/Runtime/Cache/Admin/1f872271fd02d641351548101f8dce65.php" afterPath="$PROJECT_DIR$/Public/Runtime/Cache/Admin/1f872271fd02d641351548101f8dce65.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Public/Runtime/Cache/Admin/2bde5b094049791580f07b4d45c21d56.php" afterPath="$PROJECT_DIR$/Public/Runtime/Cache/Admin/2bde5b094049791580f07b4d45c21d56.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Public/Runtime/Temp/3ede872ad321aee32c1db32f679a49d9.php" afterPath="$PROJECT_DIR$/Public/Runtime/Temp/3ede872ad321aee32c1db32f679a49d9.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Public/Runtime/Cache/Admin/6a5c8ce483fa86ae2e2aa59855a8dd5a.php" afterPath="$PROJECT_DIR$/Public/Runtime/Cache/Admin/6a5c8ce483fa86ae2e2aa59855a8dd5a.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/App/Admin/Controller/TeacherController.class.php" afterPath="$PROJECT_DIR$/App/Admin/Controller/TeacherController.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/App/Admin/View/Order/order_list.html" afterPath="$PROJECT_DIR$/App/Admin/View/Order/order_list.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/App/Admin/View/Student/student_list.html" afterPath="$PROJECT_DIR$/App/Admin/View/Student/student_list.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/App/Admin/View/Teacher/teacher_list.html" afterPath="$PROJECT_DIR$/App/Admin/View/Teacher/teacher_list.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="houtai.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -49,8 +40,8 @@
       <file leaf-file-name="TeacherController.class.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/App/Admin/Controller/TeacherController.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7051672" vertical-offset="1645" max-vertical-offset="10963">
-              <caret line="111" column="25" selection-start-line="111" selection-start-column="25" selection-end-line="111" selection-end-column="25" />
+            <state vertical-scroll-proportion="0.30091184" vertical-offset="1645" max-vertical-offset="10963">
+              <caret line="97" column="37" selection-start-line="97" selection-start-column="37" selection-end-line="97" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -1042,8 +1033,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/App/Admin/Controller/TeacherController.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7051672" vertical-offset="1645" max-vertical-offset="10963">
-          <caret line="111" column="25" selection-start-line="111" selection-start-column="25" selection-end-line="111" selection-end-column="25" />
+        <state vertical-scroll-proportion="0.30091184" vertical-offset="1645" max-vertical-offset="10963">
+          <caret line="97" column="37" selection-start-line="97" selection-start-column="37" selection-end-line="97" selection-end-column="37" />
           <folding />
         </state>
       </provider>

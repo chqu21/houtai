@@ -13716,3 +13716,27 @@ SQL: SHOW COLUMNS FROM `linshi_teachers` [ RunTime:0.003000s ]
 SQL: SELECT COUNT(*) AS tp_count FROM `linshi_teachers` LIMIT 1   [ RunTime:0.000000s ]
 SQL: SELECT `real_name`,`teacher_name`,`sex`,`teaching_age`,`certification_flag`,`education_flag`,`teacher_certification_flag`,`discipline`,`grade`,`course_category`,`sort_num`,`recommand_flag`,`raw_add_time`,`display`,`teacher_id`,`teacher_id` as teacher_ids,`teacher_id` as teacher_idss,`mobile` FROM `linshi_teachers` ORDER BY teacher_id asc LIMIT 0,20   [ RunTime:0.000000s ]
 
+[ 2015-06-15T15:44:06+08:00 ] 127.0.0.1 /index.php?s=/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `linshi_setting` [ RunTime:0.002000s ]
+SQL: SELECT `key`,`value` FROM `linshi_setting`  [ RunTime:0.001000s ]
+NOTIC: [2] unlink(D:\wamp\www\houtai\Public\Runtime\Temp/71df8fced343b2a8ba67c00a47a67b50.php): No such file or directory D:\wamp\www\houtai\Libs\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+INFO: Run \Common\Behavior\SettingBehavior [ RunTime:0.009000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-06-15T15:54:07+08:00 ] 127.0.0.1 /index.php?s=/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `linshi_setting` [ RunTime:0.002000s ]
+SQL: SELECT `key`,`value` FROM `linshi_setting`  [ RunTime:0.000000s ]
+NOTIC: [2] unlink(D:\wamp\www\houtai\Public\Runtime\Temp/71df8fced343b2a8ba67c00a47a67b50.php): No such file or directory D:\wamp\www\houtai\Libs\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+INFO: Run \Common\Behavior\SettingBehavior [ RunTime:0.018001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.019002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+

@@ -33,10 +33,8 @@ class OrderController extends CommonController {
             if (!empty($search['payment_status']) && $search['payment_status']==2){
                 $search['payment_status'] = 0;
             }
-            $newMember = 0;
             $mIds = array();
             if (!empty($search['new_member'])){
-                $newMember = 1;
                 unset($search['new_member']);
                 if (!empty($search['raw_add_time'])){
                     $member_info = $member_info_db->where("`raw_add_time` like '%".$search['raw_add_time']."%'")->select();

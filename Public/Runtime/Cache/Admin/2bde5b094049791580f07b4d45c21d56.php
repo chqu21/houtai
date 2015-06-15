@@ -5,7 +5,9 @@
         手机号:
         <input type="text" name="search[mobile]" class="easyui-text" panelHeight="auto" style="width:100px">
         </input>&nbsp;&nbsp;
-
+        邀请码:
+        <input type="text" name="search[invite_code]" class="easyui-text" panelHeight="auto" style="width:100px">
+        </input>&nbsp;&nbsp;
 
         <a href="javascript:;" onclick="adminStudentSearch(this);" class="easyui-linkbutton" iconCls="icons-map-magnifier">搜索</a>&nbsp;&nbsp;
         <a href="javascript:;" onclick="adminMemberAdd();" class="easyui-linkbutton" iconCls="icons-arrow-add">添加学生</a>&nbsp;&nbsp;

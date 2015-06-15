@@ -60,7 +60,7 @@ class StudentController extends CommonController {
             $limit=($page - 1) * $rows . "," . $rows;
             $total = $member_info_db->where($where)->count();
             $order = $sort.' '.$order;
-            $column = "`real_name`,`address`,`nick_name`,`sex`,`birthday`,`school`,`grade`,`weixin`,`qq`,`safe_email`,`head_photo`,`mobile`,`member_id`,`member_id` as member_ids,`raw_add_time`";
+            $column = "`real_name`,`address`,`nick_name`,`sex`,`birthday`,`school`,`grade`,`weixin`,`qq`,`safe_email`,`head_photo`,`mobile`,`member_id`,`member_id` as member_ids,`raw_add_time`,`invite_code`";
             $list = $total ? $member_info_db->field($column)->where($where)->order($order)->limit($limit)->select() : array();
             foreach($list as $k => $lt){
                 $mId = $lt['member_id'];
@@ -92,6 +92,7 @@ class StudentController extends CommonController {
                     '微博' => array('field'=>'weibo','width'=>25,'sortable'=>true),
                     '注册时间' => array('field'=>'raw_add_time','width'=>25,'sortable'=>true),
                     '环信帐号' => array('field'=>'huanxin_user','width'=>15,'sortable'=>true),
+                    '邀请码' =>  array('field'=>'invite_code','width'=>15,'sortable'=>true),
                     '操作'    => array('field'=>'member_ids','width'=>55,'sortable'=>true,'formatter'=>'adminMemberListOperateFormatter'),
                 )
             );

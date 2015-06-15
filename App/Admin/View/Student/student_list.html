@@ -30,6 +30,7 @@ var student_studentlist_datagrid_id = 'student_studentlist_datagrid';
 //搜索
 function adminStudentSearch(that){
     var queryParams = $('#'+student_studentlist_datagrid_id).datagrid('options').queryParams;
+
     $.each($(that).parent('form').serializeArray(), function() {
         queryParams[this['name']] = this['value'];
     });

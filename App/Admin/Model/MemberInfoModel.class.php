@@ -11,8 +11,8 @@ class MemberInfoModel extends Model{
 	/**
 	 * 获取用户信息
 	 */
-	public function getTeacherInfo($teacherId){
-	    $info = $this->where(array('teacher_id'=>$teacherId))->find();
+	public function getMemberInfo($memberId){
+	    $info = $this->where(array('member_id'=>$memberId))->find();
 	    return $info;
 	}
     

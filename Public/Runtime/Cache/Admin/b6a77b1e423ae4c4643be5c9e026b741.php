@@ -66,7 +66,7 @@ function adminteacherlistEditDialogFormSubmit(){
         <td></td>
     </tr>
     <tr>
-        <td width="80">显示名称：</td>
+        <td width="80">显示姓名：</td>
         <td><input type="text" name="info[teacher_name]" value="<?php echo ($info["teacher_name"]); ?>" style="width:180px;height:22px" /></td>
         <td></td>
     </tr>

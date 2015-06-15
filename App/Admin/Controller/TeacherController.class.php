@@ -56,8 +56,9 @@ class TeacherController extends CommonController {
                 $where[] = "`{$k}` like '%{$v}%'";
             }
             $where = implode(' and ', $where);
-            $limit=($page - 1) * $rows . "," . $rows;
             $total = $teacher_db->where($where)->count();
+            $limit=(($page - 1) * $rows>$total) ?  '0' : (($page - 1) * $rows);
+            $limit = $limit. "," . $rows;
             $order = $sort.' '.$order;
             $column = "`real_name`,`teacher_name`,`sex`,`teaching_age`,`certification_flag`,`education_flag`,`teacher_certification_flag`,`discipline`,`grade`,`course_category`,`sort_num`,`recommand_flag`,`raw_add_time`,`display`,`teacher_id`,`teacher_id` as teacher_ids,`teacher_id` as teacher_idss,`mobile`";
             $list = $total ? $teacher_db->field($column)->where($where)->order($order)->limit($limit)->select() : array();

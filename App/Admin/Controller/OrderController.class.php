@@ -57,8 +57,9 @@ class OrderController extends CommonController {
             if (!empty($mIds)){
                 $where = $where.' and member_id in ('.implode(',',$mIds).')';
             }
-            $limit=($page - 1) * $rows . "," . $rows;
             $total = $master_db->where($where)->count();
+            $limit=(($page - 1) * $rows>$total) ?  '0' : (($page - 1) * $rows);
+            $limit = $limit. "," . $rows;
             $order = $sort.' '.$order;
             $column = "`order_code`,`total_price`,`payment_price`,`total_time`,`payment_status`,`order_status`,`coupon_id`,`coupon_price`,`member_id`,`member_name`,`payment_method`,`teacher_id`,`teacher_name`,`order_id` as order_ids,`cancel_reason`,`raw_add_time`";
             $list = $total ? $master_db->field($column)->where($where)->order($order)->limit($limit)->select() : array();

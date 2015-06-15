@@ -57,8 +57,10 @@ class StudentController extends CommonController {
                 $where[] = "`{$k}` like '%{$v}%'";
             }
             $where = implode(' and ', $where);
-            $limit=($page - 1) * $rows . "," . $rows;
+
             $total = $member_info_db->where($where)->count();
+            $limit=(($page - 1) * $rows>$total) ?  '0' : (($page - 1) * $rows);
+            $limit = $limit. "," . $rows;
             $order = $sort.' '.$order;
             $column = "`real_name`,`address`,`nick_name`,`sex`,`birthday`,`school`,`grade`,`weixin`,`qq`,`safe_email`,`head_photo`,`mobile`,`member_id`,`member_id` as member_ids,`raw_add_time`,`invite_code`";
             $list = $total ? $member_info_db->field($column)->where($where)->order($order)->limit($limit)->select() : array();
@@ -104,7 +106,7 @@ class StudentController extends CommonController {
     /**
      * 添加老师
      */
-    public function teacherAdd(){
+    public function studentAdd(){
         if(IS_POST){
             $student_db = D('MemberInfo');
             //$memberInfo_db = D('memberInfo');
@@ -127,19 +129,21 @@ class StudentController extends CommonController {
     /**
      * 编辑老师
      */
-    public function teacherEdit($id){
-        $student_db = D('MemberInfo');
-
+    public function studentEdit($id){
+        $member_info_db = D('MemberInfo');
+        $member_db = D('Member');
         if(IS_POST){
             $data = I('post.info');
-            $result = $student_db->where(array('student_id'=>$id))->save($data);
+            $result = $member_info_db->where(array('student_id'=>$id))->save($data);
             if($result){
+                $pwd = $this->handle_pwd($pw,'kdsjkdeyuewy');
+                $member_db->where(array('member_id'=>$result['member_id']))->save(array('mobile'=>$data['mobile'],'password'=>$pwd));
                 $this->success('修改成功');
             }else {
                 $this->error('修改失败');
             }
         }else{
-            $info = $student_db->getTeacherInfo($id);
+            $info = $member_info_db->getMemberInfo($id);
             $this->assign('info', $info);
             $this->display('student_edit');
         }
@@ -148,7 +152,7 @@ class StudentController extends CommonController {
     /**
      * 删除老师
      */
-    public function teacherDelete(){
+    public function studentDelete(){
         $admin_db = D('MemberInfo');
         $id = I('post.id');
         $result = $admin_db->where(array('student_id'=>$id))->delete();

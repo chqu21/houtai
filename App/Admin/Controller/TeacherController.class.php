@@ -109,7 +109,7 @@ class TeacherController extends CommonController {
                     '选择'    => array('field'=>'teacher_idss','width'=>15,'checkbox'=>"true"),
                     '教师ID'    => array('field'=>'teacher_id','width'=>15,'sortable'=>true),
                     '真实姓名'      => array('field'=>'real_name','width'=>15,'sortable'=>true),
-                    '显示名称'      => array('field'=>'teacher_name','width'=>15,'sortable'=>true),
+                    '显示姓名'      => array('field'=>'teacher_name','width'=>15,'sortable'=>true),
                     '姓别'      => array('field'=>'sex','width'=>7,'sortable'=>true),
                     '教龄'    => array('field'=>'teaching_age','width'=>7,'sortable'=>true),
                     '身份认证'  => array('field'=>'certification_flag','width'=>15,'sortable'=>true),

@@ -59,7 +59,7 @@ class TeacherController extends CommonController {
             $limit=($page - 1) * $rows . "," . $rows;
             $total = $teacher_db->where($where)->count();
             $order = $sort.' '.$order;
-            $column = "`teacher_name`,`sex`,`teaching_age`,`certification_flag`,`education_flag`,`teacher_certification_flag`,`discipline`,`grade`,`course_category`,`sort_num`,`recommand_flag`,`raw_add_time`,`display`,`teacher_id`,`teacher_id` as teacher_ids,`teacher_id` as teacher_idss,`mobile`";
+            $column = "`real_name`,`teacher_name`,`sex`,`teaching_age`,`certification_flag`,`education_flag`,`teacher_certification_flag`,`discipline`,`grade`,`course_category`,`sort_num`,`recommand_flag`,`raw_add_time`,`display`,`teacher_id`,`teacher_id` as teacher_ids,`teacher_id` as teacher_idss,`mobile`";
             $list = $total ? $teacher_db->field($column)->where($where)->order($order)->limit($limit)->select() : array();
 
             foreach($list as $k => $lt){
@@ -108,7 +108,8 @@ class TeacherController extends CommonController {
                 'fields' => array(
                     '选择'    => array('field'=>'teacher_idss','width'=>15,'checkbox'=>"true"),
                     '教师ID'    => array('field'=>'teacher_id','width'=>15,'sortable'=>true),
-                    '教师姓名'      => array('field'=>'teacher_name','width'=>15,'sortable'=>true),
+                    '真实姓名'      => array('field'=>'real_name','width'=>15,'sortable'=>true),
+                    '教师昵称'      => array('field'=>'teacher_name','width'=>15,'sortable'=>true),
                     '姓别'      => array('field'=>'sex','width'=>7,'sortable'=>true),
                     '教龄'    => array('field'=>'teaching_age','width'=>7,'sortable'=>true),
                     '身份认证'  => array('field'=>'certification_flag','width'=>15,'sortable'=>true),

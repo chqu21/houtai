@@ -57,20 +57,6 @@ $("#isNewMember").click(function(){
        });
        console.log(names.join(","));
     };
-    $('#order_orderlist_datagrid').datagrid({
-        singleSelect: false,
-        selectOnCheck: true,
-        checkOnSelect: true,
-        onLoadSuccess:function(data){
-            if(data){
-                $.each(data.rows, function(index, item){
-                    if(item.checked){
-                        $('#order_orderlist_datagrid').datagrid('checkRow', index);
-                    }
-                });
-           }
-        }
-    });
         var order_orderlist_datagrid_id = 'order_orderlist_datagrid';
 //搜索
 function adminStudentSearch(that){

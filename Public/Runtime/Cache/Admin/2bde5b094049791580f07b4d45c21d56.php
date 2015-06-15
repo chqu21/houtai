@@ -12,7 +12,6 @@
         <a href="javascript:;" onclick="adminStudentSearch(this);" class="easyui-linkbutton" iconCls="icons-map-magnifier">搜索</a>&nbsp;&nbsp;
         <a href="javascript:;" onclick="adminMemberAdd();" class="easyui-linkbutton" iconCls="icons-arrow-add">添加学生</a>&nbsp;&nbsp;
         <a href="javascript:;" onclick="adminMemberRefresh();" class="easyui-linkbutton" iconCls="icons-arrow-arrow_refresh">刷新</a>
-        <a href="javascript:;" onclick="sendSms();" class="easyui-linkbutton" iconCls="icons-arrow-arrow_email">发送短信通知</a>
     </form>
 </div>
 <!-- 添加学生 -->
@@ -26,31 +25,7 @@
 <div id="admin_studentlist_edit_photo_dialog" class="easyui-dialog" title="编辑学生头像" data-options="modal:true,closed:true,iconCls:'icons-application-application_edit',buttons:[{text:'关闭',iconCls:'icons-arrow-cross',handler:function(){$('#admin_studentlist_edit_photo_dialog').dialog('close');}}]" style="width:900px;height:550px;"></div>
 
 <script type="text/javascript">
-
-   function sendSms(){
-        var checkedItems = $('#student_studentlist_datagrid').datagrid('getChecked');
-       console.dir(checkedItems);
-        var names = [];
-       $.each(checkedItems, function(index, item){
-           names.push(item.student_id);
-       });
-       console.log(names.join(","));
-    };
-    $('#student_studentlist_datagrid').datagrid({
-        singleSelect: false,
-        selectOnCheck: true,
-        checkOnSelect: true,
-        onLoadSuccess:function(data){
-            if(data){
-                $.each(data.rows, function(index, item){
-                    if(item.checked){
-                        $('#student_studentlist_datagrid').datagrid('checkRow', index);
-                    }
-                });
-           }
-        }
-    });
-        var student_studentlist_datagrid_id = 'student_studentlist_datagrid';
+var student_studentlist_datagrid_id = 'student_studentlist_datagrid';
 //搜索
 function adminStudentSearch(that){
     var queryParams = $('#'+student_studentlist_datagrid_id).datagrid('options').queryParams;

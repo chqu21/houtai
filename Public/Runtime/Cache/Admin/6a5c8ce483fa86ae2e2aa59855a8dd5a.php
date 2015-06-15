@@ -2,11 +2,12 @@
 <table id="teacher_teacherlist_datagrid" class="easyui-datagrid" data-options='<?php $dataOptions = array_merge(array ( 'border' => false, 'fit' => true, 'fitColumns' => true, 'rownumbers' => true, 'singleSelect' => true, 'pagination' => true, 'pageList' => array ( 0 => 20, 1 => 30, 2 => 50, 3 => 80, 4 => 100, ), 'pageSize' => '20', ), $datagrid["options"]);if(isset($dataOptions['toolbar']) && substr($dataOptions['toolbar'],0,1) != '#'): unset($dataOptions['toolbar']); endif; echo trim(json_encode($dataOptions), '{}[]').((isset($datagrid["options"]['toolbar']) && substr($datagrid["options"]['toolbar'],0,1) != '#')?',"toolbar":'.$datagrid["options"]['toolbar']:null); ?>' style=""><thead><tr><?php if(is_array($datagrid["fields"])):foreach ($datagrid["fields"] as $key=>$arr):if(isset($arr['formatter'])):unset($arr['formatter']);endif;echo "<th data-options='".trim(json_encode($arr), '{}[]').(isset($datagrid["fields"][$key]['formatter'])?",\"formatter\":".$datagrid["fields"][$key]['formatter']:null)."'>".$key."</th>";endforeach;endif; ?></tr></thead></table>
 <div id="admin_teacherlist_datagrid_toolbar" style="padding:5px;height:auto">
     <form>
-        用户名:
+        教师昵称:
         <input type="text" name="search[teacher_name]" class="easyui-text" panelHeight="auto" style="width:100px">
         </input>&nbsp;&nbsp;
-
-
+        真实姓名:
+        <input type="text" name="search[real_name]" class="easyui-text" panelHeight="auto" style="width:100px">
+        </input>&nbsp;&nbsp;
         <a href="javascript:;" onclick="adminTeacherSearch(this);" class="easyui-linkbutton" iconCls="icons-map-magnifier">搜索</a>&nbsp;&nbsp;
         <a href="javascript:;" onclick="adminMemberAdd();" class="easyui-linkbutton" iconCls="icons-arrow-add">添加老师</a>&nbsp;&nbsp;
         <a href="javascript:;" onclick="adminMemberRefresh();" class="easyui-linkbutton" iconCls="icons-arrow-arrow_refresh">刷新</a>
@@ -27,27 +28,27 @@
 
    function sendSms(){
         var checkedItems = $('#teacher_teacherlist_datagrid').datagrid('getChecked');
-       console.dir(checkedItems);
-        var names = [];
+       var names = [];
        $.each(checkedItems, function(index, item){
            names.push(item.teacher_id);
        });
        console.log(names.join(","));
     };
     $('#teacher_teacherlist_datagrid').datagrid({
-        singleSelect: false,
-        selectOnCheck: true,
-        checkOnSelect: true,
-        onLoadSuccess:function(data){
-            if(data){
-                $.each(data.rows, function(index, item){
-                    if(item.checked){
-                        $('#teacher_teacherlist_datagrid').datagrid('checkRow', index);
-                    }
-                });
+           singleSelect: false,
+           selectOnCheck: true,
+           checkOnSelect: true,
+           onLoadSuccess:function(data){
+               if(data){
+                   $.each(data.rows, function(index, item){
+                       if(item.checked){
+                           $('#teacher_teacherlist_datagrid').datagrid('checkRow', index);
+                       }
+                   });
+               }
            }
-        }
-    });
+       });
+
         var teacher_teacherlist_datagrid_id = 'teacher_teacherlist_datagrid';
 //搜索
 function adminTeacherSearch(that){
@@ -83,6 +84,7 @@ function adminMemberAdd(){
 }
 //编辑
 function adminMemberEdit(id){
+    $('#teacher_teacherlist_datagrid').datagrid('unselectAll',id);
 	if(typeof(id) !== 'number'){
 		$.messager.alert('提示信息', '未选择老师', 'error');
 		return false;
@@ -95,6 +97,7 @@ function adminMemberEdit(id){
 
 //修改头像
 function adminHeadPhotoEdit(id){
+    $('#teacher_teacherlist_datagrid').datagrid('unselectAll',id);
     if(typeof(id) !== 'number'){
         $.messager.alert('提示信息', '未选择老师', 'error');
         return false;
@@ -107,6 +110,7 @@ function adminHeadPhotoEdit(id){
 
 //老师评价
 function adminAppraiseEdit(id){
+    $('#teacher_teacherlist_datagrid').datagrid('unselectAll',id);
     if(typeof(id) !== 'number'){
         $.messager.alert('提示信息', '未选择老师', 'error');
         return false;
@@ -119,6 +123,7 @@ function adminAppraiseEdit(id){
 
 //删除
 function adminMemberDelete(id){
+    $('#teacher_teacherlist_datagrid').datagrid('unselectAll',id);
 	if(typeof(id) !== 'number'){
 		$.messager.alert('提示信息', '未选择老师', 'error');
 		return false;

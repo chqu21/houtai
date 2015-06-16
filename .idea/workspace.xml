@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d8f33eb3-3aed-4b70-b310-7d6daebbc6fb" name="Default" comment="">
-      <change type="DELETED" beforePath="D:\wamp\www\houtai\App\Admin\View\Course\group_course_edit.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\houtai\App\Admin\View\Course\group_course_list.html" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Public/Runtime/Logs/15_06_16.log" afterPath="$PROJECT_DIR$/Public/Runtime/Logs/15_06_16.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/App/Admin/View/Course/course_edit.html" afterPath="$PROJECT_DIR$/App/Admin/View/Course/course_edit.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/App/Admin/Controller/CourseController.class.php" afterPath="$PROJECT_DIR$/App/Admin/Controller/CourseController.class.php" />
     </list>
     <ignored path="houtai.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -77,10 +73,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="course_edit.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="course_edit.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/App/Admin/View/Course/course_edit.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.82831323" vertical-offset="1245" max-vertical-offset="3173">
+            <state vertical-scroll-proportion="-3.1976745" vertical-offset="1245" max-vertical-offset="3173">
               <caret line="80" column="106" selection-start-line="80" selection-start-column="106" selection-end-line="80" selection-end-column="106" />
               <folding>
                 <element signature="n#style#0;n#input#0;n#td#1;n#tr#0;n#table#0;n#form#0;n#!!top" expanded="true" />
@@ -111,11 +107,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CourseController.class.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="CourseController.class.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/App/Admin/Controller/CourseController.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-71.25" vertical-offset="114" max-vertical-offset="3895">
-              <caret line="111" column="265" selection-start-line="111" selection-start-column="23" selection-end-line="111" selection-end-column="265" />
+            <state vertical-scroll-proportion="3.5820513" vertical-offset="636" max-vertical-offset="2166">
+              <caret line="107" column="0" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -203,8 +199,8 @@
         <option value="$PROJECT_DIR$/App/Admin/View/System/menu_edit.html" />
         <option value="$PROJECT_DIR$/App/Admin/View/Course/group_course_edit.html" />
         <option value="$PROJECT_DIR$/App/Admin/View/Course/group_course_list.html" />
-        <option value="$PROJECT_DIR$/App/Admin/Controller/CourseController.class.php" />
         <option value="$PROJECT_DIR$/App/Admin/View/Course/course_edit.html" />
+        <option value="$PROJECT_DIR$/App/Admin/Controller/CourseController.class.php" />
       </list>
     </option>
   </component>
@@ -996,17 +992,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/App/Admin/Controller/CourseController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-71.25" vertical-offset="114" max-vertical-offset="3895">
-          <caret line="111" column="265" selection-start-line="111" selection-start-column="23" selection-end-line="111" selection-end-column="265" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/App/Admin/View/Course/course_edit.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.82831323" vertical-offset="1245" max-vertical-offset="3173">
+        <state vertical-scroll-proportion="-3.1976745" vertical-offset="1245" max-vertical-offset="3173">
           <caret line="80" column="106" selection-start-line="80" selection-start-column="106" selection-end-line="80" selection-end-column="106" />
           <folding>
             <element signature="n#style#0;n#input#0;n#td#1;n#tr#0;n#table#0;n#form#0;n#!!top" expanded="true" />
@@ -1023,6 +1011,14 @@
             <element signature="n#style#0;n#input#0;n#td#1;n#tr#12;n#table#0;n#form#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#0;n#td#1;n#tr#13;n#table#0;n#form#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/Admin/Controller/CourseController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="3.5820513" vertical-offset="636" max-vertical-offset="2166">
+          <caret line="107" column="0" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

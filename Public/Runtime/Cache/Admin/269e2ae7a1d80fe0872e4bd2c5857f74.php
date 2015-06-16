@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
  <head>
   <title>thinkphp + flash 上传头像组件</title>
@@ -40,8 +40,8 @@ WIDTH="850" HEIGHT="450" id="myMovieName">
 <PARAM NAME=movie VALUE="../flash/avatar.swf">
 <PARAM NAME=quality VALUE=high>
 <PARAM NAME=bgcolor VALUE=#FFFFFF>
-<param name="flashvars" value="imgUrl=<{$headPhoto.bigPic}>&uploadUrl=__URL__/upFile/sId/<{$teacherId}>&uploadSrc=true&pCut=170|130&pData=170|130|130|130|20|20&pSize=170|130|130|130|20|20" />
-<EMBED src="../flash/avatar.swf" quality=high bgcolor=#FFFFFF WIDTH="850" HEIGHT="450" wmode="transparent" flashVars="imgUrl=<{$headPhoto.bigPic}>&uploadUrl=__URL__/upFile/sId/<{$teacherId}>&uploadSrc=true&pCut=170|130&pData=170|130|130|130|20|20&pSize=170|130|130|130|20|20"
+<param name="flashvars" value="imgUrl=<?php echo ($headPhoto["bigPic"]); ?>&uploadUrl=/index.php?s=/admin/student/upFile/sId/<?php echo ($teacherId); ?>&uploadSrc=true&pCut=170|130&pData=170|130|130|130|20|20&pSize=170|130|130|130|20|20" />
+<EMBED src="../flash/avatar.swf" quality=high bgcolor=#FFFFFF WIDTH="850" HEIGHT="450" wmode="transparent" flashVars="imgUrl=<?php echo ($headPhoto["bigPic"]); ?>&uploadUrl=/index.php?s=/admin/student/upFile/sId/<?php echo ($teacherId); ?>&uploadSrc=true&pCut=170|130&pData=170|130|130|130|20|20&pSize=170|130|130|130|20|20"
 NAME="myMovieName" ALIGN="" TYPE="application/x-shockwave-flash" allowScriptAccess="always"
 PLUGINSPAGE="http://www.macromedia.com/go/getflashplayer">
 </EMBED>

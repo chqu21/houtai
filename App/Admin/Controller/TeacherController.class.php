@@ -281,7 +281,7 @@ public function getPicExt($fileStream){
                     break;
                 case 'gif':
                     foreach($imgType as $type){
-                        $pathStr = $path.$type;
+                        $pathStr = $path.$teacherId.$type;
                         $src = $pathStr.'.gif';
                         $image = ImageCreateFromJPEG($src);
                         $output = $pathStr.'.png';
@@ -292,7 +292,7 @@ public function getPicExt($fileStream){
                     break;
                 case 'bmp':
                     foreach($imgType as $type){
-                        $pathStr = $path.$type;
+                        $pathStr = $path.$teacherId.$type;
                         $src = $pathStr.'.bmp';
                         $image = ImageCreateFromJPEG($src);
                         $output = $pathStr.'.png';

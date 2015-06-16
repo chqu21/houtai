@@ -89,7 +89,7 @@ class StudentController extends CommonController {
                     '微信'    => array('field'=>'weixin','width'=>15,'sortable'=>true),
                     '年级'    => array('field'=>'grade','width'=>15,'sortable'=>true),
                     '安全邮箱' => array('field'=>'safe_email','width'=>15,'sortable'=>true),
-                    '手机号' => array('field'=>'mobile','width'=>15,'sortable'=>true),
+                    '手机号' => array('field'=>'mobile','width'=>20,'sortable'=>true),
                     'qq' => array('field'=>'qq','width'=>15,'sortable'=>true),
                     '微博' => array('field'=>'weibo','width'=>25,'sortable'=>true),
                     '注册时间' => array('field'=>'raw_add_time','width'=>25,'sortable'=>true),
@@ -131,13 +131,11 @@ class StudentController extends CommonController {
      */
     public function studentEdit($id){
         $member_info_db = D('MemberInfo');
-        $member_db = D('Member');
         if(IS_POST){
             $data = I('post.info');
-            $result = $member_info_db->where(array('student_id'=>$id))->save($data);
-            if($result){
-                $pwd = $this->handle_pwd($pw,'kdsjkdeyuewy');
-                $member_db->where(array('member_id'=>$result['member_id']))->save(array('mobile'=>$data['mobile'],'password'=>$pwd));
+            $data['password'] = !empty($data['password']) ? $this->handle_pwd($data['password'],'kdsjkdeyuewy') : '';
+            $rs = $member_info_db->editMemberInfo($id,$data);
+            if($rs){
                 $this->success('修改成功');
             }else {
                 $this->error('修改失败');
@@ -155,7 +153,7 @@ class StudentController extends CommonController {
     public function studentDelete(){
         $admin_db = D('MemberInfo');
         $id = I('post.id');
-        $result = $admin_db->where(array('student_id'=>$id))->delete();
+        $result = $admin_db->where(array('member_id'=>$id))->delete();
         if ($result){
             $this->success('删除成功');
         }else {
@@ -169,7 +167,7 @@ class StudentController extends CommonController {
 
     public function editPhoto($id){
         $student_db = D('MemberInfo');
-        $teacherInfo = $student_db->where(array('student_id'=>$id))->field('head_photo')->find();
+        $teacherInfo = $student_db->where(array('member_id'=>$id))->field('head_photo')->find();
         if (!empty($teacherInfo['head_photo'])){
             $rs = json_decode($teacherInfo['head_photo'],'r');
             foreach($rs as $key => $img){
@@ -209,7 +207,8 @@ public function getPicExt($fileStream){
 
 
     // 处理表单数据
-    public function upFile($teacherId) {
+    public function upFile($sId) {
+        $mId = 's_'.$sId;
         $path = C('IMG_PATH');
         $src=base64_decode($_POST['pic']);
         $pic1=base64_decode($_POST['pic1']);
@@ -218,10 +217,10 @@ public function getPicExt($fileStream){
 
         if($src) {
             $ext = $this->getPicExt($src);
-            $filenameSrc = $teacherId."_src.";
-            $filename170 = $teacherId."_big.";
-            $filename130 =  $teacherId."_middle.";
-            $filename20 =  $teacherId."_small.";
+            $filenameSrc =$mId."_src.";
+            $filename170 = $mId."_big.";
+            $filename130 =  $mId."_middle.";
+            $filename20 =  $mId."_small.";
 
             if (file_exist($path.$filenameSrc.'png')){
                 unlink($path.$filenameSrc.'png');
@@ -243,7 +242,7 @@ public function getPicExt($fileStream){
             switch($ext){
                 case 'jpg':
                     foreach($imgType as $type){
-                        $pathStr = $path.$teacherId.$type;
+                        $pathStr = $path.$mId.$type;
                         $src = $pathStr.'.jpg';
                         $image = ImageCreateFromJPEG($src);
                         $output = $pathStr.'.png';
@@ -254,7 +253,7 @@ public function getPicExt($fileStream){
                     break;
                 case 'gif':
                     foreach($imgType as $type){
-                        $pathStr = $path.$type;
+                        $pathStr = $path.$mId.$type;
                         $src = $pathStr.'.gif';
                         $image = ImageCreateFromJPEG($src);
                         $output = $pathStr.'.png';
@@ -265,7 +264,7 @@ public function getPicExt($fileStream){
                     break;
                 case 'bmp':
                     foreach($imgType as $type){
-                        $pathStr = $path.$type;
+                        $pathStr = $path.$mId.$type;
                         $src = $pathStr.'.bmp';
                         $image = ImageCreateFromJPEG($src);
                         $output = $pathStr.'.png';
@@ -281,7 +280,7 @@ public function getPicExt($fileStream){
             $imgArr['middlePic'] = 'upload/'.$filename130.'png';
             $imgArr['smallPic'] = 'upload/'.$filename20.'png';
             $student_db = D('MemberInfo');
-            if ($student_db->where(array('student_id'=>$teacherId))->save(array('head_photo'=>json_encode($imgArr)))){
+            if ($student_db->where(array('member_id'=>$sId))->save(array('head_photo'=>json_encode($imgArr)))){
                 $rs['status'] = 1;
                 echo json_encode($rs);
                 exit;

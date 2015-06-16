@@ -76,6 +76,9 @@ function adminteacherlistEditDialogFormSubmit(){
             <select id="class_method_id" class="easyui-combobox" data-options="editable:false,panelHeight:'auto'" name="info[class_method_id]" style="height:25px">
               <option value="1" <if condition="$info.class_method_id eq '1'">selected</if>>一对一(学生上门)</option>
               <option value="2" <if condition="$info.class_method_id eq '2'">selected</if>>一对一(教师外出)</option>
+              <option value="3" <if condition="$info.class_method_id eq '3'">selected</if>>小组课（2～5人,学生上门）</option>
+              <option value="4" <if condition="$info.class_method_id eq '4'">selected</if>>小班课（6～10人,学生上门）</option>
+              <option value="5" <if condition="$info.class_method_id eq '5'">selected</if>>大班课（10人以上,学生上门)</option>
             </select>
         </td>
         <td></td>

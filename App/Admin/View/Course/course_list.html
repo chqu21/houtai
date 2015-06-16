@@ -1,0 +1,82 @@
+<taglib name="Admin\TagLib\EasyUI" />
+
+<easyui:datagrid options="datagrid.options" fields="datagrid.fields" />
+<div id="course_onecourse_datagrid_toolbar" style="padding:5px;height:auto">
+    <form>
+        老师姓名:
+        <input type="text" name="search[teacher_name]" class="easyui-text" panelHeight="auto" style="width:100px">
+        </input>&nbsp;&nbsp;
+        课程名:
+        <input type="text" name="search[course_name]" class="easyui-text" panelHeight="auto" style="width:100px">
+        </input>&nbsp;&nbsp;
+        <a href="javascript:;" onclick="adminStudentSearch(this);" class="easyui-linkbutton" iconCls="icons-map-magnifier">搜索</a>&nbsp;&nbsp;
+        <a href="javascript:;" onclick="adminMemberRefresh();" class="easyui-linkbutton" iconCls="icons-arrow-arrow_refresh">刷新</a>
+    </form>
+</div>
+<!-- 添加学生 -->
+<div id="course_onecourse_add_dialog" class="easyui-dialog" title="添加学生" data-options="modal:true,closed:true,iconCls:'icons-application-application_add',buttons:[{text:'确定',iconCls:'icons-other-tick',handler:function(){$('#course_onecourse_add_dialog_form').submit();}},{text:'取消',iconCls:'icons-arrow-cross',handler:function(){$('#course_onecourse_add_dialog').dialog('close');}}]" style="width:750px;height:550px;"></div>
+
+<!-- 编辑课程 -->
+<div id="course_onecourse_edit_dialog" class="easyui-dialog" title="编辑学生" data-options="modal:true,closed:true,iconCls:'icons-application-application_edit',buttons:[{text:'确定',iconCls:'icons-other-tick',handler:function(){$('#course_onecourse_edit_dialog_form').submit();}},{text:'取消',iconCls:'icons-arrow-cross',handler:function(){$('#course_onecourse_edit_dialog').dialog('close');}}]" style="width:750px;height:550px;"></div>
+
+<script type="text/javascript">
+
+//搜索
+function adminStudentSearch(that){
+    var queryParams = $('#course_onecourse_datagrid').datagrid('options').queryParams;
+    $.each($(that).parent('form').serializeArray(), function() {
+            queryParams[this['name']] = this['value'];
+    });
+
+    $('#course_onecourse_datagrid').datagrid('reload');
+}
+
+//操作格式化
+function adminMemberListOperateFormatter(val){
+	var btn = [];
+    btn.push('<a href="javascript:;" onclick="adminMemberEdit('+val+')">编辑</a>');
+    btn.push('<a href="javascript:;" onclick="adminMemberDelete('+val+')">删除</a>');
+	return btn.join(' | ');
+}
+
+//刷新
+function adminMemberRefresh(){
+	$('#course_onecourse_datagrid').datagrid('reload');
+}
+//添加
+function adminMemberAdd(){
+	$('#course_onecourse_add_dialog').dialog({href:'<{:U('Course/courseAdd')}>'});
+	$('#course_onecourse_add_dialog').dialog('open');
+}
+//编辑
+function adminMemberEdit(id){
+	if(typeof(id) !== 'number'){
+		$.messager.alert('提示信息', '未选择学生', 'error');
+		return false;
+	}
+	var url = '<{:U('Course/courseEdit')}>';
+	url += url.indexOf('?') != -1 ? '&id='+id : '?id='+id;
+	$('#course_onecourse_edit_dialog').dialog({href:url});
+	$('#course_onecourse_edit_dialog').dialog('open');
+}
+
+
+//删除
+function adminMemberDelete(id){
+	if(typeof(id) !== 'number'){
+		$.messager.alert('提示信息', '未选择学生', 'error');
+		return false;
+	}
+	$.messager.confirm('提示信息', '确定要删除吗？', function(result){
+		if(!result) return false;
+		$.post('<{:U('Course/courseDelete')}>', {id: id}, function(res){
+			if(!res.status){
+				$.messager.alert('提示信息', res.info, 'error');
+			}else{
+				$.messager.alert('提示信息', res.info, 'info');
+				adminMemberRefresh();
+			}
+		}, 'json');
+	});
+}
+</script>

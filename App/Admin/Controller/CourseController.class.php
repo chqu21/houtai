@@ -7,146 +7,194 @@ use Admin\Controller\CommonController;
  * @author wangdong
  */
 class CourseController extends CommonController {
+    public  $classMethod = array(
+        1 => '一对一(学生上门)',
+        2 => '一对一(教师外出)',
+        3 => '小组课（2～5人,学生上门）',
+        4 => '小班课（6～10人,学生上门）',
+        5 => '大班课（10人以上,学生上门)'
+    );
     /**
-	 * 后台首页
-	 */
-	public function index(){
-	    $admin_db      = D('Admin');
-	    $menu_db       = D('Menu');
-	    
-	    $userid = session('userid');
-		$userInfo = $admin_db->getUserInfo($userid);    //获取用户基本信息
-		$menuList = $menu_db->getMenu();                //头部菜单列表
-		
-		$this->assign('userInfo', $userInfo);
-		$this->assign('menuList', $menuList);
-		$this->display('index');
-	}
-
-    public function abc(){
-        $this->display('index');
-    }
-	
-	/**
-	 * 用户登录
-	 */
-    public function login(){
-    	if (I('get.dosubmit')){
-            $admin_db = D('Admin');
-            
-			$username = I('post.username', '', 'trim') ? I('post.username', '', 'trim') : $this->error('用户名不能为空', HTTP_REFERER);
-			$password = I('post.password', '', 'trim') ? I('post.password', '', 'trim') : $this->error('密码不能为空', HTTP_REFERER);
-			//验证码判断
-			$code = I('post.code', '', 'trim') ? I('post.code', '', 'trim') : $this->error('请输入验证码', HTTP_REFERER);
-			if(!check_verify($code, 'admin')) $this->error('验证码错误！', HTTP_REFERER);
-			
-			if($admin_db->login($username, $password)){
-			    $this->success('登录成功', U('Index/index'));
-			}else{
-			    $this->error($admin_db->error, HTTP_REFERER);
-			}
-    	}else {
-    		$this->display();
-    	}
-    }
-    
-    /**
-	 * 退出登录
-	 */
-    public function logout() {
-		session('userid', null);
-		session('roleid', null);
-		cookie('username', null);
-		cookie('userid', null);
-		
-		$this->success('安全退出！', U('Index/login'));
-	}
-    
-    /**
-	 * 验证码
-	 */
-	public function code(){
-        $verify = new \Think\Verify();
-        $verify->useCurve = true;
-        $verify->useNoise = false;
-        $verify->bg = array(255, 255, 255);
-        
-		if (I('get.code_len')) $verify->length = intval(I('get.code_len'));
-		if ($verify->length > 8 || $verify->length < 2) $verify->length = 4;
-		
-		if (I('get.font_size')) $verify->fontSize = intval(I('get.font_size'));
-		
-		if (I('get.width')) $verify->imageW = intval(I('get.width'));
-		if ($verify->imageW <= 0) $verify->imageW = 130;
-		
-		if (I('get.height')) $verify->imageH = intval(I('get.height'));
-		if ($verify->imageH <= 0) $verify->imageH = 50;
-
-        $verify->entry('admin');
-	}
-	
-    /**
-     * 左侧菜单
+     * 一对一课程列表
      */
-	public function public_menuLeft($menuid = 0) {
-	    $menu_db = D('Menu');
-		$datas = array();
-		$list = $menu_db->getMenu($menuid);
-		foreach ($list as $k=>$v){
-			$datas[$k]['name'] = $v['name'];
-			$son_datas = $menu_db->getMenu($v['id']);
-			foreach ($son_datas as $k2=>$v2){
-				$datas[$k]['son'][$k2]['text'] = $v2['name'];
-				$datas[$k]['son'][$k2]['id']   = $v2['id'];
-				$datas[$k]['son'][$k2]['url'] = U($v2['c'].'/'.$v2['a'].'?menuid='.$v2['id'].'&'.$v2['data']);
-			}
-		}
-		$this->ajaxReturn($datas);
-	}
-	
-	/**
-	 * 后台欢迎页
-	 */
-	public function public_main(){
-	    $admin_db      = D('Admin');
-	    $userid = session('userid');
-		$userInfo = $admin_db->getUserInfo($userid);    //获取用户基本信息
-		
-	    $sysinfo = \Admin\Common\Sysinfo::getinfo();
-		$os = explode(' ', php_uname());
-		//网络使用状况
-		$net_state = null;
-		if ($sysinfo['sysReShow'] == 'show' && false !== ($strs = @file("/proc/net/dev"))){
-			for ($i = 2; $i < count($strs); $i++ ){
-				preg_match_all( "/([^\s]+):[\s]{0,}(\d+)\s+(\d+)\s+(\d+)\s+(\d+)\s+(\d+)\s+(\d+)\s+(\d+)\s+(\d+)\s+(\d+)\s+(\d+)\s+(\d+)/", $strs[$i], $info );
-				$net_state.="{$info[1][0]} : 已接收 : <font color=\"#CC0000\"><span id=\"NetInput{$i}\">".$sysinfo['NetInput'.$i]."</span></font> GB &nbsp;&nbsp;&nbsp;&nbsp;已发送 : <font color=\"#CC0000\"><span id=\"NetOut{$i}\">".$sysinfo['NetOut'.$i]."</span></font> GB <br />";
-			}
-		}
-		
-		$this->assign('userInfo', $userInfo);
-		$this->assign('sysinfo',$sysinfo);
-		$this->assign('os',$os);
-		$this->assign('net_state',$net_state);
-		$this->display('main');
-	}
-	
-	/**
-	 * 更新后台缓存
-	 */
-	public function public_clearCatche(){
-	    $list = dict('', 'Cache');
-		if(is_array($list) && !empty($list)){
-			foreach ($list as $modelName=>$funcName){
-				D($modelName)->$funcName();
-			}
-		}
-		$this->success('操作成功');
-	}
-	
+    public function oneCourse($page = 1, $rows = 10,$search = array(),$sort = 'course_id', $order = 'desc'){
+        if(IS_POST){
+            $course_db = D('Course');
+            //搜索
+            $where = array();
+            if (!empty($search['payment_status']) && $search['payment_status']==2){
+                $search['payment_status'] = 0;
+            }
+            foreach ($search as $k=>$v){
+                if(!$v) continue;
+                if (in_array($k,$this->compareColumns)){
+                    $where[] = "`{$k}` like '%{$v}%'";
+                }else{
+                    $where[] = "`{$k}` = '{$v}'";
+                }
+
+            }
+            $where = implode(' and ', $where);
+            $total = $course_db->where($where)->count();
+            $limit=(($page - 1) * $rows>$total) ?  '0' : (($page - 1) * $rows);
+            $limit = $limit. "," . $rows;
+            $order = $sort.' '.$order;
+            $column = "`course_id`,`teacher_id`,`teacher_name`,`course_name`,`course_category`,`price`,`course_time`,`class_method_id`,`class_method`,`class_address`,`person_num`,`begin_time`,`end_time`,`area`,`registration_number`,`time_quantum`,`discipline_id`,`sort_num`,`display`";
+            $list = $total ? $course_db->field($column)->where($where)->order($order)->limit($limit)->select() : array();
+            foreach($list as $k => $lt){
+                if ($lt['display']==1){
+                    $list[$k]['display'] = '显示';
+                }else{
+                    $list[$k]['display'] = '不显示';
+                }
+                $list[$k]['order_status'] = $this->orderStatus[$lt['order_status']];
+            }
+            $data = array('total'=>$total, 'rows'=>$list);
+            $this->ajaxReturn($data);
+        }else{
+            $menu_db = D('Menu');
+            $currentpos = $menu_db->currentPos(I('get.menuid'));  //栏目位置
+            $datagrid = array(
+                'options'     => array(
+                    'title'   => $currentpos,
+                    'url'     => U('Course/oneCourse', array('grid'=>'datagrid')),
+                    'toolbar' => 'course_onecourse_datagrid_toolbar',
+                ),
+                'fields' => array(
+                    '课程名'    => array('field'=>'course_name','width'=>25,'sortable'=>true),
+                    '老师ID'      => array('field'=>'teacher_id','width'=>10,'sortable'=>true),
+                    '老师名'      => array('field'=>'teacher_name','width'=>15,'sortable'=>true),
+                    '课程分类'    => array('field'=>'course_category','width'=>7,'sortable'=>true),
+                    '价格'  => array('field'=>'price','width'=>15,'sortable'=>true),
+                    '课时'    => array('field'=>'course_time','width'=>15,'sortable'=>true),
+                    '开始时间'    => array('field'=>'begin_time','width'=>30,'sortable'=>true),
+                    '时间段'    => array('field'=>'time_quantum','width'=>15,'sortable'=>true),
+                    '课程类型' => array('field'=>'class_method','width'=>25,'sortable'=>true),
+                    '上课区域' => array('field'=>'area','width'=>15,'sortable'=>true),
+                    '总人数' => array('field'=>'person_num','width'=>15,'sortable'=>true),
+                    '报名人数' => array('field'=>'registration_number','width'=>25,'sortable'=>true),
+                    '排序数字' => array('field'=>'sort_num','width'=>25,'sortable'=>true),
+                    '前台显示' => array('field'=>'display','width'=>15,'sortable'=>true),
+                    '操作'    => array('field'=>'course_id','width'=>25,'sortable'=>true,'formatter'=>'adminMemberListOperateFormatter'),
+                )
+            );
+            $this->assign('datagrid', $datagrid);
+            $this->display('course_list');
+        }
+    }
+
+
     /**
-     * 防止登录超时
+     * 多人课程列表
      */
-	public function public_sessionLife(){
-		$userid = session('userid');
-	}
+    public function groupCourse($page = 1, $rows = 10,$search = array(),$sort = 'course_id', $order = 'desc'){
+        if(IS_POST){
+            $course_db = D('GroupCourse');
+            //搜索
+            $where = array();
+            if (!empty($search['payment_status']) && $search['payment_status']==2){
+                $search['payment_status'] = 0;
+            }
+            foreach ($search as $k=>$v){
+                if(!$v) continue;
+                if (in_array($k,$this->compareColumns)){
+                    $where[] = "`{$k}` like '%{$v}%'";
+                }else{
+                    $where[] = "`{$k}` = '{$v}'";
+                }
+
+            }
+            $where = implode(' and ', $where);
+            $total = $course_db->where($where)->count();
+            $limit=(($page - 1) * $rows>$total) ?  '0' : (($page - 1) * $rows);
+            $limit = $limit. "," . $rows;
+            $order = $sort.' '.$order;
+            $column = "`course_id`,`teacher_id`,`teacher_name`,`course_name`,`price`,`course_time`,`class_method_id`,`class_method`,`class_address`,`person_num`,`begin_time`,`end_time`,`area`,`registration_number`,`time_quantum`,`discipline_id`,`sort_num`,`display`";
+
+            $list = $total ? $course_db->field($column)->where($where)->order($order)->limit($limit)->select() : array();
+            foreach($list as $k => $lt){
+                if ($lt['display']==1){
+                    $list[$k]['display'] = '显示';
+                }else{
+                    $list[$k]['display'] = '不显示';
+                }
+                $list[$k]['order_status'] = $this->orderStatus[$lt['order_status']];
+            }
+            $data = array('total'=>$total, 'rows'=>$list);
+            $this->ajaxReturn($data);
+        }else{
+            $menu_db = D('Menu');
+            $currentpos = $menu_db->currentPos(I('get.menuid'));  //栏目位置
+            $datagrid = array(
+                'options'     => array(
+                    'title'   => $currentpos,
+                    'url'     => U('Course/groupCourse', array('grid'=>'datagrid')),
+                    'toolbar' => 'course_groupcourse_datagrid_toolbar',
+                ),
+                'fields' => array(
+                    '课程名'    => array('field'=>'course_name','width'=>25,'sortable'=>true),
+                    '老师ID'      => array('field'=>'teacher_id','width'=>10,'sortable'=>true),
+                    '老师名'      => array('field'=>'teacher_name','width'=>15,'sortable'=>true),
+                    '课程分类'    => array('field'=>'course_category','width'=>7,'sortable'=>true),
+                    '价格'  => array('field'=>'price','width'=>15,'sortable'=>true),
+                    '课时'    => array('field'=>'course_time','width'=>15,'sortable'=>true),
+                    '开始时间'    => array('field'=>'begin_time','width'=>30,'sortable'=>true),
+                    '时间段'    => array('field'=>'time_quantum','width'=>15,'sortable'=>true),
+                    '课程类型' => array('field'=>'class_method','width'=>25,'sortable'=>true),
+                    '上课区域' => array('field'=>'area','width'=>15,'sortable'=>true),
+                    '总人数' => array('field'=>'person_num','width'=>15,'sortable'=>true),
+                    '报名人数' => array('field'=>'registration_number','width'=>25,'sortable'=>true),
+                    '排序数字' => array('field'=>'sort_num','width'=>25,'sortable'=>true),
+                    '前台显示' => array('field'=>'display','width'=>15,'sortable'=>true),
+                    '操作'    => array('field'=>'course_id','width'=>25,'sortable'=>true,'formatter'=>'adminMemberListOperateFormatter'),
+                )
+            );
+            $this->assign('datagrid', $datagrid);
+            $this->display('group_course_list');
+        }
+    }
+
+    /**
+     * 编辑课程
+     */
+    public function courseEdit($id){
+        $course_db = D('Course');
+
+        if(IS_POST){
+            $data = I('post.info');
+            $data['class_method'] = $this->classMethod[$data['class_method_id']];
+            $result = $course_db->where(array('course_id'=>$id))->save($data);
+            if($result){
+                $this->success('修改成功');
+            }else {
+                $this->error('修改失败');
+            }
+        }else{
+            $info = $course_db->getCourseInfo($id);
+            $this->assign('info', $info);
+            $this->display('course_edit');
+        }
+    }
+
+    /**
+     * 编辑小组课
+     */
+    public function groupCourseEdit($id){
+        $course_db = D('GroupCourse');
+
+        if(IS_POST){
+            $data = I('post.info');
+            $data['class_method'] = $this->classMethod[$data['class_method_id']];
+            $result = $course_db->where(array('course_id'=>$id))->save($data);
+            if($result){
+                $this->success('修改成功');
+            }else {
+                $this->error('修改失败');
+            }
+        }else{
+            $info = $course_db->getCourseInfo($id);
+            $this->assign('info', $info);
+            $this->display('group_course_edit');
+        }
+    }
 }

@@ -7,13 +7,7 @@ use Admin\Controller\CommonController;
  * @author wangdong
  */
 class CourseController extends CommonController {
-    public  $classMethod = array(
-        1 => '一对一(学生上门)',
-        2 => '一对一(教师外出)',
-        3 => '小组课（2～5人,学生上门）',
-        4 => '小班课（6～10人,学生上门）',
-        5 => '大班课（10人以上,学生上门)'
-    );
+
     /**
      * 一对一课程列表
      */
@@ -92,7 +86,7 @@ class CourseController extends CommonController {
 
         if(IS_POST){
             $data = I('post.info');
-            $data['class_method'] = $this->classMethod[$data['class_method_id']];
+            $data['class_method'] = $course_db->classMethod[$data['class_method_id']];
             $result = $course_db->where(array('course_id'=>$id))->save($data);
             if($result){
                 $this->success('修改成功');
@@ -106,4 +100,34 @@ class CourseController extends CommonController {
         }
     }
 
+
+    /**
+     * 添加课程
+     */
+    public function courseAdd($id){
+        $course_db = D('Course');
+        if(IS_POST){
+            //$memberInfo_db = D('memberInfo');
+            $data = I('post.info');
+            $rs = $course_db->addCourseByClassMethodId($id,$data['class_method_id']);
+            if($rs){
+                $this->success('添加成功');
+            }else {
+                $this->error('添加失败');
+            }
+        }else{
+            $courseList = $course_db->getCourseList($id);
+            foreach($courseList as $ifo){
+                $class_method_ids[] = $ifo['class_method_id'];
+            }
+            $info['teacher_id'] = $id;
+            $info['check1'] = in_array(1,$class_method_ids) ?  'checked' : '';
+            $info['check2'] = in_array(2,$class_method_ids) ?  'checked' : '';
+            $info['check3'] = in_array(3,$class_method_ids) ?  'checked' : '';
+            $info['check4'] = in_array(4,$class_method_ids) ?  'checked' : '';
+            $info['check5'] = in_array(5,$class_method_ids) ?  'checked' : '';
+            $this->assign('info', $info);
+            $this->display('course_add');
+        }
+    }
 }

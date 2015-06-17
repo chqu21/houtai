@@ -108,14 +108,14 @@ class TeacherController extends CommonController {
                 ),
                 'fields' => array(
                     '选择'    => array('field'=>'teacher_idss','width'=>15,'checkbox'=>"true"),
-                    '教师ID'    => array('field'=>'teacher_id','width'=>15,'sortable'=>true),
+                    '教师ID'    => array('field'=>'teacher_id','width'=>10,'sortable'=>true),
                     '真实姓名'      => array('field'=>'real_name','width'=>15,'sortable'=>true),
                     '显示姓名'      => array('field'=>'teacher_name','width'=>15,'sortable'=>true),
                     '姓别'      => array('field'=>'sex','width'=>7,'sortable'=>true),
                     '教龄'    => array('field'=>'teaching_age','width'=>7,'sortable'=>true),
                     '身份认证'  => array('field'=>'certification_flag','width'=>15,'sortable'=>true),
                     '学历认证' => array('field'=>'education_flag','width'=>15,'sortable'=>true),
-                    '教师资格认证' => array('field'=>'teacher_certification_flag','width'=>25,'sortable'=>true),
+                    '教师资格认证' => array('field'=>'teacher_certification_flag','width'=>20,'sortable'=>true),
                     '科目'    => array('field'=>'discipline','width'=>15,'sortable'=>true),
                     '年级'    => array('field'=>'grade','width'=>15,'sortable'=>true),
                     '课程分类' => array('field'=>'course_category','width'=>15,'sortable'=>true),
@@ -124,7 +124,7 @@ class TeacherController extends CommonController {
                     '注册时间' => array('field'=>'raw_add_time','width'=>25),
                     '显示' => array('field'=>'display','width'=>7,'sortable'=>true),
                     '手机号' => array('field'=>'mobile','width'=>15,'sortable'=>true),
-                    '操作'    => array('field'=>'teacher_ids','width'=>55,'sortable'=>true,'formatter'=>'adminMemberListOperateFormatter'),
+                    '操作'    => array('field'=>'teacher_ids','width'=>60,'sortable'=>true,'formatter'=>'adminMemberListOperateFormatter'),
                 )
             );
             $this->assign('datagrid', $datagrid);

@@ -88,8 +88,8 @@ class OrderController extends CommonController {
                 'fields' => array(
                     '订单号'    => array('field'=>'order_code','width'=>15,'sortable'=>true),
                     '课程名'      => array('field'=>'course_name','width'=>15,'sortable'=>true),
-                    '上课老师'      => array('field'=>'teacher_name','width'=>7,'sortable'=>true),
-                    '学生名'    => array('field'=>'student_name','width'=>7,'sortable'=>true),
+                    '上课老师'      => array('field'=>'teacher_name','width'=>15,'sortable'=>true),
+                    '学生名'    => array('field'=>'student_name','width'=>15,'sortable'=>true),
                     '学生手机号'  => array('field'=>'student_mobile','width'=>15,'sortable'=>true),
                     '课时'    => array('field'=>'course_time','width'=>15,'sortable'=>true),
                     '开始时间'    => array('field'=>'class_begin_time','width'=>15,'sortable'=>true),

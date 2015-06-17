@@ -2,6 +2,9 @@
 <table id="course_onecourse_datagrid" class="easyui-datagrid" data-options='<?php $dataOptions = array_merge(array ( 'border' => false, 'fit' => true, 'fitColumns' => true, 'rownumbers' => true, 'singleSelect' => true, 'pagination' => true, 'pageList' => array ( 0 => 20, 1 => 30, 2 => 50, 3 => 80, 4 => 100, ), 'pageSize' => '20', ), $datagrid["options"]);if(isset($dataOptions['toolbar']) && substr($dataOptions['toolbar'],0,1) != '#'): unset($dataOptions['toolbar']); endif; echo trim(json_encode($dataOptions), '{}[]').((isset($datagrid["options"]['toolbar']) && substr($datagrid["options"]['toolbar'],0,1) != '#')?',"toolbar":'.$datagrid["options"]['toolbar']:null); ?>' style=""><thead><tr><?php if(is_array($datagrid["fields"])):foreach ($datagrid["fields"] as $key=>$arr):if(isset($arr['formatter'])):unset($arr['formatter']);endif;echo "<th data-options='".trim(json_encode($arr), '{}[]').(isset($datagrid["fields"][$key]['formatter'])?",\"formatter\":".$datagrid["fields"][$key]['formatter']:null)."'>".$key."</th>";endforeach;endif; ?></tr></thead></table>
 <div id="course_onecourse_datagrid_toolbar" style="padding:5px;height:auto">
     <form>
+        老师ID:
+        <input type="text" name="search[teacher_id]" class="easyui-text" panelHeight="auto" style="width:100px">
+        </input>&nbsp;&nbsp;
         老师姓名:
         <input type="text" name="search[teacher_name]" class="easyui-text" panelHeight="auto" style="width:100px">
         </input>&nbsp;&nbsp;
@@ -44,8 +47,8 @@ function adminMemberRefresh(){
 }
 //添加
 function adminMemberAdd(){
-	$('#course_onecourse_add_dialog').dialog({href:'<?php echo U('Course/courseAdd');?>'});
-	$('#course_onecourse_add_dialog').dialog('open');
+	$('#course_courselist_add_dialog').dialog({href:'<?php echo U('Course/courseAdd');?>'});
+	$('#course_courselist_add_dialog').dialog('open');
 }
 //编辑
 function adminMemberEdit(id){

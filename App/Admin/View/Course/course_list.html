@@ -3,6 +3,9 @@
 <easyui:datagrid options="datagrid.options" fields="datagrid.fields" />
 <div id="course_onecourse_datagrid_toolbar" style="padding:5px;height:auto">
     <form>
+        老师ID:
+        <input type="text" name="search[teacher_id]" class="easyui-text" panelHeight="auto" style="width:100px">
+        </input>&nbsp;&nbsp;
         老师姓名:
         <input type="text" name="search[teacher_name]" class="easyui-text" panelHeight="auto" style="width:100px">
         </input>&nbsp;&nbsp;
@@ -45,8 +48,8 @@ function adminMemberRefresh(){
 }
 //添加
 function adminMemberAdd(){
-	$('#course_onecourse_add_dialog').dialog({href:'<{:U('Course/courseAdd')}>'});
-	$('#course_onecourse_add_dialog').dialog('open');
+	$('#course_courselist_add_dialog').dialog({href:'<{:U('Course/courseAdd')}>'});
+	$('#course_courselist_add_dialog').dialog('open');
 }
 //编辑
 function adminMemberEdit(id){

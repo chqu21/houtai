@@ -342,11 +342,14 @@ public function getPicExt($fileStream){
     public  function addAppraise($id){
         if(IS_POST) {
             $data = I('post.info');
-            $teacherName = $data['teacher_name'];
             $memberName = $data['member_name'];
             $addTime = $data['raw_add_time'];
+            $classMethodId = $data['class_method_id'];
+            $classTime = $data['class_time'];
+            unset($data['class_time']);
             unset($data['raw_add_time']);
             unset($data['member_name']);
+            unset($data['class_method_id']);
             $commentType = array(
                 'type1' => array(
                     'type_id' => 1,
@@ -364,16 +367,19 @@ public function getPicExt($fileStream){
             $serviceComments = D('ServiceComments');
             $teacher_db = D('Teacher');
             $teacherInfo = $teacher_db->where(array('teacher_id'=>$id))->field('teacher_id','teacher_name')->find();
+            $orderCode = $this->getOrderCode();
             foreach ($data as $key => $v) {
                 $dataArr['teacher_id'] = $id;
                 $dataArr['teacher_name'] = $teacherInfo['teacher_name'];
+                $dataArr['class_time'] = $classTime;
                 $dataArr['member_name'] = $memberName;
                 $dataArr['type_id'] = $commentType[$key]['type_id'];
                 $dataArr['type'] = $commentType[$key]['type'];
                 $dataArr['comments'] = $v['content'];
                 $dataArr['score'] = $v['score'];
-                $dataArr['appraise_code'] = $this->getOrderCode();
+                $dataArr['appraise_code'] = $orderCode;
                 $dataArr['raw_add_time'] = $addTime.' '.date('H:i:s');
+                $dataArr['comment_type'] = $classMethodId;
                 $result = $serviceComments->add($dataArr);
             }
             if ($result) {

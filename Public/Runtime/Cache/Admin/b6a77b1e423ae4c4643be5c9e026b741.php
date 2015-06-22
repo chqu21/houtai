@@ -106,15 +106,11 @@ function adminteacherlistEditDialogFormSubmit(){
         <td>上课方式：</td>
         <td>
             <select id="class_method" class="easyui-combobox" data-options="editable:false,panelHeight:'auto'" name="info[class_method]" style="height:25px">
-                <?php if($info["class_method"] == 1): ?><option value="1">一对一(学生上门)</option>
-                    <?php elseif($info["class_method"] == 2): ?>
-                        <option value="2">一对一(教师外出)</option>
-                    <?php elseif($info["class_method"] == 3): ?>
-                        <option value="3">小组课（2～5人,学生上门）</option>
-                    <?php elseif($info["class_method"] == 4): ?>
-                        <option value="4">小班课（6～10人,学生上门）</option>
-                    <?php elseif($info["class_method"] == 5): ?>
-                        <option value="5">大班课（10人以上,学生上门)</option><?php endif; ?>
+                        <option value="1"  <?php if($info["class_method"] == '1'): ?>selected<?php endif; ?>>一对一(学生上门)</option>
+                        <option value="2" <?php if($info["class_method"] == '2'): ?>selected<?php endif; ?>>一对一(教师外出)</option>
+                        <option value="3" <?php if($info["class_method"] == '3'): ?>selected<?php endif; ?>>小组课（2～5人,学生上门）</option>
+                        <option value="4" <?php if($info["class_method"] == '4'): ?>selected<?php endif; ?>>小班课（6～10人,学生上门）</option>
+                        <option value="5" <?php if($info["class_method"] == '5'): ?>selected<?php endif; ?>>大班课（10人以上,学生上门)</option>
             </select>
         </td>
         <td></td>
@@ -123,13 +119,13 @@ function adminteacherlistEditDialogFormSubmit(){
         <td>课程分类：</td>
         <td>
             <select id="course_category" class="easyui-combobox" data-options="editable:false,panelHeight:'auto'" name="info[course_category]" style="height:25px">
-                <option value="艺术">艺术</option>
-                <option value="体育">体育</option>
-                <option value="高中">高中</option>
-                <option value="初中">初中</option>
-                <option value="小学">小学</option>
-                <option value="兴趣">兴趣</option>
-                <option value="学前">学前</option>
+                <option value="艺术"  <?php if($info["course_category"] == '艺术'): ?>selected<?php endif; ?>>艺术</option>
+                <option value="体育"  <?php if($info["course_category"] == '体育'): ?>selected<?php endif; ?>>体育</option>
+                <option value="高中"  <?php if($info["course_category"] == '高中'): ?>selected<?php endif; ?>>高中</option>
+                <option value="初中"  <?php if($info["course_category"] == '初中'): ?>selected<?php endif; ?>>初中</option>
+                <option value="小学"  <?php if($info["course_category"] == '小学'): ?>selected<?php endif; ?>>小学</option>
+                <option value="兴趣"  <?php if($info["course_category"] == '兴趣'): ?>selected<?php endif; ?>>兴趣</option>
+                <option value="学前"  <?php if($info["course_category"] == '学前'): ?>selected<?php endif; ?>>学前</option>
             </select>
         </td>
         <td></td>
@@ -249,6 +245,16 @@ function adminteacherlistEditDialogFormSubmit(){
     <tr>
         <td>课时数：</td>
         <td><input type="text" name="info[class_hours_number]"  value="<?php echo ($info["class_hours_number"]); ?>" style="width:180px;height:22px" /></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>好评率：</td>
+        <td><input type="text" name="info[praise_rate]"  value="<?php echo ($info["praise_rate"]); ?>" style="width:180px;height:22px" /></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>续课率：</td>
+        <td><input type="text" name="info[continue_rate]"  value="<?php echo ($info["continue_rate"]); ?>" style="width:180px;height:22px" /></td>
         <td></td>
     </tr>
 </table>

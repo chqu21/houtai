@@ -86,5 +86,19 @@ function adminTeacherAddAppraiseDialogFormSubmit(){
         <td><div id="admin_addAppraise_add_dialog_form_type5Tip"></div></td>
 	</tr>
 	-->
+    <tr>
+        <td>上课方式：</td>
+        <td>
+            <select id="class_method_id" class="easyui-combobox" data-options="editable:false,panelHeight:'auto'" name="info[class_method_id]" style="height:25px">
+                <option value="1">一对一(学生上门)</option>
+                <option value="2">一对一(教师外出)</option>
+                <option value="3">小组课（2～5人,学生上门）</option>
+                <option value="4">小班课（6～10人,学生上门）</option>
+                <option value="5">大班课（10人以上,学生上门)</option>
+            </select>
+        </td>
+        <td>课时数：</td>
+        <td><input type="text" name="info[class_time]"  value="" style="width:100px;height:22px" /></td>
+    </tr>
 </table>
 </form>

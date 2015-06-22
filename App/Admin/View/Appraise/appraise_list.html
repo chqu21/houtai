@@ -57,6 +57,7 @@ function adminMemberListTimeFormatter(val){
 function adminAppraiseListOperateFormatter(val){
 	var btn = [];
 	btn.push('<a href="javascript:;" onclick="adminAppraiseEdit('+val+')">编辑</a>');
+    btn.push('<a href="javascript:;" onclick="adminMemberDelete('+val+')">删除</a>');
 	return btn.join(' | ');
 }
 
@@ -64,11 +65,7 @@ function adminAppraiseListOperateFormatter(val){
 function adminMemberRefresh(){
 	$('#appraise_appraiselist_datagrid').datagrid('reload');
 }
-//添加
-function adminMemberAdd(){
-	$('#admin_appraiselist_add_dialog').dialog({href:'<{:U('Student/studentAdd')}>'});
-	$('#admin_appraiselist_add_dialog').dialog('open');
-}
+
 //编辑
 function adminAppraiseEdit(id){
 	if(typeof(id) !== 'number'){
@@ -81,18 +78,6 @@ function adminAppraiseEdit(id){
 	$('#admin_appraiselist_edit_dialog').dialog('open');
 }
 
-//修改头像
-function adminHeadPhotoEdit(id){
-    if(typeof(id) !== 'number'){
-        $.messager.alert('提示信息', '未选择学生', 'error');
-        return false;
-    }
-    var url = '<{:U('Student/editPhoto')}>';
-    url += url.indexOf('?') != -1 ? '&id='+id : '?id='+id;
-    $('#admin_appraiselist_edit_photo_dialog').dialog({href:url});
-    $('#admin_appraiselist_edit_photo_dialog').dialog('open');
-}
-
 //删除
 function adminMemberDelete(id){
 	if(typeof(id) !== 'number'){
@@ -101,7 +86,7 @@ function adminMemberDelete(id){
 	}
 	$.messager.confirm('提示信息', '确定要删除吗？', function(result){
 		if(!result) return false;
-		$.post('<{:U('Student/studentDelete')}>', {id: id}, function(res){
+		$.post('<{:U('Appraise/appraiseDelete')}>', {id: id}, function(res){
 			if(!res.status){
 				$.messager.alert('提示信息', res.info, 'error');
 			}else{

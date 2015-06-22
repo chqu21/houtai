@@ -96,4 +96,19 @@ class AppraiseController extends CommonController {
         }
     }
 
+    /**
+     * 删除评论
+     */
+
+    public function appraiseDelete($id){
+        $comments_db = D('ServiceComments');
+        $id = I('post.id');
+        $result = $comments_db->where(array('comments_id'=>$id))->delete();
+        if ($result){
+            $this->success('删除成功');
+        }else {
+            $this->error('删除失败');
+        }
+    }
+
 }

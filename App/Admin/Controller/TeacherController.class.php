@@ -339,14 +339,13 @@ public function getPicExt($fileStream){
         return $order_id_main . str_pad((100 - $order_id_sum % 100) % 100, 2, '0', STR_PAD_LEFT);
     }
     //添加评价
-    public  function addAppraise(){
+    public  function addAppraise($id){
         if(IS_POST) {
             $data = I('post.info');
             $teacherName = $data['teacher_name'];
-            $teacherId = $data['teacher_id'];
             $memberName = $data['member_name'];
-            unset($data['teacher_name']);
-            unset($data['teacher_id']);
+            $addTime = $data['raw_add_time'];
+            unset($data['raw_add_time']);
             unset($data['member_name']);
             $commentType = array(
                 'type1' => array(
@@ -360,27 +359,21 @@ public function getPicExt($fileStream){
                 'type3' => array(
                     'type_id' => 3,
                     'type' => '教学效果',
-                ),
-                'type4' => array(
-                    'type_id' => 4,
-                    'type' => '服务质量',
-                ),
-                'type5' => array(
-                    'type_id' => 5,
-                    'type' => '作业与答疑',
-                ),
+                )
             );
             $serviceComments = D('ServiceComments');
+            $teacher_db = D('Teacher');
+            $teacherInfo = $teacher_db->where(array('teacher_id'=>$id))->field('teacher_id','teacher_name')->find();
             foreach ($data as $key => $v) {
-                $dataArr['teacher_id'] = $teacherId;
-                $dataArr['teacher_name'] = $teacherName;
+                $dataArr['teacher_id'] = $id;
+                $dataArr['teacher_name'] = $teacherInfo['teacher_name'];
                 $dataArr['member_name'] = $memberName;
                 $dataArr['type_id'] = $commentType[$key]['type_id'];
                 $dataArr['type'] = $commentType[$key]['type'];
                 $dataArr['comments'] = $v['content'];
                 $dataArr['score'] = $v['score'];
                 $dataArr['appraise_code'] = $this->getOrderCode();
-                $dataArr['raw_add_time'] = date('Y-m-d H:i:s');
+                $dataArr['raw_add_time'] = $addTime.' '.date('H:i:s');
                 $result = $serviceComments->add($dataArr);
             }
             if ($result) {
@@ -390,9 +383,6 @@ public function getPicExt($fileStream){
             }
             exit;
         }else{
-            $teacher_db = D('Teacher');
-            $teacherInfo = $teacher_db->where(array('teacher_id'=>$id))->field('teacher_id','teacher_name')->find();
-            $this->assign('teacherName', $teacherInfo['teacher_name']);
             $this->assign('teacherId',$id);
             $this->display('teacher_appraise');
         }

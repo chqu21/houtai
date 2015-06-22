@@ -72,7 +72,6 @@ $(document).ready(function(){
 	<div class="menu-sep"></div>
 	<div data-options="name:'refresh',iconCls:'icons-arrow-arrow_refresh'">刷新后台</div>
 	<div data-options="name:'cache',iconCls:'icons-other-plugin'">更新缓存</div>
-	<div data-options="name:'bug',iconCls:'icons-bug-bug'">提交缺陷</div>
 	<div class="menu-sep"></div>
 	<div data-options="name:'exit'">退出登录</div>
 </div>
@@ -110,9 +109,6 @@ function rightMenuHandler(item){
 				var msgType = data.status ? 'info' : 'error';
 				$.messager.alert('提示信息', data.info, msgType);
 			}, 'json');
-			break;
-		case 'bug': //提交缺陷
-			$.messager.alert('提示信息', '请发邮件到531381545@qq.com提交缺陷，谢谢！', 'info');
 			break;
 		case 'exit': //退出登录
 			logout();

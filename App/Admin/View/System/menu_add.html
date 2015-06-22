@@ -23,7 +23,7 @@ $(function(){
 		onError:"必须为首字母大写的驼峰法命名"
 	});
 	$("#system_menu_form_add_a").formValidator({onShow:"请输入方法名",onFocus:"方法名不能少于2个字符"}).inputValidator({min:2,empty:{leftEmpty:false,rightEmpty:false,emptyError:'方法名不能有空格'},onError:"方法名不能少于2个字符"}).regexValidator({
-		regExp:"^[a-z][a-z1-9_]+([A-Z][a-z1-9]+){1,5}?$",
+		regExp:"^[a-z][a-z1-9_]+([A-Z][a-z1-9]+){0,5}?$",
 		param : "",
 		dataType:"string",
 		onError:"必须为首字母小写的驼峰法命名"

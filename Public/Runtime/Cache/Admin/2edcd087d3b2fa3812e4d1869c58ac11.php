@@ -5,6 +5,9 @@
         老师ID:
         <input type="text" name="search[teacher_id]" class="easyui-text" panelHeight="auto" style="width:100px">
         </input>&nbsp;&nbsp;
+        老师姓名:
+        <input type="text" name="search[teacher_name]" class="easyui-text" panelHeight="auto" style="width:100px">
+        </input>&nbsp;&nbsp;
         会员名:
         <input type="text" name="search[member_name]" class="easyui-text" panelHeight="auto" style="width:100px">
         </input>&nbsp;&nbsp;

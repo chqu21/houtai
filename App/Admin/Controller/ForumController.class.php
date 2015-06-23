@@ -21,9 +21,93 @@ class ForumController extends CommonController {
     );
 
     /**
-     * 老师列表
+     * 主题列表
      */
-    public function subjectList($page = 1, $rows = 10,$search = array(),$sort = 'order_id', $order = 'desc'){
+    public function subjectList($page = 1, $rows = 10,$search = array(),$sort = 'subject_id', $order = 'desc'){
+        if(IS_POST){
+            $subject_db = D('Subject');
+
+            //搜索
+            $where = array();
+
+            foreach ($search as $k=>$v){
+                if(!$v) continue;
+                if (in_array($k,$this->compareColumns)){
+                    $where[] = "`{$k}` like '%{$v}%'";
+                }else{
+                    $where[] = "`{$k}` = '{$v}'";
+                }
+
+            }
+            $where = implode(' and ', $where);
+            if (!empty($mIds)){
+                $where = $where.' and member_id in ('.implode(',',$mIds).')';
+            }
+            $total = $subject_db->where($where)->count();
+            $limit=(($page - 1) * $rows>$total) ?  '0' : (($page - 1) * $rows);
+            $limit = $limit. "," . $rows;
+            $order = $sort.' '.$order;
+            $column = "`subject_id`,`subject_id` as subject_ids,`subject`,`member_id`,`author`,`content`,`raw_add_time`,`sort_num`,`display`";
+            $list = $total ? $subject_db->field($column)->where($where)->order($order)->limit($limit)->select() : array();
+            foreach($list as $k => $lt){
+                if ($lt['display']==1){
+                    $list[$k]['display'] = '显示';
+                }else{
+                    $list[$k]['display'] = '不显示';
+                }
+            }
+            $data = array('total'=>$total, 'rows'=>$list);
+            $this->ajaxReturn($data);
+        }else{
+            $menu_db = D('Menu');
+            $currentpos = $menu_db->currentPos(I('get.menuid'));  //栏目位置
+            $datagrid = array(
+                'options'     => array(
+                    'title'   => $currentpos,
+                    'url'     => U('Forum/subjectList', array('grid'=>'datagrid')),
+                    'toolbar' => 'admin_subjectlist_datagrid_toolbar',
+                ),
+                'fields' => array(
+                    '主题ID'    => array('field'=>'subject_id','width'=>15,'sortable'=>true),
+                    '主题标题'      => array('field'=>'subject','width'=>15,'sortable'=>true),
+                    '发布人ID'      => array('field'=>'member_id','width'=>15,'sortable'=>true),
+                    '作者'    => array('field'=>'author','width'=>15,'sortable'=>true),
+                    '内容'  => array('field'=>'content','width'=>15,'sortable'=>true),
+                    '添加时间'    => array('field'=>'raw_add_time','width'=>15,'sortable'=>true),
+                    '排序号'    => array('field'=>'sort_num','width'=>15,'sortable'=>true),
+                    '是否显示'    => array('field'=>'display','width'=>15,'sortable'=>true),
+                    '操作'    => array('field'=>'subject_ids','width'=>55,'sortable'=>true,'formatter'=>'adminSubjectListOperateFormatter'),
+                )
+            );
+            $this->assign('datagrid', $datagrid);
+            $this->display('subject_list');
+        }
+    }
+
+    /**
+     * 编辑课程
+     */
+    public function subjectEdit($id){
+        $subject_db = D('Subject');
+        if(IS_POST){
+            $data = I('post.info');
+            $result = $subject_db->where(array('subject_id'=>$id))->save($data);
+            if($result){
+                $this->success('修改成功');
+            }else {
+                $this->error('修改失败');
+            }
+        }else{
+            $info = $subject_db->getSubjectInfo($id);
+            $this->assign('info', $info);
+            $this->display('subject_edit');
+        }
+    }
+
+    /**
+     * 帖子列表
+     */
+    public function appraiseList($page = 1, $rows = 10,$search = array(),$sort = 'appraise_id', $order = 'desc'){
         if(IS_POST){
             $master_db = D('OrderMaster');
             $detail_db = D('OrderDetail');
@@ -108,5 +192,4 @@ class ForumController extends CommonController {
             $this->display('order_list');
         }
     }
-
 }

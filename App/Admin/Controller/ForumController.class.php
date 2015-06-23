@@ -105,6 +105,24 @@ class ForumController extends CommonController {
     }
 
     /**
+     * 删除评论
+     */
+
+    public function subjectDelete($id){
+        $comments_db = D('Subject');
+        $id = I('post.id');
+        $result = $comments_db->where(array('subject_id'=>$id))->delete();
+        if ($result){
+            $this->success('删除成功');
+        }else {
+            $this->error('删除失败');
+        }
+    }
+
+
+
+
+    /**
      * 帖子列表
      */
     public function appraiseList($page = 1, $rows = 10,$search = array(),$sort = 'appraise_id', $order = 'desc'){

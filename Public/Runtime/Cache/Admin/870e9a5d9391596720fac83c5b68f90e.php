@@ -79,7 +79,7 @@ function adminMemberDelete(id){
 	}
 	$.messager.confirm('提示信息', '确定要删除吗？', function(result){
 		if(!result) return false;
-		$.post('<?php echo U('Appraise/appraiseDelete');?>', {id: id}, function(res){
+		$.post('<?php echo U('Forum/subjectDelete');?>', {id: id}, function(res){
 			if(!res.status){
 				$.messager.alert('提示信息', res.info, 'error');
 			}else{

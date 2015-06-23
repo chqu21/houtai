@@ -20,7 +20,8 @@
     </form>
 </div>
 <!-- 编辑评价 -->
-<div id="admin_subjectlist_edit_dialog" class="easyui-dialog" title="编辑评价" data-options="modal:true,closed:true,iconCls:'icons-application-application_edit',buttons:[{text:'确定',iconCls:'icons-other-tick',handler:function(){$('#admin_editSubject_dialog_form').submit();}},{text:'取消',iconCls:'icons-arrow-cross',handler:function(){$('#admin_subjectlist_edit_dialog').dialog('close');}}]" style="width:750px;height:600px;"></div>
+<div id="admin_subjectlist_edit_dialog" class="easyui-dialog" title="编辑主题" data-options="modal:true,closed:true,iconCls:'icons-application-application_edit',buttons:[{text:'确定',iconCls:'icons-other-tick',handler:function(){$('#admin_editSubject_dialog_form').submit();}},{text:'取消',iconCls:'icons-arrow-cross',handler:function(){$('#admin_subjectlist_edit_dialog').dialog('close');}}]" style="width:750px;height:600px;"></div>
+<div id="admin_appraise_add_dialog" class="easyui-dialog" title="添加评价" data-options="modal:true,closed:true,iconCls:'icons-application-application_edit',buttons:[{text:'确定',iconCls:'icons-other-tick',handler:function(){$('#admin_addAppraise_dialog_form').submit();}},{text:'取消',iconCls:'icons-arrow-cross',handler:function(){$('#admin_appraise_add_dialog').dialog('close');}}]" style="width:450px;height:300px;"></div>
 
 
 <script type="text/javascript">
@@ -51,6 +52,7 @@ function adminMemberListTimeFormatter(val){
 function adminSubjectListOperateFormatter(val){
 	var btn = [];
 	btn.push('<a href="javascript:;" onclick="adminSubjectEdit('+val+')">编辑</a>');
+    btn.push('<a href="javascript:;" onclick="adminAddAppraise('+val+')">添加评价</a>');
     btn.push('<a href="javascript:;" onclick="adminMemberDelete('+val+')">删除</a>');
 	return btn.join(' | ');
 }
@@ -61,15 +63,27 @@ function adminMemberRefresh(){
 }
 
 //编辑
-function adminSubjectEdit(id){
+function adminAddAppraise(id){
 	if(typeof(id) !== 'number'){
 		$.messager.alert('提示信息', '未选择学生', 'error');
 		return false;
 	}
-	var url = '<{:U('forum/subjectEdit')}>';
+	var url = '<{:U('forum/appraiseAdd')}>';
 	url += url.indexOf('?') != -1 ? '&id='+id : '?id='+id;
-	$('#admin_subjectlist_edit_dialog').dialog({href:url});
-	$('#admin_subjectlist_edit_dialog').dialog('open');
+	$('#admin_appraise_add_dialog').dialog({href:url});
+	$('#admin_appraise_add_dialog').dialog('open');
+}
+
+//添加评价
+function adminSubjectEdit(id){
+    if(typeof(id) !== 'number'){
+        $.messager.alert('提示信息', '未选择学生', 'error');
+        return false;
+    }
+    var url = '<{:U('forum/subjectEdit')}>';
+    url += url.indexOf('?') != -1 ? '&id='+id : '?id='+id;
+    $('#admin_subjectlist_edit_dialog').dialog({href:url});
+    $('#admin_subjectlist_edit_dialog').dialog('open');
 }
 
 //删除

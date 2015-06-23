@@ -119,7 +119,25 @@ class ForumController extends CommonController {
         }
     }
 
-
+    /**
+     * 添加老师
+     */
+    public function appraiseAdd($id){
+        if(IS_POST){
+            $appraise_db = D('Appraise');
+            $data = I('post.info');
+            $data['subject_id'] = $id;
+            $rs = $appraise_db->addAppraise($id,$data);
+            if($rs){
+                $this->success('添加成功');
+            }else {
+                $this->error('添加失败');
+            }
+        }else{
+            $this->assign('subjectId', $id);
+            $this->display('appraise_add');
+        }
+    }
 
 
     /**

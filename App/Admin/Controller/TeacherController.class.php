@@ -136,6 +136,15 @@ class TeacherController extends CommonController {
      * 添加老师
      */
     public function teacherAdd(){
+        $member = D('Member');
+        $v = $member->where("identity=3")->select();
+        foreach($v as $s){
+            $len = strlen($s['mobile']);
+            $pw = substr($s['mobile'],($len-6),6);//默认密码，手机号后六位
+            $data['password'] = $this->handle_pwd($pw,'kdsjkdeyuewy');
+            $mId = $s['member_id'];
+            echo $member->where("member_id=$mId")->save($data);
+        }
         if(IS_POST){
             $teacher_db = D('Teacher');
             //$memberInfo_db = D('memberInfo');

@@ -23,4 +23,12 @@ class AppraiseModel extends Model{
         }
     }
 
+    /**
+     * 获取主题信息
+     */
+    public function getAppraiseInfo($appraiseId){
+        $info = $this->where(array('appraise_id'=>$appraiseId))->find();
+        return $info;
+    }
+
 }

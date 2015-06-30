@@ -58,4 +58,5 @@ class CourseModel extends Model{
         return true;
     }
 
+
 }

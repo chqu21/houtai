@@ -1,0 +1,57 @@
+[ 2015-06-30T16:03:57+08:00 ] 127.0.0.1 /index.php?s=/admin/student/studentlist/grid/datagrid.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `linshi_setting` [ RunTime:0.004000s ]
+SQL: SELECT `key`,`value` FROM `linshi_setting`  [ RunTime:0.000000s ]
+NOTIC: [2] unlink(D:\wamp\www\houtai\Public\Runtime\Temp/71df8fced343b2a8ba67c00a47a67b50.php): No such file or directory D:\wamp\www\houtai\Libs\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+INFO: Run \Common\Behavior\SettingBehavior [ RunTime:0.021001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.023001s ]
+SQL: SHOW COLUMNS FROM `linshi_member_info` [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `linshi_member` [ RunTime:0.003000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `linshi_member_info` LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT `real_name`,`address`,`nick_name`,`sex`,`birthday`,`school`,`grade`,`weixin`,`qq`,`safe_email`,`head_photo`,`mobile`,`member_id`,`member_id` as member_ids,`raw_add_time`,`invite_code` FROM `linshi_member_info` ORDER BY member_id desc LIMIT 0,20   [ RunTime:0.001000s ]
+SQL: SELECT `huanxin_user` FROM `linshi_member` WHERE ( member_id=596 )  [ RunTime:0.000000s ]
+SQL: SELECT `huanxin_user` FROM `linshi_member` WHERE ( member_id=595 )  [ RunTime:0.000000s ]
+SQL: SELECT `huanxin_user` FROM `linshi_member` WHERE ( member_id=594 )  [ RunTime:0.001000s ]
+SQL: SELECT `huanxin_user` FROM `linshi_member` WHERE ( member_id=593 )  [ RunTime:0.002000s ]
+SQL: SELECT `huanxin_user` FROM `linshi_member` WHERE ( member_id=592 )  [ RunTime:0.000000s ]
+SQL: SELECT `huanxin_user` FROM `linshi_member` WHERE ( member_id=591 )  [ RunTime:0.000000s ]
+SQL: SELECT `huanxin_user` FROM `linshi_member` WHERE ( member_id=590 )  [ RunTime:0.000000s ]
+SQL: SELECT `huanxin_user` FROM `linshi_member` WHERE ( member_id=589 )  [ RunTime:0.000000s ]
+SQL: SELECT `huanxin_user` FROM `linshi_member` WHERE ( member_id=588 )  [ RunTime:0.001000s ]
+SQL: SELECT `huanxin_user` FROM `linshi_member` WHERE ( member_id=587 )  [ RunTime:0.001000s ]
+SQL: SELECT `huanxin_user` FROM `linshi_member` WHERE ( member_id=586 )  [ RunTime:0.000000s ]
+SQL: SELECT `huanxin_user` FROM `linshi_member` WHERE ( member_id=585 )  [ RunTime:0.001000s ]
+SQL: SELECT `huanxin_user` FROM `linshi_member` WHERE ( member_id=584 )  [ RunTime:0.000000s ]
+SQL: SELECT `huanxin_user` FROM `linshi_member` WHERE ( member_id=583 )  [ RunTime:0.000000s ]
+SQL: SELECT `huanxin_user` FROM `linshi_member` WHERE ( member_id=582 )  [ RunTime:0.001000s ]
+SQL: SELECT `huanxin_user` FROM `linshi_member` WHERE ( member_id=581 )  [ RunTime:0.000000s ]
+SQL: SELECT `huanxin_user` FROM `linshi_member` WHERE ( member_id=580 )  [ RunTime:0.000000s ]
+SQL: SELECT `huanxin_user` FROM `linshi_member` WHERE ( member_id=579 )  [ RunTime:0.000000s ]
+SQL: SELECT `huanxin_user` FROM `linshi_member` WHERE ( member_id=578 )  [ RunTime:0.000000s ]
+SQL: SELECT `huanxin_user` FROM `linshi_member` WHERE ( member_id=577 )  [ RunTime:0.001000s ]
+
+[ 2015-06-30T16:04:01+08:00 ] 127.0.0.1 /index.php?s=/admin/teacher/timelist/grid/datagrid.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `linshi_setting` [ RunTime:0.008001s ]
+SQL: SELECT `key`,`value` FROM `linshi_setting`  [ RunTime:0.001000s ]
+NOTIC: [2] unlink(D:\wamp\www\houtai\Public\Runtime\Temp/71df8fced343b2a8ba67c00a47a67b50.php): No such file or directory D:\wamp\www\houtai\Libs\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+INFO: Run \Common\Behavior\SettingBehavior [ RunTime:0.036002s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.039002s ]
+SQL: SHOW COLUMNS FROM `linshi_course_time` [ RunTime:0.008000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `linshi_course_time` LIMIT 1   [ RunTime:0.003001s ]
+SQL: SELECT * FROM `linshi_course_time` ORDER BY course_time_id asc LIMIT 7040,20   [ RunTime:0.010000s ]
+
+[ 2015-06-30T16:08:15+08:00 ] 127.0.0.1 /index.php?s=/admin/index/public_sessionlife.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `linshi_setting` [ RunTime:0.004001s ]
+SQL: SELECT `key`,`value` FROM `linshi_setting`  [ RunTime:0.001000s ]
+NOTIC: [2] unlink(D:\wamp\www\houtai\Public\Runtime\Temp/71df8fced343b2a8ba67c00a47a67b50.php): No such file or directory D:\wamp\www\houtai\Libs\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+INFO: Run \Common\Behavior\SettingBehavior [ RunTime:0.017001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.019001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+

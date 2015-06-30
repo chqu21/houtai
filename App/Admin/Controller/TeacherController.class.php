@@ -222,26 +222,25 @@ class TeacherController extends CommonController {
         $this->assign('teacherId', $id);
         $this->display('headPhoto');
     }
-public function getPicExt($fileStream){
-    $strInfo = @unpack("C2chars", $fileStream);
-    $typeCode = intval($strInfo['chars1'].$strInfo['chars2']);
-    $fileType = '';
-    switch ($typeCode) {
-        case 7790: $fileType = 'exe'; break;
-        case 7784: $fileType = 'midi'; break;
-        case 8297: $fileType = 'rar'; break;
-        case 255216: $fileType = 'jpg'; break;
-        case 7173: $fileType = 'gif'; break;
-        case 6677: $fileType = 'bmp'; break;
-        case 13780: $fileType = 'png'; break;
-        default: echo'unknown';
+
+
+
+    public function getPicExt($fileStream){
+        $strInfo = @unpack("C2chars", $fileStream);
+        $typeCode = intval($strInfo['chars1'].$strInfo['chars2']);
+        $fileType = '';
+        switch ($typeCode) {
+            case 7790: $fileType = 'exe'; break;
+            case 7784: $fileType = 'midi'; break;
+            case 8297: $fileType = 'rar'; break;
+            case 255216: $fileType = 'jpg'; break;
+            case 7173: $fileType = 'gif'; break;
+            case 6677: $fileType = 'bmp'; break;
+            case 13780: $fileType = 'png'; break;
+            default: echo'unknown';
+        }
+        return $fileType;
     }
-    return $fileType;
-}
-
-
-
-
 
 
     // 处理表单数据
@@ -415,13 +414,11 @@ public function getPicExt($fileStream){
                 if(!$v) continue;
                 $where[] = "`{$k}` like '%{$v}%'";
             }
-            $where = implode(' and ', $where);
-            $limit=($page - 1) * $rows . "," . $rows;
+            $where = implode(' and ', $where);            
             $total = $teacher_db->where($where)->count();
+            $limit= ($page - 1) * $rows > $total ? ("1," . $rows) : (($page - 1) * $rows . "," . $rows);
             $order = $sort.' '.$order;
             $list = $total ? $teacher_db->where($where)->order($order)->limit($limit)->select() : array();
-
-
 
             foreach($list as $k => $lt){
                 if ($lt['teacher_no_time']==1){
@@ -561,6 +558,28 @@ public function getPicExt($fileStream){
             $this->display('time_add');
         }
     }
+
+
+
+    //复制时间
+    public function timeCopy(){
+
+        if(IS_POST) {
+            $data = I('post.info');
+            $courseTime = D('CourseTime');
+            $rs = $courseTime->copyTimes($data);
+            if($rs){
+                $this->success('复制课程成功');
+                exit;
+            }else {
+                $this->error('复制课程失败');
+            }
+        }else {
+            $this->display('time_copy');
+        }
+    }
+
+
 
     /**
      * 验证邮箱是否存在

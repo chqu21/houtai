@@ -9,6 +9,7 @@
 
         <a href="javascript:;" onclick="adminTeacherSearch(this);" class="easyui-linkbutton" iconCls="icons-map-magnifier">搜索</a>&nbsp;&nbsp;
         <a href="javascript:;" onclick="adminTimeAdd();" class="easyui-linkbutton" iconCls="icons-arrow-add">添加老师授课时间</a>&nbsp;&nbsp;
+        <a href="javascript:;" onclick="adminTimeCopy();" class="easyui-linkbutton" iconCls="icons-arrow-add">复制老师授课时间</a>&nbsp;&nbsp;
         <a href="javascript:;" onclick="adminTimeRefresh();" class="easyui-linkbutton" iconCls="icons-arrow-arrow_refresh">刷新</a>
     </form>
 </div>
@@ -17,6 +18,8 @@
 <div id="admin_timelist_edit_dialog" class="easyui-dialog" title="编辑时间" data-options="modal:true,closed:true,iconCls:'icons-application-application_edit',buttons:[{text:'确定',iconCls:'icons-other-tick',handler:function(){$('#admin_timelist_edit_dialog_form').submit();}},{text:'取消',iconCls:'icons-arrow-cross',handler:function(){$('#admin_timelist_edit_dialog').dialog('close');}}]" style="width:350px;height:250px;"></div>
 <!--添加授课时间-->
 <div id="admin_time_add_dialog" class="easyui-dialog" title="添加授课时间" data-options="modal:true,closed:true,iconCls:'icons-application-application_edit',buttons:[{text:'确定',iconCls:'icons-other-tick',handler:function(){$('#admin_time_add_dialog_form').submit();}},{text:'取消',iconCls:'icons-arrow-cross',handler:function(){$('#admin_time_add_dialog').dialog('close');}}]" style="width:600px;height:450px;"></div>
+<!--复制授课时间-->
+<div id="admin_time_copy_dialog" class="easyui-dialog" title="添加授课时间" data-options="modal:true,closed:true,iconCls:'icons-application-application_edit',buttons:[{text:'确定',iconCls:'icons-other-tick',handler:function(){$('#admin_time_copy_dialog_form').submit();}},{text:'取消',iconCls:'icons-arrow-cross',handler:function(){$('#admin_time_copy_dialog').dialog('close');}}]" style="width:600px;height:450px;"></div>
 
 <script type="text/javascript">
 var teacher_timelist_datagrid_id = 'teacher_timelist_datagrid';
@@ -48,6 +51,11 @@ function adminTimeRefresh(){
 function adminTimeAdd(){
 	$('#admin_time_add_dialog').dialog({href:'<?php echo U('Teacher/timeAdd');?>'});
 	$('#admin_time_add_dialog').dialog('open');
+}
+//复制老师授课时间
+function adminTimeCopy(){
+	$('#admin_time_copy_dialog').dialog({href:'<?php echo U('Teacher/timeCopy');?>'});
+	$('#admin_time_copy_dialog').dialog('open');
 }
 //编辑
 function adminMemberEdit(id){
